@@ -1,5 +1,5 @@
 /* 홈보드 서비스 워커: 앱 화면은 저장해 두고 오프라인에서도 열리게, 뉴스는 항상 새로 받아온다. */
-const CACHE = "homeboard-v4";
+const CACHE = "homeboard-v5";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
 
 self.addEventListener("install", (e) => {
