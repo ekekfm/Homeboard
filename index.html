@@ -418,20 +418,25 @@ function okUrl(u){return /^[a-z][a-z0-9+.\-]*:\/\//i.test(u)&&!/^(javascript|dat
 /* ---------- 날씨 (Open-Meteo) · 뉴스 (data/briefing.json) ---------- */
 var WMO={0:"맑음",1:"대체로 맑음",2:"구름 조금",3:"흐림",45:"안개",48:"안개",51:"이슬비",53:"이슬비",55:"이슬비",56:"어는 비",57:"어는 비",61:"비",63:"비",65:"강한 비",66:"어는 비",67:"어는 비",71:"눈",73:"눈",75:"강한 눈",77:"싸락눈",80:"소나기",81:"소나기",82:"강한 소나기",85:"눈 소나기",86:"눈 소나기",95:"뇌우",96:"뇌우·우박",99:"뇌우·우박"};
 function getJSON(u){return fetch(u,{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})}
+var CITY={"서울":[37.5665,126.978],"부산":[35.1796,129.0756],"대구":[35.8714,128.6014],"인천":[37.4563,126.7052],"광주":[35.1595,126.8526],"대전":[36.3504,127.3845],"울산":[35.5384,129.3114],"세종":[36.48,127.289],"수원":[37.2636,127.0286],"성남":[37.42,127.1267],"고양":[37.6584,126.832],"용인":[37.2411,127.1776],"부천":[37.5034,126.766],"안산":[37.3219,126.8309],"안양":[37.3943,126.9568],"화성":[37.1995,126.8312],"평택":[36.9921,127.1129],"의정부":[37.7381,127.0337],"파주":[37.76,126.78],"김포":[37.6153,126.7156],"춘천":[37.8813,127.7298],"원주":[37.3422,127.9202],"강릉":[37.7519,128.8761],"청주":[36.6424,127.489],"천안":[36.8151,127.1139],"전주":[35.8242,127.148],"목포":[34.8118,126.3922],"여수":[34.7604,127.6622],"순천":[34.9507,127.4872],"포항":[36.019,129.3435],"경주":[35.8562,129.2247],"구미":[36.1195,128.3446],"안동":[36.5684,128.7294],"창원":[35.228,128.6811],"진주":[35.18,128.1076],"김해":[35.2285,128.8894],"양산":[35.335,129.0372],"밀양":[35.5038,128.7464],"거제":[34.8806,128.6211],"통영":[34.8544,128.4331],"제주":[33.4996,126.5312],"서귀포":[33.2541,126.56]};
+function findPlace(region){var k=region.replace(/\s+/g,"").replace(/(특별자치시|특별자치도|특별시|광역시|시)$/,"");
+  if(CITY[k])return Promise.resolve({latitude:CITY[k][0],longitude:CITY[k][1]});
+  return getJSON("https://geocoding-api.open-meteo.com/v1/search?count=1&language=ko&name="+encodeURIComponent(region)).then(function(g){
+    var p=g.results&&g.results[0];if(!p)throw new Error("place");return p})}
 function loadWeather(force){var region=(S.config.region||"서울").trim();
-  try{var c=JSON.parse(localStorage.getItem("homeboard-wx")||"null");if(c&&c.region===region){wxData=c;draw();if(!force&&Date.now()-c.at<30*60000)return}}catch(e){}
-  getJSON("https://geocoding-api.open-meteo.com/v1/search?count=1&language=ko&name="+encodeURIComponent(region)).then(function(g){
-    var p=g.results&&g.results[0];if(!p)throw new Error("지역 없음");
+  try{var c=JSON.parse(localStorage.getItem("homeboard-wx")||"null");if(c&&c.region===region&&c.days){wxData=c;draw();if(!force&&Date.now()-c.at<30*60000)return}}catch(e){}
+  findPlace(region).then(function(p){
     return getJSON("https://api.open-meteo.com/v1/forecast?latitude="+p.latitude+"&longitude="+p.longitude+"&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto&forecast_days=5")
   }).then(function(f){var d=f.daily;
     wxData={region:region,at:Date.now(),now:Math.round(f.current.temperature_2m),cond:WMO[f.current.weather_code]||"",
       days:d.time.map(function(t,i){return{date:t,hi:Math.round(d.temperature_2m_max[i]),lo:Math.round(d.temperature_2m_min[i]),c:WMO[d.weather_code[i]]||"",pop:d.precipitation_probability_max?d.precipitation_probability_max[i]:null}})};
     try{localStorage.setItem("homeboard-wx",JSON.stringify(wxData))}catch(e){}draw()
-  }).catch(function(){if(!wxData||wxData.region!==region){wxData={region:region,error:true};draw()}})}
+  }).catch(function(e){if(!wxData||wxData.region!==region||!wxData.days){wxData={region:region,error:(e&&e.message==="place")?"place":"net"};draw()}})}
 function loadBrief(){getJSON("data/briefing.json").then(function(b){brief=b;draw()}).catch(function(){brief=brief||{error:true};draw()})}
 function weather(el,meta){var w=wxData;el.textContent="";meta.textContent=w&&w.at?(w.region+" · "+stamp(w.at)):"";
   if(!w){el.appendChild(h("p",{class:"empty",text:"날씨를 불러오는 중입니다."}));return}
-  if(w.error){el.appendChild(h("p",{class:"empty",text:"날씨를 불러오지 못했습니다. 인터넷 연결과 지역 이름(홈 > 설정)을 확인하세요."}));return}
+  if(w.error){el.appendChild(h("p",{class:"empty",text:w.error==="place"?"'"+w.region+"' 지역을 찾지 못했습니다. 홈 > 설정에서 '서울', '부산'처럼 시 이름으로 바꿔 보세요.":"날씨 서버에 연결하지 못했습니다. 인터넷 연결을 확인하세요."}));
+    el.appendChild(h("button",{class:"btn ghost sm",type:"button",text:"다시 불러오기",onclick:function(){wxData=null;draw();loadWeather(true)}}));return}
   var t=w.days[0]||{};
   el.appendChild(h("div",{class:"wx"},h("div",{class:"now",text:w.now+"°"}),
     h("div",null,h("b",{text:w.cond}),h("div",{class:"sub muted",text:"최고 "+t.hi+"° / 최저 "+t.lo+"°"+(t.pop!=null?" · 강수확률 "+t.pop+"%":"")})),
