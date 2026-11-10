@@ -590,10 +590,11 @@ function render(){
   var hm=$("#home-money");hm.textContent="";
   hm.appendChild(h("div",{class:"tiles"},tile("총자산",signed(total)),tile("이번 달 수입",won(cur.inc)),tile("이번 달 지출",won(cur.out))));
   var ah=$("#a-hero");ah.textContent="";ah.appendChild(assetHero(ser));assetChart($("#a-chart"),ser);
-  var mine=S.allocs.filter(function(a){return String(a.date).slice(0,7)===nowKey()}),ar=allocSum(mine),at=allocSum(S.allocs),rest=cur.inc-ar.total;
-  var alh=$("#al-hero");alh.textContent="";alh.appendChild(h("div",{class:"k",text:"이번 달 배분한 금액"}));alh.appendChild(h("div",{class:"big",text:won(ar.total)}));
-  alh.appendChild(h("div",{class:"facts"},h("span",null,"이번 달 수입 ",h("b",{text:won(cur.inc)})),
-    rest>=0?h("span",null,"아직 배분하지 않은 금액 ",h("b",{text:won(rest)})):h("span",null,"수입보다 ",h("b",{text:won(-rest)})," 더 배분")));
+  var mine=S.allocs.filter(function(a){return String(a.date).slice(0,7)===nowKey()}),ar=allocSum(mine),at=allocSum(S.allocs);
+  var reserved=ar.inv+ar.sav+Math.max(ar.use,cur.out),can=cur.inc-reserved;
+  var alh=$("#al-hero");alh.textContent="";alh.appendChild(h("div",{class:"k",text:can<0?"배분 가능 금액을 넘긴 금액":"지금 배분할 수 있는 금액"}));alh.appendChild(h("div",{class:"big",text:won(Math.abs(can))}));
+  alh.appendChild(h("div",{class:"facts"},h("span",null,"이번 달 수입 ",h("b",{text:"+"+won(cur.inc)})),h("span",null,"지출 ",h("b",{text:"-"+won(cur.out)})),
+    h("span",null,"수입 − 지출 ",h("b",{text:signed(cur.inc-cur.out)})),h("span",null,"배분한 금액 ",h("b",{text:won(ar.total)}))));
   allocBox($("#al-box"),ar,cur.out);
   var names={inv:"투자",sav:"저축",use:"사용"},att=$("#al-total");att.textContent="";
   att.appendChild(tile("투자 누적",won(at.inv)));att.appendChild(tile("저축 누적",won(at.sav)));att.appendChild(tile("사용 누적",won(at.use)));
