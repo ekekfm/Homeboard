@@ -301,15 +301,15 @@ details summary{cursor:pointer;font-weight:600}
 <section class="view" id="v-money">
   <div class="card wide" style="padding:8px">
     <div class="seg" role="radiogroup" aria-label="가계부 화면">
-      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-asset" value="asset" checked><span>자산</span></label>
-      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-alloc" value="alloc"><span>오늘 수익 배분</span></label>
-      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-cal" value="cal"><span>달력</span></label>
+      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-cal" value="cal" checked><span>달력</span></label>
+      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-asset" value="asset"><span>자산</span></label>
+      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-alloc" value="alloc"><span>배분</span></label>
     </div>
   </div>
 
   <!-- 1. 자산 -->
   <div class="card hero wide" data-mt="asset"><div id="a-hero"></div></div>
-  <div class="card wide" data-mt="asset"><h2>월별 자산 <small>잔액을 고치면 그 달 기록이 갱신됩니다</small></h2><div class="chart" id="a-chart"></div></div>
+  <div class="card wide" data-mt="asset"><h2>월별 자산 <small>달력에 적은 수입·지출이 자동 반영됩니다</small></h2><div class="chart" id="a-chart"></div></div>
   <div class="card" data-mt="asset"><h2>개인 <small id="a-psum"></small></h2><ul class="list" id="a-plist"></ul></div>
   <div class="card" data-mt="asset"><h2>사업 <small id="a-bsum"></small></h2><ul class="list" id="a-blist"></ul></div>
   <div class="card wide" data-mt="asset">
@@ -325,6 +325,7 @@ details summary{cursor:pointer;font-weight:600}
       </div>
       <input class="grow" id="acct-name" placeholder="이름 (예: 토스 통장, 증권 계좌)" required autocomplete="off">
       <input id="acct-bal" type="number" inputmode="numeric" min="0" placeholder="현재 금액(원)" required style="flex:1 1 140px">
+      <p class="muted" style="flex:1 1 100%;margin:0;font-size:13px">달력이나 배분 화면에서 수입·지출을 적으면 선택한 계좌 금액이 자동으로 늘거나 줄어듭니다.</p>
       <button class="btn" type="submit">추가</button>
     </form>
   </div>
@@ -336,6 +337,7 @@ details summary{cursor:pointer;font-weight:600}
     <h2>오늘 수익 기록</h2>
     <form class="add" id="inc-form">
       <input id="inc-amt" type="number" inputmode="numeric" min="1" placeholder="금액(원)" required style="flex:1 1 130px">
+      <select id="inc-acct" aria-label="입금 계좌" title="입금 계좌"></select>
       <input class="grow" id="inc-memo" placeholder="내용 (선택)" autocomplete="off">
       <button class="btn" type="submit">기록</button>
     </form>
@@ -371,6 +373,7 @@ details summary{cursor:pointer;font-weight:600}
         <button type="button" data-plus="1000">+1천</button><button type="button" data-plus="5000">+5천</button><button type="button" data-plus="10000">+1만</button><button type="button" data-plus="50000">+5만</button><button type="button" data-plus="0">지우기</button>
       </div>
       <div class="seg" id="m-cats" role="radiogroup" aria-label="분류" style="flex:1 1 100%"></div>
+      <select id="m-acct" aria-label="입출금 계좌" title="입출금 계좌"></select>
       <input class="grow" id="m-memo" placeholder="내용 (선택)" autocomplete="off">
       <button class="btn" type="submit">기록</button>
     </form>
@@ -451,7 +454,7 @@ function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearT
 /* ---------- 저장: 이 기기(localStorage) ---------- */
 var KEY="homeboard-v2",COLS=["tasks","events","biz","leads","logs","notes","links"];
 var S={tasks:[],events:[],biz:[],leads:[],logs:[],notes:[],links:null,config:{region:"서울"},money:{},accounts:[],assetHist:{},alloc:{inv:30,sav:30,use:40}};
-var brief=null,wxData=null,viewMonth=nowKey(),selDay=today(),moneyTab="asset",editApps=false,logFilter="전체";
+var brief=null,wxData=null,viewMonth=nowKey(),selDay=today(),moneyTab="cal",editApps=false,logFilter="전체";
 var DEFAULT_LINKS=[["네이버","https://m.naver.com"],["구글 캘린더","https://calendar.google.com"],["지메일","https://mail.google.com"],["구글 시트","https://docs.google.com/spreadsheets"],["카토리지","https://cartorage.kr"],["블로그","https://m.blog.naver.com"],["증권","https://m.stock.naver.com"],["지도","https://m.map.naver.com"],["유튜브","https://m.youtube.com"]];
 function load(){try{var d=JSON.parse(localStorage.getItem(KEY)||"null");if(d)for(var k in S)if(d[k]!=null)S[k]=d[k]}catch(e){}
   if(!S.links)S.links=DEFAULT_LINKS.map(function(l,i){return{id:"d"+i,name:l[0],url:l[1],ord:i}})}
@@ -459,8 +462,16 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){toast("
 function add(col,data){S[col].push(Object.assign({id:newId()},data));save();draw()}
 function upd(col,id,patch){S[col].forEach(function(x){if(x.id===id)Object.assign(x,patch)});save();draw()}
 function del(col,id){S[col]=S[col].filter(function(x){return x.id!==id});save();draw()}
-function moneyAdd(key,entry){if(!S.money[key])S.money[key]={};S.money[key][newId()]=entry;save();draw()}
-function moneyDel(key,id){if(S.money[key])delete S.money[key][id];save();draw()}
+function assetAccts(){return S.accounts.filter(function(a){return a.kind!=="debt"})}
+function defaultAcct(){var list=assetAccts(),hit=list.filter(function(a){return a.id===S.config.acct})[0]||list[0];
+  if(!hit){hit={id:newId(),name:"가계부 현금",owner:"p",kind:"asset",bal:0};S.accounts.push(hit)}
+  return hit.id}
+function applyEntry(e,sign){var a=S.accounts.filter(function(x){return x.id===e.acct})[0];if(!a)return;
+  a.bal=(+a.bal||0)+sign*(e.type==="in"?1:-1)*(+e.amt||0)}
+function moneyAdd(key,entry,acct){var list=assetAccts();
+  entry.acct=(acct&&list.some(function(a){return a.id===acct}))?acct:defaultAcct();S.config.acct=entry.acct;
+  if(!S.money[key])S.money[key]={};S.money[key][newId()]=entry;applyEntry(entry,1);snap()}
+function moneyDel(key,id){var e=S.money[key]&&S.money[key][id];if(!e)return;applyEntry(e,-1);delete S.money[key][id];snap()}
 
 /* ---------- 공통 조각 ---------- */
 function delBtn(fn){var b=h("button",{class:"btn ghost sm danger",type:"button",text:"삭제"});
@@ -518,6 +529,8 @@ function assetHero(){var r=assetSum(),box=h("div");
   box.appendChild(h("div",{class:"big",text:signed(r.net)}));
   box.appendChild(h("div",{class:"facts"},h("span",null,"개인 ",h("b",{text:signed(r.p)})),h("span",null,"사업 ",h("b",{text:signed(r.b)})),
     (r.pd+r.bd)?h("span",null,"부채 ",h("b",{text:won(r.pd+r.bd)})):null));
+  var m=monthSum(nowKey());
+  box.appendChild(h("div",{class:"facts"},h("span",null,"이번 달 수입 ",h("b",{text:"+"+won(m.inc)})),h("span",null,"지출 ",h("b",{text:"-"+won(m.out)})),h("span",null,"수지 ",h("b",{text:signed(m.inc-m.out)}))));
   return box}
 function assetChart(el){el.textContent="";var keys=[],d=new Date(),i,hist=S.assetHist;
   for(i=11;i>=0;i--){var x=new Date(d.getFullYear(),d.getMonth()-i,1);keys.push(x.getFullYear()+"-"+pad(x.getMonth()+1))}
@@ -535,13 +548,17 @@ function assetChart(el){el.textContent="";var keys=[],d=new Date(),i,hist=S.asse
     if(pa)svg.appendChild(s("rect",{class:"s1",x:cx-bw/2,y:y0-h1,width:bw,height:h1,rx:3}));
     if(ba)svg.appendChild(s("rect",{class:"s2",x:cx-bw/2,y:y0-h1-gap-h2,width:bw,height:h2,rx:3}));
     var hit=s("rect",{class:"hit",x:L+step*ix,y:T,width:step,height:ph});
-    function show(){var debt=(v.pd||0)+(v.bd||0);tip.textContent=k.slice(0,4)+"년 "+mo+"월 · 개인 "+short(pa)+" · 사업 "+short(ba)+(debt?" · 부채 "+short(debt):"")+" · 순자산 "+short(pa+ba-debt);
+    function show(){var debt=(v.pd||0)+(v.bd||0),ms=monthSum(k),flow=(ms.inc||ms.out)?" · 수입 "+short(ms.inc)+" · 지출 "+short(ms.out):"";tip.textContent=k.slice(0,4)+"년 "+mo+"월 · 개인 "+short(pa)+" · 사업 "+short(ba)+(debt?" · 부채 "+short(debt):"")+" · 순자산 "+short(pa+ba-debt)+flow;
       tip.style.left=Math.min(78,Math.max(22,cx/W*100))+"%";tip.style.top=((y0-h1-gap-h2)/H*100)+"%";tip.style.display="block"}
     hit.addEventListener("mouseenter",show);hit.addEventListener("click",show);hit.addEventListener("mouseleave",function(){tip.style.display="none"});svg.appendChild(hit)});
   el.appendChild(svg);el.appendChild(tip);
   el.appendChild(h("div",{class:"legend"},h("span",null,h("i",{style:"background:var(--c1)"}),"개인 자산"),h("span",null,h("i",{style:"background:var(--c2)"}),"사업 자산"),h("span",{text:"막대를 누르면 금액이 보입니다"})))}
-function acctRow(a){var inp=h("input",{class:"field balance",type:"number",inputmode:"numeric",min:"0",value:a.bal,"aria-label":a.name+" 금액",id:"bal-"+a.id});
-  inp.addEventListener("change",function(){var v=+inp.value;if(!(v>=0))return;S.accounts.forEach(function(x){if(x.id===a.id)x.bal=v});snap();toast("금액을 고쳤습니다")});
+function acctName(id){var a=S.accounts.filter(function(x){return x.id===id})[0];return a?a.name:""}
+function fillAcct(sel){var list=assetAccts(),cur=S.config.acct;sel.textContent="";
+  if(!list.length){sel.appendChild(h("option",{value:"",text:"가계부 현금 (자동 생성)"}));return}
+  list.forEach(function(a){sel.appendChild(h("option",{value:a.id,selected:a.id===cur?true:null,text:(a.owner==="b"?"사업 · ":"개인 · ")+a.name}))})}
+function acctRow(a){var inp=h("input",{class:"field balance",type:"number",inputmode:"numeric",value:a.bal,"aria-label":a.name+" 금액",id:"bal-"+a.id});
+  inp.addEventListener("change",function(){var v=+inp.value;if(inp.value===""||isNaN(v))return;S.accounts.forEach(function(x){if(x.id===a.id)x.bal=v});snap();toast("금액을 고쳤습니다")});
   return h("li",null,h("span",{class:"main"},h("b",{text:a.name})," ",a.kind==="debt"?h("span",{class:"pill warn",text:"부채"}):null),inp,
     delBtn(function(){S.accounts=S.accounts.filter(function(x){return x.id!==a.id});snap()}))}
 var PARTS=[["inv","투자","var(--c1)"],["sav","저축","var(--c2)"],["use","사용 가능","var(--c3)"]];
@@ -614,15 +631,16 @@ function render(){
   allocBox($("#al-box"),tInc,tOut,"오늘");allocBox($("#al-month"),cur.inc,cur.out,"이번 달");
   $("#al-mmeta").textContent=cur.inc?"수익 "+won(cur.inc):"";
   fill($("#al-today"),cur.rows.filter(function(e){return e.type==="in"&&e.date===td}).map(function(e){
-    return h("li",null,h("span",{class:"main"},h("b",{class:"amt",text:"+"+won(e.amt)}),e.memo?h("div",{class:"sub",text:e.memo}):null),delBtn(function(){moneyDel(nowKey(),e.id)}))}),"오늘 기록한 수익이 없습니다.");
+    return h("li",null,h("span",{class:"main"},h("b",{class:"amt",text:"+"+won(e.amt)}),h("div",{class:"sub",text:[acctName(e.acct),e.memo].filter(Boolean).join(" · ")})),delBtn(function(){moneyDel(nowKey(),e.id)}))}),"오늘 기록한 수익이 없습니다.");
   var m=monthSum(viewMonth),vp=viewMonth.split("-");
   $("#m-label").textContent=vp[0]+"년 "+(+vp[1])+"월";$("#m-now").hidden=m.isNow;
   var mt=$("#m-tiles");mt.textContent="";mt.appendChild(tile("수입",won(m.inc)));mt.appendChild(tile("지출",won(m.out)));mt.appendChild(tile("수지",signed(m.inc-m.out)));
   calendar($("#cal"),m);
+  [$("#m-acct"),$("#inc-acct")].forEach(function(x){if(document.activeElement!==x)fillAcct(x)});
   $("#d-title").textContent=nice(selDay)+" 기록";
   fill($("#m-list"),m.rows.filter(function(e){return e.date===selDay}).map(function(e){
     return h("li",null,h("span",{class:"pill "+(e.type==="in"?"good":"plain"),text:e.type==="in"?"수입":(e.cat||"기타")}),
-      h("span",{class:"main"},h("b",{class:"amt",text:(e.type==="in"?"+":"-")+won(e.amt)}),e.memo?h("div",{class:"sub",text:e.memo}):null),delBtn(function(){moneyDel(viewMonth,e.id)}))}),"이 날 기록이 없습니다. 위에서 바로 적으세요.");
+      h("span",{class:"main"},h("b",{class:"amt",text:(e.type==="in"?"+":"-")+won(e.amt)}),h("div",{class:"sub",text:[acctName(e.acct),e.memo].filter(Boolean).join(" · ")})),delBtn(function(){moneyDel(viewMonth,e.id)}))}),"이 날 기록이 없습니다. 위에서 바로 적으세요.");
   var bars=$("#m-bars");bars.textContent="";var ck=Object.keys(m.cats).sort(function(a,b){return m.cats[b]-m.cats[a]}),mx=ck.length?m.cats[ck[0]]:0;
   if(!ck.length)bars.appendChild(h("p",{class:"empty",text:"지출을 기록하면 분류별로 보여줍니다."}));
   ck.forEach(function(c){bars.appendChild(h("div",{class:"b",title:c+" "+won(m.cats[c])},h("span",{text:c}),h("span",{class:"t"},h("i",{style:"width:"+Math.max(2,Math.round(m.cats[c]/mx*100))+"%"})),
@@ -671,9 +689,9 @@ document.querySelectorAll('input[name="mtype"]').forEach(function(r){r.addEventL
 document.querySelectorAll('input[name="mtab"]').forEach(function(r){r.addEventListener("change",function(){moneyTab=r.value;draw()})});
 document.querySelectorAll("[data-plus]").forEach(function(b){b.addEventListener("click",function(){var p=+b.dataset.plus;$("#m-amt").value=p?(+$("#m-amt").value||0)+p:""})});
 on("#money-form",function(){var a=+val("#m-amt");if(!(a>0))return;var type=mtype();
-  moneyAdd(selDay.slice(0,7),{type:type,amt:a,cat:type==="in"?"수입":document.querySelector('input[name="mcat"]:checked').value,memo:val("#m-memo"),date:selDay});
+  moneyAdd(selDay.slice(0,7),{type:type,amt:a,cat:type==="in"?"수입":document.querySelector('input[name="mcat"]:checked').value,memo:val("#m-memo"),date:selDay},$("#m-acct").value);
   $("#m-amt").value="";$("#m-memo").value="";toast("기록했습니다")});
-on("#inc-form",function(){var a=+val("#inc-amt");if(!(a>0))return;moneyAdd(nowKey(),{type:"in",amt:a,cat:"수입",memo:val("#inc-memo"),date:today()});
+on("#inc-form",function(){var a=+val("#inc-amt");if(!(a>0))return;moneyAdd(nowKey(),{type:"in",amt:a,cat:"수입",memo:val("#inc-memo"),date:today()},$("#inc-acct").value);
   $("#inc-amt").value="";$("#inc-memo").value="";toast("수익을 기록했습니다")});
 on("#alloc-form",function(){var a=+val("#al-inv")||0,b=+val("#al-sav")||0,c=+val("#al-use")||0;
   if(a+b+c!==100){toast("세 비율의 합이 100%가 되어야 합니다 (지금 "+(a+b+c)+"%)");return}
@@ -681,6 +699,7 @@ on("#alloc-form",function(){var a=+val("#al-inv")||0,b=+val("#al-sav")||0,c=+val
 on("#acct-form",function(){var b=+val("#acct-bal");if(!(b>=0))return;
   S.accounts.push({id:newId(),name:val("#acct-name"),owner:document.querySelector('input[name="aowner"]:checked').value,kind:document.querySelector('input[name="akind"]:checked').value,bal:b});
   $("#acct-name").value="";$("#acct-bal").value="";snap();toast("추가했습니다")});
+["#m-acct","#inc-acct"].forEach(function(x){$(x).addEventListener("change",function(e){if(e.target.value){S.config.acct=e.target.value;save();draw()}})});
 function fillAlloc(){$("#al-inv").value=S.alloc.inv;$("#al-sav").value=S.alloc.sav;$("#al-use").value=S.alloc.use}
 on("#log-form",function(){add("logs",{cat:$("#log-cat").value,date:val("#log-date")||today(),text:val("#log-text")});$("#log-text").value=""});
 on("#note-form",function(){add("notes",{text:val("#note-text"),tag:document.querySelector('input[name="ntag"]:checked').value,at:new Date().toISOString()});$("#note-text").value=""});
