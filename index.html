@@ -23,6 +23,7 @@
   --good-bg:#e0f1e6; --warn-bg:#f6ecd3; --crit-bg:#f8e3e0; --info-bg:#e1e7fa;
   --display:"Hahmlet","Noto Serif KR",serif;
   --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --c1:#3355c4; --c2:#5b93f0; --c3:#12a594;
   --r:14px;
 }
 @media (prefers-color-scheme: dark){
@@ -126,6 +127,21 @@ input[type=checkbox]{width:20px;height:20px;margin:2px 0 0;accent-color:var(--na
 .bars .b .t i{display:block;height:100%;background:var(--navy-2);border-radius:0 4px 4px 0}
 .bars .b .n{font-variant-numeric:tabular-nums;text-align:right}
 .bars .b .n small{color:var(--muted);margin-left:4px}
+.chart .s1{fill:var(--c1)} .chart .s2{fill:var(--c2)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.split{display:flex;gap:2px;height:16px;margin:4px 0 12px}
+.split i{display:block;min-width:3px;border-radius:4px}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin-top:12px}
+.cal .dow{text-align:center;font-size:12px;color:var(--muted);padding:2px 0}
+.cal button{min-height:60px;background:var(--sunken);border:1.5px solid transparent;border-radius:9px;padding:5px 1px;display:flex;flex-direction:column;align-items:center;gap:1px;
+  font-size:10.5px;line-height:1.25;cursor:pointer;min-width:0;font-variant-numeric:tabular-nums;overflow:hidden}
+.cal button .n{font-size:13.5px;font-weight:600}
+.cal button .in{color:var(--good)} .cal button .out{color:var(--muted)}
+.cal button.today{border-color:var(--c1)}
+.cal button.sel{background:var(--navy);color:var(--on-navy)}
+.cal button.sel .in,.cal button.sel .out{color:var(--on-navy)}
+.balance{width:130px;text-align:right;font-variant-numeric:tabular-nums;min-height:38px!important;padding:6px 10px!important}
+@media (min-width:900px){.cal button{min-height:72px;font-size:12px}}
 /* 앱 */
 .apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
 .app{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;color:var(--ink);background:var(--sunken);border-radius:14px;padding:12px 6px;font-size:13px;text-align:center;min-width:0}
@@ -160,7 +176,7 @@ details summary{cursor:pointer;font-weight:600}
 <div class="shell">
 <nav class="tabs" aria-label="메뉴">
   <div class="brand">홈보드</div>
-  <a href="#home">홈</a><a href="#plan">일정</a><a href="#biz">사업</a><a href="#money">자산</a><a href="#life">취미</a><a href="#notes">메모</a><a href="#news">뉴스</a>
+  <a href="#home">홈</a><a href="#plan">일정</a><a href="#biz">사업</a><a href="#money">가계부</a><a href="#life">취미</a><a href="#notes">메모</a><a href="#news">뉴스</a>
 </nav>
 <main>
 <header class="top">
@@ -208,7 +224,7 @@ details summary{cursor:pointer;font-weight:600}
     <div class="tiles" id="home-biz"></div>
   </div>
   <div class="card">
-    <h2>이번 달 돈 흐름 <a href="#money" class="muted" style="font-size:13px;font-weight:400">자세히</a></h2>
+    <h2>가계부 <a href="#money" class="muted" style="font-size:13px;font-weight:400">자세히</a></h2>
     <div id="home-money"></div>
   </div>
   <div class="card wide">
@@ -281,21 +297,75 @@ details summary{cursor:pointer;font-weight:600}
   </div>
 </section>
 
-<!-- 자산 -->
+<!-- 가계부 -->
 <section class="view" id="v-money">
-  <div class="card hero wide">
+  <div class="card wide" style="padding:8px">
+    <div class="seg" role="radiogroup" aria-label="가계부 화면">
+      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-asset" value="asset" checked><span>자산</span></label>
+      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-alloc" value="alloc"><span>오늘 수익 배분</span></label>
+      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-cal" value="cal"><span>달력</span></label>
+    </div>
+  </div>
+
+  <!-- 1. 자산 -->
+  <div class="card hero wide" data-mt="asset"><div id="a-hero"></div></div>
+  <div class="card wide" data-mt="asset"><h2>월별 자산 <small>잔액을 고치면 그 달 기록이 갱신됩니다</small></h2><div class="chart" id="a-chart"></div></div>
+  <div class="card" data-mt="asset"><h2>개인 <small id="a-psum"></small></h2><ul class="list" id="a-plist"></ul></div>
+  <div class="card" data-mt="asset"><h2>사업 <small id="a-bsum"></small></h2><ul class="list" id="a-blist"></ul></div>
+  <div class="card wide" data-mt="asset">
+    <h2>계좌·자산 추가</h2>
+    <form class="add" id="acct-form" style="margin:0">
+      <div class="seg" role="radiogroup" aria-label="구분">
+        <label><input type="radio" name="aowner" id="ao-p" value="p" checked><span>개인</span></label>
+        <label><input type="radio" name="aowner" id="ao-b" value="b"><span>사업</span></label>
+      </div>
+      <div class="seg" role="radiogroup" aria-label="종류">
+        <label><input type="radio" name="akind" id="ak-a" value="asset" checked><span>자산</span></label>
+        <label><input type="radio" name="akind" id="ak-d" value="debt"><span>부채</span></label>
+      </div>
+      <input class="grow" id="acct-name" placeholder="이름 (예: 토스 통장, 증권 계좌)" required autocomplete="off">
+      <input id="acct-bal" type="number" inputmode="numeric" min="0" placeholder="현재 금액(원)" required style="flex:1 1 140px">
+      <button class="btn" type="submit">추가</button>
+    </form>
+  </div>
+
+  <!-- 2. 오늘 수익 배분 -->
+  <div class="card hero wide" data-mt="alloc"><div id="al-hero"></div></div>
+  <div class="card wide" data-mt="alloc"><h2>오늘 배분</h2><div id="al-box"></div></div>
+  <div class="card" data-mt="alloc">
+    <h2>오늘 수익 기록</h2>
+    <form class="add" id="inc-form">
+      <input id="inc-amt" type="number" inputmode="numeric" min="1" placeholder="금액(원)" required style="flex:1 1 130px">
+      <input class="grow" id="inc-memo" placeholder="내용 (선택)" autocomplete="off">
+      <button class="btn" type="submit">기록</button>
+    </form>
+    <ul class="list" id="al-today"></ul>
+  </div>
+  <div class="card" data-mt="alloc">
+    <h2>배분 비율 <small>합계 100%</small></h2>
+    <form class="add" id="alloc-form" style="margin:0">
+      <label class="row" for="al-inv">투자 <input id="al-inv" type="number" inputmode="numeric" min="0" max="100" required style="width:76px"> %</label>
+      <label class="row" for="al-sav">저축 <input id="al-sav" type="number" inputmode="numeric" min="0" max="100" required style="width:76px"> %</label>
+      <label class="row" for="al-use">사용 <input id="al-use" type="number" inputmode="numeric" min="0" max="100" required style="width:76px"> %</label>
+      <button class="btn" type="submit">저장</button>
+    </form>
+  </div>
+  <div class="card wide" data-mt="alloc"><h2>이번 달 누적 <small id="al-mmeta"></small></h2><div id="al-month"></div></div>
+
+  <!-- 3. 달력 -->
+  <div class="card wide" data-mt="cal">
     <h2><span class="row"><button class="btn ghost sm" id="m-prev" type="button" aria-label="이전 달">‹</button><span id="m-label"></span><button class="btn ghost sm" id="m-next" type="button" aria-label="다음 달">›</button></span>
       <button class="btn ghost sm" id="m-now" type="button">이번 달</button></h2>
-    <div id="m-hero"></div>
+    <div class="tiles" id="m-tiles"></div>
+    <div class="cal" id="cal"></div>
   </div>
-  <div class="card">
-    <h2>기록하기</h2>
+  <div class="card" data-mt="cal">
+    <h2 id="d-title"></h2>
     <form class="add" id="money-form">
       <div class="seg" role="radiogroup" aria-label="수입 지출">
         <label><input type="radio" name="mtype" id="mt-out" value="out" checked><span>지출</span></label>
         <label><input type="radio" name="mtype" id="mt-in" value="in"><span>수입</span></label>
       </div>
-      <input id="m-date" type="date" required aria-label="날짜">
       <input id="m-amt" type="number" inputmode="numeric" min="1" placeholder="금액(원)" required>
       <div class="chips" aria-label="금액 빠른 추가">
         <button type="button" data-plus="1000">+1천</button><button type="button" data-plus="5000">+5천</button><button type="button" data-plus="10000">+1만</button><button type="button" data-plus="50000">+5만</button><button type="button" data-plus="0">지우기</button>
@@ -304,22 +374,9 @@ details summary{cursor:pointer;font-weight:600}
       <input class="grow" id="m-memo" placeholder="내용 (선택)" autocomplete="off">
       <button class="btn" type="submit">기록</button>
     </form>
+    <ul class="list" id="m-list"></ul>
   </div>
-  <div class="card">
-    <h2>가용자금 설정</h2>
-    <form class="add" id="budget-form">
-      <label class="row" for="cfg-daily">하루 가용자금</label>
-      <input id="cfg-daily" type="number" inputmode="numeric" min="0" placeholder="금액(원)" style="flex:1 1 120px">
-      <button class="btn" type="submit">저장</button>
-    </form>
-    <div class="tiles" id="m-plan"></div>
-  </div>
-  <div class="card wide">
-    <h2>일별 지출 <small id="m-avg"></small></h2>
-    <div class="chart" id="m-chart"></div>
-  </div>
-  <div class="card"><h2>분류별 지출</h2><div class="bars" id="m-bars"></div></div>
-  <div class="card"><h2>내역 <small id="m-count"></small></h2><ul class="list" id="m-list"></ul></div>
+  <div class="card" data-mt="cal"><h2>분류별 지출</h2><div class="bars" id="m-bars"></div></div>
 </section>
 
 <!-- 취미 -->
@@ -393,8 +450,8 @@ function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearT
 
 /* ---------- 저장: 이 기기(localStorage) ---------- */
 var KEY="homeboard-v2",COLS=["tasks","events","biz","leads","logs","notes","links"];
-var S={tasks:[],events:[],biz:[],leads:[],logs:[],notes:[],links:null,config:{region:"서울",daily:0},money:{}};
-var brief=null,wxData=null,viewMonth=nowKey(),editApps=false,logFilter="전체";
+var S={tasks:[],events:[],biz:[],leads:[],logs:[],notes:[],links:null,config:{region:"서울"},money:{},accounts:[],assetHist:{},alloc:{inv:30,sav:30,use:40}};
+var brief=null,wxData=null,viewMonth=nowKey(),selDay=today(),moneyTab="asset",editApps=false,logFilter="전체";
 var DEFAULT_LINKS=[["네이버","https://m.naver.com"],["구글 캘린더","https://calendar.google.com"],["지메일","https://mail.google.com"],["구글 시트","https://docs.google.com/spreadsheets"],["카토리지","https://cartorage.kr"],["블로그","https://m.blog.naver.com"],["증권","https://m.stock.naver.com"],["지도","https://m.map.naver.com"],["유튜브","https://m.youtube.com"]];
 function load(){try{var d=JSON.parse(localStorage.getItem(KEY)||"null");if(d)for(var k in S)if(d[k]!=null)S[k]=d[k]}catch(e){}
   if(!S.links)S.links=DEFAULT_LINKS.map(function(l,i){return{id:"d"+i,name:l[0],url:l[1],ord:i}})}
@@ -445,49 +502,65 @@ function weather(el,meta){var w=wxData;el.textContent="";meta.textContent=w&&w.a
 function newsRow(n){var a=h("a",{class:"t",text:n.t||"",href:n.url&&/^https?:\/\//.test(n.url)?n.url:null,target:"_blank",rel:"noopener"});
   return h("li",null,a,n.src?h("div",{class:"sub",text:n.src}):null)}
 
-/* ---------- 자산 계산 ---------- */
+/* ---------- 가계부 계산 ---------- */
 var CATS=["식비","교통","주거·통신","사업","취미","쇼핑","저축·투자","기타"];
-function monthSum(key){var it=S.money[key]||{},inc=0,out=0,cats={},rows=[],byDay={};
-  Object.keys(it).forEach(function(id){var e=it[id],a=+e.amt||0;rows.push(Object.assign({id:id},e));
-    if(e.type==="in")inc+=a;else{out+=a;cats[e.cat||"기타"]=(cats[e.cat||"기타"]||0)+a;var dd=+String(e.date).slice(8,10);byDay[dd]=(byDay[dd]||0)+a}});
+function signed(n){return (n<0?"-":"")+won(Math.abs(n))}
+function monthSum(key){var it=S.money[key]||{},inc=0,out=0,cats={},rows=[],byDay={},inDay={};
+  Object.keys(it).forEach(function(id){var e=it[id],a=+e.amt||0,dd=+String(e.date).slice(8,10);rows.push(Object.assign({id:id},e));
+    if(e.type==="in"){inc+=a;inDay[dd]=(inDay[dd]||0)+a}else{out+=a;cats[e.cat||"기타"]=(cats[e.cat||"기타"]||0)+a;byDay[dd]=(byDay[dd]||0)+a}});
   rows.sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:a.id<b.id?1:-1});
-  var p=key.split("-"),days=new Date(+p[0],+p[1],0).getDate(),isNow=key===nowKey(),passed=isNow?new Date().getDate():(key<nowKey()?days:0);
-  return{inc:inc,out:out,cats:cats,rows:rows,byDay:byDay,days:days,isNow:isNow,passed:passed}}
-function heroBox(m,compact){var daily=+S.config.daily||0,box=h("div");
-  if(!daily){
-    box.appendChild(h("div",{class:"k",text:"수입에서 지출을 뺀 금액"}));
-    box.appendChild(h("div",{class:"big",text:(m.inc-m.out<0?"-":"")+won(Math.abs(m.inc-m.out))}));
-    box.appendChild(h("div",{class:"facts"},h("span",null,"수입 ",h("b",{text:won(m.inc)})),h("span",null,"지출 ",h("b",{text:won(m.out)}))));
-    if(!compact)box.appendChild(h("div",{class:"k",style:"margin-top:8px",text:"하루 가용자금을 설정하면 남은 돈과 오늘 쓸 수 있는 금액을 보여줍니다."}));
-    return box}
-  var total=daily*m.days,left=total-m.out,pct=Math.min(100,Math.round(m.out/total*100)),rest=m.isNow?m.days-new Date().getDate()+1:0;
-  box.appendChild(h("div",{class:"k",text:left<0?"가용자금을 넘겨 쓴 금액":"이번 달 가용자금 중 남은 돈"}));
-  box.appendChild(h("div",{class:"big",text:won(Math.abs(left))}));
-  box.appendChild(h("div",{class:"meter"+(left<0?" over":""),role:"img","aria-label":"가용자금 사용률 "+pct+"%"},h("i",{style:"width:"+pct+"%"})));
-  var facts=h("div",{class:"facts"},h("span",null,"가용자금 ",h("b",{text:won(total)})),h("span",null,"지출 ",h("b",{text:won(m.out)+" ("+pct+"%)"})));
-  if(!compact)facts.appendChild(h("span",null,"수입 ",h("b",{text:won(m.inc)})));
-  if(m.isNow&&left>0)facts.appendChild(h("span",null,"오늘부터 하루 ",h("b",{text:won(left/rest)}),"씩 · 남은 "+rest+"일"));
-  box.appendChild(facts);return box}
-function chart(el,m){el.textContent="";var daily=+S.config.daily||0,n=m.days,W=Math.max(300,Math.min(900,el.clientWidth||640)),H=190,L=44,R=8,T=14,B=24,pw=W-L-R,ph=H-T-B,mx=daily,d;
-  for(d=1;d<=n;d++)mx=Math.max(mx,m.byDay[d]||0);
-  if(!m.out){el.appendChild(h("p",{class:"empty",text:"지출을 기록하면 날짜별 막대로 보여줍니다."}));return}
-  mx=mx*1.12;var svg=s("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":"일별 지출 막대 그래프"}),step=pw/n,bw=Math.max(3,Math.min(14,step-2)),tip=h("div",{class:"tip"});
-  var y0=T+ph,tx;svg.appendChild(s("line",{class:"axis",x1:L,x2:W-R,y1:y0,y2:y0}));
+  var p=key.split("-");return{inc:inc,out:out,cats:cats,rows:rows,byDay:byDay,inDay:inDay,days:new Date(+p[0],+p[1],0).getDate(),isNow:key===nowKey()}}
+function assetSum(){var r={pa:0,pd:0,ba:0,bd:0};S.accounts.forEach(function(a){r[(a.owner==="b"?"b":"p")+(a.kind==="debt"?"d":"a")]+=+a.bal||0});
+  r.p=r.pa-r.pd;r.b=r.ba-r.bd;r.net=r.p+r.b;return r}
+function snap(){var r=assetSum();S.assetHist[nowKey()]={pa:r.pa,pd:r.pd,ba:r.ba,bd:r.bd};save();draw()}
+function assetHero(){var r=assetSum(),box=h("div");
+  box.appendChild(h("div",{class:"k",text:"총 순자산 (자산 − 부채)"}));
+  box.appendChild(h("div",{class:"big",text:signed(r.net)}));
+  box.appendChild(h("div",{class:"facts"},h("span",null,"개인 ",h("b",{text:signed(r.p)})),h("span",null,"사업 ",h("b",{text:signed(r.b)})),
+    (r.pd+r.bd)?h("span",null,"부채 ",h("b",{text:won(r.pd+r.bd)})):null));
+  return box}
+function assetChart(el){el.textContent="";var keys=[],d=new Date(),i,hist=S.assetHist;
+  for(i=11;i>=0;i--){var x=new Date(d.getFullYear(),d.getMonth()-i,1);keys.push(x.getFullYear()+"-"+pad(x.getMonth()+1))}
+  var mx=0;keys.forEach(function(k){var v=hist[k];if(v)mx=Math.max(mx,(v.pa||0)+(v.ba||0))});
+  if(!mx){el.appendChild(h("p",{class:"empty",text:"계좌와 자산을 추가하면 달마다 총자산이 막대로 쌓입니다."}));return}
+  var W=Math.max(300,Math.min(900,el.clientWidth||640)),H=210,L=50,R=8,T=14,B=24,pw=W-L-R,ph=H-T-B,step=pw/12,bw=Math.min(30,step-6),y0=T+ph,tip=h("div",{class:"tip"}),tx;
+  mx*=1.1;var svg=s("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":"최근 12개월 자산 막대 그래프"});
+  svg.appendChild(s("line",{class:"axis",x1:L,x2:W-R,y1:y0,y2:y0}));
   tx=s("text",{x:L-6,y:y0+4,"text-anchor":"end"});tx.textContent="0";svg.appendChild(tx);
-  if(daily){var yr=T+ph-(daily/mx)*ph;svg.appendChild(s("line",{class:"ref",x1:L,x2:W-R,y1:yr,y2:yr}));
-    tx=s("text",{x:L-6,y:yr+4,"text-anchor":"end"});tx.textContent=short(daily);svg.appendChild(tx)}
-  var td=m.isNow?new Date().getDate():0;
-  for(d=1;d<=n;d++){(function(d){var v=m.byDay[d]||0,cx=L+step*(d-.5),bh=v?Math.max(2,(v/mx)*ph):0;
-    if(v)svg.appendChild(s("rect",{class:"bar"+(daily&&v>daily?" over":d===td?" today":""),x:cx-bw/2,y:y0-bh,width:bw,height:bh,rx:Math.min(3,bw/2)}));
-    if(d===1||d%5===0){var t=s("text",{x:cx,y:H-7,"text-anchor":"middle"});t.textContent=d;svg.appendChild(t)}
-    var hit=s("rect",{class:"hit",x:L+step*(d-1),y:T,width:step,height:ph});
-    function show(){tip.textContent=d+"일 · "+won(v)+(daily&&v>daily?" (가용자금 초과)":"");tip.style.left=(cx/W*100)+"%";tip.style.top=((y0-bh)/H*100)+"%";tip.style.display="block"}
-    hit.addEventListener("mouseenter",show);hit.addEventListener("click",show);hit.addEventListener("mouseleave",function(){tip.style.display="none"});
-    svg.appendChild(hit)})(d)}
+  var gy=T+ph-(mx/1.1/mx)*ph;svg.appendChild(s("line",{class:"axis",x1:L,x2:W-R,y1:gy,y2:gy,"stroke-dasharray":"2 4"}));
+  tx=s("text",{x:L-6,y:gy+4,"text-anchor":"end"});tx.textContent=short(mx/1.1);svg.appendChild(tx);
+  keys.forEach(function(k,ix){var v=hist[k],cx=L+step*(ix+.5),mo=+k.slice(5);
+    if(step>=30||ix%2===1){var t=s("text",{x:cx,y:H-7,"text-anchor":"middle"});t.textContent=mo+"월";svg.appendChild(t)}
+    if(!v)return;var pa=v.pa||0,ba=v.ba||0,h1=pa/mx*ph,h2=ba/mx*ph,gap=pa&&ba?2:0;
+    if(pa)svg.appendChild(s("rect",{class:"s1",x:cx-bw/2,y:y0-h1,width:bw,height:h1,rx:3}));
+    if(ba)svg.appendChild(s("rect",{class:"s2",x:cx-bw/2,y:y0-h1-gap-h2,width:bw,height:h2,rx:3}));
+    var hit=s("rect",{class:"hit",x:L+step*ix,y:T,width:step,height:ph});
+    function show(){var debt=(v.pd||0)+(v.bd||0);tip.textContent=k.slice(0,4)+"년 "+mo+"월 · 개인 "+short(pa)+" · 사업 "+short(ba)+(debt?" · 부채 "+short(debt):"")+" · 순자산 "+short(pa+ba-debt);
+      tip.style.left=Math.min(78,Math.max(22,cx/W*100))+"%";tip.style.top=((y0-h1-gap-h2)/H*100)+"%";tip.style.display="block"}
+    hit.addEventListener("mouseenter",show);hit.addEventListener("click",show);hit.addEventListener("mouseleave",function(){tip.style.display="none"});svg.appendChild(hit)});
   el.appendChild(svg);el.appendChild(tip);
-  var lg=h("div",{class:"legend"},h("span",null,h("i",{style:"background:var(--navy-2)"}),"하루 지출"));
-  if(daily){lg.appendChild(h("span",null,h("i",{style:"background:var(--crit)"}),"하루 가용자금 초과"));lg.appendChild(h("span",{text:"점선: 하루 가용자금 "+won(daily)}))}
-  el.appendChild(lg)}
+  el.appendChild(h("div",{class:"legend"},h("span",null,h("i",{style:"background:var(--c1)"}),"개인 자산"),h("span",null,h("i",{style:"background:var(--c2)"}),"사업 자산"),h("span",{text:"막대를 누르면 금액이 보입니다"})))}
+function acctRow(a){var inp=h("input",{class:"field balance",type:"number",inputmode:"numeric",min:"0",value:a.bal,"aria-label":a.name+" 금액",id:"bal-"+a.id});
+  inp.addEventListener("change",function(){var v=+inp.value;if(!(v>=0))return;S.accounts.forEach(function(x){if(x.id===a.id)x.bal=v});snap();toast("금액을 고쳤습니다")});
+  return h("li",null,h("span",{class:"main"},h("b",{text:a.name})," ",a.kind==="debt"?h("span",{class:"pill warn",text:"부채"}):null),inp,
+    delBtn(function(){S.accounts=S.accounts.filter(function(x){return x.id!==a.id});snap()}))}
+var PARTS=[["inv","투자","var(--c1)"],["sav","저축","var(--c2)"],["use","사용 가능","var(--c3)"]];
+function allocBox(el,inc,out,label){el.textContent="";
+  if(!inc){el.appendChild(h("p",{class:"empty",text:label+" 기록된 수익이 없습니다. 수익을 기록하면 투자·저축·사용 금액으로 나눠 보여줍니다."}));return}
+  var al=S.alloc,bar=h("div",{class:"split",role:"img","aria-label":"투자 "+al.inv+"%, 저축 "+al.sav+"%, 사용 "+al.use+"%"}),tiles=h("div",{class:"tiles"});
+  PARTS.forEach(function(p){var pc=+al[p[0]]||0;if(pc)bar.appendChild(h("i",{style:"flex:"+pc+" 0 0;background:"+p[2]}));
+    tiles.appendChild(h("div",{class:"tile"},h("div",{class:"k"},h("span",{class:"dot",style:"background:"+p[2]}),p[1]+" "+pc+"%"),h("div",{class:"v",text:won(inc*pc/100)})))});
+  el.appendChild(bar);el.appendChild(tiles);
+  var use=inc*(+al.use||0)/100,left=use-out;
+  el.appendChild(h("p",{style:"margin:12px 0 0;font-size:14px"},label+" 지출 ",h("b",{class:"amt",text:won(out)})," · ",
+    left<0?h("span",{class:"pill crit"},"! 사용 몫 "+won(-left)+" 초과"):h("span",null,"남은 사용 가능 금액 ",h("b",{class:"amt",text:won(left)}))))}
+function calendar(el,m){el.textContent="";DOW.forEach(function(d){el.appendChild(h("div",{class:"dow",text:d}))});
+  var p=viewMonth.split("-"),first=new Date(+p[0],+p[1]-1,1).getDay(),td=today(),i;
+  for(i=0;i<first;i++)el.appendChild(h("div"));
+  for(i=1;i<=m.days;i++){(function(d){var date=viewMonth+"-"+pad(d),inc=m.inDay[d],out=m.byDay[d];
+    el.appendChild(h("button",{type:"button",class:(date===td?"today ":"")+(date===selDay?"sel":""),"aria-pressed":date===selDay?"true":"false",
+      "aria-label":d+"일"+(inc?" 수입 "+won(inc):"")+(out?" 지출 "+won(out):""),onclick:function(){selDay=date;draw()}},
+      h("span",{class:"n",text:d}),inc?h("span",{class:"in",text:"+"+short(inc)}):null,out?h("span",{class:"out",text:"-"+short(out)}):null))})(i)}}
 
 /* ---------- 그리기 ---------- */
 var raf=0;function draw(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;render()})}
@@ -528,27 +601,32 @@ function render(){
   /* 일정 */
   fill($("#tasks"),sortBy(S.tasks,function(t){return (t.done?"1":"0")+(t.due||"9999")+t.id}).map(taskRow),"할 일이 없습니다.");
   fill($("#events"),sortBy(S.events.filter(function(e){return e.date>=td}),function(e){return e.date+(e.time||"")}).map(eventRow),"예정된 일정이 없습니다.");
-  /* 자산 */
-  var cur=monthSum(nowKey()),hm=$("#home-money");hm.textContent="";
-  var hb=heroBox(cur,true);hb.className="card hero";hb.style.padding="14px";hm.appendChild(hb);
-  var m=monthSum(viewMonth),vp=viewMonth.split("-"),daily=+S.config.daily||0;
+  /* 가계부 */
+  document.querySelectorAll("[data-mt]").forEach(function(el){el.hidden=el.dataset.mt!==moneyTab});
+  var cur=monthSum(nowKey()),dd=new Date().getDate(),tInc=cur.inDay[dd]||0,tOut=cur.byDay[dd]||0,as=assetSum();
+  var hm=$("#home-money");hm.textContent="";
+  hm.appendChild(h("div",{class:"tiles"},tile("총 순자산",S.accounts.length?signed(as.net):"미입력"),tile("오늘 수익",won(tInc)),tile("오늘 사용 가능",won(Math.max(0,tInc*(+S.alloc.use||0)/100-tOut)))));
+  var ah=$("#a-hero");ah.textContent="";ah.appendChild(assetHero());assetChart($("#a-chart"));
+  $("#a-psum").textContent=S.accounts.length?"순자산 "+signed(as.p):"";$("#a-bsum").textContent=S.accounts.length?"순자산 "+signed(as.b):"";
+  fill($("#a-plist"),S.accounts.filter(function(a){return a.owner!=="b"}).map(acctRow),"개인 계좌·자산이 없습니다. 아래에서 추가하세요.");
+  fill($("#a-blist"),S.accounts.filter(function(a){return a.owner==="b"}).map(acctRow),"사업 계좌·자산이 없습니다. 아래에서 추가하세요.");
+  var alh=$("#al-hero");alh.textContent="";alh.appendChild(h("div",{class:"k",text:"오늘 얻은 수익"}));alh.appendChild(h("div",{class:"big",text:won(tInc)}));
+  allocBox($("#al-box"),tInc,tOut,"오늘");allocBox($("#al-month"),cur.inc,cur.out,"이번 달");
+  $("#al-mmeta").textContent=cur.inc?"수익 "+won(cur.inc):"";
+  fill($("#al-today"),cur.rows.filter(function(e){return e.type==="in"&&e.date===td}).map(function(e){
+    return h("li",null,h("span",{class:"main"},h("b",{class:"amt",text:"+"+won(e.amt)}),e.memo?h("div",{class:"sub",text:e.memo}):null),delBtn(function(){moneyDel(nowKey(),e.id)}))}),"오늘 기록한 수익이 없습니다.");
+  var m=monthSum(viewMonth),vp=viewMonth.split("-");
   $("#m-label").textContent=vp[0]+"년 "+(+vp[1])+"월";$("#m-now").hidden=m.isNow;
-  var mh=$("#m-hero");mh.textContent="";mh.appendChild(heroBox(m,false));
-  var pl=$("#m-plan");pl.textContent="";
-  if(daily){pl.appendChild(tile("하루",won(daily)));pl.appendChild(tile("한 주",won(daily*7)));pl.appendChild(tile("이 달",won(daily*m.days)));pl.appendChild(tile("한 해",won(daily*365)))}
-  else pl.appendChild(h("p",{class:"empty",text:"하루에 쓸 수 있는 금액을 넣으면 주·월·연 가용자금을 계산합니다."}));
-  $("#m-avg").textContent=m.out&&m.passed?("하루 평균 "+won(m.out/m.passed)):"";
-  chart($("#m-chart"),m);
+  var mt=$("#m-tiles");mt.textContent="";mt.appendChild(tile("수입",won(m.inc)));mt.appendChild(tile("지출",won(m.out)));mt.appendChild(tile("수지",signed(m.inc-m.out)));
+  calendar($("#cal"),m);
+  $("#d-title").textContent=nice(selDay)+" 기록";
+  fill($("#m-list"),m.rows.filter(function(e){return e.date===selDay}).map(function(e){
+    return h("li",null,h("span",{class:"pill "+(e.type==="in"?"good":"plain"),text:e.type==="in"?"수입":(e.cat||"기타")}),
+      h("span",{class:"main"},h("b",{class:"amt",text:(e.type==="in"?"+":"-")+won(e.amt)}),e.memo?h("div",{class:"sub",text:e.memo}):null),delBtn(function(){moneyDel(viewMonth,e.id)}))}),"이 날 기록이 없습니다. 위에서 바로 적으세요.");
   var bars=$("#m-bars");bars.textContent="";var ck=Object.keys(m.cats).sort(function(a,b){return m.cats[b]-m.cats[a]}),mx=ck.length?m.cats[ck[0]]:0;
   if(!ck.length)bars.appendChild(h("p",{class:"empty",text:"지출을 기록하면 분류별로 보여줍니다."}));
   ck.forEach(function(c){bars.appendChild(h("div",{class:"b",title:c+" "+won(m.cats[c])},h("span",{text:c}),h("span",{class:"t"},h("i",{style:"width:"+Math.max(2,Math.round(m.cats[c]/mx*100))+"%"})),
     h("span",{class:"n"},won(m.cats[c]),h("small",{text:Math.round(m.cats[c]/m.out*100)+"%"}))))});
-  $("#m-count").textContent=m.rows.length?m.rows.length+"건":"";
-  var rows=[],last="";m.rows.forEach(function(e){
-    if(e.date!==last){last=e.date;var dd=+e.date.slice(8,10);rows.push(h("li",{class:"day"},h("span",{text:nice(e.date)}),h("span",{class:"amt",text:m.byDay[dd]?"지출 "+won(m.byDay[dd]):""})))}
-    rows.push(h("li",null,h("span",{class:"pill "+(e.type==="in"?"good":"plain"),text:e.type==="in"?"수입":(e.cat||"기타")}),
-      h("span",{class:"main"},h("b",{class:"amt",text:(e.type==="in"?"+":"-")+won(e.amt)}),e.memo?h("div",{class:"sub",text:e.memo}):null),delBtn(function(){moneyDel(viewMonth,e.id)})))});
-  fill($("#m-list"),rows,"이 달에 기록된 내역이 없습니다.");
   /* 취미 */
   var lf=$("#log-filter");lf.textContent="";["전체","블로그","글쓰기","기타"].forEach(function(c,ix){
     lf.appendChild(h("label",null,h("input",{type:"radio",name:"lf",id:"lf-"+ix,checked:c===logFilter?true:null,onchange:function(){logFilter=c;draw()}}),h("span",{text:c})))});
@@ -590,11 +668,20 @@ on("#lead-form",function(f){add("leads",{name:val("#lead-name"),text:val("#lead-
 var mc=$("#m-cats");CATS.forEach(function(c,i){mc.appendChild(h("label",null,h("input",{type:"radio",name:"mcat",id:"mc-"+i,value:c,checked:i===0?true:null}),h("span",{text:c})))});
 function mtype(){return document.querySelector('input[name="mtype"]:checked').value}
 document.querySelectorAll('input[name="mtype"]').forEach(function(r){r.addEventListener("change",function(){mc.hidden=mtype()==="in"})});
+document.querySelectorAll('input[name="mtab"]').forEach(function(r){r.addEventListener("change",function(){moneyTab=r.value;draw()})});
 document.querySelectorAll("[data-plus]").forEach(function(b){b.addEventListener("click",function(){var p=+b.dataset.plus;$("#m-amt").value=p?(+$("#m-amt").value||0)+p:""})});
-on("#money-form",function(){var a=+val("#m-amt"),d=val("#m-date")||today();if(!(a>0))return;var type=mtype();
-  moneyAdd(d.slice(0,7),{type:type,amt:a,cat:type==="in"?"수입":document.querySelector('input[name="mcat"]:checked').value,memo:val("#m-memo"),date:d});
-  $("#m-amt").value="";$("#m-memo").value="";if(d.slice(0,7)!==viewMonth){viewMonth=d.slice(0,7);draw()}toast("기록했습니다")});
-on("#budget-form",function(){S.config.daily=+val("#cfg-daily")||0;save();draw();toast("저장했습니다")});
+on("#money-form",function(){var a=+val("#m-amt");if(!(a>0))return;var type=mtype();
+  moneyAdd(selDay.slice(0,7),{type:type,amt:a,cat:type==="in"?"수입":document.querySelector('input[name="mcat"]:checked').value,memo:val("#m-memo"),date:selDay});
+  $("#m-amt").value="";$("#m-memo").value="";toast("기록했습니다")});
+on("#inc-form",function(){var a=+val("#inc-amt");if(!(a>0))return;moneyAdd(nowKey(),{type:"in",amt:a,cat:"수입",memo:val("#inc-memo"),date:today()});
+  $("#inc-amt").value="";$("#inc-memo").value="";toast("수익을 기록했습니다")});
+on("#alloc-form",function(){var a=+val("#al-inv")||0,b=+val("#al-sav")||0,c=+val("#al-use")||0;
+  if(a+b+c!==100){toast("세 비율의 합이 100%가 되어야 합니다 (지금 "+(a+b+c)+"%)");return}
+  S.alloc={inv:a,sav:b,use:c};save();draw();toast("비율을 저장했습니다")});
+on("#acct-form",function(){var b=+val("#acct-bal");if(!(b>=0))return;
+  S.accounts.push({id:newId(),name:val("#acct-name"),owner:document.querySelector('input[name="aowner"]:checked').value,kind:document.querySelector('input[name="akind"]:checked').value,bal:b});
+  $("#acct-name").value="";$("#acct-bal").value="";snap();toast("추가했습니다")});
+function fillAlloc(){$("#al-inv").value=S.alloc.inv;$("#al-sav").value=S.alloc.sav;$("#al-use").value=S.alloc.use}
 on("#log-form",function(){add("logs",{cat:$("#log-cat").value,date:val("#log-date")||today(),text:val("#log-text")});$("#log-text").value=""});
 on("#note-form",function(){add("notes",{text:val("#note-text"),tag:document.querySelector('input[name="ntag"]:checked').value,at:new Date().toISOString()});$("#note-text").value=""});
 on("#app-form",function(f){var u=val("#app-url");if(!/^[a-z][a-z0-9+.\-]*:/i.test(u))u="https://"+u;
@@ -604,14 +691,14 @@ on("#cfg",function(){S.config.region=val("#cfg-region")||"서울";save();loadWea
 $("#apps-edit").addEventListener("click",function(){editApps=!editApps;draw()});
 $("#tasks-clear").addEventListener("click",function(){var n=S.tasks.length;S.tasks=S.tasks.filter(function(t){return !t.done});if(n===S.tasks.length){toast("완료한 항목이 없습니다");return}save();draw()});
 $("#note-q").addEventListener("input",draw);
-function setMonth(k){viewMonth=k;$("#m-date").value=k===nowKey()?today():k+"-01";draw()}
+function setMonth(k){viewMonth=k;selDay=k===nowKey()?today():k+"-01";draw()}
 function shift(n){var p=viewMonth.split("-"),d=new Date(+p[0],+p[1]-1+n,1);setMonth(d.getFullYear()+"-"+pad(d.getMonth()+1))}
 $("#m-prev").addEventListener("click",function(){shift(-1)});$("#m-next").addEventListener("click",function(){shift(1)});$("#m-now").addEventListener("click",function(){setMonth(nowKey())});
 $("#backup").addEventListener("click",function(){var a=h("a",{href:URL.createObjectURL(new Blob([JSON.stringify(S,null,1)],{type:"application/json"})),download:"homeboard-"+today()+".json"});
   document.body.appendChild(a);a.click();a.remove();toast("백업 파일을 저장했습니다")});
 $("#restore").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();
   r.onload=function(){try{var d=JSON.parse(r.result);if(!d||typeof d!=="object"||!Array.isArray(d.tasks))throw 0;
-      for(var k in S)if(d[k]!=null)S[k]=d[k];save();$("#cfg-region").value=S.config.region||"";$("#cfg-daily").value=S.config.daily||"";loadWeather(true);draw();toast("백업을 불러왔습니다")}
+      for(var k in S)if(d[k]!=null)S[k]=d[k];save();$("#cfg-region").value=S.config.region||"";fillAlloc();loadWeather(true);draw();toast("백업을 불러왔습니다")}
     catch(x){toast("홈보드 백업 파일이 아닙니다")}e.target.value=""};r.readAsText(f)});
 
 /* ---------- 화면 전환 ---------- */
@@ -625,8 +712,8 @@ window.addEventListener("resize",draw);
 
 /* ---------- 시작 ---------- */
 load();
-["#event-date","#m-date","#log-date"].forEach(function(x){$(x).value=today()});
-$("#cfg-region").value=S.config.region||"";$("#cfg-daily").value=S.config.daily||"";
+["#event-date","#log-date"].forEach(function(x){$(x).value=today()});
+$("#cfg-region").value=S.config.region||"";fillAlloc();
 route();render();loadWeather(false);loadBrief();
 document.addEventListener("visibilitychange",function(){if(!document.hidden){loadWeather(false);loadBrief();draw()}});
 if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(function(){});
