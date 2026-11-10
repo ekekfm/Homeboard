@@ -1,0 +1,22 @@
+name: 아침 뉴스 갱신
+on:
+  schedule:
+    - cron: "47 21 * * *"   # 매일 한국 시간 오전 6시 47분 (UTC 21:47)
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/briefing.mjs
+      - name: 변경이 있으면 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/briefing.json
+          git diff --cached --quiet || (git commit -m "뉴스 갱신" && git push)
