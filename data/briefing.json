@@ -1,67 +1,200 @@
 {
- "updatedAt": "2026-11-12T22:27:11.771Z",
+ "date": "2026-11-14",
+ "slot": "morning",
+ "updatedAt": "2026-11-13T22:27:00.483Z",
+ "slots": {
+  "morning": {
+   "at": "2026-11-13T22:27:00.483Z",
+   "economy": [
+    {
+     "t": "대만 매체 \"젠슨 황 불륜녀, 中국가안전부 반도체팀 소속\"",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5JTlU1R1VKckk3MWxQNlVhUlZrRURGNTVQamctRVU3bTFiWGk3cHdKdjF3RUFMbXBIcUhZWmlFVFRTWFZDU3J3R0pDb1dXcTBHUFV4elFESkRvVFdqWXRBbTJkRm1Xbzg?oc=5",
+     "d": "2026-11-13T12:28:00.000Z"
+    },
+    {
+     "t": "[뉴욕증시-1보] 젠슨 황 스캔들 여파 지속…혼조 마감",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BaFhLd2dPcDhaNHFtYTg3cERiZ0hVWU1aSjFmZ1J4eVRWU0FxazFEWm14REZsY1hISll3eFRkaXR3Q0RWNGN0TXRVWlRlVmpZMVVnUUNfQmI4ZmZ4US0yMmxJUDd0SDFRN3V4bW5JQm7SAXRBVV95cUxQZlpWYUgtOFlSME9YWmQtVVJfODBITmVaVDJBZ0U1QmJUbm9rTEpwVVFEVFhnZW9CTlFicnFoaUk0SWRzWjh5SHF3SlR0SEpydXJiVkxvUGNGdEx1cV9Fal8wRTY3Y0FmV2l0OUNqX04yX1BlSQ?oc=5",
+     "d": "2026-11-13T21:16:38.000Z"
+    },
+    {
+     "t": "환율·유가 동반 하락에 10월 수입물가 1.8%↓",
+     "src": "한국무역협회-KITA.NET",
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMjRWWXZLeXpNNWlsamlKV3BMd1NneVpSbzdZVXRWVmJMVjZZX2c0LXJsaVB2SlNDR0RadlUwRlVaaElYTFVTT0UwUHIwdHRVU2JBNVU2Qk9UV3JnV0w0a2hmcmJuallJRTg1QTNzWF9Ma2lYRUFjbDItRGQ2bEFUM3U0ZmJ1MW9rZTZXY3l3WDZ0VWEyYXdPVjMxNzBRRHU2cnNKd0pLb1BRQnI1dWUxd194eDUwNVNMZDZLTkVRT3BGXzJvcnlQalVHc0xRLUJ5RE0xWG1B?oc=5",
+     "d": "2026-11-13T04:59:51.000Z"
+    },
+    {
+     "t": "美재무 \"과도한 금리 인상은 잡음 큰 수치에 대응하는 것…연준 오픈마인드 가져야\"",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHU2YyVnBtalIwOGVIakdrTVF6VWR6eHJ5YWFxQWY3T2Zldy1MZG1sZzNmV1BvUGxUQ1RxOVFnVXNMOS1mSkh3NEY4QzV1cGU3RjByRkphaVFaTG5oN1FWWENLTlBsd3NUVmlxcUN4RXA?oc=5",
+     "d": "2026-11-13T16:09:50.000Z"
+    },
+    {
+     "t": "2차 모두의창업 정보 유출, 1차 사고 판박이…'취약한 API' 타깃(종합)",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBOTmtIUW1NX2VsOE12Umo3aFc3Y0J2Wlg3QzJjaUdxVm5EYnhMQTlNLTEwaWZZMTVSVy1rTHVva2dnZEVPVk9xZ3hpZ04tZHhHQ2xIZVppSHFoMkXSAWBBVV95cUxPbTJZSTNOZmZJQ0p0aXlVckg1MGJnZkNMYkdLU2Q3cVVqTGZsU2FFSllZdXRpd2hPU1piel9YRms3NzJDaFI3Ym13aE40ZmM1MzNhN3lZV2hsXzduSkpGTHY?oc=5",
+     "d": "2026-11-13T12:25:19.000Z"
+    },
+    {
+     "t": "NH농협캐피탈, 5년째 지배구조 'A'…투명경영 경쟁력 입증",
+     "src": "재외동포신문",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE83OUJXQnJoSG45bzIzeHVEZWZoLWVTMUppMVB2aEtRaWl2eURZWEVaOWNwVzZhb2hGMnVvLV83cEpxVDgyUzlYc1FKQW5yYVhzeEJxQ1pOYnBBMUhlTVU4MnFXazJrWUJzams5Vw?oc=5",
+     "d": "2026-11-13T13:33:43.000Z"
+    }
+   ],
+   "stock": [
+    {
+     "t": "\"양손으로 엔비디아 주식 사들인다\"…젠슨 황 충격, 주가 바닥 쳤나 - 머니투데이",
+     "src": "머니투데이",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Wc3laQ1M5WEY5QWVmN29tRWpLM3UxS3pIdUtOVVNYcU5mNzZGSm5YRVE5MEEzMEVrQ0pNQ1oxUTg5Q25tSG5Qd0QtUWhGdTlObjQ2aFp0QnM5SkdJWG1kdWR6aHRoQVRW0gFuQVVfeXFMUEQ5YmdrWDJHc28xR0FmYTZnN1dRdHRNdVpvQjNiU3VLdFR4dncyeUJlMW50MjA3RGt6WDhKZ1JmZm1kUUZ0YlF4TGdHbHhrR1J4bnRQcDV2ajRTVkpLaGRxcnRLSWpCcVYxVUt2WUE?oc=5",
+     "d": "2026-11-13T21:34:08.000Z"
+    },
+    {
+     "t": "뉴욕증시 혼조 마감…엔비디아 하락세 계속, 2%↓",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB5MHNNT2FzWnlzOWNJRnA3NnFCM3RGbVZKVHBYejdrQk0xSDBvTEJJblNxblp3eDhfR2syT1BRejBpYnJuclQ4X1o2eXQweVhXbzdqd24zWk41bzjSAWBBVV95cUxPcW05YTVodGYwS0VTZnJ4Yzk3bFdESGNrOGRNMWEtcl81azNZazByRlNvb3JvWi1yUnBycGtWWEZLaGtMN1k1YzBGaVBQR3FUMzJRSWNzamFxZWJhZDcwZm4?oc=5",
+     "d": "2026-11-13T21:18:20.000Z"
+    },
+    {
+     "t": "주가 하락에 ‘줍줍’ 美 개미들…“엔비디아서 당장 나와라” 투자거물 경고, 왜?",
+     "src": "매일경제",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Tbk1nMHlfOTBKTXBYSUVDMlBqNW1abktmVlM2ZnpaUlBvLURpY1NMb0xIdWNzeVh1Zk9oMk1pSS1zXzJQXy1Bb2dyNExDaFJQVGc?oc=5",
+     "d": "2026-11-13T11:38:03.000Z"
+    },
+    {
+     "t": "뉴욕증시, 반도체주 약세에 나스닥 0.91%↓…다우는 상승",
+     "src": "Chosunbiz",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQQWtVZW5IV1hmWGJfUG1KQmhuQzRWbGlyYldmX1ZiUGxoQnhEUE1HRksxc2RNMDNEVExXZWJadFVjTnhFaDZnQThMV2pjVTZPV0hZSjY2YmxfOWc1MHhTUmJsbndLVkhpZnpuS1hpbktTaDdnc25kNzJ6MzloakNkOGtIODNUX0ZwUmtuclU3Ny0tVG1YY09Qa1BOMjZvd9IBsgFBVV95cUxQcDhkOTRKYk1yckJuODBxMVFpQV9WcWpobFZDTkFrRHVzd2dSbVNRcVFwQjVHVE1ObzFkYzg0LWF0cXBtaHI0SG5tMmkxMGxZY3FJdlNvUGw0V2NxN05kZ0toWTFzWGdMYm5RLW9VdWg3MGZYMWNuWHFQMTUwYm84b3JrRnZBZjVOMGtuZ2puMUQtQ0pyZlpPaXpOVHY5c1FJNmFabUNlV3hkOEVVYy1SaTFR?oc=5",
+     "d": "2026-11-13T22:09:00.000Z"
+    },
+    {
+     "t": "’젠슨 황 사임’에도 올랐던 코스피…외국인 매도에 하락",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5EZkJJTHFTdVlFWFdDRWwteTc3ak1IaUJSZjh4MnJKVnY2ZVVGUEJWWE9EbHVhS1o2dmhOamgydTNvNFJYWGtBYmxXd3hjenlVQmo3SE5wNHZ0MWt4T3pDbmxRUlVCS2M?oc=5",
+     "d": "2026-11-13T11:56:00.000Z"
+    },
+    {
+     "t": "인터넷/SNS상 코스닥 추가대책에 대한 허위정보 관련 투자자 유의사항 - 전체 | 카드/한컷 | 멀티미디어",
+     "src": "대한민국 정책브리핑",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUUtHenkwcUJHQmxEbWpscmM4WVVubnRXaDVzX2NKZnRQamEtQ0tpU2Jwd2xBeXJQUEtKM042a1c1ZUhTYnZkMFZ1elMtZXVfSy1BMFBnaHRoUGFCVXhBdkNnSDdvUWVnOUsza3JQTkwwOG1HUi1EUFg2X0V5R2ZJekptNEtxR0ZULWFz?oc=5",
+     "d": "2026-11-13T06:24:57.000Z"
+    }
+   ],
+   "news": [
+    {
+     "t": "‘쌈짓돈’ 논란 미래기금… 국회 “25조 늘려 달라”",
+     "src": "동아일보",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5oQndpQ1FreFlpejFUWWlmWWpGMERTNm5Yd1pyeE03VkRha05Cc1FGSllTZVJoc1oteUFIUHgzVlAzeVZ4dTUxaTNMMTZBMVFNV1JZS0ZrOGNBdVhBVi1aQ3NJSVk5bExhVDhGSzVxT3VfUUZnM2pj0gFmQVVfeXFMTmpVQnpYaW5URmdfekFraElHOGQ4OUpWVVRLSEFpMHYxcDB3NWhtSkRycXJpZUJTU3YzZ2FONnpranVFRlVtS2wxaUpZVnVRTjRwRjdaOWp4MkJOX3otaWl3RmNCYzZR?oc=5",
+     "d": "2026-11-13T16:40:00.000Z"
+    },
+    {
+     "t": "조현, 중국에 ’한반도 문제’ 역할 당부…왕이 “정책 변함없어“",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5kRUFJVU5PVFdhNjJyMjlUaWFFVkVsak5tSDEydzJ0ZUtMQ0M2UjdwMnc4RGhSZ0tiLUZfaEtzVjFIcnRlRGFJWkdfOGlVaVNfTzF1SmludS1ua2pGTmM2N040ZEtrZ1k?oc=5",
+     "d": "2026-11-13T15:21:00.000Z"
+    },
+    {
+     "t": "‘신천지 사태’에 ‘최민희 구설’까지…친명-친청 갈등 심화",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14ZmZPdWZXTEt4Uzhzb18xUUdBRFE5OEtkc2g4Sk5oXzM0d21KYXNjcEVacmZPNm9TdTRaeU03NmdVd3BhS0xEa0NVWEx0c0JadnNoR01KMHROaVBiU0tJY1hnNjdjTnhhekZiaDdTbjhIb2Rv?oc=5",
+     "d": "2026-11-13T10:16:00.000Z"
+    },
+    {
+     "t": "\"AI 안경 쓴 거 맞네\" 댓글 달았다간…무서운 '경고' [법알못]",
+     "src": "한국경제",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9XSlNMc0xBak4xUVhuWmptSmpZc3pmcy12bUc4ZU1xZDlyVjZhUGJZd3JoY2ZvMlg0SmtUUENad3NfdUhXWTRDYUlOVGl0RUpzc0laYkdEWVV3dw?oc=5",
+     "d": "2026-11-13T10:09:01.000Z"
+    },
+    {
+     "t": "이란 외교부 “뱁새가 황새 따라가면 가랑이 찢어져”···한국 속담으로 ‘청해부대 임무 확대’ 경고",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12YjNYdzdLSE44V1d0MXJWWE1IZWxabGVuSVhyS0dEMkgyZXE5RC1ucmxzWFNYaWNGazJVM3dJWV9paGVCcUtyVjVPejdjWXNjUDVkRGhEemVaQdIBX0FVX3lxTE0zRWcydWNZRlRMdTNHS1AzNF9sa2Q4eENQQkZXSDliS1pFWXlCMHc4RXRDNmloaEhLRk1FMWhYc1J5WjF0a1JJY050aUxFeWxmRE5ScUFmVk1jNTdGdFFJ?oc=5",
+     "d": "2026-11-13T06:07:00.000Z"
+    },
+    {
+     "t": "‘성북 10대 여성 살해’ 50대 남성 구속…부검서 “입실 직후 범행” 소견",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5faU9xSDV5Um9HWTZ0d3gyc240ZlNDT2FGNUpVelhveFFWOGs4UHhuSmhnRGZIeTJvaTVpdTFudTZzTi05OXVTTnJBYV9pUU45LTF0REdzcTZCbnQ2UnFCZmZLOVZPcjVjSFd0LVI5NlEzUQ?oc=5",
+     "d": "2026-11-13T13:13:00.000Z"
+    }
+   ]
+  }
+ },
  "economy": [
   {
-   "t": "[속보] 사임한 젠슨 황, 세 번째 불륜 의혹까지…또 다른 엔비디아 직원",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4zRkpzZTRTbUJyd3R1bmg3WF9FREtoTkZLSlZ0MjVMc2FlUmRsR0dnYi1yLUhsYWJyVGNDWTA0RGdLdzRCY0QxbnhMMDNqazhSVlZlOWxZMUNMNnBpSEdjNmpfVHFnTElnQ3NUMUwtUQ?oc=5"
+   "t": "대만 매체 \"젠슨 황 불륜녀, 中국가안전부 반도체팀 소속\"",
+   "src": "연합뉴스TV",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5JTlU1R1VKckk3MWxQNlVhUlZrRURGNTVQamctRVU3bTFiWGk3cHdKdjF3RUFMbXBIcUhZWmlFVFRTWFZDU3J3R0pDb1dXcTBHUFV4elFESkRvVFdqWXRBbTJkRm1Xbzg?oc=5",
+   "d": "2026-11-13T12:28:00.000Z"
   },
   {
-   "t": "안경 벗은 이재용 모습에 '깜짝'…\"돌아가신 이건희 회장인 줄\" [영상]",
-   "src": "한국경제",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9YNXM0d3NYWGlTRGdEajdpZE9EdjNSWmZ4ZkZLRnAtZ1dCV2RENDR4QTVyMldYZ3dvTDN4YWJMaVhnSDVMaFhDcjFFQWZPQUxtdmRPWXBtVHNDQQ?oc=5"
+   "t": "[뉴욕증시-1보] 젠슨 황 스캔들 여파 지속…혼조 마감",
+   "src": "연합인포맥스",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BaFhLd2dPcDhaNHFtYTg3cERiZ0hVWU1aSjFmZ1J4eVRWU0FxazFEWm14REZsY1hISll3eFRkaXR3Q0RWNGN0TXRVWlRlVmpZMVVnUUNfQmI4ZmZ4US0yMmxJUDd0SDFRN3V4bW5JQm7SAXRBVV95cUxQZlpWYUgtOFlSME9YWmQtVVJfODBITmVaVDJBZ0U1QmJUbm9rTEpwVVFEVFhnZW9CTlFicnFoaUk0SWRzWjh5SHF3SlR0SEpydXJiVkxvUGNGdEx1cV9Fal8wRTY3Y0FmV2l0OUNqX04yX1BlSQ?oc=5",
+   "d": "2026-11-13T21:16:38.000Z"
   },
   {
-   "t": "젠슨 황 퇴진·유가 급등에 뉴욕증시 하락‥나스닥 0.4%↓",
-   "src": "MBC 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9YWVBTS005ZDdMM3NMUDBQeWpKNlJra2lCZ0tnMXV4bkVnaHJjVzY3N2tGRHo4Mjh4bW1uNG9EZGlzNmZOUWdzYjRXUC1NVks4akZHaVg3OXViUFlRNHJVcUJxdVg5cUZOSVhwckJfZTBvVnpN0gF0QVVfeXFMUHpxRXRfYTExYzdqd0NVZGFBWFVOdUNqV0lUeUVyUTZIc3ByOU5mMG5MVXdqU1YtSDhJb2xqWEszRGFyWFFPcW9QcHdFRjV6cVp4dkF3SzVKeTQ5VU1hWEFKdElaaks2dTRQNElWZ0RhLV9QcWk?oc=5"
-  },
-  {
-   "t": "한국 간판주 버리는 외국인… 현대차 26년·삼전 17년 만의 ‘지분 최저치’",
-   "src": "Chosunbiz",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOY3hmTFBUZnAwUzViaFMyU19rWWVyOE9sQWo4YUJobDBLTklLZEstUFA1S3poSHBvZzh5TTNUQlRiNmRiYmZEUHlycktabk9OYUdob0J4YUczNXZhMFBTeXh0dXR4QmdxbzhOblhieWRjVHRIR20xTVpZdmMxVllGZ0pveEU1WDc20gGcAUFVX3lxTE15WU5weG9wdjhhY2RPcC1mQ2c2VEV6akNfVFhXYXlpWXZQTm1QYWNJZTRnM2ZraWo5TG9mYlduT215QkM0NUxDLW0tclpLSndWNU9iRXAwbE43TXdnWE10cXR0dC1EYmd5N1M2dG5WWjBhLXcxWkEzWms4UWItZXdNNmtqREpMTUswN2FEeVJUNUdvdXFCY2gyNDg3SA?oc=5"
-  },
-  {
-   "t": "대기업 무역흑자 4배 될 때…중견은 적자 전환, 중소는 적자 확대",
+   "t": "환율·유가 동반 하락에 10월 수입물가 1.8%↓",
    "src": "한국무역협회-KITA.NET",
-   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQYTVIUEJUMGdkemtZV21LcWExTkhwN3F1dnRmSkRiRi03dDFnd0N1OUFCeTUtb2RjSmRYWnRnSS1GWGp0TkRFM3BkUnEyLVFFM2lHbWVyZVpjUU1sampGNDRmNjYya0N0OVhFRDJ3R2JsaVY0MnU4NHo1bkxHbGFscFZkLVhWQTRIa21XZGoxNGdtbzhtMHlGVzhfRy1sbFpVdHlQQVUwTVNBQzFNamFxN3VBcFNUb1R6SmsxT1lfTGtGYl96LWxZc1JNYkQ3Mnl3eGNMekl3?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMjRWWXZLeXpNNWlsamlKV3BMd1NneVpSbzdZVXRWVmJMVjZZX2c0LXJsaVB2SlNDR0RadlUwRlVaaElYTFVTT0UwUHIwdHRVU2JBNVU2Qk9UV3JnV0w0a2hmcmJuallJRTg1QTNzWF9Ma2lYRUFjbDItRGQ2bEFUM3U0ZmJ1MW9rZTZXY3l3WDZ0VWEyYXdPVjMxNzBRRHU2cnNKd0pLb1BRQnI1dWUxd194eDUwNVNMZDZLTkVRT3BGXzJvcnlQalVHc0xRLUJ5RE0xWG1B?oc=5",
+   "d": "2026-11-13T04:59:51.000Z"
   },
   {
-   "t": "美, 中 반도체 규제 전면전…삼성·SK 중국공장 '초비상'",
+   "t": "美재무 \"과도한 금리 인상은 잡음 큰 수치에 대응하는 것…연준 오픈마인드 가져야\"",
+   "src": "연합인포맥스",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHU2YyVnBtalIwOGVIakdrTVF6VWR6eHJ5YWFxQWY3T2Zldy1MZG1sZzNmV1BvUGxUQ1RxOVFnVXNMOS1mSkh3NEY4QzV1cGU3RjByRkphaVFaTG5oN1FWWENLTlBsd3NUVmlxcUN4RXA?oc=5",
+   "d": "2026-11-13T16:09:50.000Z"
+  },
+  {
+   "t": "2차 모두의창업 정보 유출, 1차 사고 판박이…'취약한 API' 타깃(종합)",
+   "src": "연합뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBOTmtIUW1NX2VsOE12Umo3aFc3Y0J2Wlg3QzJjaUdxVm5EYnhMQTlNLTEwaWZZMTVSVy1rTHVva2dnZEVPVk9xZ3hpZ04tZHhHQ2xIZVppSHFoMkXSAWBBVV95cUxPbTJZSTNOZmZJQ0p0aXlVckg1MGJnZkNMYkdLU2Q3cVVqTGZsU2FFSllZdXRpd2hPU1piel9YRms3NzJDaFI3Ym13aE40ZmM1MzNhN3lZV2hsXzduSkpGTHY?oc=5",
+   "d": "2026-11-13T12:25:19.000Z"
+  },
+  {
+   "t": "NH농협캐피탈, 5년째 지배구조 'A'…투명경영 경쟁력 입증",
    "src": "재외동포신문",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9qdWZueV8yZFhHWE9jdjdtY08xcTNhNnRzX3NpaTRWQS1vb1NPYVdDbldFamFtNE9oRzZJLXRuN3ZjSm1oTWt6Y2x6ZDdFYmluWjJ4dDU0QlpBVzVyUkpBUUJoV3RFUnRmdXRPag?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE83OUJXQnJoSG45bzIzeHVEZWZoLWVTMUppMVB2aEtRaWl2eURZWEVaOWNwVzZhb2hGMnVvLV83cEpxVDgyUzlYc1FKQW5yYVhzeEJxQ1pOYnBBMUhlTVU4MnFXazJrWUJzams5Vw?oc=5",
+   "d": "2026-11-13T13:33:43.000Z"
   }
  ],
  "news": [
   {
-   "t": "‘조작징계 의혹’ 폭로에…‘한동훈 복당’ 놓고 국힘 사분오열",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1PWVF6QkNDeU5pWTkzdjNNQ1RIMzVMMDhJQTJvX0JUMjdHcXpXLTVsNlRUb2l3c3d3OVQ0dE5XUW1xSmtCVkh0cEdXRzZJMS13ZUNFMWtNWHpNZTBlNFRiM1BHWi1tVEx2Wmc?oc=5"
-  },
-  {
-   "t": "이용철, 성남진흥재단 대표때 ‘대장동-위례’ 육성사업 제시",
+   "t": "‘쌈짓돈’ 논란 미래기금… 국회 “25조 늘려 달라”",
    "src": "동아일보",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5RT2NHdll2Q19OQTBiaWIxU2pvX1NoMnBJZEo1N3d1TFQ5dmRUdjlHS3BjbVZUMHpZZDdGb1hCWHZPVXlpNkRzT0hzZi1GejUwUUxmU1UwYWwxQXRsLWdVVkVWcm1jWmZCbnpQN2xuSlBtNktLbENV0gFmQVVfeXFMTVdfSWRsY2ZSVDlEYllUTm1keTVoMVpsbmNWXzM0dzZoSmw0MEJtZVI4M2RScUhoZnZhMkszNVFmbUp5TEpUM1psT1FIU3gzRXNERDNMMDU1SHVvMzZoVHBmWlpXN3pn?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5oQndpQ1FreFlpejFUWWlmWWpGMERTNm5Yd1pyeE03VkRha05Cc1FGSllTZVJoc1oteUFIUHgzVlAzeVZ4dTUxaTNMMTZBMVFNV1JZS0ZrOGNBdVhBVi1aQ3NJSVk5bExhVDhGSzVxT3VfUUZnM2pj0gFmQVVfeXFMTmpVQnpYaW5URmdfekFraElHOGQ4OUpWVVRLSEFpMHYxcDB3NWhtSkRycXJpZUJTU3YzZ2FONnpranVFRlVtS2wxaUpZVnVRTjRwRjdaOWp4MkJOX3otaWl3RmNCYzZR?oc=5",
+   "d": "2026-11-13T16:40:00.000Z"
   },
   {
-   "t": "50대男 손에 숨진 15세 소녀… 아들이 성폭행, 내연녀는 성매매 강요",
-   "src": "조선일보",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNmpfSndNelVfcXJ3RTNhVl96Tk9WR1FEeHRMMXZSUmtlWjM0QWhUT0t4OGpwS3pQYkxLMzR6Q05tX3J0S2IyakdpVEt4eWdZMEc4eEZjeFF3SzhGUHlkeXVwZlBDSXRDSlo5dGJTQUQ4UWZGc1k5MjJEV2tyTkQ4YWh4NV9aQQ?oc=5"
-  },
-  {
-   "t": "트럼프 \"이란과 합의 필요 없다\" 급선회…국제유가 급등",
+   "t": "조현, 중국에 ’한반도 문제’ 역할 당부…왕이 “정책 변함없어“",
    "src": "연합뉴스TV",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9wUDJ1VUhZbktwb2RFci0zQzZ6NmdjZUY5WEFXU2xHbF8zc2d0Wk9oUmduX3VWSUdRMjk5VmRna2JwYzU0S0laeG91QWQ0cUtvTWNuelNCMjh6VU90SlZGY3U1bFFBNE0?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5kRUFJVU5PVFdhNjJyMjlUaWFFVkVsak5tSDEydzJ0ZUtMQ0M2UjdwMnc4RGhSZ0tiLUZfaEtzVjFIcnRlRGFJWkdfOGlVaVNfTzF1SmludS1ua2pGTmM2N040ZEtrZ1k?oc=5",
+   "d": "2026-11-13T15:21:00.000Z"
   },
   {
-   "t": "오후 남부지방부터 비, 서울 낮 기온 17도",
-   "src": "KBS 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PNUsxTWRWaFZ2NVBwWjFvLWFvTWQ0amZWQWZMek5MclpjQjNwQkNzam54bmhSRjctZFJrM1FHR2pDa2lpWDdGRE42ZVBsdUlqUy1wczBPdHl5dHM?oc=5"
+   "t": "‘신천지 사태’에 ‘최민희 구설’까지…친명-친청 갈등 심화",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14ZmZPdWZXTEt4Uzhzb18xUUdBRFE5OEtkc2g4Sk5oXzM0d21KYXNjcEVacmZPNm9TdTRaeU03NmdVd3BhS0xEa0NVWEx0c0JadnNoR01KMHROaVBiU0tJY1hnNjdjTnhhekZiaDdTbjhIb2Rv?oc=5",
+   "d": "2026-11-13T10:16:00.000Z"
   },
   {
-   "t": "한국 절반 값에 여행까지 ‘일석이조’···정부 빗장 풀자 “스시자로 원정 간다” 와글와글",
+   "t": "\"AI 안경 쓴 거 맞네\" 댓글 달았다간…무서운 '경고' [법알못]",
+   "src": "한국경제",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9XSlNMc0xBak4xUVhuWmptSmpZc3pmcy12bUc4ZU1xZDlyVjZhUGJZd3JoY2ZvMlg0SmtUUENad3NfdUhXWTRDYUlOVGl0RUpzc0laYkdEWVV3dw?oc=5",
+   "d": "2026-11-13T10:09:01.000Z"
+  },
+  {
+   "t": "이란 외교부 “뱁새가 황새 따라가면 가랑이 찢어져”···한국 속담으로 ‘청해부대 임무 확대’ 경고",
    "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1pakVKWmx5WFVHZHVVSDMwZkpYenFheUIxQmMwNjBfbElZcWdJb1d0SWhrQXFWbi0tMDl6X041akdWYXhFN2w5dEZITTVRVGxFVlYwV0tmeVRSZ9IBX0FVX3lxTE1GSHNhdm42NlVpTHp2MEVfNDZCSk9YalZLQ2R3SEZ0Q2h0dEFDck9sWWUwOWxNeVhnOFk3OGN2OExWcUNyS0dVazdOZzBQRGxHYXRIM3Z0UHlsWkJVNGlF?oc=5"
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12YjNYdzdLSE44V1d0MXJWWE1IZWxabGVuSVhyS0dEMkgyZXE5RC1ucmxzWFNYaWNGazJVM3dJWV9paGVCcUtyVjVPejdjWXNjUDVkRGhEemVaQdIBX0FVX3lxTE0zRWcydWNZRlRMdTNHS1AzNF9sa2Q4eENQQkZXSDliS1pFWXlCMHc4RXRDNmloaEhLRk1FMWhYc1J5WjF0a1JJY050aUxFeWxmRE5ScUFmVk1jNTdGdFFJ?oc=5",
+   "d": "2026-11-13T06:07:00.000Z"
+  },
+  {
+   "t": "‘성북 10대 여성 살해’ 50대 남성 구속…부검서 “입실 직후 범행” 소견",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5faU9xSDV5Um9HWTZ0d3gyc240ZlNDT2FGNUpVelhveFFWOGs4UHhuSmhnRGZIeTJvaTVpdTFudTZzTi05OXVTTnJBYV9pUU45LTF0REdzcTZCbnQ2UnFCZmZLOVZPcjVjSFd0LVI5NlEzUQ?oc=5",
+   "d": "2026-11-13T13:13:00.000Z"
   }
  ],
  "week": [
@@ -122,6 +255,29 @@
      "t": "젠슨 황 퇴진·유가 급등에 뉴욕증시 하락‥나스닥 0.4%↓",
      "src": "MBC 뉴스",
      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9YWVBTS005ZDdMM3NMUDBQeWpKNlJra2lCZ0tnMXV4bkVnaHJjVzY3N2tGRHo4Mjh4bW1uNG9EZGlzNmZOUWdzYjRXUC1NVks4akZHaVg3OXViUFlRNHJVcUJxdVg5cUZOSVhwckJfZTBvVnpN0gF0QVVfeXFMUHpxRXRfYTExYzdqd0NVZGFBWFVOdUNqV0lUeUVyUTZIc3ByOU5mMG5MVXdqU1YtSDhJb2xqWEszRGFyWFFPcW9QcHdFRjV6cVp4dkF3SzVKeTQ5VU1hWEFKdElaaks2dTRQNElWZ0RhLV9QcWk?oc=5"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-14",
+   "items": [
+    {
+     "t": "대만 매체 \"젠슨 황 불륜녀, 中국가안전부 반도체팀 소속\"",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5JTlU1R1VKckk3MWxQNlVhUlZrRURGNTVQamctRVU3bTFiWGk3cHdKdjF3RUFMbXBIcUhZWmlFVFRTWFZDU3J3R0pDb1dXcTBHUFV4elFESkRvVFdqWXRBbTJkRm1Xbzg?oc=5",
+     "d": "2026-11-13T12:28:00.000Z"
+    },
+    {
+     "t": "[뉴욕증시-1보] 젠슨 황 스캔들 여파 지속…혼조 마감",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BaFhLd2dPcDhaNHFtYTg3cERiZ0hVWU1aSjFmZ1J4eVRWU0FxazFEWm14REZsY1hISll3eFRkaXR3Q0RWNGN0TXRVWlRlVmpZMVVnUUNfQmI4ZmZ4US0yMmxJUDd0SDFRN3V4bW5JQm7SAXRBVV95cUxQZlpWYUgtOFlSME9YWmQtVVJfODBITmVaVDJBZ0U1QmJUbm9rTEpwVVFEVFhnZW9CTlFicnFoaUk0SWRzWjh5SHF3SlR0SEpydXJiVkxvUGNGdEx1cV9Fal8wRTY3Y0FmV2l0OUNqX04yX1BlSQ?oc=5",
+     "d": "2026-11-13T21:16:38.000Z"
+    },
+    {
+     "t": "환율·유가 동반 하락에 10월 수입물가 1.8%↓",
+     "src": "한국무역협회-KITA.NET",
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMjRWWXZLeXpNNWlsamlKV3BMd1NneVpSbzdZVXRWVmJMVjZZX2c0LXJsaVB2SlNDR0RadlUwRlVaaElYTFVTT0UwUHIwdHRVU2JBNVU2Qk9UV3JnV0w0a2hmcmJuallJRTg1QTNzWF9Ma2lYRUFjbDItRGQ2bEFUM3U0ZmJ1MW9rZTZXY3l3WDZ0VWEyYXdPVjMxNzBRRHU2cnNKd0pLb1BRQnI1dWUxd194eDUwNVNMZDZLTkVRT3BGXzJvcnlQalVHc0xRLUJ5RE0xWG1B?oc=5",
+     "d": "2026-11-13T04:59:51.000Z"
     }
    ]
   }
