@@ -184,6 +184,42 @@ details summary{cursor:pointer;font-weight:600}
 .notice .nr a{color:var(--ink);font-weight:600}
 .notice .acts{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
 @media (prefers-reduced-motion:no-preference){.notice{animation:drop .25s ease-out}@keyframes drop{from{transform:translateY(-14px);opacity:0}}}
+/* 홈: 요약 숫자, 빠른 기록, 오늘 흐름(타임라인) */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.hstats a{display:flex;flex-direction:column;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;text-decoration:none;color:var(--ink);min-width:0}
+.hstats a:hover{border-color:var(--accent)}
+.hstats .k{font-size:12.5px;color:var(--muted)}
+.hstats b{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.qcap{display:flex;flex-direction:column;gap:10px}
+.qrow{display:flex;gap:8px}
+.qrow input{flex:1;min-width:0;min-height:48px;border:1px solid var(--line);background:var(--sunken);border-radius:12px;padding:0 14px;font-size:16px}
+.qrow input:focus{outline:none;border-color:var(--accent)}
+.qprev{margin:0;font-size:13.5px;color:var(--muted);min-height:1.4em}
+.qprev b{color:var(--ink);font-weight:600}
+.tl-row{display:grid;grid-template-columns:50px 14px minmax(0,1fr);column-gap:10px}
+.tl-time{font-size:13.5px;text-align:right;padding-top:2px;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:500}
+.tl-rail{display:flex;flex-direction:column;align-items:center}
+.tl-dot{width:12px;height:12px;border-radius:99px;border:2.5px solid var(--navy-2);background:var(--surface);margin-top:5px;box-sizing:border-box;flex:none}
+.tl-line{flex:1;width:2px;background:var(--line);min-height:18px}
+.tl-row:last-child .tl-line{visibility:hidden}
+.tl-body{padding-bottom:14px;min-width:0}
+.tl-title{display:block;font-size:15.5px;font-weight:600;line-height:1.45;color:var(--ink);text-decoration:none;word-break:keep-all;overflow-wrap:anywhere}
+a.tl-title:hover{text-decoration:underline;text-underline-offset:3px}
+.tl-sub{display:block;font-size:13px;color:var(--muted);line-height:1.45;word-break:keep-all;overflow-wrap:anywhere}
+.tl-row.past .tl-time,.tl-row.past .tl-title{color:var(--muted);font-weight:500}
+.tl-row.past .tl-dot{border-color:var(--muted)}
+.tl-row.rain .tl-dot{border-color:var(--warn)}
+.tl-row.rain .tl-title{color:var(--warn)}
+.tl-row.now .tl-time{color:var(--accent);font-weight:700}
+.tl-row.now .tl-dot{background:var(--accent);border-color:var(--accent)}
+.tl-now{display:flex;align-items:center;gap:8px;padding-top:2px}
+.tl-now span{font-size:12px;font-weight:700;color:#fff;background:var(--navy-2);border-radius:99px;padding:2px 9px}
+.tl-now i{flex:1;height:2px;background:var(--accent)}
+.subh{font-size:14px;font-weight:600;margin:4px 0 2px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:12px}
+.subh small{font-weight:400;color:var(--muted);font-size:12.5px}
+.hside{display:flex;flex-direction:column;gap:14px;min-width:0}
+.hmoney .big{font-family:var(--display);font-size:28px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.25;margin:2px 0 10px}
 /* 시간대 선택 막대 */
 .slotbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
 .sb-date{display:flex;flex-direction:column;gap:1px;min-width:0}
@@ -220,6 +256,8 @@ details summary{cursor:pointer;font-weight:600}
   .wxchip{flex-direction:row;align-items:center;gap:10px;padding:8px 14px} .wxchip span{font-size:13px}
   .wxchip .cond{display:inline} header.top .dt p .yr{display:inline}
   .sb-seg{flex:0 1 420px}
+  #v-home.on{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);align-items:start}
+  .hstats b{font-size:21px}
   .reading{grid-column:1/-1;width:100%;max-width:820px;justify-self:center}
   .nl .hl{font-size:16.5px} .nl li:first-child .hl{font-size:18px}
   .view.on{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -243,46 +281,47 @@ details summary{cursor:pointer;font-weight:600}
 
 <!-- 홈 -->
 <section class="view" id="v-home">
-  <div class="card wide">
-    <h2>바로 기록</h2>
-    <form class="add" id="quick">
-      <div class="seg" role="radiogroup" aria-label="기록 종류">
-        <label><input type="radio" name="qtype" id="qt-task" value="task" checked><span>할 일</span></label>
-        <label><input type="radio" name="qtype" id="qt-event" value="event"><span>일정</span></label>
-        <label><input type="radio" name="qtype" id="qt-spend" value="spend"><span>지출</span></label>
-        <label><input type="radio" name="qtype" id="qt-memo" value="memo"><span>메모</span></label>
-      </div>
-      <input class="grow" id="q-text" placeholder="할 일을 적으세요" autocomplete="off" required>
-      <input id="q-amt" type="number" inputmode="numeric" min="0" placeholder="금액(원)" hidden style="width:130px">
-      <input id="q-date" type="date" aria-label="날짜">
+  <nav class="hstats wide" id="hstats" aria-label="오늘 요약"></nav>
+  <form class="card wide qcap" id="quick">
+    <div class="seg" role="radiogroup" aria-label="기록 종류">
+      <label><input type="radio" name="qtype" id="qt-auto" value="auto" checked><span>자동</span></label>
+      <label><input type="radio" name="qtype" id="qt-task" value="task"><span>할 일</span></label>
+      <label><input type="radio" name="qtype" id="qt-event" value="event"><span>일정</span></label>
+      <label><input type="radio" name="qtype" id="qt-spend" value="spend"><span>지출</span></label>
+      <label><input type="radio" name="qtype" id="qt-memo" value="memo"><span>메모</span></label>
+    </div>
+    <div class="qrow">
+      <label for="q-text" class="sr">빠른 기록</label>
+      <input id="q-text" placeholder="예: 내일 3시 미팅 · 점심 12000 · 은행 가기" autocomplete="off" required>
       <button class="btn" type="submit">기록</button>
-    </form>
-  </div>
+    </div>
+    <p class="qprev" id="q-prev" aria-live="polite">시간을 적으면 일정, 금액을 적으면 지출, 나머지는 할 일로 기록됩니다.</p>
+  </form>
   <div class="card">
-    <h2>오늘 챙길 것 <small id="home-count"></small></h2>
-    <ul class="list" id="home-today"></ul>
+    <h2><span>오늘 흐름</span> <a href="#plan" class="muted" style="font-size:13px;font-weight:400">일정 전체</a></h2>
+    <div id="home-tl"></div>
+    <h3 class="subh">할 일 <small id="home-task-count"></small></h3>
+    <ul class="list" id="home-tasks"></ul>
   </div>
-  <div class="card">
-    <h2>날씨 <small id="wx-meta"></small></h2>
-    <div id="wx"></div>
-  </div>
-  <div class="card wide">
-    <h2>앱 바로가기 <button class="btn ghost sm" id="apps-edit" type="button">편집</button></h2>
-    <div class="apps" id="apps"></div>
-    <form class="add" id="app-form" hidden style="margin:12px 0 0">
-      <input id="app-name" placeholder="이름 (예: 네이버 지도)" required style="flex:1 1 140px">
-      <input class="grow" id="app-url" placeholder="주소 (https://…)" required inputmode="url" autocapitalize="off">
-      <button class="btn" type="submit">추가</button>
-      <p class="muted" style="flex:1 1 100%;margin:0;font-size:13px">웹 주소를 넣으면 폰에서는 설치된 앱으로 열립니다. 앱 전용 주소(kakaotalk:// 등)도 넣을 수 있지만 기기에 따라 열리지 않을 수 있습니다.</p>
-    </form>
-  </div>
-  <div class="card">
-    <h2>가계부 <a href="#money" class="muted" style="font-size:13px;font-weight:400">자세히</a></h2>
-    <div id="home-money"></div>
-  </div>
-  <div class="card">
-    <h2><span>오늘의 이슈 <small id="home-news-meta"></small></span> <a href="#news" class="muted" style="font-size:13px;font-weight:400">전체 보기</a></h2>
-    <div id="home-news"></div>
+  <div class="hside">
+    <div class="card hmoney">
+      <h2>가계부 <a href="#money" class="muted" style="font-size:13px;font-weight:400">자세히</a></h2>
+      <div id="home-money"></div>
+    </div>
+    <div class="card">
+      <h2><span>오늘의 이슈 <small id="home-news-meta"></small></span> <a href="#news" class="muted" style="font-size:13px;font-weight:400">전체 보기</a></h2>
+      <div id="home-news"></div>
+    </div>
+    <div class="card">
+      <h2>앱 바로가기 <button class="btn ghost sm" id="apps-edit" type="button">편집</button></h2>
+      <div class="apps" id="apps"></div>
+      <form class="add" id="app-form" hidden style="margin:12px 0 0">
+        <input id="app-name" placeholder="이름 (예: 네이버 지도)" required style="flex:1 1 140px">
+        <input class="grow" id="app-url" placeholder="주소 (https://…)" required inputmode="url" autocapitalize="off">
+        <button class="btn" type="submit">추가</button>
+        <p class="muted" style="flex:1 1 100%;margin:0;font-size:13px">웹 주소를 넣으면 폰에서는 설치된 앱으로 열립니다. 앱 전용 주소(kakaotalk:// 등)도 넣을 수 있지만 기기에 따라 열리지 않을 수 있습니다.</p>
+      </form>
+    </div>
   </div>
   <div class="card wide">
     <details>
@@ -491,12 +530,13 @@ function findPlace(region){var k=region.replace(/\s+/g,"").replace(/(특별자�
   return getJSON("https://geocoding-api.open-meteo.com/v1/search?count=1&language=ko&name="+encodeURIComponent(region)).then(function(g){
     var p=g.results&&g.results[0];if(!p)throw new Error("place");return p})}
 function loadWeather(force){var region=(S.config.region||"서울").trim();
-  try{var c=JSON.parse(localStorage.getItem("homeboard-wx")||"null");if(c&&c.region===region&&c.days){wxData=c;draw();if(!force&&Date.now()-c.at<30*60000)return}}catch(e){}
+  try{var c=JSON.parse(localStorage.getItem("homeboard-wx")||"null");if(c&&c.region===region&&c.days){wxData=c;draw();if(!force&&c.hours&&Date.now()-c.at<30*60000)return}}catch(e){}
   findPlace(region).then(function(p){
-    return getJSON("https://api.open-meteo.com/v1/forecast?latitude="+p.latitude+"&longitude="+p.longitude+"&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto&forecast_days=5")
+    return getJSON("https://api.open-meteo.com/v1/forecast?latitude="+p.latitude+"&longitude="+p.longitude+"&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&hourly=precipitation_probability&timezone=auto&forecast_days=5")
   }).then(function(f){var d=f.daily;
     wxData={region:region,at:Date.now(),now:Math.round(f.current.temperature_2m),cond:WMO[f.current.weather_code]||"",
-      days:d.time.map(function(t,i){return{date:t,hi:Math.round(d.temperature_2m_max[i]),lo:Math.round(d.temperature_2m_min[i]),c:WMO[d.weather_code[i]]||"",pop:d.precipitation_probability_max?d.precipitation_probability_max[i]:null}})};
+      days:d.time.map(function(t,i){return{date:t,hi:Math.round(d.temperature_2m_max[i]),lo:Math.round(d.temperature_2m_min[i]),c:WMO[d.weather_code[i]]||"",pop:d.precipitation_probability_max?d.precipitation_probability_max[i]:null}}),
+      hours:f.hourly&&f.hourly.time?f.hourly.time.slice(0,48).map(function(t,i){return{t:t,p:f.hourly.precipitation_probability[i]}}):[]};
     try{localStorage.setItem("homeboard-wx",JSON.stringify(wxData))}catch(e){}draw()
   }).catch(function(e){if(!wxData||wxData.region!==region||!wxData.days){wxData={region:region,error:(e&&e.message==="place")?"place":"net"};draw()}})}
 function loadBrief(){getJSON("data/briefing.json").then(function(b){brief=normBrief(b);draw();sysNotify()}).catch(function(){brief=brief||{error:true};draw()})}
@@ -634,13 +674,62 @@ function taskRow(t){var late=t.due&&t.due<today()&&!t.done;
     h("span",{class:"main"+(t.done?" done":"")},t.text,t.due?h("div",{class:"sub"},late?h("span",{class:"pill crit"},"! 기한 지남"):null," ",nice(t.due)):null),
     delBtn(function(){del("tasks",t.id)}))}
 function eventRow(e){return h("li",null,h("span",{class:"main"},h("b",{text:e.title}),h("div",{class:"sub",text:nice(e.date)+(e.time?" "+e.time:"")})),delBtn(function(){del("events",e.id)}))}
+/* 오늘 흐름: 일정·뉴스 도착·비 예보·지금을 시간 순서로 */
+function homeTimeline(){var td=today(),now=new Date(),nowMin=now.getHours()*60+now.getMinutes(),items=[];
+  function mins(t){var p=String(t).split(":");return(+p[0])*60+(+p[1]||0)}
+  var evs=S.events.filter(function(e){return e.date===td});
+  evs.forEach(function(e){items.push(e.time?{m:mins(e.time),time:e.time,title:e.title,sub:"일정",href:"#plan"}:{m:-1,time:"종일",title:e.title,sub:"일정 · 하루 종일",href:"#plan"})});
+  var b=brief||{},sl=b.slots||{},isToday=b.date===td,SH={morning:7,afternoon:13,night:21};
+  SLOTS.forEach(function(sd){var x=isToday&&sl[sd[0]];
+    if(x){var at=hhmm(x.at),top=(x.news||[])[0]||(x.economy||[])[0];
+      items.push({m:mins(at),time:at,title:sd[1]+" 뉴스 도착",sub:"경제 "+(x.economy||[]).length+" · 증권 "+(x.stock||[]).length+" · 주요 "+(x.news||[]).length+(top?" · "+top.t:""),href:"#news",slot:sd[0]})}
+    else if(nowMin<SH[sd[0]]*60+90)items.push({m:SH[sd[0]]*60,time:pad(SH[sd[0]])+":00",title:sd[1]+" 뉴스 예정",sub:"",later:true})});
+  var w=wxData,hit=null;
+  if(w&&w.hours)w.hours.forEach(function(x){if(hit||String(x.t).slice(0,10)!==td)return;var hr=+String(x.t).slice(11,13);if(hr*60+59<nowMin)return;if(x.p>=50)hit={hr:hr,p:x.p}});
+  if(hit){var rm=Math.max(hit.hr*60,nowMin),after=evs.filter(function(e){return e.time&&mins(e.time)>=rm}).sort(function(a,c){return mins(a.time)-mins(c.time)})[0];
+    items.push({m:rm,time:hit.hr*60<=nowMin?"지금":pad(hit.hr)+":00",title:(hit.hr*60<=nowMin?"비 올 가능성 높음":"비 시작 예상")+" (강수확률 "+hit.p+"%)",
+      sub:after?after.time+" "+after.title+" 갈 때 우산 챙기기":"외출하면 우산 챙기기",rain:true})}
+  items.push({m:nowMin,time:pad(now.getHours())+":"+pad(now.getMinutes()),now:true});
+  items.sort(function(a,c){return a.m-c.m||(a.now?-1:c.now?1:0)});
+  return{items:items,nowMin:nowMin}}
+function renderTimeline(el){var r=homeTimeline();el.textContent="";
+  r.items.forEach(function(it){var past=!it.now&&!it.later&&!it.rain&&it.m>=0&&it.m<r.nowMin;
+    el.appendChild(h("div",{class:"tl-row"+(it.now?" now":"")+(past||it.later?" past":"")+(it.rain?" rain":"")},
+      h("span",{class:"tl-time",text:it.time}),
+      h("span",{class:"tl-rail","aria-hidden":"true"},h("span",{class:"tl-dot"}),h("span",{class:"tl-line"})),
+      h("div",{class:"tl-body"},it.now?h("div",{class:"tl-now"},h("span",{text:"지금"}),h("i")):[
+        it.href?h("a",{class:"tl-title",href:it.href,text:it.title,onclick:it.slot?function(){selSlot=it.slot}:null}):h("span",{class:"tl-title",text:it.title}),
+        it.sub?h("span",{class:"tl-sub",text:it.sub}):null])))})}
+/* 빠른 기록: "내일 3시 미팅" → 일정, "점심 12000" → 지출, 그 외 → 할 일 */
+function parseQuick(text,forced){var t=String(text||"").trim(),rest=t,d=new Date(),base=new Date(d.getFullYear(),d.getMonth(),d.getDate()),day=null,hh=null,mm=0,amt=0,m;
+  if(/모레/.test(rest)){day=new Date(base.getTime()+2*86400000);rest=rest.replace(/모레/,"")}
+  else if(/내일/.test(rest)){day=new Date(base.getTime()+86400000);rest=rest.replace(/내일/,"")}
+  else if(/오늘/.test(rest)){day=base;rest=rest.replace(/오늘/,"")}
+  if((m=rest.match(/(\d{1,2})\s*월\s*(\d{1,2})\s*일/))){day=new Date(base.getFullYear(),+m[1]-1,+m[2]);if(day<base)day.setFullYear(day.getFullYear()+1);rest=rest.replace(m[0],"")}
+  if((m=rest.match(/(\d{1,2}):(\d{2})/))){hh=+m[1];mm=+m[2];rest=rest.replace(m[0],"")}
+  else if((m=rest.match(/(오전|오후|아침|저녁|밤)?\s*(\d{1,2})\s*시(?:\s*(\d{1,2})\s*분|\s*(반))?/))){hh=+m[2];mm=m[3]?+m[3]:(m[4]?30:0);
+    if((m[1]==="오후"||m[1]==="저녁"||m[1]==="밤")&&hh<12)hh+=12;else if(!m[1]&&hh>=1&&hh<=7)hh+=12;rest=rest.replace(m[0],"")}
+  if(hh!=null&&(hh>23||mm>59))hh=null;
+  if((m=rest.match(/(\d{1,3}(?:,\d{3})+|\d{3,})\s*원?/))){amt=+m[1].replace(/,/g,"");rest=rest.replace(m[0],"")}
+  var memo=/^(메모|아이디어)\s*[:：]?\s*/.test(t);if(memo)rest=rest.replace(/^\s*(메모|아이디어)\s*[:：]?\s*/,"");
+  rest=rest.replace(/\s+/g," ").replace(/^[\s,·]+|[\s,·]+$/g,"");
+  var kind=forced&&forced!=="auto"?forced:memo?"memo":(amt&&hh==null)?"spend":hh!=null?"event":"task";
+  var date=ymd(day||base),time=hh!=null?pad(hh)+":"+pad(mm):"";
+  return{kind:kind,date:date,hasDay:!!day,time:time,amt:amt,title:kind==="memo"?(rest||t):(rest||t),raw:t}}
+function quickLabel(q){var KN={task:"할 일",event:"일정",spend:"지출",memo:"메모"},parts=[];
+  if(q.kind==="event")parts.push(nice(q.date)+(q.time?" "+q.time:""));
+  if(q.kind==="task"&&q.hasDay)parts.push(nice(q.date)+"까지");
+  if(q.kind==="spend")parts.push(q.amt?won(q.amt):"금액을 함께 적어 주세요");
+  if(q.title)parts.push(q.title);
+  return{kind:KN[q.kind],rest:parts.join(" · ")}}
 function render(){
   var td=today();
   var open=sortBy(S.tasks.filter(function(t){return !t.done&&(!t.due||t.due<=td)}),function(t){return t.due||"9"});
   var evs=sortBy(S.events.filter(function(e){return e.date===td}),function(e){return e.time||""});
-  $("#home-count").textContent=(open.length+evs.length)?("할 일 "+open.length+" · 일정 "+evs.length):"";
-  fill($("#home-today"),evs.map(function(e){return h("li",null,h("span",{class:"pill info",text:e.time||"오늘"}),h("span",{class:"main",text:e.title}))}).concat(open.slice(0,8).map(taskRow)),"오늘 챙길 일이 없습니다. 위에서 바로 기록하세요.");
-  weather($("#wx"),$("#wx-meta"));weather($("#wx2"),$("#wx2-meta"));
+  renderTimeline($("#home-tl"));
+  $("#home-task-count").textContent=open.length?open.length+"개 남음":"";
+  fill($("#home-tasks"),open.slice(0,8).map(taskRow),"남은 할 일이 없습니다.");
+  weather($("#wx2"),$("#wx2-meta"));
   /* 앱 */
   var apps=$("#apps");apps.textContent="";
   if(!S.links.length)apps.appendChild(h("p",{class:"empty",text:"바로가기가 없습니다. 편집을 눌러 추가하세요."}));
@@ -653,8 +742,6 @@ function render(){
   /* 가계부 */
   document.querySelectorAll("[data-mt]").forEach(function(el){el.hidden=el.dataset.mt!==moneyTab});
   var cur=monthSum(nowKey()),ser=assetSeries(),total=ser[ser.length-1].val;
-  var hm=$("#home-money");hm.textContent="";
-  hm.appendChild(h("div",{class:"tiles"},tile("총자산",signed(total)),tile("이번 달 수입",won(cur.inc)),tile("이번 달 지출",won(cur.out))));
   var ah=$("#a-hero");ah.textContent="";ah.appendChild(assetHero(ser));assetChart($("#a-chart"),ser);
   var mine=S.allocs.filter(function(a){return String(a.date).slice(0,7)===nowKey()}),ar=allocSum(mine),at=allocSum(S.allocs);
   var reserved=ar.inv+ar.sav+Math.max(ar.use,cur.out),can=cur.inc-reserved;
@@ -662,6 +749,12 @@ function render(){
   alh.appendChild(h("div",{class:"facts"},h("span",null,"이번 달 수입 ",h("b",{text:"+"+won(cur.inc)})),h("span",null,"지출 ",h("b",{text:"-"+won(cur.out)})),
     h("span",null,"수입 − 지출 ",h("b",{text:signed(cur.inc-cur.out)})),h("span",null,"배분한 금액 ",h("b",{text:won(ar.total)}))));
   allocBox($("#al-box"),ar,cur.out);
+  var hm=$("#home-money");hm.textContent="";
+  hm.appendChild(h("div",{class:"muted",style:"font-size:13px",text:"총자산"}));hm.appendChild(h("div",{class:"big",text:signed(total)}));
+  hm.appendChild(h("div",{class:"tiles"},tile("이번 달 수입","+"+won(cur.inc)),tile("이번 달 지출","-"+won(cur.out)),tile("배분할 수 있는 돈",won(Math.max(0,can)))));
+  var lb=latest(),lbToday=lb&&lb.b.date===td,lbCount=lbToday?((lb.s.economy||[]).length+(lb.s.stock||[]).length+(lb.s.news||[]).length):0,hs=$("#hstats");hs.textContent="";
+  [["#plan","남은 할 일",open.length+"개"],["#money","오늘 지출",won(cur.byDay[new Date().getDate()]||0)],["#news",lbToday?lb.name+" 뉴스":"오늘 뉴스",lbToday?lbCount+"건":"대기 중"]].forEach(function(x){
+    hs.appendChild(h("a",{href:x[0]},h("span",{class:"k",text:x[1]}),h("b",{text:x[2]})))});
   var names={inv:"투자",sav:"저축",use:"사용"},att=$("#al-total");att.textContent="";
   att.appendChild(tile("투자 누적",won(at.inv)));att.appendChild(tile("저축 누적",won(at.sav)));att.appendChild(tile("사용 누적",won(at.use)));
   fill($("#al-list"),mine.slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:a.id<b.id?1:-1}).map(function(a){
@@ -709,16 +802,19 @@ function render(){
 /* ---------- 입력 ---------- */
 function on(id,fn){$(id).addEventListener("submit",function(e){e.preventDefault();fn(e.target)})}
 function val(id){return ($(id).value||"").trim()}
-var QP={task:"할 일을 적으세요",event:"일정 이름",spend:"어디에 썼나요 (선택)",memo:"메모 내용"};
 function qtype(){return document.querySelector('input[name="qtype"]:checked').value}
-document.querySelectorAll('input[name="qtype"]').forEach(function(r){r.addEventListener("change",function(){var t=qtype();
-  $("#q-text").placeholder=QP[t];$("#q-text").required=t!=="spend";$("#q-amt").hidden=t!=="spend";$("#q-amt").required=t==="spend";$("#q-date").hidden=t==="memo"})});
-on("#quick",function(){var t=qtype(),x=val("#q-text"),dt=val("#q-date");
-  if(t==="task")add("tasks",{text:x,due:dt,done:false});
-  else if(t==="event")add("events",{title:x,date:dt||today(),time:""});
-  else if(t==="memo")add("notes",{text:x,tag:"메모",at:new Date().toISOString()});
-  else{var a=+val("#q-amt");if(!(a>0))return;var d=dt||today();moneyAdd(d.slice(0,7),{type:"out",amt:a,cat:"기타",memo:x,date:d})}
-  $("#q-text").value="";$("#q-amt").value="";toast("기록했습니다")});
+function showPrev(){var t=val("#q-text"),pv=$("#q-prev");pv.textContent="";
+  if(!t){pv.textContent="시간을 적으면 일정, 금액을 적으면 지출, 나머지는 할 일로 기록됩니다.";return}
+  var l=quickLabel(parseQuick(t,qtype()));pv.appendChild(document.createTextNode("→ "));pv.appendChild(h("b",{text:l.kind}));pv.appendChild(document.createTextNode(" · "+l.rest))}
+$("#q-text").addEventListener("input",showPrev);
+document.querySelectorAll('input[name="qtype"]').forEach(function(r){r.addEventListener("change",showPrev)});
+on("#quick",function(){var q=parseQuick(val("#q-text"),qtype()),l=quickLabel(q);if(!q.raw)return;
+  if(q.kind==="spend"&&!q.amt){toast("지출은 금액을 함께 적어 주세요 (예: 점심 12000)");return}
+  if(q.kind==="task")add("tasks",{text:q.title,due:q.hasDay?q.date:"",done:false});
+  else if(q.kind==="event")add("events",{title:q.title,date:q.date,time:q.time});
+  else if(q.kind==="memo")add("notes",{text:q.title,tag:"메모",at:new Date().toISOString()});
+  else moneyAdd(q.date.slice(0,7),{type:"out",amt:q.amt,cat:"기타",memo:q.title,date:q.date});
+  $("#q-text").value="";showPrev();toast(l.kind+"(으)로 기록했습니다 · "+l.rest)});
 on("#task-form",function(f){add("tasks",{text:val("#task-text"),due:val("#task-due"),done:false});f.reset()});
 on("#event-form",function(f){add("events",{title:val("#event-title"),date:val("#event-date"),time:val("#event-time")});f.reset();$("#event-date").value=today()});
 var mc=$("#m-cats");CATS.forEach(function(c,i){mc.appendChild(h("label",null,h("input",{type:"radio",name:"mcat",id:"mc-"+i,value:c,checked:i===0?true:null}),h("span",{text:c})))});
