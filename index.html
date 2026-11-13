@@ -159,11 +159,28 @@ input[type=checkbox]{width:20px;height:20px;margin:2px 0 0;accent-color:var(--na
 .cal button.sel .in,.cal button.sel .out{color:var(--on-navy)}
 .balance{width:130px;text-align:right;font-variant-numeric:tabular-nums;min-height:38px!important;padding:6px 10px!important}
 @media (min-width:900px){.cal button{min-height:72px;font-size:12px}}
-/* 앱 */
-.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
-.app{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;color:var(--ink);background:var(--sunken);border-radius:14px;padding:12px 6px;font-size:13px;text-align:center;min-width:0}
-.app .ic{width:42px;height:42px;border-radius:12px;background:var(--navy);color:var(--on-navy);display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:18px}
-.app .nm{max-width:100%;overflow-wrap:anywhere;line-height:1.3}
+/* 앱 바로가기: 아이콘 없이 이름 버튼 */
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.appbtn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:8px 10px;border-radius:12px;background:var(--sunken);color:var(--ink);
+  text-decoration:none;font-size:14.5px;font-weight:600;text-align:center;line-height:1.3;word-break:keep-all;overflow-wrap:anywhere;border:1px solid transparent;cursor:pointer}
+.appbtn:hover{border-color:var(--accent)}
+.apps a.appbtn{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+.appbtn.lifting{transform:scale(1.07);box-shadow:0 10px 24px rgba(16,27,63,.28);background:var(--surface);border-color:var(--accent);position:relative;z-index:2}
+.apps.sorting a.appbtn:not(.lifting){opacity:.75}
+.apphint{margin:8px 0 0;font-size:12.5px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.appbtn{transition:transform .12s,box-shadow .12s}}
+.appbtn.off{color:var(--muted);font-weight:500;border-style:dashed;border-color:var(--line)}
+.appbtn.edit{flex-direction:column;gap:6px;cursor:default}
+.appbtn .ctl{display:flex;gap:4px}
+.apps.editing{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.mini{white-space:nowrap;min-width:34px;min-height:32px;padding:0 6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;cursor:pointer;font-size:13px}
+.mini.danger{color:var(--crit)}
+.appedit{margin-top:14px;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--line);padding-top:12px}
+.appedit h3{margin:0;font-size:13.5px;font-weight:600;color:var(--muted)}
+.presets{display:flex;flex-wrap:wrap;gap:6px}
+.presets button{border:1px dashed var(--accent);background:var(--surface);color:var(--accent);border-radius:99px;padding:7px 12px;font-size:13.5px;cursor:pointer}
+.appedit form.add{margin:0}
+.appedit .help{flex:1 1 100%;margin:0;font-size:12.5px;color:var(--muted);line-height:1.5}
 .wx{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center}
 .wx .now{font-family:var(--display);font-size:38px;font-weight:700;line-height:1}
 .wx .days{display:flex;gap:6px;flex-wrap:wrap}
@@ -315,12 +332,23 @@ a.tl-title:hover{text-decoration:underline;text-underline-offset:3px}
     <div class="card">
       <h2>앱 바로가기 <button class="btn ghost sm" id="apps-edit" type="button">편집</button></h2>
       <div class="apps" id="apps"></div>
-      <form class="add" id="app-form" hidden style="margin:12px 0 0">
-        <input id="app-name" placeholder="이름 (예: 네이버 지도)" required style="flex:1 1 140px">
-        <input class="grow" id="app-url" placeholder="주소 (https://…)" required inputmode="url" autocapitalize="off">
-        <button class="btn" type="submit">추가</button>
-        <p class="muted" style="flex:1 1 100%;margin:0;font-size:13px">웹 주소를 넣으면 폰에서는 설치된 앱으로 열립니다. 앱 전용 주소(kakaotalk:// 등)도 넣을 수 있지만 기기에 따라 열리지 않을 수 있습니다.</p>
-      </form>
+      <p class="apphint" id="app-hint">길게 누른 채 끌면 순서를 바꿀 수 있습니다.</p>
+      <div class="appedit" id="app-editor" hidden>
+        <h3>자주 쓰는 앱 추가 <span style="font-weight:400">(누르면 바로 추가)</span></h3>
+        <div class="presets" id="app-presets"></div>
+        <details>
+          <summary style="font-size:13.5px">목록에 없는 앱 직접 추가</summary>
+          <form class="add" id="app-form" style="margin-top:10px">
+            <input id="app-name" placeholder="이름 (예: 신한 SOL)" required style="flex:1 1 140px">
+            <input class="grow" id="app-addr" placeholder="앱 주소 (예: kakaotalk://)" autocapitalize="off" autocomplete="off">
+            <input class="grow" id="app-pkg" placeholder="안드로이드 패키지 (예: com.kakao.talk)" autocapitalize="off" autocomplete="off">
+            <input class="grow" id="app-sc" placeholder="아이폰 단축어 이름 (선택)" autocomplete="off">
+            <input class="grow" id="app-web" placeholder="웹 주소, PC에서 열 때 (선택)" inputmode="url" autocapitalize="off" autocomplete="off">
+            <button class="btn" type="submit">추가</button>
+            <p class="help">앱 주소나 패키지 중 하나는 넣어 주세요. 안드로이드 패키지는 플레이스토어 앱 페이지 주소의 <b>id=</b> 뒤에 있습니다. 아이폰에서 주소를 모르는 앱은 단축어 앱에서 그 앱을 여는 단축어를 만들고 이름을 적으면 됩니다.</p>
+          </form>
+        </details>
+      </div>
     </div>
   </div>
   <div class="card wide">
@@ -501,9 +529,72 @@ function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearT
 var KEY="homeboard-v2",COLS=["tasks","events","biz","leads","logs","notes","links"];
 var S={tasks:[],events:[],biz:[],leads:[],logs:[],notes:[],links:null,config:{region:"서울"},money:{},allocs:[]};
 var brief=null,wxData=null,viewMonth=nowKey(),selDay=today(),moneyTab="cal",editApps=false,logFilter="전체";
+/* 자주 쓰는 앱: addr=앱 주소(아이폰·안드로이드 공통), pkg=안드로이드 패키지, android/ios=기기별 주소, web=PC용 */
+var APPS={
+  kakaotalk:{name:"카카오톡",addr:"kakaotalk://",pkg:"com.kakao.talk"},
+  naver:{name:"네이버",addr:"naversearchapp://",pkg:"com.nhn.android.search",web:"https://m.naver.com"},
+  nmap:{name:"네이버 지도",addr:"nmap://",pkg:"com.nhn.android.nmap",web:"https://map.naver.com"},
+  naverblog:{name:"네이버 블로그",addr:"naverblog://",pkg:"com.nhn.android.blog",web:"https://m.blog.naver.com"},
+  kakaomap:{name:"카카오맵",addr:"kakaomap://",pkg:"net.daum.android.map",web:"https://map.kakao.com"},
+  tmap:{name:"티맵",addr:"tmap://",pkg:"com.skt.tmap.ku"},
+  toss:{name:"토스",addr:"supertoss://",pkg:"viva.republica.toss",web:"https://toss.im"},
+  kakaobank:{name:"카카오뱅크",addr:"kakaobank://",pkg:"com.kakaobank.channel"},
+  kbbank:{name:"KB스타뱅킹",addr:"kbbank://",pkg:"com.kbstar.kbbank"},
+  coupang:{name:"쿠팡",addr:"coupang://",pkg:"com.coupang.mobile",web:"https://www.coupang.com"},
+  baemin:{name:"배달의민족",addr:"baemin://",pkg:"com.sampleapp"},
+  youtube:{name:"유튜브",ios:"youtube://",android:"https://m.youtube.com",web:"https://www.youtube.com"},
+  instagram:{name:"인스타그램",ios:"instagram://",android:"https://www.instagram.com",web:"https://www.instagram.com"},
+  gmail:{name:"지메일",ios:"googlegmail://",android:"https://mail.google.com",web:"https://mail.google.com"},
+  gcal:{name:"구글 캘린더",ios:"googlecalendar://",android:"https://calendar.google.com",web:"https://calendar.google.com"}
+};
+var DEFAULT_APPS=["kakaotalk","naver","nmap","toss","youtube","gcal","gmail"];
+var LEGACY_APP={d0:"naver",d1:"gcal",d2:"gmail",d5:"naverblog",d7:"nmap",d8:"youtube"};
+function platform(){var u=navigator.userAgent||"";
+  if(/iPhone|iPad|iPod/.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1))return"ios";
+  return/Android/.test(u)?"android":"desktop"}
+function appInfo(l){return l.app&&APPS[l.app]?Object.assign({},APPS[l.app],l):l}
+/* 이 기기에서 누를 주소. 없으면 null(이 기기에서는 못 엶) */
+function appHref(l){var a=appInfo(l),p=platform(),m=a.addr&&String(a.addr).match(/^([a-z][a-z0-9+.\-]*):\/\/(.*)$/i);
+  if(!a.addr&&!a.pkg&&!a.ios&&!a.android&&!a.shortcut)return a.url||a.web||null;
+  if(p==="ios"){if(a.shortcut)return"shortcuts://run-shortcut?name="+encodeURIComponent(a.shortcut);return a.ios||a.addr||a.web||a.url||null}
+  if(p==="android"){if(a.android)return a.android;
+    if(m&&a.pkg)return"intent://"+m[2]+"#Intent;scheme="+m[1]+";package="+a.pkg+";end";
+    if(a.pkg)return"intent://#Intent;package="+a.pkg+";end";
+    return a.addr||a.web||a.url||null}
+  return a.web||a.url||null}
+function launchApp(e,l,href){var a=appInfo(l);
+  if(suppressTap){e.preventDefault();return}
+  if(!href){e.preventDefault();toast("'"+a.name+"'은(는) 폰에서만 열 수 있습니다.");return}
+  if(/^https?:/i.test(href))return;
+  setTimeout(function(){if(!document.hidden)toast("'"+a.name+"'이(가) 열리지 않았어요. 앱 설치 여부를 확인하거나, 편집에서 지우고 직접 추가로 주소를 바꿔 보세요.")},1800)}
+/* 길게 눌러 끌어서 순서 바꾸기 (손가락·마우스 모두) */
+var appDrag=null,suppressTap=false;
+function initAppDrag(){var box=$("#apps");
+  box.addEventListener("contextmenu",function(e){if(e.target.closest&&e.target.closest("a.appbtn"))e.preventDefault()});
+  box.addEventListener("pointerdown",function(e){var el=e.target.closest&&e.target.closest("a.appbtn");
+    if(!el||editApps||(e.pointerType==="mouse"&&e.button!==0))return;
+    var st={el:el,x:e.clientX,y:e.clientY,id:e.pointerId,on:false};appDrag=st;
+    st.t=setTimeout(function(){if(appDrag!==st)return;st.on=true;el.classList.add("lifting");box.classList.add("sorting");
+      try{box.setPointerCapture(st.id)}catch(x){}try{if(navigator.vibrate)navigator.vibrate(12)}catch(x){}},450)});
+  box.addEventListener("pointermove",function(e){var d=appDrag;if(!d||e.pointerId!==d.id)return;
+    if(!d.on){if(Math.abs(e.clientX-d.x)+Math.abs(e.clientY-d.y)>10){clearTimeout(d.t);appDrag=null}return}
+    e.preventDefault();
+    var under=document.elementFromPoint(e.clientX,e.clientY),t=under&&under.closest&&under.closest("a.appbtn");
+    if(t&&t!==d.el&&t.parentNode===box){var kids=[].slice.call(box.children),a=kids.indexOf(d.el),c=kids.indexOf(t);box.insertBefore(d.el,a<c?t.nextSibling:t)}});
+  function end(e){var d=appDrag;if(!d||e.pointerId!==d.id)return;clearTimeout(d.t);appDrag=null;if(!d.on)return;
+    d.el.classList.remove("lifting");box.classList.remove("sorting");suppressTap=true;setTimeout(function(){suppressTap=false},600);
+    var ids=[].slice.call(box.querySelectorAll("a.appbtn")).map(function(x){return x.getAttribute("data-id")}),changed=false;
+    S.links.forEach(function(l){var i=ids.indexOf(l.id);if(i>=0&&l.ord!==i){l.ord=i;changed=true}});
+    if(changed){save();toast("순서를 바꿨습니다")}draw()}
+  box.addEventListener("pointerup",end);box.addEventListener("pointercancel",end);
+  document.addEventListener("touchmove",function(e){if(appDrag&&appDrag.on)e.preventDefault()},{passive:false})}
+function moveApp(id,dir){var list=sortBy(S.links,function(l){return l.ord||0}),i=list.findIndex(function(l){return l.id===id}),j=i+dir;if(i<0||j<0||j>=list.length)return;
+  var t=list[i].ord;list[i].ord=list[j].ord;list[j].ord=t;if(list[i].ord===list[j].ord){list.forEach(function(l,k){l.ord=k})}save();draw()}
 var DEFAULT_LINKS=[["네이버","https://m.naver.com"],["구글 캘린더","https://calendar.google.com"],["지메일","https://mail.google.com"],["구글 시트","https://docs.google.com/spreadsheets"],["카토리지","https://cartorage.kr"],["블로그","https://m.blog.naver.com"],["증권","https://m.stock.naver.com"],["지도","https://m.map.naver.com"],["유튜브","https://m.youtube.com"]];
 function load(){try{var d=JSON.parse(localStorage.getItem(KEY)||"null");if(d)for(var k in S)if(d[k]!=null)S[k]=d[k]}catch(e){}
-  if(!S.links)S.links=DEFAULT_LINKS.map(function(l,i){return{id:"d"+i,name:l[0],url:l[1],ord:i}})}
+  if(!S.links)S.links=DEFAULT_APPS.map(function(k,i){return{id:"a"+i,app:k,name:APPS[k].name,ord:i}}).concat([{id:"a9",name:"카토리지",url:"https://cartorage.kr",ord:9}]);
+  /* 예전 기본 바로가기(웹 주소)는 같은 앱의 앱 실행 버튼으로 바꾼다 */
+  S.links.forEach(function(l){var k=LEGACY_APP[l.id];if(k&&!l.app&&l.url){l.app=k;l.name=APPS[k].name;delete l.url}})}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){toast("저장 공간이 부족합니다. 백업 후 오래된 기록을 지우세요.")}}
 function add(col,data){S[col].push(Object.assign({id:newId()},data));save();draw()}
 function upd(col,id,patch){S[col].forEach(function(x){if(x.id===id)Object.assign(x,patch)});save();draw()}
@@ -731,11 +822,22 @@ function render(){
   fill($("#home-tasks"),open.slice(0,8).map(taskRow),"남은 할 일이 없습니다.");
   weather($("#wx2"),$("#wx2-meta"));
   /* 앱 */
-  var apps=$("#apps");apps.textContent="";
-  if(!S.links.length)apps.appendChild(h("p",{class:"empty",text:"바로가기가 없습니다. 편집을 눌러 추가하세요."}));
-  sortBy(S.links,function(l){return l.ord||0}).forEach(function(l){var ic=h("span",{class:"ic",text:(l.name||"?").trim().charAt(0)}),nm=h("span",{class:"nm",text:l.name});
-    apps.appendChild(editApps?h("div",{class:"app"},ic,nm,delBtn(function(){del("links",l.id)})):h("a",{class:"app",href:okUrl(l.url)?l.url:null,target:"_blank",rel:"noopener"},ic,nm))});
-  $("#app-form").hidden=!editApps;$("#apps-edit").textContent=editApps?"완료":"편집";
+  if(!(appDrag&&appDrag.on)){
+  var apps=$("#apps"),ordered=sortBy(S.links,function(l){return l.ord||0});apps.textContent="";$("#app-hint").hidden=editApps||ordered.length<2;
+  if(!ordered.length)apps.appendChild(h("p",{class:"empty",text:"바로가기가 없습니다. 편집을 눌러 추가하세요."}));
+  ordered.forEach(function(l,ix){var a=appInfo(l),href=appHref(l);
+    if(editApps)apps.appendChild(h("div",{class:"appbtn edit"},h("span",{text:a.name}),h("span",{class:"ctl"},
+      h("button",{class:"mini",type:"button","aria-label":a.name+" 앞으로",disabled:ix===0?true:null,onclick:function(){moveApp(l.id,-1)}},"◀"),
+      h("button",{class:"mini",type:"button","aria-label":a.name+" 뒤로",disabled:ix===ordered.length-1?true:null,onclick:function(){moveApp(l.id,1)}},"▶"),
+      h("button",{class:"mini danger",type:"button","aria-label":a.name+" 삭제",onclick:function(){del("links",l.id)}},"삭제"))));
+    else apps.appendChild(h("a",{class:"appbtn"+(href?"":" off"),"data-id":l.id,href:href&&okUrl(href)?href:null,role:href?null:"button",tabindex:href?null:"0",
+      target:href&&/^https?:/i.test(href)?"_blank":null,rel:"noopener",title:href?null:"폰에서만 열 수 있는 앱",onclick:function(e){launchApp(e,l,href)}},a.name))});
+  apps.classList.toggle("editing",editApps);$("#app-editor").hidden=!editApps;$("#apps-edit").textContent=editApps?"완료":"편집";
+  var pr=$("#app-presets"),have={};pr.textContent="";S.links.forEach(function(l){if(l.app)have[l.app]=1});
+  Object.keys(APPS).filter(function(k){return!have[k]}).forEach(function(k){
+    pr.appendChild(h("button",{type:"button",onclick:function(){add("links",{app:k,name:APPS[k].name,ord:Date.now()});toast(APPS[k].name+" 추가")}},"+ "+APPS[k].name))});
+  if(!pr.childNodes.length)pr.appendChild(h("span",{class:"muted",style:"font-size:13px",text:"목록의 앱을 모두 추가했습니다."}));
+  }
   /* 일정 */
   fill($("#tasks"),sortBy(S.tasks,function(t){return (t.done?"1":"0")+(t.due||"9999")+t.id}).map(taskRow),"할 일이 없습니다.");
   fill($("#events"),sortBy(S.events.filter(function(e){return e.date>=td}),function(e){return e.date+(e.time||"")}).map(eventRow),"예정된 일정이 없습니다.");
@@ -832,9 +934,15 @@ on("#al-form",function(){var a=+val("#al-amt");if(!(a>0))return;
 function fillBase(){$("#base-amt").value=S.config.base||""}
 $("#notif-btn").addEventListener("click",function(){try{Promise.resolve(Notification.requestPermission()).then(function(){draw()},function(){draw()})}catch(e){draw()}});
 on("#note-form",function(){add("notes",{text:val("#note-text"),tag:document.querySelector('input[name="ntag"]:checked').value,at:new Date().toISOString()});$("#note-text").value=""});
-on("#app-form",function(f){var u=val("#app-url");if(!/^[a-z][a-z0-9+.\-]*:/i.test(u))u="https://"+u;
-  if(!okUrl(u)){toast("주소 형식을 확인하세요 (https://…)");return}
-  add("links",{name:val("#app-name"),url:u,ord:Date.now()});f.reset()});
+on("#app-form",function(f){var nm=val("#app-name"),addr=val("#app-addr"),pkg=val("#app-pkg"),sc=val("#app-sc"),web=val("#app-web");
+  if(addr&&!/:\/\//.test(addr))addr=addr.replace(/:?$/,"")+"://";
+  if(addr&&!okUrl(addr)){toast("앱 주소 형식을 확인하세요 (예: kakaotalk://)");return}
+  if(pkg&&!/^[A-Za-z][\w]*(\.[A-Za-z_][\w]*)+$/.test(pkg)){toast("패키지 이름 형식을 확인하세요 (예: com.kakao.talk)");return}
+  if(web&&!/^https?:\/\//i.test(web))web="https://"+web;
+  if(web&&!okUrl(web)){toast("웹 주소 형식을 확인하세요");return}
+  if(!addr&&!pkg&&!sc&&!web){toast("앱 주소, 패키지, 단축어 이름, 웹 주소 중 하나는 넣어 주세요");return}
+  var o={name:nm,ord:Date.now()};if(addr)o.addr=addr;if(pkg)o.pkg=pkg;if(sc)o.shortcut=sc;if(web)o.web=web;
+  add("links",o);f.reset();toast(nm+" 추가")});
 on("#cfg",function(){S.config.region=val("#cfg-region")||"서울";save();loadWeather(true);toast("저장했습니다")});
 $("#apps-edit").addEventListener("click",function(){editApps=!editApps;draw()});
 $("#tasks-clear").addEventListener("click",function(){var n=S.tasks.length;S.tasks=S.tasks.filter(function(t){return !t.done});if(n===S.tasks.length){toast("완료한 항목이 없습니다");return}save();draw()});
@@ -862,7 +970,7 @@ window.addEventListener("resize",draw);
 load();
 ["#event-date","#al-date"].forEach(function(x){$(x).value=today()});
 $("#cfg-region").value=S.config.region||"";fillBase();
-route();render();loadWeather(false);loadBrief();
+route();render();initAppDrag();loadWeather(false);loadBrief();
 document.addEventListener("visibilitychange",function(){if(!document.hidden){loadWeather(false);loadBrief();draw()}});
 setInterval(function(){loadBrief();if(!document.hidden)loadWeather(false)},10*60000);
 if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(function(){});
