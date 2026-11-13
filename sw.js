@@ -1,5 +1,5 @@
 /* 홈보드 서비스 워커: 앱 화면은 저장해 두고 오프라인에서도 열리게, 뉴스는 항상 새로 받아온다. */
-const CACHE = "homeboard-v6";
+const CACHE = "homeboard-v10";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
 
 self.addEventListener("install", (e) => {
@@ -36,4 +36,16 @@ self.addEventListener("fetch", (e) => {
   }
   // 앱 화면: 새 것을 먼저 시도하고, 오프라인이면 저장본
   e.respondWith(fetch(req).then(put).catch(() => caches.match(req).then((hit) => hit || caches.match("index.html"))));
+});
+
+// 기기 알림을 누르면 홈보드를 앞으로 가져오거나 새로 연다
+self.addEventListener("notificationclick", (e) => {
+  e.notification.close();
+  const url = new URL((e.notification.data && e.notification.data.url) || "./", self.registration.scope).href;
+  e.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((list) => {
+      for (const c of list) if ("focus" in c) { if ("navigate" in c) c.navigate(url).catch(() => {}); return c.focus(); }
+      return self.clients.openWindow(url);
+    })
+  );
 });
