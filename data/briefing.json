@@ -1,200 +1,200 @@
 {
- "date": "2026-11-14",
+ "date": "2026-11-15",
  "slot": "morning",
- "updatedAt": "2026-11-13T22:27:00.483Z",
+ "updatedAt": "2026-11-14T22:17:40.460Z",
  "slots": {
   "morning": {
-   "at": "2026-11-13T22:27:00.483Z",
+   "at": "2026-11-14T22:17:40.460Z",
    "economy": [
     {
-     "t": "대만 매체 \"젠슨 황 불륜녀, 中국가안전부 반도체팀 소속\"",
-     "src": "연합뉴스TV",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5JTlU1R1VKckk3MWxQNlVhUlZrRURGNTVQamctRVU3bTFiWGk3cHdKdjF3RUFMbXBIcUhZWmlFVFRTWFZDU3J3R0pDb1dXcTBHUFV4elFESkRvVFdqWXRBbTJkRm1Xbzg?oc=5",
-     "d": "2026-11-13T12:28:00.000Z"
+     "t": "젠슨 황 몰락이 남긴 역설…“이사회 누가 머스크·저커버그에 맞설 수 있겠나”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAxSkg4S2lxYnlrSmNUMWY1ZWpyUzdPRVE4NGZGV2lzbE1fRml1dWVtZ1I3NHNXazhnVXNSS0lCOWpjYnBNMFZ2MzdPRGtkUnV1QVhzWUtyaFZEYmVlX2xFOGVwaXBrQ25nZS03X0N4QWJNYWZibDZn?oc=5",
+     "d": "2026-11-14T12:36:00.000Z"
     },
     {
-     "t": "[뉴욕증시-1보] 젠슨 황 스캔들 여파 지속…혼조 마감",
-     "src": "연합인포맥스",
-     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BaFhLd2dPcDhaNHFtYTg3cERiZ0hVWU1aSjFmZ1J4eVRWU0FxazFEWm14REZsY1hISll3eFRkaXR3Q0RWNGN0TXRVWlRlVmpZMVVnUUNfQmI4ZmZ4US0yMmxJUDd0SDFRN3V4bW5JQm7SAXRBVV95cUxQZlpWYUgtOFlSME9YWmQtVVJfODBITmVaVDJBZ0U1QmJUbm9rTEpwVVFEVFhnZW9CTlFicnFoaUk0SWRzWjh5SHF3SlR0SEpydXJiVkxvUGNGdEx1cV9Fal8wRTY3Y0FmV2l0OUNqX04yX1BlSQ?oc=5",
-     "d": "2026-11-13T21:16:38.000Z"
+     "t": "인천공항 대한항공·아시아나 미국행 결항 취소‥운항 정상화",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1uMWN3TzUydHQ3dzhTbVFxcndkNTN3eS1pWlBDQjU2QXhIUk9SWk9LYkhiTG9BaWJnY1QyaWFUVFU0VGdPRlV6Nlg4bzBPYWNIYzRWc3hGTjRnWWhFQlJWTTB6dGNYdlBDMHM3N1haSGZ6SlIz0gF0QVVfeXFMUHBoRzYyeDdSLUNvR1dqN1NUbnRXY2RYNVJuV2ZkR1ViLUpEQkZHWnY5cnZLSE9CUGpFYXFJaXM2MGxfaHVTRl9kLUhuc1hLQklWLVliQmh1ejFGOWU5ejNoSmtNbEw3dkJZQl9malhkTExZYkw?oc=5",
+     "d": "2026-11-14T04:03:40.000Z"
     },
     {
-     "t": "환율·유가 동반 하락에 10월 수입물가 1.8%↓",
-     "src": "한국무역협회-KITA.NET",
-     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMjRWWXZLeXpNNWlsamlKV3BMd1NneVpSbzdZVXRWVmJMVjZZX2c0LXJsaVB2SlNDR0RadlUwRlVaaElYTFVTT0UwUHIwdHRVU2JBNVU2Qk9UV3JnV0w0a2hmcmJuallJRTg1QTNzWF9Ma2lYRUFjbDItRGQ2bEFUM3U0ZmJ1MW9rZTZXY3l3WDZ0VWEyYXdPVjMxNzBRRHU2cnNKd0pLb1BRQnI1dWUxd194eDUwNVNMZDZLTkVRT3BGXzJvcnlQalVHc0xRLUJ5RE0xWG1B?oc=5",
-     "d": "2026-11-13T04:59:51.000Z"
-    },
-    {
-     "t": "美재무 \"과도한 금리 인상은 잡음 큰 수치에 대응하는 것…연준 오픈마인드 가져야\"",
-     "src": "연합인포맥스",
-     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHU2YyVnBtalIwOGVIakdrTVF6VWR6eHJ5YWFxQWY3T2Zldy1MZG1sZzNmV1BvUGxUQ1RxOVFnVXNMOS1mSkh3NEY4QzV1cGU3RjByRkphaVFaTG5oN1FWWENLTlBsd3NUVmlxcUN4RXA?oc=5",
-     "d": "2026-11-13T16:09:50.000Z"
-    },
-    {
-     "t": "2차 모두의창업 정보 유출, 1차 사고 판박이…'취약한 API' 타깃(종합)",
+     "t": "\"트럼프, AI 반도체 수출통제 풀며 엔비디아 주식 샀다\"",
      "src": "연합뉴스",
-     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBOTmtIUW1NX2VsOE12Umo3aFc3Y0J2Wlg3QzJjaUdxVm5EYnhMQTlNLTEwaWZZMTVSVy1rTHVva2dnZEVPVk9xZ3hpZ04tZHhHQ2xIZVppSHFoMkXSAWBBVV95cUxPbTJZSTNOZmZJQ0p0aXlVckg1MGJnZkNMYkdLU2Q3cVVqTGZsU2FFSllZdXRpd2hPU1piel9YRms3NzJDaFI3Ym13aE40ZmM1MzNhN3lZV2hsXzduSkpGTHY?oc=5",
-     "d": "2026-11-13T12:25:19.000Z"
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YeUhFV0JzUVZNNkIxNFFDQVkwQnktZEE5OTJudWVfeHlGb0tCaUVRbjFiODhyVm5Ma1dYWl9McDFrSFJIOUNGczBqVV8zeDZ4cFl3Znd0eHRsNDjSAWBBVV95cUxNMHhWOHJpVXdSRmhyNmhsRkwtX0EzcGlrNDlEQm8wVm9JaFhDYWVsX1RfY1lRRC1ZU0VPeVRXZzZ0NFVZYTlqYkhURDVsVUhfdEMwdzR1SWM0ZXlJYm0xbUU?oc=5",
+     "d": "2026-11-14T08:29:21.000Z"
     },
     {
-     "t": "NH농협캐피탈, 5년째 지배구조 'A'…투명경영 경쟁력 입증",
-     "src": "재외동포신문",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE83OUJXQnJoSG45bzIzeHVEZWZoLWVTMUppMVB2aEtRaWl2eURZWEVaOWNwVzZhb2hGMnVvLV83cEpxVDgyUzlYc1FKQW5yYVhzeEJxQ1pOYnBBMUhlTVU4MnFXazJrWUJzams5Vw?oc=5",
-     "d": "2026-11-13T13:33:43.000Z"
+     "t": "“비트코인 못해먹겠네”…툭하면 강제청산, 7만달러 다시 붕괴 [머니+]",
+     "src": "에너지경제신문",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4wbG1Ic2ctb21xQlpGZkdmRXNYTm5tbllYNUpUYkJUMnk0RDF5RklxUUZ1WkF0aWhOUERid2hINXl2N0RmT3hVTXQzZUV0RWltOXNSMW56dm5ETmM?oc=5",
+     "d": "2026-11-14T03:58:06.000Z"
+    },
+    {
+     "t": "“한때 국민 자격증이었는데”…공인중개사들이 한숨 쉬는 이유",
+     "src": "매일경제",
+     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBLMkN4aWtHRlY4Slg3UkxJSGZaWHg5MkdCOTMxU1p1NHdHN1ZkQlhtdXl3bnJHbWtUOW5nR1R6STZnbzZWekp0dTNEaF9TMnc1WmJ4SUhMU0c?oc=5",
+     "d": "2026-11-14T12:23:31.000Z"
+    },
+    {
+     "t": "매물 늘고 가격 조정…시들해진 서울 아파트 '매수' 심리",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBucWRHTmg5aVhrWkJTdHVyYjR1c0UwVnRsVjlUUlpEYlRxTl9VOUZIMGhqWXJNbTEyaHYwNkM5TWp3Uk9zZk11Yl9ENkhfakgwV0dNaWVCM05aTERJaXJHNjlYVkM5bThNTmliZlQ0NTI?oc=5",
+     "d": "2026-11-14T22:00:12.000Z"
     }
    ],
    "stock": [
     {
-     "t": "\"양손으로 엔비디아 주식 사들인다\"…젠슨 황 충격, 주가 바닥 쳤나 - 머니투데이",
-     "src": "머니투데이",
-     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Wc3laQ1M5WEY5QWVmN29tRWpLM3UxS3pIdUtOVVNYcU5mNzZGSm5YRVE5MEEzMEVrQ0pNQ1oxUTg5Q25tSG5Qd0QtUWhGdTlObjQ2aFp0QnM5SkdJWG1kdWR6aHRoQVRW0gFuQVVfeXFMUEQ5YmdrWDJHc28xR0FmYTZnN1dRdHRNdVpvQjNiU3VLdFR4dncyeUJlMW50MjA3RGt6WDhKZ1JmZm1kUUZ0YlF4TGdHbHhrR1J4bnRQcDV2ajRTVkpLaGRxcnRLSWpCcVYxVUt2WUE?oc=5",
-     "d": "2026-11-13T21:34:08.000Z"
-    },
-    {
-     "t": "뉴욕증시 혼조 마감…엔비디아 하락세 계속, 2%↓",
+     "t": "'젠슨황 스캔들'에 짓눌린 증시…엔비디아 실적·앤트로픽 상장 주시",
      "src": "연합뉴스",
-     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB5MHNNT2FzWnlzOWNJRnA3NnFCM3RGbVZKVHBYejdrQk0xSDBvTEJJblNxblp3eDhfR2syT1BRejBpYnJuclQ4X1o2eXQweVhXbzdqd24zWk41bzjSAWBBVV95cUxPcW05YTVodGYwS0VTZnJ4Yzk3bFdESGNrOGRNMWEtcl81azNZazByRlNvb3JvWi1yUnBycGtWWEZLaGtMN1k1YzBGaVBQR3FUMzJRSWNzamFxZWJhZDcwZm4?oc=5",
-     "d": "2026-11-13T21:18:20.000Z"
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9nR0p4Y2pYLVk2R3BIak9qbGxBY2NpNWFSY0cwUG85TjFGR0hycl94WjJYTXJZTUt4Nnd2WEVjektXMjRyalYyVDE3MVFZUjl3YVVqTmlOQjl2Y0XSAWBBVV95cUxPMEFvZkx4dXNTVkhiX2RfZkV3V3ZXQzFieDlaQlFvQWExaWY3RkVFUE9UTDcwcllsMW5QeEF1LVphMzVJX0dsLVRPVjdQdlY1elczSVlMbVZjVUtJWWs4bnE?oc=5",
+     "d": "2026-11-14T21:00:05.000Z"
     },
     {
-     "t": "주가 하락에 ‘줍줍’ 美 개미들…“엔비디아서 당장 나와라” 투자거물 경고, 왜?",
-     "src": "매일경제",
-     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Tbk1nMHlfOTBKTXBYSUVDMlBqNW1abktmVlM2ZnpaUlBvLURpY1NMb0xIdWNzeVh1Zk9oMk1pSS1zXzJQXy1Bb2dyNExDaFJQVGc?oc=5",
-     "d": "2026-11-13T11:38:03.000Z"
+     "t": "[마켓스토리] 롤러코스터 탔던 올해 코스피…내년 투자 전략은?",
+     "src": "매일경제 마켓",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4xSC01ampBZS12SjE3czlRRkFHRzdfVzB2R1VMUjF3Q2Y0SjFicmI1OUZ4WTZoQkVXNjNLQ1lucG9BRThwS0ZFcEJNYTlXRGtaaFE?oc=5",
+     "d": "2026-11-14T21:30:00.000Z"
     },
     {
-     "t": "뉴욕증시, 반도체주 약세에 나스닥 0.91%↓…다우는 상승",
-     "src": "Chosunbiz",
-     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQQWtVZW5IV1hmWGJfUG1KQmhuQzRWbGlyYldmX1ZiUGxoQnhEUE1HRksxc2RNMDNEVExXZWJadFVjTnhFaDZnQThMV2pjVTZPV0hZSjY2YmxfOWc1MHhTUmJsbndLVkhpZnpuS1hpbktTaDdnc25kNzJ6MzloakNkOGtIODNUX0ZwUmtuclU3Ny0tVG1YY09Qa1BOMjZvd9IBsgFBVV95cUxQcDhkOTRKYk1yckJuODBxMVFpQV9WcWpobFZDTkFrRHVzd2dSbVNRcVFwQjVHVE1ObzFkYzg0LWF0cXBtaHI0SG5tMmkxMGxZY3FJdlNvUGw0V2NxN05kZ0toWTFzWGdMYm5RLW9VdWg3MGZYMWNuWHFQMTUwYm84b3JrRnZBZjVOMGtuZ2puMUQtQ0pyZlpPaXpOVHY5c1FJNmFabUNlV3hkOEVVYy1SaTFR?oc=5",
-     "d": "2026-11-13T22:09:00.000Z"
+     "t": "\"바겐세일, 지금이 기회\" 반도체 소부장 51% 불기둥...계속 될까?[김근희의 증시 랩업] - 머니투데이",
+     "src": "머니투데이",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE85RWRpXzRmc042aEFLLXBFTnpRdVE4SDJyRmVrb094Z3ptVkpvNVQ4ZDh0MGx0NldZTldEU3B1WDBzUm9MYXozcUl0T3BteldHdDVUeFk0elJaLVlLXzhSM2Q5dVFaT2F50gFuQVVfeXFMTklMRHRzSVBZeWkwUFJVeWpaRTVPVmR4VGxRNGlySk1qeTRsLS02VDM1Mmw5WUFNaEt4aXhib3k0VFNfcnBFWFZYODd2enk4UGowNmx2RVgxQVRGd1lsOWN6bUdlNloxSVhtZnpURWc?oc=5",
+     "d": "2026-11-14T21:16:12.000Z"
     },
     {
-     "t": "’젠슨 황 사임’에도 올랐던 코스피…외국인 매도에 하락",
-     "src": "연합뉴스TV",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5EZkJJTHFTdVlFWFdDRWwteTc3ak1IaUJSZjh4MnJKVnY2ZVVGUEJWWE9EbHVhS1o2dmhOamgydTNvNFJYWGtBYmxXd3hjenlVQmo3SE5wNHZ0MWt4T3pDbmxRUlVCS2M?oc=5",
-     "d": "2026-11-13T11:56:00.000Z"
+     "t": "특검법에 주가·청해부대까지 '촉각'...이 대통령, 정상외교 재시동",
+     "src": "YTN",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1PVlBYQ2ktSmxGWlB0NU8wWXRTT2ZpMV83LW92cUNPbTFfdzVTQjdTb2NHUHJPZzZaaFpaUkp4N2duUlY3UGdNU3JkWDd0NlRVRXUxNXNnbU9HZFZjUVk3dlBvTWhTMXBpLU9wLUlDcw?oc=5",
+     "d": "2026-11-14T18:18:00.000Z"
     },
     {
-     "t": "인터넷/SNS상 코스닥 추가대책에 대한 허위정보 관련 투자자 유의사항 - 전체 | 카드/한컷 | 멀티미디어",
-     "src": "대한민국 정책브리핑",
-     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUUtHenkwcUJHQmxEbWpscmM4WVVubnRXaDVzX2NKZnRQamEtQ0tpU2Jwd2xBeXJQUEtKM042a1c1ZUhTYnZkMFZ1elMtZXVfSy1BMFBnaHRoUGFCVXhBdkNnSDdvUWVnOUsza3JQTkwwOG1HUi1EUFg2X0V5R2ZJekptNEtxR0ZULWFz?oc=5",
-     "d": "2026-11-13T06:24:57.000Z"
+     "t": "(주간증시전망)젠슨 황 쇼크 속 시선은 '미중 정상회담'",
+     "src": "뉴스토마토",
+     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TS2drQ3UtelZSV3p1bWxuWnlTY2Q1STMyNnNTR0hLQUx1V2xXdkxrakRscGhsaUtDdjlJb0x3Tk94d0ZxMUJ6NXBMaXJkaWdoNVBvSTJSR1c0VllLeFJYSQ?oc=5",
+     "d": "2026-11-14T21:00:00.000Z"
+    },
+    {
+     "t": "시스코, 매출 24% 증가에도 주가 6% 급락…AI 장비 수익성 부담",
+     "src": "글로벌이코노믹",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPM1NtaHRKSHpHUFBtQnlITGQ1OTlrOVdNMXpsZGVIakExSmptY29iMDZTT2N5ZFcyR1V6TFdrbU85ODQ1S2hvM2dXWkhQb1Frcl9MZnRZLXpjaTVwaEwzeUg2d042bUVCNzFra2hzMUpyaHRudGRIaWlkdGs5RmJ2TGJJNmxXSkFS?oc=5",
+     "d": "2026-11-14T18:00:00.000Z"
     }
    ],
    "news": [
     {
-     "t": "‘쌈짓돈’ 논란 미래기금… 국회 “25조 늘려 달라”",
-     "src": "동아일보",
-     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5oQndpQ1FreFlpejFUWWlmWWpGMERTNm5Yd1pyeE03VkRha05Cc1FGSllTZVJoc1oteUFIUHgzVlAzeVZ4dTUxaTNMMTZBMVFNV1JZS0ZrOGNBdVhBVi1aQ3NJSVk5bExhVDhGSzVxT3VfUUZnM2pj0gFmQVVfeXFMTmpVQnpYaW5URmdfekFraElHOGQ4OUpWVVRLSEFpMHYxcDB3NWhtSkRycXJpZUJTU3YzZ2FONnpranVFRlVtS2wxaUpZVnVRTjRwRjdaOWp4MkJOX3otaWl3RmNCYzZR?oc=5",
-     "d": "2026-11-13T16:40:00.000Z"
+     "t": "이 대통령 \"가장 힘든 건 등 뒤에서 날아오는 화살\"",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBuamxhZmZDZVdFNnBESllFY2xvVmxycklhSWJFZmI0RTdpQkdWUTRWN3dpQm53LUx6VkpNY0VYM3BQbl9wb1F0YlJNOHhydDllUlBoVG1OemxralFwRW1rdGxQbDQ5OXEtN05GRlBueEc1c25EYkpsaQ?oc=5",
+     "d": "2026-11-14T12:40:24.000Z"
     },
     {
-     "t": "조현, 중국에 ’한반도 문제’ 역할 당부…왕이 “정책 변함없어“",
+     "t": "강원 동해안·제주 곳곳에 비…전라·경북 내륙 짙은 안개",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE85SHh6VjUwN1JFd3ZPQncwUUhfb2JnSHRpMl9YWFNicG9rdl9McWNMSXhGTm5sekNuOE95aVFFbV9iQVZ0WWtBMDB4RjFjUzRCMERSN3RpVWQyTXPSAWBBVV95cUxPdVpQVm1qUjRId1dqRGZhbGk2SVFNVWttWG5udFBOdGltaW5LVjFxak1vanV0alUxWmhmVGVwc3IxSm8xVnJudEFiTnNlVFhYU0MxVFJzbWszM0ozNmxCQko?oc=5",
+     "d": "2026-11-14T20:20:33.000Z"
+    },
+    {
+     "t": "미국 “19일 중국서 미·중·러 정상회담”…트럼프-김정은 회담은 불발 전망",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1VYjhxNE9MMzVIUXJRNWtnQjluUklaVllNRGVLamFIWjJxUkJRZTQ4ODEtVElCYUF3SkxRS1kyeDE0Tld2bW54ODgtZ0w1dmtIYXFsZTJMZDMyVEJ0TW5KQ1NtYVYwU04waHItVU1ROFFkN1U0?oc=5",
+     "d": "2026-11-14T21:53:00.000Z"
+    },
+    {
+     "t": "국힘, 부산역서 ‘이재명 탈옥법’ 규탄…“죽은 법에 근거한 특검”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9oajBkTDJSQ2hSY2VoMUFuT1VQeF93ek5ZSU9mYTlOaE9VRExsdjh6bTBTejE1Z3lMVEkxLUNaZVJpS2lfSXAzSC1rZWo0QWxaMFNhMVJwOUx2TFZEYjFHbGRxUk1rM2h3Z3luVjNZRkU3c0U1?oc=5",
+     "d": "2026-11-14T13:12:00.000Z"
+    },
+    {
+     "t": "한동훈 “최민희, 우기면 추하다…이 대통령·윤 재판 똑같다더니”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBOQkRkS3YwX3ctSnBZZk5jZkxCaEtRck9kQUp2LW94NVBFR2taeEtSU2s0cWJMa25DdHZzaTFHVEhXOG9UYllWRmlqVmU3MFpranQxMFhEaThORjFJYkNuMUc3MUhKd3dJMEhPWkcxVWN4VXRI?oc=5",
+     "d": "2026-11-14T13:13:00.000Z"
+    },
+    {
+     "t": "광주 아파트 방화범 구속…70대 경비원 사망·13명 부상",
      "src": "연합뉴스TV",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5kRUFJVU5PVFdhNjJyMjlUaWFFVkVsak5tSDEydzJ0ZUtMQ0M2UjdwMnc4RGhSZ0tiLUZfaEtzVjFIcnRlRGFJWkdfOGlVaVNfTzF1SmludS1ua2pGTmM2N040ZEtrZ1k?oc=5",
-     "d": "2026-11-13T15:21:00.000Z"
-    },
-    {
-     "t": "‘신천지 사태’에 ‘최민희 구설’까지…친명-친청 갈등 심화",
-     "src": "한겨레",
-     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14ZmZPdWZXTEt4Uzhzb18xUUdBRFE5OEtkc2g4Sk5oXzM0d21KYXNjcEVacmZPNm9TdTRaeU03NmdVd3BhS0xEa0NVWEx0c0JadnNoR01KMHROaVBiU0tJY1hnNjdjTnhhekZiaDdTbjhIb2Rv?oc=5",
-     "d": "2026-11-13T10:16:00.000Z"
-    },
-    {
-     "t": "\"AI 안경 쓴 거 맞네\" 댓글 달았다간…무서운 '경고' [법알못]",
-     "src": "한국경제",
-     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9XSlNMc0xBak4xUVhuWmptSmpZc3pmcy12bUc4ZU1xZDlyVjZhUGJZd3JoY2ZvMlg0SmtUUENad3NfdUhXWTRDYUlOVGl0RUpzc0laYkdEWVV3dw?oc=5",
-     "d": "2026-11-13T10:09:01.000Z"
-    },
-    {
-     "t": "이란 외교부 “뱁새가 황새 따라가면 가랑이 찢어져”···한국 속담으로 ‘청해부대 임무 확대’ 경고",
-     "src": "경향신문",
-     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12YjNYdzdLSE44V1d0MXJWWE1IZWxabGVuSVhyS0dEMkgyZXE5RC1ucmxzWFNYaWNGazJVM3dJWV9paGVCcUtyVjVPejdjWXNjUDVkRGhEemVaQdIBX0FVX3lxTE0zRWcydWNZRlRMdTNHS1AzNF9sa2Q4eENQQkZXSDliS1pFWXlCMHc4RXRDNmloaEhLRk1FMWhYc1J5WjF0a1JJY050aUxFeWxmRE5ScUFmVk1jNTdGdFFJ?oc=5",
-     "d": "2026-11-13T06:07:00.000Z"
-    },
-    {
-     "t": "‘성북 10대 여성 살해’ 50대 남성 구속…부검서 “입실 직후 범행” 소견",
-     "src": "한겨레",
-     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5faU9xSDV5Um9HWTZ0d3gyc240ZlNDT2FGNUpVelhveFFWOGs4UHhuSmhnRGZIeTJvaTVpdTFudTZzTi05OXVTTnJBYV9pUU45LTF0REdzcTZCbnQ2UnFCZmZLOVZPcjVjSFd0LVI5NlEzUQ?oc=5",
-     "d": "2026-11-13T13:13:00.000Z"
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1xc2tfdmhwWjVoYlY1RmlVTldTOVJoczNkcXZOcEc5aDlkQ3JkLWJ3Y2J0eGRvUzdrejY2eEd4aTRnVHhzb0QtQndEeFpnbWt4d2stX1N4cHVsbmNhS3YwYlNLMVpCNEU?oc=5",
+     "d": "2026-11-14T11:33:00.000Z"
     }
    ]
   }
  },
  "economy": [
   {
-   "t": "대만 매체 \"젠슨 황 불륜녀, 中국가안전부 반도체팀 소속\"",
-   "src": "연합뉴스TV",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5JTlU1R1VKckk3MWxQNlVhUlZrRURGNTVQamctRVU3bTFiWGk3cHdKdjF3RUFMbXBIcUhZWmlFVFRTWFZDU3J3R0pDb1dXcTBHUFV4elFESkRvVFdqWXRBbTJkRm1Xbzg?oc=5",
-   "d": "2026-11-13T12:28:00.000Z"
+   "t": "젠슨 황 몰락이 남긴 역설…“이사회 누가 머스크·저커버그에 맞설 수 있겠나”",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAxSkg4S2lxYnlrSmNUMWY1ZWpyUzdPRVE4NGZGV2lzbE1fRml1dWVtZ1I3NHNXazhnVXNSS0lCOWpjYnBNMFZ2MzdPRGtkUnV1QVhzWUtyaFZEYmVlX2xFOGVwaXBrQ25nZS03X0N4QWJNYWZibDZn?oc=5",
+   "d": "2026-11-14T12:36:00.000Z"
   },
   {
-   "t": "[뉴욕증시-1보] 젠슨 황 스캔들 여파 지속…혼조 마감",
-   "src": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BaFhLd2dPcDhaNHFtYTg3cERiZ0hVWU1aSjFmZ1J4eVRWU0FxazFEWm14REZsY1hISll3eFRkaXR3Q0RWNGN0TXRVWlRlVmpZMVVnUUNfQmI4ZmZ4US0yMmxJUDd0SDFRN3V4bW5JQm7SAXRBVV95cUxQZlpWYUgtOFlSME9YWmQtVVJfODBITmVaVDJBZ0U1QmJUbm9rTEpwVVFEVFhnZW9CTlFicnFoaUk0SWRzWjh5SHF3SlR0SEpydXJiVkxvUGNGdEx1cV9Fal8wRTY3Y0FmV2l0OUNqX04yX1BlSQ?oc=5",
-   "d": "2026-11-13T21:16:38.000Z"
+   "t": "인천공항 대한항공·아시아나 미국행 결항 취소‥운항 정상화",
+   "src": "MBC 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1uMWN3TzUydHQ3dzhTbVFxcndkNTN3eS1pWlBDQjU2QXhIUk9SWk9LYkhiTG9BaWJnY1QyaWFUVFU0VGdPRlV6Nlg4bzBPYWNIYzRWc3hGTjRnWWhFQlJWTTB6dGNYdlBDMHM3N1haSGZ6SlIz0gF0QVVfeXFMUHBoRzYyeDdSLUNvR1dqN1NUbnRXY2RYNVJuV2ZkR1ViLUpEQkZHWnY5cnZLSE9CUGpFYXFJaXM2MGxfaHVTRl9kLUhuc1hLQklWLVliQmh1ejFGOWU5ejNoSmtNbEw3dkJZQl9malhkTExZYkw?oc=5",
+   "d": "2026-11-14T04:03:40.000Z"
   },
   {
-   "t": "환율·유가 동반 하락에 10월 수입물가 1.8%↓",
-   "src": "한국무역협회-KITA.NET",
-   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMjRWWXZLeXpNNWlsamlKV3BMd1NneVpSbzdZVXRWVmJMVjZZX2c0LXJsaVB2SlNDR0RadlUwRlVaaElYTFVTT0UwUHIwdHRVU2JBNVU2Qk9UV3JnV0w0a2hmcmJuallJRTg1QTNzWF9Ma2lYRUFjbDItRGQ2bEFUM3U0ZmJ1MW9rZTZXY3l3WDZ0VWEyYXdPVjMxNzBRRHU2cnNKd0pLb1BRQnI1dWUxd194eDUwNVNMZDZLTkVRT3BGXzJvcnlQalVHc0xRLUJ5RE0xWG1B?oc=5",
-   "d": "2026-11-13T04:59:51.000Z"
-  },
-  {
-   "t": "美재무 \"과도한 금리 인상은 잡음 큰 수치에 대응하는 것…연준 오픈마인드 가져야\"",
-   "src": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHU2YyVnBtalIwOGVIakdrTVF6VWR6eHJ5YWFxQWY3T2Zldy1MZG1sZzNmV1BvUGxUQ1RxOVFnVXNMOS1mSkh3NEY4QzV1cGU3RjByRkphaVFaTG5oN1FWWENLTlBsd3NUVmlxcUN4RXA?oc=5",
-   "d": "2026-11-13T16:09:50.000Z"
-  },
-  {
-   "t": "2차 모두의창업 정보 유출, 1차 사고 판박이…'취약한 API' 타깃(종합)",
+   "t": "\"트럼프, AI 반도체 수출통제 풀며 엔비디아 주식 샀다\"",
    "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBOTmtIUW1NX2VsOE12Umo3aFc3Y0J2Wlg3QzJjaUdxVm5EYnhMQTlNLTEwaWZZMTVSVy1rTHVva2dnZEVPVk9xZ3hpZ04tZHhHQ2xIZVppSHFoMkXSAWBBVV95cUxPbTJZSTNOZmZJQ0p0aXlVckg1MGJnZkNMYkdLU2Q3cVVqTGZsU2FFSllZdXRpd2hPU1piel9YRms3NzJDaFI3Ym13aE40ZmM1MzNhN3lZV2hsXzduSkpGTHY?oc=5",
-   "d": "2026-11-13T12:25:19.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YeUhFV0JzUVZNNkIxNFFDQVkwQnktZEE5OTJudWVfeHlGb0tCaUVRbjFiODhyVm5Ma1dYWl9McDFrSFJIOUNGczBqVV8zeDZ4cFl3Znd0eHRsNDjSAWBBVV95cUxNMHhWOHJpVXdSRmhyNmhsRkwtX0EzcGlrNDlEQm8wVm9JaFhDYWVsX1RfY1lRRC1ZU0VPeVRXZzZ0NFVZYTlqYkhURDVsVUhfdEMwdzR1SWM0ZXlJYm0xbUU?oc=5",
+   "d": "2026-11-14T08:29:21.000Z"
   },
   {
-   "t": "NH농협캐피탈, 5년째 지배구조 'A'…투명경영 경쟁력 입증",
-   "src": "재외동포신문",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE83OUJXQnJoSG45bzIzeHVEZWZoLWVTMUppMVB2aEtRaWl2eURZWEVaOWNwVzZhb2hGMnVvLV83cEpxVDgyUzlYc1FKQW5yYVhzeEJxQ1pOYnBBMUhlTVU4MnFXazJrWUJzams5Vw?oc=5",
-   "d": "2026-11-13T13:33:43.000Z"
+   "t": "“비트코인 못해먹겠네”…툭하면 강제청산, 7만달러 다시 붕괴 [머니+]",
+   "src": "에너지경제신문",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4wbG1Ic2ctb21xQlpGZkdmRXNYTm5tbllYNUpUYkJUMnk0RDF5RklxUUZ1WkF0aWhOUERid2hINXl2N0RmT3hVTXQzZUV0RWltOXNSMW56dm5ETmM?oc=5",
+   "d": "2026-11-14T03:58:06.000Z"
+  },
+  {
+   "t": "“한때 국민 자격증이었는데”…공인중개사들이 한숨 쉬는 이유",
+   "src": "매일경제",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBLMkN4aWtHRlY4Slg3UkxJSGZaWHg5MkdCOTMxU1p1NHdHN1ZkQlhtdXl3bnJHbWtUOW5nR1R6STZnbzZWekp0dTNEaF9TMnc1WmJ4SUhMU0c?oc=5",
+   "d": "2026-11-14T12:23:31.000Z"
+  },
+  {
+   "t": "매물 늘고 가격 조정…시들해진 서울 아파트 '매수' 심리",
+   "src": "연합인포맥스",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBucWRHTmg5aVhrWkJTdHVyYjR1c0UwVnRsVjlUUlpEYlRxTl9VOUZIMGhqWXJNbTEyaHYwNkM5TWp3Uk9zZk11Yl9ENkhfakgwV0dNaWVCM05aTERJaXJHNjlYVkM5bThNTmliZlQ0NTI?oc=5",
+   "d": "2026-11-14T22:00:12.000Z"
   }
  ],
  "news": [
   {
-   "t": "‘쌈짓돈’ 논란 미래기금… 국회 “25조 늘려 달라”",
-   "src": "동아일보",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5oQndpQ1FreFlpejFUWWlmWWpGMERTNm5Yd1pyeE03VkRha05Cc1FGSllTZVJoc1oteUFIUHgzVlAzeVZ4dTUxaTNMMTZBMVFNV1JZS0ZrOGNBdVhBVi1aQ3NJSVk5bExhVDhGSzVxT3VfUUZnM2pj0gFmQVVfeXFMTmpVQnpYaW5URmdfekFraElHOGQ4OUpWVVRLSEFpMHYxcDB3NWhtSkRycXJpZUJTU3YzZ2FONnpranVFRlVtS2wxaUpZVnVRTjRwRjdaOWp4MkJOX3otaWl3RmNCYzZR?oc=5",
-   "d": "2026-11-13T16:40:00.000Z"
+   "t": "이 대통령 \"가장 힘든 건 등 뒤에서 날아오는 화살\"",
+   "src": "MBC 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBuamxhZmZDZVdFNnBESllFY2xvVmxycklhSWJFZmI0RTdpQkdWUTRWN3dpQm53LUx6VkpNY0VYM3BQbl9wb1F0YlJNOHhydDllUlBoVG1OemxralFwRW1rdGxQbDQ5OXEtN05GRlBueEc1c25EYkpsaQ?oc=5",
+   "d": "2026-11-14T12:40:24.000Z"
   },
   {
-   "t": "조현, 중국에 ’한반도 문제’ 역할 당부…왕이 “정책 변함없어“",
+   "t": "강원 동해안·제주 곳곳에 비…전라·경북 내륙 짙은 안개",
+   "src": "연합뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE85SHh6VjUwN1JFd3ZPQncwUUhfb2JnSHRpMl9YWFNicG9rdl9McWNMSXhGTm5sekNuOE95aVFFbV9iQVZ0WWtBMDB4RjFjUzRCMERSN3RpVWQyTXPSAWBBVV95cUxPdVpQVm1qUjRId1dqRGZhbGk2SVFNVWttWG5udFBOdGltaW5LVjFxak1vanV0alUxWmhmVGVwc3IxSm8xVnJudEFiTnNlVFhYU0MxVFJzbWszM0ozNmxCQko?oc=5",
+   "d": "2026-11-14T20:20:33.000Z"
+  },
+  {
+   "t": "미국 “19일 중국서 미·중·러 정상회담”…트럼프-김정은 회담은 불발 전망",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1VYjhxNE9MMzVIUXJRNWtnQjluUklaVllNRGVLamFIWjJxUkJRZTQ4ODEtVElCYUF3SkxRS1kyeDE0Tld2bW54ODgtZ0w1dmtIYXFsZTJMZDMyVEJ0TW5KQ1NtYVYwU04waHItVU1ROFFkN1U0?oc=5",
+   "d": "2026-11-14T21:53:00.000Z"
+  },
+  {
+   "t": "국힘, 부산역서 ‘이재명 탈옥법’ 규탄…“죽은 법에 근거한 특검”",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9oajBkTDJSQ2hSY2VoMUFuT1VQeF93ek5ZSU9mYTlOaE9VRExsdjh6bTBTejE1Z3lMVEkxLUNaZVJpS2lfSXAzSC1rZWo0QWxaMFNhMVJwOUx2TFZEYjFHbGRxUk1rM2h3Z3luVjNZRkU3c0U1?oc=5",
+   "d": "2026-11-14T13:12:00.000Z"
+  },
+  {
+   "t": "한동훈 “최민희, 우기면 추하다…이 대통령·윤 재판 똑같다더니”",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBOQkRkS3YwX3ctSnBZZk5jZkxCaEtRck9kQUp2LW94NVBFR2taeEtSU2s0cWJMa25DdHZzaTFHVEhXOG9UYllWRmlqVmU3MFpranQxMFhEaThORjFJYkNuMUc3MUhKd3dJMEhPWkcxVWN4VXRI?oc=5",
+   "d": "2026-11-14T13:13:00.000Z"
+  },
+  {
+   "t": "광주 아파트 방화범 구속…70대 경비원 사망·13명 부상",
    "src": "연합뉴스TV",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5kRUFJVU5PVFdhNjJyMjlUaWFFVkVsak5tSDEydzJ0ZUtMQ0M2UjdwMnc4RGhSZ0tiLUZfaEtzVjFIcnRlRGFJWkdfOGlVaVNfTzF1SmludS1ua2pGTmM2N040ZEtrZ1k?oc=5",
-   "d": "2026-11-13T15:21:00.000Z"
-  },
-  {
-   "t": "‘신천지 사태’에 ‘최민희 구설’까지…친명-친청 갈등 심화",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14ZmZPdWZXTEt4Uzhzb18xUUdBRFE5OEtkc2g4Sk5oXzM0d21KYXNjcEVacmZPNm9TdTRaeU03NmdVd3BhS0xEa0NVWEx0c0JadnNoR01KMHROaVBiU0tJY1hnNjdjTnhhekZiaDdTbjhIb2Rv?oc=5",
-   "d": "2026-11-13T10:16:00.000Z"
-  },
-  {
-   "t": "\"AI 안경 쓴 거 맞네\" 댓글 달았다간…무서운 '경고' [법알못]",
-   "src": "한국경제",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9XSlNMc0xBak4xUVhuWmptSmpZc3pmcy12bUc4ZU1xZDlyVjZhUGJZd3JoY2ZvMlg0SmtUUENad3NfdUhXWTRDYUlOVGl0RUpzc0laYkdEWVV3dw?oc=5",
-   "d": "2026-11-13T10:09:01.000Z"
-  },
-  {
-   "t": "이란 외교부 “뱁새가 황새 따라가면 가랑이 찢어져”···한국 속담으로 ‘청해부대 임무 확대’ 경고",
-   "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12YjNYdzdLSE44V1d0MXJWWE1IZWxabGVuSVhyS0dEMkgyZXE5RC1ucmxzWFNYaWNGazJVM3dJWV9paGVCcUtyVjVPejdjWXNjUDVkRGhEemVaQdIBX0FVX3lxTE0zRWcydWNZRlRMdTNHS1AzNF9sa2Q4eENQQkZXSDliS1pFWXlCMHc4RXRDNmloaEhLRk1FMWhYc1J5WjF0a1JJY050aUxFeWxmRE5ScUFmVk1jNTdGdFFJ?oc=5",
-   "d": "2026-11-13T06:07:00.000Z"
-  },
-  {
-   "t": "‘성북 10대 여성 살해’ 50대 남성 구속…부검서 “입실 직후 범행” 소견",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5faU9xSDV5Um9HWTZ0d3gyc240ZlNDT2FGNUpVelhveFFWOGs4UHhuSmhnRGZIeTJvaTVpdTFudTZzTi05OXVTTnJBYV9pUU45LTF0REdzcTZCbnQ2UnFCZmZLOVZPcjVjSFd0LVI5NlEzUQ?oc=5",
-   "d": "2026-11-13T13:13:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1xc2tfdmhwWjVoYlY1RmlVTldTOVJoczNkcXZOcEc5aDlkQ3JkLWJ3Y2J0eGRvUzdrejY2eEd4aTRnVHhzb0QtQndEeFpnbWt4d2stX1N4cHVsbmNhS3YwYlNLMVpCNEU?oc=5",
+   "d": "2026-11-14T11:33:00.000Z"
   }
  ],
  "week": [
@@ -278,6 +278,29 @@
      "src": "한국무역협회-KITA.NET",
      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMjRWWXZLeXpNNWlsamlKV3BMd1NneVpSbzdZVXRWVmJMVjZZX2c0LXJsaVB2SlNDR0RadlUwRlVaaElYTFVTT0UwUHIwdHRVU2JBNVU2Qk9UV3JnV0w0a2hmcmJuallJRTg1QTNzWF9Ma2lYRUFjbDItRGQ2bEFUM3U0ZmJ1MW9rZTZXY3l3WDZ0VWEyYXdPVjMxNzBRRHU2cnNKd0pLb1BRQnI1dWUxd194eDUwNVNMZDZLTkVRT3BGXzJvcnlQalVHc0xRLUJ5RE0xWG1B?oc=5",
      "d": "2026-11-13T04:59:51.000Z"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-15",
+   "items": [
+    {
+     "t": "젠슨 황 몰락이 남긴 역설…“이사회 누가 머스크·저커버그에 맞설 수 있겠나”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAxSkg4S2lxYnlrSmNUMWY1ZWpyUzdPRVE4NGZGV2lzbE1fRml1dWVtZ1I3NHNXazhnVXNSS0lCOWpjYnBNMFZ2MzdPRGtkUnV1QVhzWUtyaFZEYmVlX2xFOGVwaXBrQ25nZS03X0N4QWJNYWZibDZn?oc=5",
+     "d": "2026-11-14T12:36:00.000Z"
+    },
+    {
+     "t": "인천공항 대한항공·아시아나 미국행 결항 취소‥운항 정상화",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1uMWN3TzUydHQ3dzhTbVFxcndkNTN3eS1pWlBDQjU2QXhIUk9SWk9LYkhiTG9BaWJnY1QyaWFUVFU0VGdPRlV6Nlg4bzBPYWNIYzRWc3hGTjRnWWhFQlJWTTB6dGNYdlBDMHM3N1haSGZ6SlIz0gF0QVVfeXFMUHBoRzYyeDdSLUNvR1dqN1NUbnRXY2RYNVJuV2ZkR1ViLUpEQkZHWnY5cnZLSE9CUGpFYXFJaXM2MGxfaHVTRl9kLUhuc1hLQklWLVliQmh1ejFGOWU5ejNoSmtNbEw3dkJZQl9malhkTExZYkw?oc=5",
+     "d": "2026-11-14T04:03:40.000Z"
+    },
+    {
+     "t": "\"트럼프, AI 반도체 수출통제 풀며 엔비디아 주식 샀다\"",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YeUhFV0JzUVZNNkIxNFFDQVkwQnktZEE5OTJudWVfeHlGb0tCaUVRbjFiODhyVm5Ma1dYWl9McDFrSFJIOUNGczBqVV8zeDZ4cFl3Znd0eHRsNDjSAWBBVV95cUxNMHhWOHJpVXdSRmhyNmhsRkwtX0EzcGlrNDlEQm8wVm9JaFhDYWVsX1RfY1lRRC1ZU0VPeVRXZzZ0NFVZYTlqYkhURDVsVUhfdEMwdzR1SWM0ZXlJYm0xbUU?oc=5",
+     "d": "2026-11-14T08:29:21.000Z"
     }
    ]
   }
