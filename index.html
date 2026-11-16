@@ -172,7 +172,15 @@ input[type=checkbox]{width:20px;height:20px;margin:2px 0 0;accent-color:var(--na
 .appbtn.off{color:var(--muted);font-weight:500;border-style:dashed;border-color:var(--line)}
 .appbtn.edit{flex-direction:column;gap:6px;cursor:default}
 .appbtn .ctl{display:flex;gap:4px}
-.apps.editing{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.apps.editing{display:flex;flex-direction:column;gap:6px}
+.approw{display:flex;align-items:center;gap:6px;background:var(--sunken);border:1px solid transparent;border-radius:12px;padding:5px 8px 5px 2px;min-height:54px;
+  -webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.approw .grip{flex:none;width:44px;height:44px;border:0;background:transparent;color:var(--muted);cursor:grab;touch-action:none;display:grid;place-items:center;border-radius:9px}
+.approw .grip:active{cursor:grabbing}
+.approw .nm{flex:1;min-width:0;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.approw .kind{flex:none;font-size:12px;color:var(--muted);margin-right:4px}
+.approw.lifting{transform:scale(1.02);box-shadow:0 10px 24px rgba(16,27,63,.25);background:var(--surface);border-color:var(--accent);position:relative;z-index:2}
+.apps.sorting .approw:not(.lifting){opacity:.75}
 .mini{white-space:nowrap;min-width:34px;min-height:32px;padding:0 6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;cursor:pointer;font-size:13px}
 .mini.danger{color:var(--crit)}
 .appedit{margin-top:14px;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--line);padding-top:12px}
@@ -189,7 +197,7 @@ input[type=checkbox]{width:20px;height:20px;margin:2px 0 0;accent-color:var(--na
 .news a.t{font-weight:600;text-decoration:none;color:var(--ink)}
 .news a.t[href]{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
 details summary{cursor:pointer;font-weight:600}
-.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(24px + env(safe-area-inset-bottom));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:99px;font-size:14px;z-index:30;display:none;max-width:90vw}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(24px + env(safe-area-inset-bottom));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:99px;font-size:14px;z-index:30;display:none;max-width:90vw;pointer-events:none}
 .toast.on{display:block}
 .notice{position:fixed;z-index:40;top:calc(env(safe-area-inset-top) + 10px);left:12px;right:12px;max-width:460px;margin:0 auto;background:var(--surface);color:var(--ink);
   border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:16px;padding:14px 16px 12px;box-shadow:0 14px 36px rgba(16,27,63,.24)}
@@ -571,23 +579,26 @@ function launchApp(e,l,href){var a=appInfo(l);
 var appDrag=null,suppressTap=false;
 function initAppDrag(){var box=$("#apps");
   box.addEventListener("contextmenu",function(e){if(e.target.closest&&e.target.closest("a.appbtn"))e.preventDefault()});
-  box.addEventListener("pointerdown",function(e){var el=e.target.closest&&e.target.closest("a.appbtn");
-    if(!el||editApps||(e.pointerType==="mouse"&&e.button!==0))return;
-    var st={el:el,x:e.clientX,y:e.clientY,id:e.pointerId,on:false};appDrag=st;
-    st.t=setTimeout(function(){if(appDrag!==st)return;st.on=true;el.classList.add("lifting");box.classList.add("sorting");
-      try{box.setPointerCapture(st.id)}catch(x){}try{if(navigator.vibrate)navigator.vibrate(12)}catch(x){}},450)});
+  box.addEventListener("pointerdown",function(e){var c=e.target.closest?e.target:null,el=c&&c.closest(editApps?".approw":"a.appbtn");
+    if(!el||(e.pointerType==="mouse"&&e.button!==0)||(c.closest(".mini")))return;
+    var viaGrip=editApps&&!!c.closest(".grip"),st={el:el,x:e.clientX,y:e.clientY,id:e.pointerId,on:false,t0:Date.now(),wait:editApps?350:450};appDrag=st;
+    st.lift=lift;function lift(){if(appDrag!==st)return;st.on=true;el.classList.add("lifting");box.classList.add("sorting");
+      try{box.setPointerCapture(st.id)}catch(x){}try{if(navigator.vibrate)navigator.vibrate(12)}catch(x){}}
+    if(viaGrip){e.preventDefault();lift()}else st.t=setTimeout(lift,st.wait)});
   box.addEventListener("pointermove",function(e){var d=appDrag;if(!d||e.pointerId!==d.id)return;
-    if(!d.on){if(Math.abs(e.clientX-d.x)+Math.abs(e.clientY-d.y)>10){clearTimeout(d.t);appDrag=null}return}
+    if(!d.on){var far=Math.abs(e.clientX-d.x)+Math.abs(e.clientY-d.y)>10;
+      if(Date.now()-d.t0>=d.wait){clearTimeout(d.t);d.lift()}else{if(far){clearTimeout(d.t);appDrag=null}return}}
     e.preventDefault();
-    var under=document.elementFromPoint(e.clientX,e.clientY),t=under&&under.closest&&under.closest("a.appbtn");
+    var under=document.elementFromPoint(e.clientX,e.clientY),t=under&&under.closest&&under.closest("[data-id]");
     if(t&&t!==d.el&&t.parentNode===box){var kids=[].slice.call(box.children),a=kids.indexOf(d.el),c=kids.indexOf(t);box.insertBefore(d.el,a<c?t.nextSibling:t)}});
   function end(e){var d=appDrag;if(!d||e.pointerId!==d.id)return;clearTimeout(d.t);appDrag=null;if(!d.on)return;
     d.el.classList.remove("lifting");box.classList.remove("sorting");suppressTap=true;setTimeout(function(){suppressTap=false},600);
-    var ids=[].slice.call(box.querySelectorAll("a.appbtn")).map(function(x){return x.getAttribute("data-id")}),changed=false;
+    var ids=[].slice.call(box.querySelectorAll("[data-id]")).map(function(x){return x.getAttribute("data-id")}),changed=false;
     S.links.forEach(function(l){var i=ids.indexOf(l.id);if(i>=0&&l.ord!==i){l.ord=i;changed=true}});
     if(changed){save();toast("순서를 바꿨습니다")}draw()}
   box.addEventListener("pointerup",end);box.addEventListener("pointercancel",end);
   document.addEventListener("touchmove",function(e){if(appDrag&&appDrag.on)e.preventDefault()},{passive:false})}
+function focusGrip(id){setTimeout(function(){var g=document.querySelector('#apps [data-id="'+id+'"] .grip');if(g)g.focus()},60)}
 function moveApp(id,dir){var list=sortBy(S.links,function(l){return l.ord||0}),i=list.findIndex(function(l){return l.id===id}),j=i+dir;if(i<0||j<0||j>=list.length)return;
   var t=list[i].ord;list[i].ord=list[j].ord;list[j].ord=t;if(list[i].ord===list[j].ord){list.forEach(function(l,k){l.ord=k})}save();draw()}
 var DEFAULT_LINKS=[["네이버","https://m.naver.com"],["구글 캘린더","https://calendar.google.com"],["지메일","https://mail.google.com"],["구글 시트","https://docs.google.com/spreadsheets"],["카토리지","https://cartorage.kr"],["블로그","https://m.blog.naver.com"],["증권","https://m.stock.naver.com"],["지도","https://m.map.naver.com"],["유튜브","https://m.youtube.com"]];
@@ -823,13 +834,17 @@ function render(){
   weather($("#wx2"),$("#wx2-meta"));
   /* 앱 */
   if(!(appDrag&&appDrag.on)){
-  var apps=$("#apps"),ordered=sortBy(S.links,function(l){return l.ord||0});apps.textContent="";$("#app-hint").hidden=editApps||ordered.length<2;
+  var apps=$("#apps"),ordered=sortBy(S.links,function(l){return l.ord||0});apps.textContent="";$("#app-hint").hidden=ordered.length<2;
+  $("#app-hint").textContent=editApps?"왼쪽 손잡이를 잡거나 줄을 길게 누른 채 위아래로 끌면 순서가 바뀝니다.":"길게 누른 채 끌면 순서를 바꿀 수 있습니다.";
   if(!ordered.length)apps.appendChild(h("p",{class:"empty",text:"바로가기가 없습니다. 편집을 눌러 추가하세요."}));
   ordered.forEach(function(l,ix){var a=appInfo(l),href=appHref(l);
-    if(editApps)apps.appendChild(h("div",{class:"appbtn edit"},h("span",{text:a.name}),h("span",{class:"ctl"},
-      h("button",{class:"mini",type:"button","aria-label":a.name+" 앞으로",disabled:ix===0?true:null,onclick:function(){moveApp(l.id,-1)}},"◀"),
-      h("button",{class:"mini",type:"button","aria-label":a.name+" 뒤로",disabled:ix===ordered.length-1?true:null,onclick:function(){moveApp(l.id,1)}},"▶"),
-      h("button",{class:"mini danger",type:"button","aria-label":a.name+" 삭제",onclick:function(){del("links",l.id)}},"삭제"))));
+    if(editApps){var grip=h("button",{class:"grip",type:"button","aria-label":a.name+" 순서 옮기기 (위·아래 화살표 키)",
+        onkeydown:function(e){if(e.key==="ArrowUp"||e.key==="ArrowDown"){e.preventDefault();moveApp(l.id,e.key==="ArrowUp"?-1:1);focusGrip(l.id)}}});
+      grip.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 8h14M5 12h14M5 16h14"/></svg>';
+      apps.appendChild(h("div",{class:"approw","data-id":l.id},grip,h("span",{class:"nm",text:a.name}),
+        h("span",{class:"kind",text:(a.addr||a.pkg||a.ios||a.android||a.shortcut)?"앱":"웹"}),
+        (function(){var b=h("button",{class:"mini danger",type:"button","aria-label":a.name+" 삭제"},"삭제");
+          b.addEventListener("click",function(){if(b.dataset.arm){del("links",l.id)}else{b.dataset.arm="1";b.textContent="삭제 확인";setTimeout(function(){delete b.dataset.arm;b.textContent="삭제"},3000)}});return b})()))}
     else apps.appendChild(h("a",{class:"appbtn"+(href?"":" off"),"data-id":l.id,href:href&&okUrl(href)?href:null,role:href?null:"button",tabindex:href?null:"0",
       target:href&&/^https?:/i.test(href)?"_blank":null,rel:"noopener",title:href?null:"폰에서만 열 수 있는 앱",onclick:function(e){launchApp(e,l,href)}},a.name))});
   apps.classList.toggle("editing",editApps);$("#app-editor").hidden=!editApps;$("#apps-edit").textContent=editApps?"완료":"편집";
