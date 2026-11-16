@@ -1,10 +1,15 @@
-name: 아침 뉴스 갱신
+name: 뉴스 갱신 (아침·오후·밤)
 on:
   schedule:
-    - cron: "47 21 * * *"   # 매일 한국 시간 오전 6시 47분 (UTC 21:47)
+    - cron: "7 22 * * *"   # 아침: 한국 시간 오전 7시 7분
+    - cron: "7 4 * * *"    # 오후: 한국 시간 오후 1시 7분
+    - cron: "7 12 * * *"   # 밤: 한국 시간 오후 9시 7분
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: briefing
+  cancel-in-progress: false
 jobs:
   briefing:
     runs-on: ubuntu-latest
@@ -19,4 +24,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/briefing.json
-          git diff --cached --quiet || (git commit -m "뉴스 갱신" && git push)
+          if ! git diff --cached --quiet; then
+            git commit -m "뉴스 갱신"
+            git pull --rebase origin main
+            git push
+          fi
