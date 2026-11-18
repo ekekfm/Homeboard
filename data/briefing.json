@@ -1,7 +1,7 @@
 {
  "date": "2026-11-18",
- "slot": "afternoon",
- "updatedAt": "2026-11-18T03:35:59.862Z",
+ "slot": "night",
+ "updatedAt": "2026-11-18T12:57:17.647Z",
  "slots": {
   "morning": {
    "at": "2026-11-17T20:47:58.316Z",
@@ -236,82 +236,199 @@
      "d": "2026-11-18T02:36:00.000Z"
     }
    ]
+  },
+  "night": {
+   "at": "2026-11-18T12:57:17.647Z",
+   "economy": [
+    {
+     "t": "국가안보실, ‘자바’ 취약점 확인에 민관군 긴급회의…PHP 이어 보안 취약 우려",
+     "src": "동아일보",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBRZWhidC1wOXQ0U3VtMkxOdXdmWnBFSlMtV0hCb1dJVUp6dEJFSnFxa3FIWWZWbHpna3I3M0dqamg2b3YyUDIxQzBIT3B1eXY4LU5yYUdWSFh0MzRnM2dwbUpqel9jODBNbGtIWWpVOFdxZkxadU1r0gFmQVVfeXFMUFpLMmE2OFFWbnZXb29NYmZwRXNmYjMxVDA5OTc5VDNXVWhFRE1GMGVja281elhoVFhvcVNKdTN4SkpSaUQwZEVaXzRlc2g4eU55WV8wR0p3dExyQzNKUTRINUVLY0Zn?oc=5",
+     "d": "2026-11-17T23:47:52.000Z"
+    },
+    {
+     "t": "3분기 가계 빚 2030조원, ‘빚투’ 감소에 증가세는 축소",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE16V2x3WVZpSlZJemR5TWN0YlVaRm1EYkg0X3JnRHhnUjhBU0haUzBVRy16SkE5UFNPV2RBY2ctUGg3ckt2cHNYdGotTDNZaDVnV0JXanlwcnpnZ9IBX0FVX3lxTFBTS2lqRVpjUGlycXVuSk1BOHY0MWdsOEV5cWQ3TUVYbXNTdm9RaVpBazJNYk5sb0pZYjZTVHRUQXg2a0s5dkUwc1lObllBTEVDNUhXeXJjVkpEU0Iyd093?oc=5",
+     "d": "2026-11-18T05:59:00.000Z"
+    },
+    {
+     "t": "KDI, 내년 성장률 3.9%로 상향 전망‥반도체 호황으로 수출·투자 확대",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5Cc0lMY1kxRzB2V3JhaE9tRUh3THBVRHBjc2h5alJiZjRYQm5CYjVCNVZURVNQU1lNT2VvU1g0cEoyTWY3SzhXRnYyRUFobjhzRjI0MElGenFnekowbFZxU0wtSk5ETnJQd0p3dUxpM3hYdmIt0gF0QVVfeXFMUHhXbHJzUXR0LXhic2hhc3VOQ3NXNHNYbW1TYk55REZ3WGY4MTM3QmtXajFqZWdRaXR0T1JFQ0FsNE8wTF85Q1M1NHRvd2ExWURDR0ZtWHd4SzBXQ1dIckd0azRuOWVOdmhFb3Y3QXZFVzNQa3Y?oc=5",
+     "d": "2026-11-18T04:34:29.000Z"
+    },
+    {
+     "t": "산업부, 체코 원전 계획 2차 점검...\"정상추진 담보\"",
+     "src": "YTN",
+     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1DWUlRLWdaalZUYmpFcHNDdG9mYlpfVkRuUU1WU3FlNWdLQ2RhV0o4VWx3S01WeHYzcXdnZkxxc2JkUzVPLVNhc2RPa19Fb2ptU0pZX0xValE0OG1zLXc?oc=5",
+     "d": "2026-11-18T05:30:00.000Z"
+    },
+    {
+     "t": "포스코그룹, 세계 최대 전기차 배터리 기업에 리튬 장기 공급",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1iQUVJY3ZXSHZUNmIzRjR4OTh1OGY4Rzc0SlFiWWZnVFpmb19CQ3RNalluTmtkRy1CZ2RfN3BYTWVod3VuWG5VS19CdVY3aVE2MXZDZEhwYzNUU1ZMS0JRNnB1YjkxVGZXeF9pamYxQXk?oc=5",
+     "d": "2026-11-18T07:23:10.000Z"
+    },
+    {
+     "t": "젠슨 황 딸, 메가스피드 사태 개입…“막강한 영향력에 누구도 ‘No’ 못했다”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFA0eWtxZzJOQnhCUGJXa2ZCVjloOVNtSkZER2FISTlHSEdxdXAwZlFpbUZwMTVGTy1kcm1wY0RzWlhPX0VraXc2QzVJamNwak9WbEkxUTJUc3NWWnVJbzRPUVRnSExyU2hhc2tBRFB5OA?oc=5",
+     "d": "2026-11-18T04:58:00.000Z"
+    }
+   ],
+   "stock": [
+    {
+     "t": "Applied Opt 주가, 오늘 왜 하락하나?",
+     "src": "Investing.com 한국어",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBmSFFpS0phV0ZxdzA2RXhPTkp2bzkySjM3aE1uaHpYWGc5QVhXOHVRVEtVRmlaNU5LZmpmR3U3Vm1RTzRzTERTSFB6Q2hJVmpOdWFPRmxrX0ppMVBlMnRzLUduZHV2cHNEajJuUXlTdHFZMS1RSjJv?oc=5",
+     "d": "2026-11-18T12:09:00.000Z"
+    },
+    {
+     "t": "엔비디아 호실적 훈풍에...코스피, 5천 선 탈환",
+     "src": "YTN",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9pTzN4TnBqVm1WOUJQNmVMRUtHajNNdVBnMmJrN2RKbjNkYmNZMzRlS3FEN3BzTGdoci01YTdTTG41ZDU2WWVXVkdSSDN6cEh6OVRRU2Z1SWFPX2M0WkJ1b25mU1RjbEhGVXJnSEttbw?oc=5",
+     "d": "2026-11-18T09:40:00.000Z"
+    },
+    {
+     "t": "코스피, 2% 오른 5,067 마감‥하루 만에 다시 '5천피'",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA3ZmNEaGFTUkhMTnpDbzBnLW1oVmlwbTVLZnItdmF6bTB2SF92akxNVmZUQkVzNVZaU056eS1ZbmdMNFZFRHFwaTdpR3djQUh6Y2JtUGxtOElDZk15ZEQwZXZKZzBMcl9PeVR1RDBfT0pQeGV30gF0QVVfeXFMT0ZTbjh6YXVaWFljUmVpZFpVU1c4UXdJMzYtbXZfbWZUdWZTT0ZPUV9CcThvMVp1SlRHWVJITkFWa09RelNVTjBPNDBvZlBMZENIQmdCbWw3N0dCM2pJNkY3ZHVMUzRHSE9KQTgxY1N0Wk5aQ08?oc=5",
+     "d": "2026-11-18T07:20:14.000Z"
+    },
+    {
+     "t": "코스피200에 두산퓨얼셀·일진전기 편입…SKIET·영풍 편출",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5PZ2dPbThRWW5EeFNYM2FxU1h0RTNRSlIyZ1VjckNpeW9lQkZRd2pjcUVTMzgzMFFKdzhQYzBNTnYwRS14UFkzZk9kVTdOZUE2ZlZ3dFo3OTZTSEwyQnhWMUh3R01BSENXOXpCOGktWWs?oc=5",
+     "d": "2026-11-18T08:55:53.000Z"
+    },
+    {
+     "t": "코스피, 5000선 탈환 마감…엔비디아발 불확실성은 여전",
+     "src": "전자신문",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9YQnhiRVBuQVNYRG5VUUhUQ1hUWlhrMTBtYjNtX0tZdGg0bFJRNmV4a2d4M1c1dGNHcDlOa2FYRTFDeDVoTGpwaXBhSFpldw?oc=5",
+     "d": "2026-11-18T07:00:19.000Z"
+    },
+    {
+     "t": "기관 매수에…코스피 하루만에 5,000선 회복",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9hS2dfQVFYZ0pTX2VvT0pGMXFKTHUzZUIzckh2RUZTQml0NmtYX3Jvd3dVcFNLdDdRRy1XNUpwTW1YcFNMNU5iWEJDM3VyWk1sSjBJcVdhTDR5UktXUV95RS10N3M4WXc?oc=5",
+     "d": "2026-11-18T09:25:00.000Z"
+    }
+   ],
+   "news": [
+    {
+     "t": "‘계엄해제 표결 방해’ 추경호 1심서 무죄",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBGdUFmTHlzN1Fua0pKellVNTdNMEhiMVQ1QW9nQkxaeWNkVGlXUDlZQWxkYkV6N2RZY3kxYUxET1I2Qy11VkR0TUU1Slp0aDhudU0tYWM1cnJZZ9IBX0FVX3lxTFB3S2VhcGhIQ2t3Wjk3d084QW5QSklmU3NtSk5pN1dqc3BCZldJM0p0d3dxdG5HUTlDS3BTa2R2YVc4TE9KX2ItaXlfbHA4U0Ezc1RiMmg1ZDg1eWdWNHFB?oc=5",
+     "d": "2026-11-18T11:57:00.000Z"
+    },
+    {
+     "t": "이 대통령 \"APEC 교역·투자 확대…기업 체감할 변화 만들어 내야\"",
+     "src": "대한민국 정책브리핑",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOZ285VDh6eE5sMzJLdjIxekJzNVFpNUNNZS1TbFlDMGwwV0FYZDljenItS2l0VzJ5a0szY2xQR25aXzRzYkItWjBaU3pPN0V4RU9CcDZrWFNhTVBvV3MtanFXcFNIZjBQZGs1SDNmUUhZUXR6S3FURWZJbUZWclhmeloyRUR3TFVLLUE?oc=5",
+     "d": "2026-11-18T12:22:30.000Z"
+    },
+    {
+     "t": "시험 전날까지 추가된 ‘뒷북 대책’…수험생도 시험장도 혼란",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0welhNa2xPVnpnd1A3cmRfVmhIZGxzNlh5N0t4b2Z6TWg4RGc0VTNON042MVd1Qk5yTjlHaHhMV19BQXlLR1pENlNqQ3hjanp6cWItYTZYTlRqYkFnWjZPRUNraE9kMkZMOUE?oc=5",
+     "d": "2026-11-18T11:38:00.000Z"
+    },
+    {
+     "t": "루비오 장관 “트럼프 대통령, 김정은과 대화에 진지”…순방 중 회동은 불확실",
+     "src": "VOA 한국어 홈페이지",
+     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE10cXVzSXlDV0FhMTJBNW5fWXp6U2lhUXI0ak1zN0NERXhqLTJWc2FOcExIMmFCUGw5alFhSThKSFlNNnVBUnE4ak5NdzF5QllW0gFTQVVfeXFMUGlKT0w4X0NNekRITUZ6NDdvUmFRLUVVRThhNkVWWF9Qb21IZEVoTFZTOWNESHZlT2dTZC11X3gyeFJNXzlyUUlFY040bzlTdDZ2eUU?oc=5",
+     "d": "2026-11-18T12:25:46.000Z"
+    },
+    {
+     "t": "[단독] \"숙명여고 쌍둥이 부정행위 확률 0.00065%\" 계산한 경제학자, 리트 만점자 시험지 분석해보니",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPY0RBZHVYMlhoMktjOXJyMHpGWWkxX3BTcnNZVjlDTS1aMjlZeDVZNkcyUWJfVkNfaFhfQmVKcVhZR2RRSlVQSkVPd3J0RXFvb3ZmN3NFbXFndGxSczFwcDNGQmdTNGdCLUJLWHpIaENxM0p2QW4xWUlpaEdLcFRPWDItdTlneVk?oc=5",
+     "d": "2026-11-18T09:48:32.000Z"
+    },
+    {
+     "t": "조태용, 징역 2년6개월 확정…내란 때 “정치인 체포 지시 없었다” 위증",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA3YVBKNUFrbTRXNVFxblhsbFdoZjJWMFNjdnRFVS16THZyWjl2MWVHSno3RXNoblJicjBma2RBME5TWU90OG4xTjdOeXU1MjBRVlkwdWZ0MDdxZmZ1U1l1VjQ5UWg1MEZsMkl3Xy1SYlZIUQ?oc=5",
+     "d": "2026-11-18T06:12:00.000Z"
+    }
+   ]
   }
  },
  "economy": [
   {
-   "t": "젠슨 황 없는 엔비디아 3분기 매출 155조 원‥임시 CEO \"로드맵 순조\"",
+   "t": "국가안보실, ‘자바’ 취약점 확인에 민관군 긴급회의…PHP 이어 보안 취약 우려",
+   "src": "동아일보",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBRZWhidC1wOXQ0U3VtMkxOdXdmWnBFSlMtV0hCb1dJVUp6dEJFSnFxa3FIWWZWbHpna3I3M0dqamg2b3YyUDIxQzBIT3B1eXY4LU5yYUdWSFh0MzRnM2dwbUpqel9jODBNbGtIWWpVOFdxZkxadU1r0gFmQVVfeXFMUFpLMmE2OFFWbnZXb29NYmZwRXNmYjMxVDA5OTc5VDNXVWhFRE1GMGVja281elhoVFhvcVNKdTN4SkpSaUQwZEVaXzRlc2g4eU55WV8wR0p3dExyQzNKUTRINUVLY0Zn?oc=5",
+   "d": "2026-11-17T23:47:52.000Z"
+  },
+  {
+   "t": "3분기 가계 빚 2030조원, ‘빚투’ 감소에 증가세는 축소",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE16V2x3WVZpSlZJemR5TWN0YlVaRm1EYkg0X3JnRHhnUjhBU0haUzBVRy16SkE5UFNPV2RBY2ctUGg3ckt2cHNYdGotTDNZaDVnV0JXanlwcnpnZ9IBX0FVX3lxTFBTS2lqRVpjUGlycXVuSk1BOHY0MWdsOEV5cWQ3TUVYbXNTdm9RaVpBazJNYk5sb0pZYjZTVHRUQXg2a0s5dkUwc1lObllBTEVDNUhXeXJjVkpEU0Iyd093?oc=5",
+   "d": "2026-11-18T05:59:00.000Z"
+  },
+  {
+   "t": "KDI, 내년 성장률 3.9%로 상향 전망‥반도체 호황으로 수출·투자 확대",
    "src": "MBC 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE95V19kQi1rN016X0RwTnpMN2pseEdLMXREcHNtakVDQUZuZ3pESmlTVTc1TWduNjBGRHp4cE1PQl9nenk2SmdFQjRKdkhQRzEwU2tSWDVobjhBY0xXXzkxUDZzU2Y3MnZ1NGpSZVFsVWZQYkNN0gF0QVVfeXFMTm9Bb0E3ODFOOUs0RC1aa3dRUkJqWlNSU3gyazl2VXctVi0xdFZvREdvLXlzWnBQdFZWZ2J2dFoyX2FKUTMwZDk4OXQ1N2lzWnlVMTkwbmIydFFyWFE0eVV3TmFtb1owMnNMY01mQ3h2TjJfTVE?oc=5",
-   "d": "2026-11-17T21:41:29.000Z"
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5Cc0lMY1kxRzB2V3JhaE9tRUh3THBVRHBjc2h5alJiZjRYQm5CYjVCNVZURVNQU1lNT2VvU1g0cEoyTWY3SzhXRnYyRUFobjhzRjI0MElGenFnekowbFZxU0wtSk5ETnJQd0p3dUxpM3hYdmIt0gF0QVVfeXFMUHhXbHJzUXR0LXhic2hhc3VOQ3NXNHNYbW1TYk55REZ3WGY4MTM3QmtXajFqZWdRaXR0T1JFQ0FsNE8wTF85Q1M1NHRvd2ExWURDR0ZtWHd4SzBXQ1dIckd0azRuOWVOdmhFb3Y3QXZFVzNQa3Y?oc=5",
+   "d": "2026-11-18T04:34:29.000Z"
   },
   {
-   "t": "젠슨 황의 몰락 불당긴 ‘루비오 메모’…그 뒤엔 거대한 암투 있었다",
+   "t": "산업부, 체코 원전 계획 2차 점검...\"정상추진 담보\"",
+   "src": "YTN",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1DWUlRLWdaalZUYmpFcHNDdG9mYlpfVkRuUU1WU3FlNWdLQ2RhV0o4VWx3S01WeHYzcXdnZkxxc2JkUzVPLVNhc2RPa19Fb2ptU0pZX0xValE0OG1zLXc?oc=5",
+   "d": "2026-11-18T05:30:00.000Z"
+  },
+  {
+   "t": "포스코그룹, 세계 최대 전기차 배터리 기업에 리튬 장기 공급",
+   "src": "연합인포맥스",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1iQUVJY3ZXSHZUNmIzRjR4OTh1OGY4Rzc0SlFiWWZnVFpmb19CQ3RNalluTmtkRy1CZ2RfN3BYTWVod3VuWG5VS19CdVY3aVE2MXZDZEhwYzNUU1ZMS0JRNnB1YjkxVGZXeF9pamYxQXk?oc=5",
+   "d": "2026-11-18T07:23:10.000Z"
+  },
+  {
+   "t": "젠슨 황 딸, 메가스피드 사태 개입…“막강한 영향력에 누구도 ‘No’ 못했다”",
    "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxObUh4TjN3aHF2ZTJsVkR2YmRUaG1ERk5sZllFaUVYSWdGMEt3RkhJMUtGMWxCRG1COUpGS0JHWnB2UGs2dTE5OTZTaldVZ2V1VHh6NWIwRkxtVzdUcFZ4UzVhTVFVSThpZXA3WnNsZUgxeERRY3o2MElBYWVxM0lkaTdn?oc=5",
-   "d": "2026-11-18T01:53:00.000Z"
-  },
-  {
-   "t": "과기정통부 \"자바 보안 취약점 주의를\"...업데이트 권고",
-   "src": "지디넷코리아",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9lV1cwelpHX3IzN3E0SFktZEhtTmp1Z3U3Q3lsR0dGUERjTVlSR3VIb2xRcnVFb3pvUjZ6aDBBVlJSUC1DSXRHMUFDVF82NDczbHFLQnd3?oc=5",
-   "d": "2026-11-18T00:41:46.000Z"
-  },
-  {
-   "t": "\"미 증권거래위, 엔비디아 '젠슨황 의혹' 관련 공시위반 조사\"",
-   "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBFM01zSVRsLVg4LTJya3ZjWUs0TVc0TXJULVdkU2Qxd2ZTcmx4Qjc3VTRfYTNiZTM0VVlHR0d6Nk92VnNOcDdZOEkzTnhTUTdBd3FHa2xfWkZUNm_SAWBBVV95cUxOLS1MMFl0a1VLVG4zcGJvMG1KdkZnNTBBcElhNjRXb0RjWWhBakVvSmpIVW1uVFNfWlVaTXJPdVp5Z3VrRlViMV9UclVTczJLUVhyMHUtaE82dzcyU2dYbGM?oc=5",
-   "d": "2026-11-18T01:09:40.000Z"
-  },
-  {
-   "t": "“MS 다음엔 애플” 내부 업데이트 오류로 아이클라우드·애플페이 장애…‘완벽한 생태계’의 역설",
-   "src": "Chosunbiz",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVG5yaUx4QTlSMjZTTVN3eDVyVXJSak91Q3FPTWxkaU9Oa21FaW0zSFkwbmlLY2M4dUJsYXRlYkZ0c29fRk5DN3NxdHVzNTFrQkl1cEdKODNTM0hVZG5Nb191dXpJTVl5eGpMX3FKS0VvdnRoZkVzbjE2UDlnXzRURUx30gGWAUFVX3lxTE1kcVZzaEhSRnQ3ZmNuZmlXTFNudkdQakREYnRNV3EwTGFuMElHaEdOSGRoTHpFYnBjaURXcjJBUkZaalZqdXZEeXdyRTF5dWJ3ZVJJeGloZ09xYk54Yjg3bHlXanhINHlULTNrSk15aE1JTEpHaC1GR0hqZFRXaHhSajNESmZ4MDJLR193OEFXTGdiSkdhZw?oc=5",
-   "d": "2026-11-17T23:26:00.000Z"
-  },
-  {
-   "t": "\"왜 이렇게 아이폰이 많아요?\" 농담했던 이재용…현실은 달랐다 [트렌드시그널]",
-   "src": "한국경제",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBwMl9tMnRUSlFrY0x6cjZuRlVPekRCMGFFS2h2VzZSaWhnTUpwX25fSS13WnpURE9mZ3ZETDV1UUgyZ3VqYVRWN1VzalhMeXE0dWdVZ1k5OC13Zw?oc=5",
-   "d": "2026-11-17T21:00:12.000Z"
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFA0eWtxZzJOQnhCUGJXa2ZCVjloOVNtSkZER2FISTlHSEdxdXAwZlFpbUZwMTVGTy1kcm1wY0RzWlhPX0VraXc2QzVJamNwak9WbEkxUTJUc3NWWnVJbzRPUVRnSExyU2hhc2tBRFB5OA?oc=5",
+   "d": "2026-11-18T04:58:00.000Z"
   }
  ],
  "news": [
   {
-   "t": "이 대통령 “수능 중 재난문자로 방해받으면 시험시간 연장 검토”",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5JbUhId3JVbER6TEtuSGtMcklvWHozS2xxajBoZXM5ZDk0bzZiRHN5dHRKMGcxRG1qMUpnRzROQjZ2ZTlCc0FrR0J6bklhX1Y4MzRFZFBLMTA3ZzhJMW1pb2tSNWg1cm02QmJBd1QwMlRLNklr?oc=5",
-   "d": "2026-11-18T01:13:00.000Z"
-  },
-  {
-   "t": "[속보] ‘부정행위 의혹’ 리트 만점자 경찰 고발",
+   "t": "‘계엄해제 표결 방해’ 추경호 1심서 무죄",
    "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBrRVFlaTItQ2tiS3FIZThqdWtucmdOczRnRkZZNmUyRzVVX3pnTVNGejRROVBYUjYzREx3ZVo2bzdnZGVCcFdUYjQzdWhiRVByMkhrSmJ1X2l3Z9IBX0FVX3lxTE5qaVFxV3lXR2FGUlk1UTBwLVZjNURXeXR1U3lfbW9Vc1E4NHN1X2tyNlE1a1M1UDBMN0o0bEk0bTZhV0dROW03ZS1CbjFOSTJvTGpvcGRVYmlZWk5vYzdn?oc=5",
-   "d": "2026-11-18T02:58:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBGdUFmTHlzN1Fua0pKellVNTdNMEhiMVQ1QW9nQkxaeWNkVGlXUDlZQWxkYkV6N2RZY3kxYUxET1I2Qy11VkR0TUU1Slp0aDhudU0tYWM1cnJZZ9IBX0FVX3lxTFB3S2VhcGhIQ2t3Wjk3d084QW5QSklmU3NtSk5pN1dqc3BCZldJM0p0d3dxdG5HUTlDS3BTa2R2YVc4TE9KX2ItaXlfbHA4U0Ezc1RiMmg1ZDg1eWdWNHFB?oc=5",
+   "d": "2026-11-18T11:57:00.000Z"
   },
   {
-   "t": "수능 하루 앞두고 필기구 반입 기준도 변경…‘흑색 연필’만 허용",
-   "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FQ2cwVFAtM05QYlZSTjc4TUE1N0k1TTU2TVhia3I4WHdHWU1OZXh4U2k4RXlEYWE4cTk2S1ZGN25QMEZjVnhoeThnSHJxVEtMVHBrbXNSZEEzQQ?oc=5",
-   "d": "2026-11-18T02:40:00.000Z"
+   "t": "이 대통령 \"APEC 교역·투자 확대…기업 체감할 변화 만들어 내야\"",
+   "src": "대한민국 정책브리핑",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOZ285VDh6eE5sMzJLdjIxekJzNVFpNUNNZS1TbFlDMGwwV0FYZDljenItS2l0VzJ5a0szY2xQR25aXzRzYkItWjBaU3pPN0V4RU9CcDZrWFNhTVBvV3MtanFXcFNIZjBQZGs1SDNmUUhZUXR6S3FURWZJbUZWclhmeloyRUR3TFVLLUE?oc=5",
+   "d": "2026-11-18T12:22:30.000Z"
   },
   {
-   "t": "‘與 1호 리스크’ 된 수석최고위원 최민희… 설화에 사과만 6차례",
-   "src": "동아일보",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1ab0p5VVpiUjd1NG1MVDJWVWloTVdXWnp5Z2Y4MVhqYUtrQ2tuemowQlc4ZWItRnFSSDBiRVFHekxydnd4cFN1LUJGOHUxTHB1TC15SjhVdTZ3SnNFMm5xT2NJZHlnbmU4M0hMM2pRWVBDa2RRSVNn0gFmQVVfeXFMTTE5eWxzM01CNTRNVFFsTk80SEJwelhieWhlWDlmM0J4RlhlSnhBZW5fTG1hYjk0aXo1YmVqTDZMUTJTTnUtam1MaEdBTl9VejQzd0hVUmpxQl9XX2gzdDRiYkdPMGFB?oc=5",
-   "d": "2026-11-17T19:30:00.000Z"
-  },
-  {
-   "t": "이 대통령, 시진핑 주석과 오늘 정상회담…한반도 정세 논의",
+   "t": "시험 전날까지 추가된 ‘뒷북 대책’…수험생도 시험장도 혼란",
    "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1MU3RTVXdxR0lfUkVQVnIyRmxGTFlVaFJoX1BGNmFMQlJuTEYyb1R4WDFDdDlrZ1dfOUVSbGNPVVM1R1hCYWVaeDNPVkc1TzBWdFBvUnRac3dYaWQ3RGhzNTRjNFFuNzBCWFlV?oc=5",
-   "d": "2026-11-18T01:27:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0welhNa2xPVnpnd1A3cmRfVmhIZGxzNlh5N0t4b2Z6TWg4RGc0VTNON042MVd1Qk5yTjlHaHhMV19BQXlLR1pENlNqQ3hjanp6cWItYTZYTlRqYkFnWjZPRUNraE9kMkZMOUE?oc=5",
+   "d": "2026-11-18T11:38:00.000Z"
   },
   {
-   "t": "국힘 윤리위원 \"張대리인이 윤리위 실질 관리\"…추가 의혹 제기",
-   "src": "연합뉴스TV",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE02NThkR0JqX1BCbTB6aDMtWXlDdlNGajJ5RWpKZ3V3aC1UemdXeF9YWTBmUkRRd0ttTmNrVlg5cGstb0RLR0dGdDRRa0dyWU81YTg0R0tFTWczMzMxLTNPLVE0YmZaWDg?oc=5",
-   "d": "2026-11-18T02:36:00.000Z"
+   "t": "루비오 장관 “트럼프 대통령, 김정은과 대화에 진지”…순방 중 회동은 불확실",
+   "src": "VOA 한국어 홈페이지",
+   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE10cXVzSXlDV0FhMTJBNW5fWXp6U2lhUXI0ak1zN0NERXhqLTJWc2FOcExIMmFCUGw5alFhSThKSFlNNnVBUnE4ak5NdzF5QllW0gFTQVVfeXFMUGlKT0w4X0NNekRITUZ6NDdvUmFRLUVVRThhNkVWWF9Qb21IZEVoTFZTOWNESHZlT2dTZC11X3gyeFJNXzlyUUlFY040bzlTdDZ2eUU?oc=5",
+   "d": "2026-11-18T12:25:46.000Z"
+  },
+  {
+   "t": "[단독] \"숙명여고 쌍둥이 부정행위 확률 0.00065%\" 계산한 경제학자, 리트 만점자 시험지 분석해보니",
+   "src": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPY0RBZHVYMlhoMktjOXJyMHpGWWkxX3BTcnNZVjlDTS1aMjlZeDVZNkcyUWJfVkNfaFhfQmVKcVhZR2RRSlVQSkVPd3J0RXFvb3ZmN3NFbXFndGxSczFwcDNGQmdTNGdCLUJLWHpIaENxM0p2QW4xWUlpaEdLcFRPWDItdTlneVk?oc=5",
+   "d": "2026-11-18T09:48:32.000Z"
+  },
+  {
+   "t": "조태용, 징역 2년6개월 확정…내란 때 “정치인 체포 지시 없었다” 위증",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA3YVBKNUFrbTRXNVFxblhsbFdoZjJWMFNjdnRFVS16THZyWjl2MWVHSno3RXNoblJicjBma2RBME5TWU90OG4xTjdOeXU1MjBRVlkwdWZ0MDdxZmZ1U1l1VjQ5UWg1MEZsMkl3Xy1SYlZIUQ?oc=5",
+   "d": "2026-11-18T06:12:00.000Z"
   }
  ],
  "week": [
