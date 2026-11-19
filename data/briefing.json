@@ -1,7 +1,7 @@
 {
  "date": "2026-11-19",
- "slot": "morning",
- "updatedAt": "2026-11-18T20:24:33.060Z",
+ "slot": "afternoon",
+ "updatedAt": "2026-11-19T03:09:21.909Z",
  "slots": {
   "morning": {
    "at": "2026-11-18T20:24:33.060Z",
@@ -119,82 +119,199 @@
      "d": "2026-11-18T06:12:28.000Z"
     }
    ]
+  },
+  "afternoon": {
+   "at": "2026-11-19T03:09:21.909Z",
+   "economy": [
+    {
+     "t": "엔비디아 직원 56% \"젠슨황 복귀 원해\"…후임 후보 이언 벅 선두",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8wUHJkcm02a1lHM2hiVW81WE1tLXg1UWhZSXZQakFrRVREamJjdVdwU0EzWkJrMURJcDZ5d0huSVF2cS1vbHE4QmNQd3RfM3pmby1ONVdNNUl0dVXSAWBBVV95cUxQMVU4R05JUS1oNThSanZZY2V2V09QUUFYU2RJcm5yZlQ0N3pIY05zcDIxUGZFWG1rQ0ZaWklFTXp3cHVUNHpjdEJUb19uQ2pMTmM1dmNLOERsTkdOYUp3bkE?oc=5",
+     "d": "2026-11-18T21:45:01.000Z"
+    },
+    {
+     "t": "가계빚 2030조, 주담대 금리 14년래 최고…취약차주 내년 상반기 고비",
+     "src": "뉴스1",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9xYTJseEVvQmtPUEJaaEVaZ1pMcjNUb0NIdVJDSERFUzd6UlJ3WjlDRnhyODZ2aUJVcUwyeHljRDZfUXE0ZnFRX0RSTWcwSmJkX0JpdQ?oc=5",
+     "d": "2026-11-18T21:20:00.000Z"
+    },
+    {
+     "t": "나스닥100 선물, 앤트로픽 상장 기대에 상승세…美 국채금리↑",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BS3dVSzVhZExKakdaYTdCMHZmNkQ0QlZGTVJCN3I5U20yVVZCTkI5eWVaQlVNX01EUThzbjFxT1lSVE9zeHVCaEI1LTFMTm1yb05tTUlsVVYxODhmWFYwWFRnekZlSGtUTENRS2dQak0?oc=5",
+     "d": "2026-11-19T01:14:17.000Z"
+    },
+    {
+     "t": "미국, ‘중국 AI 모델 사용’ 기업 공개 의무화 추진",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9iT3Z5UHBSQWxTTGY2VExXVnFYeUt2dlBPamNYamNScXVlYnFFckZnTDFNemlITk9iOV9oMEZSWnI5TVM0RUFDTkx5UzZSWHhRcTdjWDdPSXNVR1U?oc=5",
+     "d": "2026-11-18T23:49:00.000Z"
+    },
+    {
+     "t": "'금리 동결' 10월 FOMC서 추가 금리 인상에 공감대‥'빅스텝' 거론도",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vbzdrRWMtdWxNMzFNd1UzVnF3bDEwWDI1S3EtQU00ZDJrdFd3dHlpRlN6RHdhRmlqZk0wRDJYVG5lR042N1VYSVF4RTFyckJTWDBJSVhtWUt3MWQwZ3pHWjBHX3o1VVNNOEJiTU13alh1N3pa0gF0QVVfeXFMTWVTSTkxVmxYWG8wc2RqYzI4YjEtMGR3VWR6QTB4UnRuMFhhbDdJQUs4T3VpQXFwLUYxbnlWMVdoUHFQMDhxdmZjYW5oTGs2QTk5Vlk1MjZNMlBVWlF2LWhGWHZxMEpHTlNLbGoxRWh0LWVRa0Q?oc=5",
+     "d": "2026-11-19T01:53:29.000Z"
+    },
+    {
+     "t": "엔비디아 실적에 웃은 코스피, 5000 탈환…삼전닉스 반등 - 머니투데이",
+     "src": "머니투데이",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBYUEVUUUUzRU5oWWhMWVFKOV9pcHJ6V09Nb3plcERXdmxnSktSU2tPbkxyUUM2WlM5QnJ5RkVRa3N3NHRfZFltR3l2dUt5WjNjV1NsSU5iVDNXd0ZuSnNVZ3p1THFoTzJt0gFuQVVfeXFMT0JiTlJWaW5QRkdNZmJ3eHRaRWY4dkYtekcxZFNUTFEtSF9IdXU3d0VIQkIwNUtHOEtxeUdZcVRZdzJoRkpVQVZVVV9zcERLQVV0dXBWVjdUY1lySU9QdXNFUDRmWmpibzVtbTl6cWc?oc=5",
+     "d": "2026-11-18T00:41:30.000Z"
+    }
+   ],
+   "stock": [
+    {
+     "t": "수능에 오전 10시 개장한 증시...코스피 상승 출발",
+     "src": "YTN",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0tSWxjWFpSRWI0VXRFUFpZazk3dlRxVms5X2lTbXZiWU5OT1Q0OVI4T1hfcWF4empZcHpIVVdTS2NWeXg2M0R0cnVOSWtqLVpnNWV1cXk3T3VudnktLU1JbFFubS1OODQ2aW9wTEdOaw?oc=5",
+     "d": "2026-11-19T01:14:00.000Z"
+    },
+    {
+     "t": "코스피, 오늘도 보합권에서 등락 반복‥5천 선 지킬까",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB3MmJwSkR0Wm1HMlppX2Z1RkpVVW1raU1KUmFRUHF6QWVBLW1qUUFEamZ0WktvYlE5OVlCcUh5bTRzZnBmUC1lYmtKZHo4S1BfMllOMFlMd2FvOXFoRlluSUw4cHNiR1NjZl9jbTQxOGVlWEVK0gF0QVVfeXFMUEZlcjlLS0ZFWnNNVXBHWmFLc0l4bkRnRzZRaW9oaTVZOFdOTnFvSXB4WEY5Y0ZOVWlXRjVEQ0E1b0JYVkQyWVg2TWlaZ3NhZW8tTkhaNlFkRlRSdVNsY0tZcmNSTEFxbFZHNHZYUW9ydjhUTDE?oc=5",
+     "d": "2026-11-19T02:12:33.000Z"
+    },
+    {
+     "t": "씨어스, 코스닥150 신규 편입…투자 접근성 높여",
+     "src": "팜이데일리",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9qYnoxaFBvRHU2ZDZMMFVIYnhCX3dXSUVMVGFvNVNfNW0zX3BGblZqcHZrS0FteGpDamxzMjctVXpSSkp5NjZOS2VxR2I1TFNLeEN5aHhMeWdhanNrajkxTWFKOTlXRnJLUnhxZUhn?oc=5",
+     "d": "2026-11-19T00:47:06.000Z"
+    },
+    {
+     "t": "\"기관 유입 촉진·부실기업 퇴출로 코스닥 활성화해야\"",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE51ODZfRmY5Q3FUOUloY2F4MDkxMlk3ZFZ3UEFLczA4d0k4OW9hZzJxeUtfeGFfWEg5QTVBcGtLZXBYYllXZkhKSGhKUllRRkVFUVBDUlJjQmtQTUnSAWBBVV95cUxQWXJwbGpjVWlTY0p2UF9Zd0RCWjl5OGc4LUtkNW5iWWp0V1NGRmd4d3h1cUxtOG1WLVlLRXBIb3RuOWZMaDYwcHhFQ1A1SVhvUENRdjItWmozMzZmOXhEWTg?oc=5",
+     "d": "2026-11-19T02:46:42.000Z"
+    },
+    {
+     "t": "코스피, 상승 출발 후 하락 전환…5,000선 부근 등락",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1WZmQ0YWQ0S0FpU25jbk9lWm5hUzJSQ0RRZUo0UlpmaVQwZExEYXFzcUQ3RFdjaWc3TmlWejJGbEt2Ykd3ZXh4bnBwRGdaaXV0MnEyZVVFVVdIWEg1SHdCbnAtZlVJc0k?oc=5",
+     "d": "2026-11-19T02:13:00.000Z"
+    },
+    {
+     "t": "코스피 0.45% 오른 5090선에 출발…수능으로 오전 10시 개장",
+     "src": "전자신문",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1qLVBJVm5PZUctdUQ0XzdPNTh6MUxLNXZHWmpTQ1ZlNWVnWEEybm9OQ0N3MEpYUWVlRXdOZERwUUdQb3R3QXJXSnU5UXphQQ?oc=5",
+     "d": "2026-11-19T01:23:28.000Z"
+    }
+   ],
+   "news": [
+    {
+     "t": "[속보] 교육부 \"위급재난문자로 스마트폰 22개 적발\"",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeHhSQkVDUHJZX1VPdUpiTXpTNXBHWGt0cmxwVTMwSnVpWDRkYTBtSGNoaW0xaTE2RlFsT1BNMXFIYlJIWmM1SFMyOV9nMXF5TlFkaDFjRkgwdzZoS2U4S3BrNWhqTGNsMHMtcTFFSHE2TnNvU25HRjllci1IaEQ0ZmotcmJqQ1U?oc=5",
+     "d": "2026-11-19T02:06:00.000Z"
+    },
+    {
+     "t": "'리트 만점자' 폰 끄고 잠적…서울대 치대 합격 시험지 폐기되나",
+     "src": "한국경제",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE54dF9MUFY4aWx2c0lKREo3a0MtQS1adkl0US1lS2Y2YmtGdmV5eUZFTUJ2b0x2T0lIREZyTXI2b2JnLTZrLVFmN2hRS25rOFhNVFc1ZS1yRlp6dw?oc=5",
+     "d": "2026-11-18T23:40:50.000Z"
+    },
+    {
+     "t": "8년 끈 한중FTA 2단계 타결 … K콘텐츠·관광 中빗장 풀린다",
+     "src": "매일경제",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE95N2tmRl9aVGtEZUNsenJYb1V6V3FWaUpMaTBfcUZjWWI2V05yT2VpY2Jzc0lsVUZQTmFKOE9sZ19JVFJvUGY1SFVFckFsN3c3a1lNSw?oc=5",
+     "d": "2026-11-18T10:59:55.000Z"
+    },
+    {
+     "t": "수능 출제위원장 “영어 1등급 비율 안정적 달성 예상…선택과목 유불리 최소화”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1jRjlKTWxmM2RBMEZ5ZkVqM1VrN1dOOUd5Q1pSaVZ4eUdUT3ZLbFMxTkNxXzVSTFJmaGM3clB5SGhTOWx4YkJEM1pkUUZrTnhEWTZCVEdxRmtxbGJGcl8yY1lWODNlM2JONXc?oc=5",
+     "d": "2026-11-19T00:46:00.000Z"
+    },
+    {
+     "t": "李, 中 현지에서 조작기소 특검법 재가",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUWgwZU16RnhGUERVbmJWb3ZIaGxNYnRyS21mTUVQLUlsN0NNMVpfT25mMThtcGtVOHNJZkxpTVB3MTl1X0c2bktGTTRLREhaWkpLYzJ5cllSWG91djFIdVdlZlpmc0JoX0RwUldaQjZHd1EyWWxnU2Y5MHZ0dTR4dkQ0aDZmWjB6SmVmUUMxQ1g?oc=5",
+     "d": "2026-11-18T23:35:00.000Z"
+    },
+    {
+     "t": "\"통신 차단\" \"1억 포상\" \"연필만\"... 李정부가 초래한 수능 대혼란",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVHNQX3RQMDlHRnFwU3R4QlJsUWoyaGdQczhYRjV6ZWt3V0t6RVZTOWlkakYxLWxiTEdZeWUzb2dYcmZuMFV5aDFVT3phdjhIci0xeVZ1X3Z4QUhudkh3RjRnZDBBcl84LXQtVnZuR0FEXzhSZTRXODVidXlMZ1pNcHFUd0UxNWc?oc=5",
+     "d": "2026-11-18T15:57:00.000Z"
+    }
+   ]
   }
  },
  "economy": [
   {
-   "t": "씨티, 내년 성장률 전망치 4.1%로 상향…\"반도체 호황 지속\"",
+   "t": "엔비디아 직원 56% \"젠슨황 복귀 원해\"…후임 후보 이언 벅 선두",
    "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9NdlZBMlZQMWRoUEU1MkZVeE9kNVNlcXlXdDhwS1A1aV8tM3FwdGdjT3JmWDZYMUZNODdvZHpGLTY1MHU1UDhiWjM5ZEd4b05JTVZKUk1IZEk5TmPSAWBBVV95cUxOYlJ2QUZSUGFnakFWQlNUZF8wSFc4THY4WFd3XzRJaTB6cERtUE9Ba3J0aWJ5RTl3aG1YYmpiUmZhOUphTjBVQzdGUC1peDAtV3BZSGdIdE43YlFIU0RkZW4?oc=5",
-   "d": "2026-11-18T09:40:44.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8wUHJkcm02a1lHM2hiVW81WE1tLXg1UWhZSXZQakFrRVREamJjdVdwU0EzWkJrMURJcDZ5d0huSVF2cS1vbHE4QmNQd3RfM3pmby1ONVdNNUl0dVXSAWBBVV95cUxQMVU4R05JUS1oNThSanZZY2V2V09QUUFYU2RJcm5yZlQ0N3pIY05zcDIxUGZFWG1rQ0ZaWklFTXp3cHVUNHpjdEJUb19uQ2pMTmM1dmNLOERsTkdOYUp3bkE?oc=5",
+   "d": "2026-11-18T21:45:01.000Z"
   },
   {
-   "t": "3분기 가계 빚 2030조원, ‘빚투’ 감소에 증가세는 축소",
-   "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE16V2x3WVZpSlZJemR5TWN0YlVaRm1EYkg0X3JnRHhnUjhBU0haUzBVRy16SkE5UFNPV2RBY2ctUGg3ckt2cHNYdGotTDNZaDVnV0JXanlwcnpnZw?oc=5",
-   "d": "2026-11-18T05:59:00.000Z"
+   "t": "가계빚 2030조, 주담대 금리 14년래 최고…취약차주 내년 상반기 고비",
+   "src": "뉴스1",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9xYTJseEVvQmtPUEJaaEVaZ1pMcjNUb0NIdVJDSERFUzd6UlJ3WjlDRnhyODZ2aUJVcUwyeHljRDZfUXE0ZnFRX0RSTWcwSmJkX0JpdQ?oc=5",
+   "d": "2026-11-18T21:20:00.000Z"
   },
   {
-   "t": "美연준 월러, 또 '빅스텝' 필요성 언급‥\"충격줘야 할 수도\"",
+   "t": "나스닥100 선물, 앤트로픽 상장 기대에 상승세…美 국채금리↑",
+   "src": "연합인포맥스",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BS3dVSzVhZExKakdaYTdCMHZmNkQ0QlZGTVJCN3I5U20yVVZCTkI5eWVaQlVNX01EUThzbjFxT1lSVE9zeHVCaEI1LTFMTm1yb05tTUlsVVYxODhmWFYwWFRnekZlSGtUTENRS2dQak0?oc=5",
+   "d": "2026-11-19T01:14:17.000Z"
+  },
+  {
+   "t": "미국, ‘중국 AI 모델 사용’ 기업 공개 의무화 추진",
+   "src": "KBS 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9iT3Z5UHBSQWxTTGY2VExXVnFYeUt2dlBPamNYamNScXVlYnFFckZnTDFNemlITk9iOV9oMEZSWnI5TVM0RUFDTkx5UzZSWHhRcTdjWDdPSXNVR1U?oc=5",
+   "d": "2026-11-18T23:49:00.000Z"
+  },
+  {
+   "t": "'금리 동결' 10월 FOMC서 추가 금리 인상에 공감대‥'빅스텝' 거론도",
    "src": "MBC 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8zME5McUlwRnhoOUNab3Ffb1BDNG9sekZTeXJTb3dVMG9tU1hlNmVNX09IYzlKdGNCOTJTd1pvNUtwZkdvXzBaZVk2UFhzd013VnRRNEFLU2R2MldoX010QWNEbzVRSC1EdHRrZXE1ZVJBMzU00gF0QVVfeXFMTTNRR19XUWhCV0dqaXdiR3JiTGhPb3g3QXNycEtZQ3c2X3AxX09VYXRWU0ZtTkpfZ056c3hPQklWYU9BZ19rWmhWb2VfWFViLWRoMWZtd21Cb1JHaDZxY2RKcHNGdW9WUGhnekthSVhPZTB1VzQ?oc=5",
-   "d": "2026-11-18T19:05:09.000Z"
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vbzdrRWMtdWxNMzFNd1UzVnF3bDEwWDI1S3EtQU00ZDJrdFd3dHlpRlN6RHdhRmlqZk0wRDJYVG5lR042N1VYSVF4RTFyckJTWDBJSVhtWUt3MWQwZ3pHWjBHX3o1VVNNOEJiTU13alh1N3pa0gF0QVVfeXFMTWVTSTkxVmxYWG8wc2RqYzI4YjEtMGR3VWR6QTB4UnRuMFhhbDdJQUs4T3VpQXFwLUYxbnlWMVdoUHFQMDhxdmZjYW5oTGs2QTk5Vlk1MjZNMlBVWlF2LWhGWHZxMEpHTlNLbGoxRWh0LWVRa0Q?oc=5",
+   "d": "2026-11-19T01:53:29.000Z"
   },
   {
-   "t": "젠슨 황 없는 엔비디아 실적, 시장 전망 웃돌아…삼성·하닉 주가 반등",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4zUzBZQTU5RmY0Q2tkRHhTNEtHMmNMVWp2aWxrZk5FQkZ5Ql8wcVZHRXRaT1JMMXNSYkNXZFpFN0l5UnVSVTh6Wm44b3ZYdkNQTmpjYnRjTzFhTm85Sy0zX3VZNE1iZF85cmc?oc=5",
-   "d": "2026-11-18T10:24:00.000Z"
-  },
-  {
-   "t": "美 민주, 러트닉 '메가스피드 제재 거부' 조사…아들 회사 특혜 의혹",
-   "src": "뉴스핌",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1QZU1wa2FHLWpkTmVuNGJoSmJxaDhCQXktSExzV3ZycU92QzZrb2t5TDNyeTlNZ1NGamx1SWNvbGVaWjd1SGpjVEh5VFpqcV84bndmSVlVZFgwbFA3?oc=5",
-   "d": "2026-11-18T15:08:00.000Z"
-  },
-  {
-   "t": "미국 사이버 보안국도 자바 취약점 경고...\"즉각 패치 적용\" 권고",
-   "src": "YTN",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE83ZWNkZ2tfbGxYTGNMd0lsNkRnR2JsVFBhUExMS09wZGRkamxTWFFHSDhFQV9Zc0gxcFFfd0tpX01KOEJGN0JxVm1pZWZvZi10T25nZHJBS2p3eVdjREE?oc=5",
-   "d": "2026-11-18T16:44:00.000Z"
+   "t": "엔비디아 실적에 웃은 코스피, 5000 탈환…삼전닉스 반등 - 머니투데이",
+   "src": "머니투데이",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBYUEVUUUUzRU5oWWhMWVFKOV9pcHJ6V09Nb3plcERXdmxnSktSU2tPbkxyUUM2WlM5QnJ5RkVRa3N3NHRfZFltR3l2dUt5WjNjV1NsSU5iVDNXd0ZuSnNVZ3p1THFoTzJt0gFuQVVfeXFMT0JiTlJWaW5QRkdNZmJ3eHRaRWY4dkYtekcxZFNUTFEtSF9IdXU3d0VIQkIwNUtHOEtxeUdZcVRZdzJoRkpVQVZVVV9zcERLQVV0dXBWVjdUY1lySU9QdXNFUDRmWmpibzVtbTl6cWc?oc=5",
+   "d": "2026-11-18T00:41:30.000Z"
   }
  ],
  "news": [
   {
-   "t": "수북이 쌓인 버려진 문제집들…노량진 N수생의 마지막 하루 [현장+]",
+   "t": "[속보] 교육부 \"위급재난문자로 스마트폰 22개 적발\"",
+   "src": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeHhSQkVDUHJZX1VPdUpiTXpTNXBHWGt0cmxwVTMwSnVpWDRkYTBtSGNoaW0xaTE2RlFsT1BNMXFIYlJIWmM1SFMyOV9nMXF5TlFkaDFjRkgwdzZoS2U4S3BrNWhqTGNsMHMtcTFFSHE2TnNvU25HRjllci1IaEQ0ZmotcmJqQ1U?oc=5",
+   "d": "2026-11-19T02:06:00.000Z"
+  },
+  {
+   "t": "'리트 만점자' 폰 끄고 잠적…서울대 치대 합격 시험지 폐기되나",
    "src": "한국경제",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8yRkMxZ3BiZjE3T0QzamttYkZMRkw5LVNrdVhrdXUtS2NSLWdsMDNyOGc3QVlxWDVXZTExOVU3MHRyNGRsR2NySFBMdUg4cHdmVUJzOU9uQVQ3Zw?oc=5",
-   "d": "2026-11-18T10:00:01.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE54dF9MUFY4aWx2c0lKREo3a0MtQS1adkl0US1lS2Y2YmtGdmV5eUZFTUJ2b0x2T0lIREZyTXI2b2JnLTZrLVFmN2hRS25rOFhNVFc1ZS1yRlp6dw?oc=5",
+   "d": "2026-11-18T23:40:50.000Z"
   },
   {
-   "t": "한중 정상, 선전서 ‘한반도 긴장 완화’ 논의…한국, ‘중국 역할’ 요청",
-   "src": "VOA 한국어 홈페이지",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNa0tTanZWTTN5c3RUZFF1eUxSSnZNMmJUbzNjMEtWdkVHZ29uOGI5VEdSUXdUV19aWjVmc2xtSFpfU1RXR2V6d0lOOTVyeF9MdTc4RWRYajhaNmFYM2ZKVzVuc2Nrc29zYXhfWUQxWnk5ME0xSEpCckxBZ3p3eTdiTnpVbTV5QdIBiAFBVV95cUxNX2RkSlRVWndaWk0yTEoza0Q1OUIyRHA3b3ZlVVFCMm4tQllIY0VhTFE0QTJJakJQTEtOMzhacGJ3SUJDRTFuRFItRTZTbVluU05Gc25XUzZ2cnBUU3hGWkE5QVpYRzB1MG11V1AyNWFjenNkN0hFNm9JeDMtMUtTN3o5emE1VkpW?oc=5",
-   "d": "2026-11-18T16:36:31.000Z"
-  },
-  {
-   "t": "시진핑, 공항서 트럼프 포옹... 美中러 담판 전날 ‘파격 예우’",
-   "src": "조선일보",
-   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQZ0dobmtxOVBiQmR1Tlc4cnUwUUI2bG0xRzNGNDBzT1pRdWw0N0RVbW1XbHNyeVo1VDFLQ0Q1cFBvaDhiYnp4eDFNNk1JRFo1T1RYZElieFVqQ1NFMC12X2RJMkdtbkc2T0YwdHlhODlVeEp3eVlmbDFkTk9mSmNXT2JGY0tRUTRqT2Jzbk1ZMVVuSG5lekF6LTViWTNMUQ?oc=5",
-   "d": "2026-11-18T14:19:10.000Z"
-  },
-  {
-   "t": "풉! ‘무죄’인 나는 간다~ [그림판]",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9mczMtZkVMNEY2YU82bzhQWURzS2pXZ2Q1NDB0RlBISG05SEIzMUFmZzZZZDFXS0xRRHN3dkRpX1JzRnk1cHNXSGVuSnBHQmVCLW9ldVpjZy1lSGJZMjBOUlpnazcyVi1BR2xaMA?oc=5",
-   "d": "2026-11-18T10:42:00.000Z"
-  },
-  {
-   "t": "中, 다카이치는 썰렁한 영접... 日측 \"정말 무례하다\" 분노",
-   "src": "조선일보",
-   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVlpwcEZManpsSmpvaUEzV2toZWc5UjM2c3hkUUZRUTU1Mk9pa1pHV2xEd3E0QTVENUFwallWTG5TMnlxMmp0NXVrVzFxb1pLS2VJbzZENE9qV1R5WUtVWkZzWXVPSG5PTmwyWllRSjN3MWJBaXNsZ2k5MWwteU50QTlNcHpmVHBsS1dVQ2s4QW03cXRtYUV0X2ZsNHYyQQ?oc=5",
-   "d": "2026-11-18T12:40:37.000Z"
-  },
-  {
-   "t": "수능날 갑자기 추워지는 날씨…“방한용품 잘 챙기세요”",
+   "t": "8년 끈 한중FTA 2단계 타결 … K콘텐츠·관광 中빗장 풀린다",
    "src": "매일경제",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE52UDk1RkpPNjZ4LWFkT21KNGJXUW53bXBtTnBnVTJ4YjB3U01INXFPaVQxTGpOaVhGRWNOM1RNaHctM0ZWa0ZOb0s1dXZhY3RXUlEyQQ?oc=5",
-   "d": "2026-11-18T06:12:28.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE95N2tmRl9aVGtEZUNsenJYb1V6V3FWaUpMaTBfcUZjWWI2V05yT2VpY2Jzc0lsVUZQTmFKOE9sZ19JVFJvUGY1SFVFckFsN3c3a1lNSw?oc=5",
+   "d": "2026-11-18T10:59:55.000Z"
+  },
+  {
+   "t": "수능 출제위원장 “영어 1등급 비율 안정적 달성 예상…선택과목 유불리 최소화”",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1jRjlKTWxmM2RBMEZ5ZkVqM1VrN1dOOUd5Q1pSaVZ4eUdUT3ZLbFMxTkNxXzVSTFJmaGM3clB5SGhTOWx4YkJEM1pkUUZrTnhEWTZCVEdxRmtxbGJGcl8yY1lWODNlM2JONXc?oc=5",
+   "d": "2026-11-19T00:46:00.000Z"
+  },
+  {
+   "t": "李, 中 현지에서 조작기소 특검법 재가",
+   "src": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUWgwZU16RnhGUERVbmJWb3ZIaGxNYnRyS21mTUVQLUlsN0NNMVpfT25mMThtcGtVOHNJZkxpTVB3MTl1X0c2bktGTTRLREhaWkpLYzJ5cllSWG91djFIdVdlZlpmc0JoX0RwUldaQjZHd1EyWWxnU2Y5MHZ0dTR4dkQ0aDZmWjB6SmVmUUMxQ1g?oc=5",
+   "d": "2026-11-18T23:35:00.000Z"
+  },
+  {
+   "t": "\"통신 차단\" \"1억 포상\" \"연필만\"... 李정부가 초래한 수능 대혼란",
+   "src": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVHNQX3RQMDlHRnFwU3R4QlJsUWoyaGdQczhYRjV6ZWt3V0t6RVZTOWlkakYxLWxiTEdZeWUzb2dYcmZuMFV5aDFVT3phdjhIci0xeVZ1X3Z4QUhudkh3RjRnZDBBcl84LXQtVnZuR0FEXzhSZTRXODVidXlMZ1pNcHFUd0UxNWc?oc=5",
+   "d": "2026-11-18T15:57:00.000Z"
   }
  ],
  "week": [
