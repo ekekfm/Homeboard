@@ -1,7 +1,7 @@
 {
  "date": "2026-11-19",
- "slot": "afternoon",
- "updatedAt": "2026-11-19T03:09:21.909Z",
+ "slot": "night",
+ "updatedAt": "2026-11-19T12:53:11.444Z",
  "slots": {
   "morning": {
    "at": "2026-11-18T20:24:33.060Z",
@@ -236,82 +236,199 @@
      "d": "2026-11-18T15:57:00.000Z"
     }
    ]
+  },
+  "night": {
+   "at": "2026-11-19T12:53:11.444Z",
+   "economy": [
+    {
+     "t": "대한민국 수출 1조 달러 돌파…K-반도체가 해냈다",
+     "src": "지디넷코리아",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE52T21HOURqWGNIQUpyUm9vYXFsZ01jbS02T01ObTJhOGNMVnR0VEJ1akxyTk9mdHpSemlDWGtvYnhNQk1lOW5FVk1nUnh3MVI5dENqNEhR?oc=5",
+     "d": "2026-11-19T05:29:23.000Z"
+    },
+    {
+     "t": "양대증시 상승 마감…앤트로픽 IPO에 반도체 투자심리 회복되나",
+     "src": "머니투데이",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8tMFY3MHdVYVBIMmd3ZlN0UEpDUF8zVGhOQzNoNnZKQTIybTFyUEIwOXh4cTYzZXVwN2FrQXM3VHdyMVc5MjBmYmU3OFNmWjMyVldoZGhpV3B0N1R4d3hQZVdWWWtKSWdU?oc=5",
+     "d": "2026-11-19T08:09:34.000Z"
+    },
+    {
+     "t": "앤트로픽 상장으로 수십조원대 자산가가 될 창업자 7명은 누구?",
+     "src": "BBC",
+     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96NGljSk1LbDlNQV9wenBqYWlEVnhZZkVXV3ZRUy0wUFlCQ3RsY08zTGlWR0NLSXZHWWctY1IwQXMxdkl3OFRETGRvWkdJWGFmSlRocEZRQzZIN2tPaVHSAWNBVV95cUxNRXBrOGtpOFJTaWxxM2VQaFFHbzFvTDVzNkxQNC1BMEpoSUxBalBCOHRQLVk4T2VMRFBMRW9mZUNKMlM1QTFYaGxUNVFTZHRjUUFOUDVLazlaX3lwWjdjRmpmMFk?oc=5",
+     "d": "2026-11-19T10:41:57.000Z"
+    },
+    {
+     "t": "LG생활건강, 서주완·이준호 전무 승진…핵심 사업·재무 강화",
+     "src": "뉴스핌",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5tOThKazRlYmF4MFpZVjNfajRKdjZVTDFjR3V3enZfNExqM1JDczVXdWN2ZDlOVzNLbTZaX2p0Mlk1enVFRDBJbWhiUnVpUzdJWUxid1Q3bUJqTlNn?oc=5",
+     "d": "2026-11-19T08:05:00.000Z"
+    },
+    {
+     "t": "SK텔레콤, 수능 마친 수험생에 공연·영화·AI 서비스 혜택 제공",
+     "src": "매일일보",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE05WTNUR2lUcWJGMlpjSktxZ2N4cFBLSVJEUDVTUl9wMkcyT2ZnUi1BQndaRGlPbF9hOVV4OGlKbEwtMW9SQzAwVjF6THpOV1pBS3BKS2RpRTVMY3NIM0FwMkhZLXk?oc=5",
+     "d": "2026-11-19T05:59:16.000Z"
+    },
+    {
+     "t": "LG그룹, '안정에 방점' 2027년 임원 인사…승진 132명·신규 임원 89명",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBIRFRtSV9UdFRWSkFISGxVZzM0OGlCXzZsSk83NHNnNkgzSk9jc3g3NVRyOGxQMWpEWFlRMmFrSFNhVmlmYlBXNEFObEpnbnM0OVRGM3lxNjdpY01LMEtBcW8wU3NHdHZoeDliUEtuUnY?oc=5",
+     "d": "2026-11-19T08:34:02.000Z"
+    }
+   ],
+   "stock": [
+    {
+     "t": "앤트로픽 효과에 반등…코스피 5,100선 탈환",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1PTnhWLVQ0UFI3VGE2Z05sSEFWOHZCbkdYTVlDeTB4RnJQWXR3dFRYNG9YOHVqdl9WODZ0WkJYVWhYM2YzZklpU1p2Ti02eGFXOHN5eGh3TkY5UU1WY1QwdEsza0lzdW8?oc=5",
+     "d": "2026-11-19T11:16:00.000Z"
+    },
+    {
+     "t": "[亞증시-종합] 혼조세로 마감…대만, 공매도 규제 강화",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAtZlVNak1XbThndG5HVERsZ2dLX1RjdjVOUUI5WnJac1EtaDJ1VFIydU1BaUw0akE3Mm83cEdrdXpON01hcGMzVFBPWHRMVUlaeWd0dXBYVjM2N2ZfUWZGRWxzMzFIUEotbXFFWXZCOTM?oc=5",
+     "d": "2026-11-19T10:24:46.000Z"
+    },
+    {
+     "t": "InvestingPro는 엘티씨 주가 48% 하락을 어떻게 미리 포착했나 By Investing.com",
+     "src": "Investing.com 한국어",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9vdlNPWWtIanVRZ3RwM3RBdV9RYWNpbnh1a1hTNXZSeWJlOWN4b0dqUDhDRGhsNGtsVUlkYk5UMVFPSmFEWmViT2FMLUxMVS1xbEhCcmxINDNKNXEwUC1PVVdRQWZVb3F2Q2ZHME1qZWFhTWs4Zmc?oc=5",
+     "d": "2026-11-19T11:37:00.000Z"
+    },
+    {
+     "t": "코스피, 앤트로픽 상장 앞두고 1.4% 상승 마감…5100선 회복",
+     "src": "매일경제 마켓",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5leHVqakQyOVBjN0RFNEhUODR4ZEhUbjJkUm9ZRmQ5X0h3ZnMzWng0Vi1scGU1N195Wmk4WGdCSXdWRlBoMjZkeUdNV0w2OGJDU3c?oc=5",
+     "d": "2026-11-19T07:56:57.000Z"
+    },
+    {
+     "t": "앤트로픽 오늘밤 나스닥 입성…증시 짓누르던 수급불안 완화될까(종합)",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5KSDVwUXk3dldLU0d0TUJIcmVYQmdUNWJCX2dsWFV3UGFvWjBtYUlnVTJlODUwVlJGOGJLVlJiN1lpUUZTUV92R25jYUZZd0JSZGdZamQtQnh1UEHSAWBBVV95cUxQOVBLakpzbnhzMHJ0eGlwTzF3WG9vRkVaS2RzdE5hYkF2a1NVTzF5d2dPdTR5a1pIcXU4VEhOdGg4SnNVYzEtN1pIMzdDSEx5WmQ3TmdKLVJOenlsUzFqUU4?oc=5",
+     "d": "2026-11-19T08:12:31.000Z"
+    },
+    {
+     "t": "코스피, 외국인 매도에도 1.4% 올라 5138 마감",
+     "src": "코리아리포트",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Mb0Rmb211UlpmSncwWlV6V0lneHhIRHZ5eVRqM2tyM1FMM2phTk1lbFRnUUc3Z1RERVV2YjVVOUJacTI4R0F4N242TFRNWS1pdEtNUTFwcm1WWmx5bl9VdnJRcmJrU3QySXplUENDWmw?oc=5",
+     "d": "2026-11-19T08:43:43.000Z"
+    }
+   ],
+   "news": [
+    {
+     "t": "한덕수 일부 무죄 취지 파기환송…윤석열 재판에 어떤 영향 미칠까?",
+     "src": "BBC",
+     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8wT2ZrNkNiOXdWUEhUdWg4cTFKOGZYQzRMX3NBN05SdnRLRGliTVJlUVZ1RXpGQ2Jvb04xRmpOcGZyMmU0TWd3ZnM2cF9lYU5EUWpYU2JBclZ2Z0t0NGfSAWNBVV95cUxPUDh5ZTVvTjFxQlJIVTZlNDNDd2lQbGdJQ3lqYUNBaWtmbG9ralppaFF5czE5Q2cxM1drOWpXcGxEbTRxNFpGUkZQT2JsUnBpWFVvY1F0cDhCLW0tZ09pZHhxYWc?oc=5",
+     "d": "2026-11-19T12:07:03.000Z"
+    },
+    {
+     "t": "[전문]미·중·러 정상회담 각 정상 모두발언",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1TUXVTc1N6eHl2VThNLU9OcEhMOHVMNzFQRG00czYyVk91ZklsTGVtcVVjbktzUUhiUG5GWWJwSklaSnV2cFJiMG9xSUN2MExQYUxKM0ZOMU40QdIBX0FVX3lxTE1LQWNSNDltWXF0bzJRcFpoVTRUejJkbGRUUU9mcUJMUXdMSHZvQ3U0NHhLRFcxVXA5d0dRQUtzbC1XRDhpOENBQ0R1WjFjNnRMYlp4bllSQkc1SlcteW9J?oc=5",
+     "d": "2026-11-19T10:50:00.000Z"
+    },
+    {
+     "t": "\"'조작-성공-몰락-자살' 고리 끊어야\"…이진우 논란에 서울대 교수의 '쓴소리' [이슈+]",
+     "src": "한국경제",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBmejcxTkp6d0wtbDFMd1ZYU29qX0N5elZZd2lmZjJ4SUpnSTltSXdiMGN1YjlBdDh0VE5keVU4V0h6Y2tJNGN0Q181Zkp6Qk1MRmY0elJUcFJPUQ?oc=5",
+     "d": "2026-11-19T09:29:57.000Z"
+    },
+    {
+     "t": "단추는 떼고 휴대폰은 신발에?…수능장서 벌어진 황당 풍경",
+     "src": "한국경제",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4zaFJZaWFmVnhwU29rYVowcUpZM19XRVotYW1fdS1mNnZvRUYxNFh0cjZqeGdGczFfdXNUVDVITEExRFRaQllOUC14ZlNsTk1ycUwyY0dYNG1JUQ?oc=5",
+     "d": "2026-11-19T10:17:00.000Z"
+    },
+    {
+     "t": "‘1심 무죄’ 추경호 “정부·여당 정치탄압, TK 홀대 멈춰라”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1Ncm1sdUVacmY3VWR3VWZyWnZjZmdvVDB5aUFtVThhUjN3djlFenBEalh3V1ctSXNiYXdrWWMxX3JaOUJUSkY0QkNadmd3YTQ2VlBaU2daTlRrdzA0SWVYTW5TSVI?oc=5",
+     "d": "2026-11-19T07:51:00.000Z"
+    },
+    {
+     "t": "‘한한령 완화’ 기대감 커진 한국, ‘한반도’ 언급 없는 중국",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1seW9ZTUpQbVEtU0l0c0FYTGYtVDk0S2p4b0F3NUlvS0dlVlNBTGxfRjZlRDBRTVVSOXFkSE1SU0JRUWlqSDdTOWZWaE8tYUkzX0tJWU5SRUxubDZWZ1ZPdWl6ZWlqQjBnQjBRbWlrdkdseG5p?oc=5",
+     "d": "2026-11-19T11:05:00.000Z"
+    }
+   ]
   }
  },
  "economy": [
   {
-   "t": "엔비디아 직원 56% \"젠슨황 복귀 원해\"…후임 후보 이언 벅 선두",
-   "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8wUHJkcm02a1lHM2hiVW81WE1tLXg1UWhZSXZQakFrRVREamJjdVdwU0EzWkJrMURJcDZ5d0huSVF2cS1vbHE4QmNQd3RfM3pmby1ONVdNNUl0dVXSAWBBVV95cUxQMVU4R05JUS1oNThSanZZY2V2V09QUUFYU2RJcm5yZlQ0N3pIY05zcDIxUGZFWG1rQ0ZaWklFTXp3cHVUNHpjdEJUb19uQ2pMTmM1dmNLOERsTkdOYUp3bkE?oc=5",
-   "d": "2026-11-18T21:45:01.000Z"
+   "t": "대한민국 수출 1조 달러 돌파…K-반도체가 해냈다",
+   "src": "지디넷코리아",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE52T21HOURqWGNIQUpyUm9vYXFsZ01jbS02T01ObTJhOGNMVnR0VEJ1akxyTk9mdHpSemlDWGtvYnhNQk1lOW5FVk1nUnh3MVI5dENqNEhR?oc=5",
+   "d": "2026-11-19T05:29:23.000Z"
   },
   {
-   "t": "가계빚 2030조, 주담대 금리 14년래 최고…취약차주 내년 상반기 고비",
-   "src": "뉴스1",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9xYTJseEVvQmtPUEJaaEVaZ1pMcjNUb0NIdVJDSERFUzd6UlJ3WjlDRnhyODZ2aUJVcUwyeHljRDZfUXE0ZnFRX0RSTWcwSmJkX0JpdQ?oc=5",
-   "d": "2026-11-18T21:20:00.000Z"
-  },
-  {
-   "t": "나스닥100 선물, 앤트로픽 상장 기대에 상승세…美 국채금리↑",
-   "src": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BS3dVSzVhZExKakdaYTdCMHZmNkQ0QlZGTVJCN3I5U20yVVZCTkI5eWVaQlVNX01EUThzbjFxT1lSVE9zeHVCaEI1LTFMTm1yb05tTUlsVVYxODhmWFYwWFRnekZlSGtUTENRS2dQak0?oc=5",
-   "d": "2026-11-19T01:14:17.000Z"
-  },
-  {
-   "t": "미국, ‘중국 AI 모델 사용’ 기업 공개 의무화 추진",
-   "src": "KBS 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9iT3Z5UHBSQWxTTGY2VExXVnFYeUt2dlBPamNYamNScXVlYnFFckZnTDFNemlITk9iOV9oMEZSWnI5TVM0RUFDTkx5UzZSWHhRcTdjWDdPSXNVR1U?oc=5",
-   "d": "2026-11-18T23:49:00.000Z"
-  },
-  {
-   "t": "'금리 동결' 10월 FOMC서 추가 금리 인상에 공감대‥'빅스텝' 거론도",
-   "src": "MBC 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vbzdrRWMtdWxNMzFNd1UzVnF3bDEwWDI1S3EtQU00ZDJrdFd3dHlpRlN6RHdhRmlqZk0wRDJYVG5lR042N1VYSVF4RTFyckJTWDBJSVhtWUt3MWQwZ3pHWjBHX3o1VVNNOEJiTU13alh1N3pa0gF0QVVfeXFMTWVTSTkxVmxYWG8wc2RqYzI4YjEtMGR3VWR6QTB4UnRuMFhhbDdJQUs4T3VpQXFwLUYxbnlWMVdoUHFQMDhxdmZjYW5oTGs2QTk5Vlk1MjZNMlBVWlF2LWhGWHZxMEpHTlNLbGoxRWh0LWVRa0Q?oc=5",
-   "d": "2026-11-19T01:53:29.000Z"
-  },
-  {
-   "t": "엔비디아 실적에 웃은 코스피, 5000 탈환…삼전닉스 반등 - 머니투데이",
+   "t": "양대증시 상승 마감…앤트로픽 IPO에 반도체 투자심리 회복되나",
    "src": "머니투데이",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBYUEVUUUUzRU5oWWhMWVFKOV9pcHJ6V09Nb3plcERXdmxnSktSU2tPbkxyUUM2WlM5QnJ5RkVRa3N3NHRfZFltR3l2dUt5WjNjV1NsSU5iVDNXd0ZuSnNVZ3p1THFoTzJt0gFuQVVfeXFMT0JiTlJWaW5QRkdNZmJ3eHRaRWY4dkYtekcxZFNUTFEtSF9IdXU3d0VIQkIwNUtHOEtxeUdZcVRZdzJoRkpVQVZVVV9zcERLQVV0dXBWVjdUY1lySU9QdXNFUDRmWmpibzVtbTl6cWc?oc=5",
-   "d": "2026-11-18T00:41:30.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8tMFY3MHdVYVBIMmd3ZlN0UEpDUF8zVGhOQzNoNnZKQTIybTFyUEIwOXh4cTYzZXVwN2FrQXM3VHdyMVc5MjBmYmU3OFNmWjMyVldoZGhpV3B0N1R4d3hQZVdWWWtKSWdU?oc=5",
+   "d": "2026-11-19T08:09:34.000Z"
+  },
+  {
+   "t": "앤트로픽 상장으로 수십조원대 자산가가 될 창업자 7명은 누구?",
+   "src": "BBC",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96NGljSk1LbDlNQV9wenBqYWlEVnhZZkVXV3ZRUy0wUFlCQ3RsY08zTGlWR0NLSXZHWWctY1IwQXMxdkl3OFRETGRvWkdJWGFmSlRocEZRQzZIN2tPaVHSAWNBVV95cUxNRXBrOGtpOFJTaWxxM2VQaFFHbzFvTDVzNkxQNC1BMEpoSUxBalBCOHRQLVk4T2VMRFBMRW9mZUNKMlM1QTFYaGxUNVFTZHRjUUFOUDVLazlaX3lwWjdjRmpmMFk?oc=5",
+   "d": "2026-11-19T10:41:57.000Z"
+  },
+  {
+   "t": "LG생활건강, 서주완·이준호 전무 승진…핵심 사업·재무 강화",
+   "src": "뉴스핌",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5tOThKazRlYmF4MFpZVjNfajRKdjZVTDFjR3V3enZfNExqM1JDczVXdWN2ZDlOVzNLbTZaX2p0Mlk1enVFRDBJbWhiUnVpUzdJWUxid1Q3bUJqTlNn?oc=5",
+   "d": "2026-11-19T08:05:00.000Z"
+  },
+  {
+   "t": "SK텔레콤, 수능 마친 수험생에 공연·영화·AI 서비스 혜택 제공",
+   "src": "매일일보",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE05WTNUR2lUcWJGMlpjSktxZ2N4cFBLSVJEUDVTUl9wMkcyT2ZnUi1BQndaRGlPbF9hOVV4OGlKbEwtMW9SQzAwVjF6THpOV1pBS3BKS2RpRTVMY3NIM0FwMkhZLXk?oc=5",
+   "d": "2026-11-19T05:59:16.000Z"
+  },
+  {
+   "t": "LG그룹, '안정에 방점' 2027년 임원 인사…승진 132명·신규 임원 89명",
+   "src": "연합인포맥스",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBIRFRtSV9UdFRWSkFISGxVZzM0OGlCXzZsSk83NHNnNkgzSk9jc3g3NVRyOGxQMWpEWFlRMmFrSFNhVmlmYlBXNEFObEpnbnM0OVRGM3lxNjdpY01LMEtBcW8wU3NHdHZoeDliUEtuUnY?oc=5",
+   "d": "2026-11-19T08:34:02.000Z"
   }
  ],
  "news": [
   {
-   "t": "[속보] 교육부 \"위급재난문자로 스마트폰 22개 적발\"",
-   "src": "조선일보",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeHhSQkVDUHJZX1VPdUpiTXpTNXBHWGt0cmxwVTMwSnVpWDRkYTBtSGNoaW0xaTE2RlFsT1BNMXFIYlJIWmM1SFMyOV9nMXF5TlFkaDFjRkgwdzZoS2U4S3BrNWhqTGNsMHMtcTFFSHE2TnNvU25HRjllci1IaEQ0ZmotcmJqQ1U?oc=5",
-   "d": "2026-11-19T02:06:00.000Z"
+   "t": "한덕수 일부 무죄 취지 파기환송…윤석열 재판에 어떤 영향 미칠까?",
+   "src": "BBC",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8wT2ZrNkNiOXdWUEhUdWg4cTFKOGZYQzRMX3NBN05SdnRLRGliTVJlUVZ1RXpGQ2Jvb04xRmpOcGZyMmU0TWd3ZnM2cF9lYU5EUWpYU2JBclZ2Z0t0NGfSAWNBVV95cUxPUDh5ZTVvTjFxQlJIVTZlNDNDd2lQbGdJQ3lqYUNBaWtmbG9ralppaFF5czE5Q2cxM1drOWpXcGxEbTRxNFpGUkZQT2JsUnBpWFVvY1F0cDhCLW0tZ09pZHhxYWc?oc=5",
+   "d": "2026-11-19T12:07:03.000Z"
   },
   {
-   "t": "'리트 만점자' 폰 끄고 잠적…서울대 치대 합격 시험지 폐기되나",
+   "t": "[전문]미·중·러 정상회담 각 정상 모두발언",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1TUXVTc1N6eHl2VThNLU9OcEhMOHVMNzFQRG00czYyVk91ZklsTGVtcVVjbktzUUhiUG5GWWJwSklaSnV2cFJiMG9xSUN2MExQYUxKM0ZOMU40QdIBX0FVX3lxTE1LQWNSNDltWXF0bzJRcFpoVTRUejJkbGRUUU9mcUJMUXdMSHZvQ3U0NHhLRFcxVXA5d0dRQUtzbC1XRDhpOENBQ0R1WjFjNnRMYlp4bllSQkc1SlcteW9J?oc=5",
+   "d": "2026-11-19T10:50:00.000Z"
+  },
+  {
+   "t": "\"'조작-성공-몰락-자살' 고리 끊어야\"…이진우 논란에 서울대 교수의 '쓴소리' [이슈+]",
    "src": "한국경제",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE54dF9MUFY4aWx2c0lKREo3a0MtQS1adkl0US1lS2Y2YmtGdmV5eUZFTUJ2b0x2T0lIREZyTXI2b2JnLTZrLVFmN2hRS25rOFhNVFc1ZS1yRlp6dw?oc=5",
-   "d": "2026-11-18T23:40:50.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBmejcxTkp6d0wtbDFMd1ZYU29qX0N5elZZd2lmZjJ4SUpnSTltSXdiMGN1YjlBdDh0VE5keVU4V0h6Y2tJNGN0Q181Zkp6Qk1MRmY0elJUcFJPUQ?oc=5",
+   "d": "2026-11-19T09:29:57.000Z"
   },
   {
-   "t": "8년 끈 한중FTA 2단계 타결 … K콘텐츠·관광 中빗장 풀린다",
-   "src": "매일경제",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE95N2tmRl9aVGtEZUNsenJYb1V6V3FWaUpMaTBfcUZjWWI2V05yT2VpY2Jzc0lsVUZQTmFKOE9sZ19JVFJvUGY1SFVFckFsN3c3a1lNSw?oc=5",
-   "d": "2026-11-18T10:59:55.000Z"
+   "t": "단추는 떼고 휴대폰은 신발에?…수능장서 벌어진 황당 풍경",
+   "src": "한국경제",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4zaFJZaWFmVnhwU29rYVowcUpZM19XRVotYW1fdS1mNnZvRUYxNFh0cjZqeGdGczFfdXNUVDVITEExRFRaQllOUC14ZlNsTk1ycUwyY0dYNG1JUQ?oc=5",
+   "d": "2026-11-19T10:17:00.000Z"
   },
   {
-   "t": "수능 출제위원장 “영어 1등급 비율 안정적 달성 예상…선택과목 유불리 최소화”",
+   "t": "‘1심 무죄’ 추경호 “정부·여당 정치탄압, TK 홀대 멈춰라”",
    "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1jRjlKTWxmM2RBMEZ5ZkVqM1VrN1dOOUd5Q1pSaVZ4eUdUT3ZLbFMxTkNxXzVSTFJmaGM3clB5SGhTOWx4YkJEM1pkUUZrTnhEWTZCVEdxRmtxbGJGcl8yY1lWODNlM2JONXc?oc=5",
-   "d": "2026-11-19T00:46:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1Ncm1sdUVacmY3VWR3VWZyWnZjZmdvVDB5aUFtVThhUjN3djlFenBEalh3V1ctSXNiYXdrWWMxX3JaOUJUSkY0QkNadmd3YTQ2VlBaU2daTlRrdzA0SWVYTW5TSVI?oc=5",
+   "d": "2026-11-19T07:51:00.000Z"
   },
   {
-   "t": "李, 中 현지에서 조작기소 특검법 재가",
-   "src": "조선일보",
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUWgwZU16RnhGUERVbmJWb3ZIaGxNYnRyS21mTUVQLUlsN0NNMVpfT25mMThtcGtVOHNJZkxpTVB3MTl1X0c2bktGTTRLREhaWkpLYzJ5cllSWG91djFIdVdlZlpmc0JoX0RwUldaQjZHd1EyWWxnU2Y5MHZ0dTR4dkQ0aDZmWjB6SmVmUUMxQ1g?oc=5",
-   "d": "2026-11-18T23:35:00.000Z"
-  },
-  {
-   "t": "\"통신 차단\" \"1억 포상\" \"연필만\"... 李정부가 초래한 수능 대혼란",
-   "src": "조선일보",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVHNQX3RQMDlHRnFwU3R4QlJsUWoyaGdQczhYRjV6ZWt3V0t6RVZTOWlkakYxLWxiTEdZeWUzb2dYcmZuMFV5aDFVT3phdjhIci0xeVZ1X3Z4QUhudkh3RjRnZDBBcl84LXQtVnZuR0FEXzhSZTRXODVidXlMZ1pNcHFUd0UxNWc?oc=5",
-   "d": "2026-11-18T15:57:00.000Z"
+   "t": "‘한한령 완화’ 기대감 커진 한국, ‘한반도’ 언급 없는 중국",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1seW9ZTUpQbVEtU0l0c0FYTGYtVDk0S2p4b0F3NUlvS0dlVlNBTGxfRjZlRDBRTVVSOXFkSE1SU0JRUWlqSDdTOWZWaE8tYUkzX0tJWU5SRUxubDZWZ1ZPdWl6ZWlqQjBnQjBRbWlrdkdseG5p?oc=5",
+   "d": "2026-11-19T11:05:00.000Z"
   }
  ],
  "week": [
