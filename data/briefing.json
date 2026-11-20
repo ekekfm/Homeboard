@@ -1,7 +1,7 @@
 {
  "date": "2026-11-20",
- "slot": "afternoon",
- "updatedAt": "2026-11-20T02:58:16.005Z",
+ "slot": "night",
+ "updatedAt": "2026-11-20T12:44:42.555Z",
  "slots": {
   "morning": {
    "at": "2026-11-19T20:27:32.692Z",
@@ -236,82 +236,199 @@
      "d": "2026-11-19T21:58:58.000Z"
     }
    ]
+  },
+  "night": {
+   "at": "2026-11-20T12:44:42.555Z",
+   "economy": [
+    {
+     "t": "웹툰 속 전투를 직접 지휘할 수 있다면…지스타 웹젠 ‘디겜폭’ 시연 열기",
+     "src": "지디넷코리아",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE93cllZRDFhWm9oSGh5Z2FzUURvRmJnSDBuaV82cXNRSDJfRmdLU1pGZzhkXzBwb3cwOVhKQU80MVNMa2xnTVN4VHFnQnl0bGdvQnJMTGVn?oc=5",
+     "d": "2026-11-20T05:02:57.000Z"
+    },
+    {
+     "t": "[속보] 코스피, 4%대 급락에 매도 사이드카 발동",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0xVXRKQmJTcFF6SWNjWTYtTWhTNGRuay02R1laSXhib3J1b2xrOEE0Tm83SU0zYzhCdkpudGJZTktNaE9GNmFhVmNYX0RLem1JNG4zVV9YWVlRekMyTUlrdkdXcnJzekNyR2tjanYzZjlSNlU40gF0QVVfeXFMTlA5YTBwNi1aRC1RZDZZTU1GZjRiM2VUSk9IMncwbzZsdm1XTHc5QktCNnVMa25nZFctaWx5R210OGdGbEJGMW9wV2NjSDJCZEx0dEo1UWMtQkN4YjFGSzh2Wm13Q0dHblFfRHBmU0lyZ1NWUU4?oc=5",
+     "d": "2026-11-20T02:57:40.000Z"
+    },
+    {
+     "t": "10월 국내주식 25조원 넘게 판 외국인 투자자...두 달 연속 ‘셀코리아’",
+     "src": "JTBC",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9RTmZuazBmTE9lREJHNUYxMmV6ZEJlVzV5TmZuSkJISXFybFI3d3hJQlFDel82clpfdDVkdWNpNWhXd2lISkxCcmNpeVplLW1WQ3Rzcg?oc=5",
+     "d": "2026-11-20T07:05:00.000Z"
+    },
+    {
+     "t": "3분기 신규 주담대 평균 2억 1,451만원…622만원 증가",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5ILUxmVGgxdFJjcU5LM0luSFR5bVVEUFM3UWJKeG5MaVV3cjl2OUMwdjZRaHRScFdXbWhWaWJMLThuTV9aakgySFRJTllObzd5SHhZejk4RE16Z1FVczE1c253LXZ2azQ?oc=5",
+     "d": "2026-11-20T05:14:00.000Z"
+    },
+    {
+     "t": "내년 아파트 공시가격 현실화율 69%로 5년째 동결…보유세 영향은?",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9YUklzWE5YclA3VXNYRzd5U1hjMW9NR1hfUnVyNXAxVzk2aUF5NU1wakpJSFVOU2VSMUhYMWRhN2VZTW5ES2xCTml6eEtsQnJleHVVTzB4cWRMN0NPaU44OE16aU5JUQ?oc=5",
+     "d": "2026-11-20T08:46:00.000Z"
+    },
+    {
+     "t": "\"엔비디아 칩, 우회로 거쳐 中 군 연계 연구소 코앞까지\"",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBPMlUxMkI0OEJjMGRlazJIbVVISkF2QTdEcVlPNVZGVzF5LUVKR2pSU3B5bE5mOU9FQ1M0VE1CRTJXdTAwZWZoM1Izb1RwU0VIcjc3TG5zTXdSMjdvelhaanhYdXYxRE5yaFR4OVNWVlE?oc=5",
+     "d": "2026-11-20T02:43:10.000Z"
+    }
+   ],
+   "stock": [
+    {
+     "t": "미국발 삭풍에 약세 마감...코스피, 4,900선도 붕괴",
+     "src": "YTN",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1mWTVpcHhibzFuNS1tVWUzbWp4dGNzTkxTdjdIWjZiUXkwQk9tMEE2cmpkYl9ZQkxob1oza1kxTHl3c3g1NVdoTkdDSVA4N1ZuV3lyZ0FrT1lRVEZKMTcyd29MejAwZnFrdkJyVUxVZw?oc=5",
+     "d": "2026-11-20T09:39:00.000Z"
+    },
+    {
+     "t": "다시 5천선 내준 코스피…앤트로픽도 못 막은 AI 불안",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9nckVXR2VBbHNVUjdTTUhoM0Eya3lLSnNKb3VCTzZhdC1LcnNfNWtpVjVoY2piaE1Mc2R2cU43NFVCWlphT3dIdWZ0azdwQW1KeTZRUXZrZzhmbjg?oc=5",
+     "d": "2026-11-20T10:09:00.000Z"
+    },
+    {
+     "t": "삼전닉스 '와르르'…코스피·코스닥 5%대 급락에 개미들 '비명'",
+     "src": "한국경제",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5rQk4wT0NTZGJ4Q2hXYkFRTFFvMlFzTnZMUWxQUzVKQk9mbExiQlBsbjhrZHFIWkF3Sm1nc05sb1V4RWp5THRhWUduT3dMUFlseGdsWnE1aHlfQQ?oc=5",
+     "d": "2026-11-20T06:46:32.000Z"
+    },
+    {
+     "t": "[증시-마감] 코스피 AMD發 반도체 불안에 5.2%↓…10개월 만에 최저",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1JOWREaDdOaWp4bVNrbmw5cG43Q0JKUnFzdVJTU2o1Y05Ga1dQMEhBdTE5UFBpS2FSQnVrOVhrV2RpbS11eGNKOHRrOV9xNkNuTmlWNG5YcDlhTERodDNEcmY0SkZIczJ1YUhHa0hPZDI?oc=5",
+     "d": "2026-11-20T07:12:29.000Z"
+    },
+    {
+     "t": "’검은 금요일’ 코스피·코스닥 5%대 동반 급락",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1aeXN0S2pSR1ktb2dSdnl5OGFJQjhfaWNGN3pQSWlOZ2xpb1gzdURNbS12Q1Yyc2Q2SXNRSnh1OUdiZEYzWEg2RS1kQUlkSG9wRjBKOElJREd6bW1WNDFGV0lxU2lKcXc?oc=5",
+     "d": "2026-11-20T09:23:00.000Z"
+    },
+    {
+     "t": "앤트로픽 143조 돈잔치 열렸는데 세계증시 폭락‥AI거품 공포 확산?",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9RY3RicnRldGVQMTl3eHVqVjdBbjhsbnRPczhmRy1jVXRJSFctZ1JaSlVqT2xncFJweTVNQkRKXzBFVXFoaWwteXYzT3ZESTZDSzB1UjhleXl1YTVaakFOdURZazM0ZnBRM1BvRjUzbDVKVWxlU0ZtQtIBeEFVX3lxTE9VT1ZwWHNiSV9fYmtGdzFCTDQ1aGh6dlJuUW9mX2ppTDlqb0dSd1pTZGJFbnhQa0NxTEhOTWtpQkFUXzhJcm0wQ25rZXJXM1NkbWFlajllQTZwU3ZvY3RLU3hBdWdlaVY4X1JUMjVNMldGYzFIYXRJdg?oc=5",
+     "d": "2026-11-20T11:23:00.000Z"
+    }
+   ],
+   "news": [
+    {
+     "t": "신발 깔창에 핸드폰 숨겨 반입한 수험생, 경찰 수사 받는다",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRVpmc0xXdFZidnNmVXI1ZkR4Wm9jOWdaSTlpQXpVSGRjcVBnZk5xbmlOSl9uU1BaaFI5MkFpWjVWeDJGeElrMXJDZ2hPdWVVRjVESWt4czlWUktXUFBLdGd1ZTF4WFVwMUFxZGFyUXl4NXJhMlZSMjRUeDd6VGF1MVJpSUI4blpTNjB6cWpnTEs?oc=5",
+     "d": "2026-11-20T09:27:00.000Z"
+    },
+    {
+     "t": "[사설] ‘한덕수 파기환송’ 잘못됐지만, 대법원장 탄핵은 끝까지 숙고해야",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9UbTd0cW85R2UwZmpJNlVidDl6QUVUMDRQQzVsYlZaX3l0dVpOaTA4TzB3UHBnT3U0Ym5LNDFxZjlYQXdVem1Jdm9xcWYybDNOaE5YT2hrYXVvZXNmVlgwMk1QNlAtbFg5Umc?oc=5",
+     "d": "2026-11-20T11:26:00.000Z"
+    },
+    {
+     "t": "’민주유공자법’ 26년만 통과…野 “운동권 특혜법“ 반발",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE16Nzd5bWNibTlLQmpmY3pDcU1KUi1CWWh3TEtiUzNUaTR3cl82R3JQcTkxWEhaSDlvWXBjWllaY2VJdTMtWDMzQkctMkljaGo3Ny1HTnc3d2dpUUZsSGxLNGRBTGNhdlk?oc=5",
+     "d": "2026-11-20T11:58:00.000Z"
+    },
+    {
+     "t": "\"서울대 의대 합격컷 300점 만점에 298점\"…연고대는?",
+     "src": "한국경제",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8zWHA0YTZ3ZEpsN3IxakVsLU14dk42WjA2c0NXU2JrYUROVXNpc1dxbzZYNXVXSk1LWU85QTJOa0ZzVnRNTzAxallWN25KdmRmUGZoWWNXS2d3dw?oc=5",
+     "d": "2026-11-20T02:17:59.000Z"
+    },
+    {
+     "t": "‘AI 커닝’ 비상, 경기도 중등 교사 임용시험에 전파탐지기 투입",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1Ga2tIMHlxVm95Z0JFdUktV2FkRE9FdFlDekdnUy1zVDFUMEVpWjlvY0JWT19FbFZpUEc1YUNuSWQ0UmZ0cTYxU3J3TWJBSFVFWTZIaGJRMUE0bXc?oc=5",
+     "d": "2026-11-20T05:24:00.000Z"
+    },
+    {
+     "t": "이 대통령, 김종철 경찰청장 후보자 임명안 재가",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA0SjA5Q2o1WE9XcnhLcEZoV0pOeWtFdTdTYlpZWDViNnZ5M2tHVWpKMVI0enJFa1VUUU14NDhSUEt0YXk3bjI0NGp3SXJsUFlPZXdhTUNSS3NBQdIBX0FVX3lxTE5sVVJIT1lRVHNDeXIxYy1BbTE1OG9qcXk5bC0ySlotTDhXVFVzV29yQUQyZFlRMFJHOVNBdkg3YVZqek5qVE5odEc4ZzRMOEllc08waEpPeDdzUmFoZEE0?oc=5",
+     "d": "2026-11-20T10:17:00.000Z"
+    }
+   ]
   }
  },
  "economy": [
   {
-   "t": "앤트로픽, 상장 첫날 17% 급등했지만…\"지수 편입 후 매물 주의\"",
-   "src": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5tVWMtYUpaOGYwekhfbllWOUc2YmtHQktmNkNIVzh4VFVqMVJ4LURKOEpvU3JnQUFQYnFXdThUQmZlMTk1aldYRmVObE1iMXdjUGM5RUtYeG9EZjNVRUJidzRUN0JhY0JaN0o3N04xTG4?oc=5",
-   "d": "2026-11-19T23:10:12.000Z"
-  },
-  {
-   "t": "코스피 3% 하락 출발…‘앤트로픽 IPO 흥행’에도 기술주 전반 부진",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBONHl6UTRENzd3Sm1fSk5rRE1qZEFZRkl1bmtUUU9ZZUgxcnhkeTVWWkF2YlNsc2ZuMTdHbmlUVlh4Qm5zMjBRYnRmNURqbTE3aFM2SnhERDQyckdka0tBTkRmM1JwR00?oc=5",
-   "d": "2026-11-20T00:31:00.000Z"
-  },
-  {
-   "t": "삼성전자, 전영현·노태문 '투톱' 유지...메모리 황상준·모바일 최원준",
+   "t": "웹툰 속 전투를 직접 지휘할 수 있다면…지스타 웹젠 ‘디겜폭’ 시연 열기",
    "src": "지디넷코리아",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9lYmZzRnJ6djdQTlFqUTdxOTNSUGVQOFFFU2lXOXgwSHNFTmFCZ1dYbFpXRk1zWVVqSzctWG10cGZ0Rk9TLVNqRnBYZ1hMSFFtb09OMWd3?oc=5",
-   "d": "2026-11-20T01:39:20.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE93cllZRDFhWm9oSGh5Z2FzUURvRmJnSDBuaV82cXNRSDJfRmdLU1pGZzhkXzBwb3cwOVhKQU80MVNMa2xnTVN4VHFnQnl0bGdvQnJMTGVn?oc=5",
+   "d": "2026-11-20T05:02:57.000Z"
   },
   {
-   "t": "반포현대 재초환 부담금 179억, 연내 부과",
-   "src": "중앙일보",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBUeXdGa2xuUjVlVVdBaWlhVDVxYzZxVHItTnZwYVFyWC16ZDhIU1ZSWF90ZzMtSWp2OFlyaFgwQXlFby1pUlJLZVZYTHpaXzlsaDd1cDBn?oc=5",
-   "d": "2026-11-19T15:02:01.000Z"
+   "t": "[속보] 코스피, 4%대 급락에 매도 사이드카 발동",
+   "src": "MBC 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0xVXRKQmJTcFF6SWNjWTYtTWhTNGRuay02R1laSXhib3J1b2xrOEE0Tm83SU0zYzhCdkpudGJZTktNaE9GNmFhVmNYX0RLem1JNG4zVV9YWVlRekMyTUlrdkdXcnJzekNyR2tjanYzZjlSNlU40gF0QVVfeXFMTlA5YTBwNi1aRC1RZDZZTU1GZjRiM2VUSk9IMncwbzZsdm1XTHc5QktCNnVMa25nZFctaWx5R210OGdGbEJGMW9wV2NjSDJCZEx0dEo1UWMtQkN4YjFGSzh2Wm13Q0dHblFfRHBmU0lyZ1NWUU4?oc=5",
+   "d": "2026-11-20T02:57:40.000Z"
   },
   {
-   "t": "'SM 주가조작' 김범수 카카오 창업자, 2심도 '무죄' 선고",
-   "src": "YTN",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5XTHd6V1IwUE9DSUdmcW9kcmF6Vm1UWU9KYm9LRGd2TE9kaEtveVI3TzVTeVJIUmFtMkhHeG12NzZsSE42ckJPWTREWjM4MFc4UkhkYmRETVdqTlM5X3ZiQ29YclEzMmdwdjNpRV9Ldw?oc=5",
-   "d": "2026-11-20T02:06:00.000Z"
+   "t": "10월 국내주식 25조원 넘게 판 외국인 투자자...두 달 연속 ‘셀코리아’",
+   "src": "JTBC",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9RTmZuazBmTE9lREJHNUYxMmV6ZEJlVzV5TmZuSkJISXFybFI3d3hJQlFDel82clpfdDVkdWNpNWhXd2lISkxCcmNpeVplLW1WQ3Rzcg?oc=5",
+   "d": "2026-11-20T07:05:00.000Z"
   },
   {
-   "t": "10월 생산자물가 0.1% 하락…사과 29.2%·돼지고기 12.8%↓",
-   "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5MSXlPTVNmelRFYVlqeDZDbGxwcVlLeWMzVy1FalNtem1WZmtyR1Q3MEdudWFfTThMOUtGdkVDWjROV1hoSmFqMktKY2l0RDdwUzNzakYxWjJjeFXSAWBBVV95cUxOQWYtVThabzhHaUU1S09jX0FnZW1lMXdjQWw3ZHVXcG9lWFhQeUM5cDNTVEhQSzRMbF8ybHZwajk5aVVTUUNVRkUtWmVqbHNzRUxRdURyWnUwRFJBTjlKVmc?oc=5",
-   "d": "2026-11-19T21:00:02.000Z"
+   "t": "3분기 신규 주담대 평균 2억 1,451만원…622만원 증가",
+   "src": "연합뉴스TV",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5ILUxmVGgxdFJjcU5LM0luSFR5bVVEUFM3UWJKeG5MaVV3cjl2OUMwdjZRaHRScFdXbWhWaWJMLThuTV9aakgySFRJTllObzd5SHhZejk4RE16Z1FVczE1c253LXZ2azQ?oc=5",
+   "d": "2026-11-20T05:14:00.000Z"
+  },
+  {
+   "t": "내년 아파트 공시가격 현실화율 69%로 5년째 동결…보유세 영향은?",
+   "src": "KBS 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9YUklzWE5YclA3VXNYRzd5U1hjMW9NR1hfUnVyNXAxVzk2aUF5NU1wakpJSFVOU2VSMUhYMWRhN2VZTW5ES2xCTml6eEtsQnJleHVVTzB4cWRMN0NPaU44OE16aU5JUQ?oc=5",
+   "d": "2026-11-20T08:46:00.000Z"
+  },
+  {
+   "t": "\"엔비디아 칩, 우회로 거쳐 中 군 연계 연구소 코앞까지\"",
+   "src": "연합인포맥스",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBPMlUxMkI0OEJjMGRlazJIbVVISkF2QTdEcVlPNVZGVzF5LUVKR2pSU3B5bE5mOU9FQ1M0VE1CRTJXdTAwZWZoM1Izb1RwU0VIcjc3TG5zTXdSMjdvelhaanhYdXYxRE5yaFR4OVNWVlE?oc=5",
+   "d": "2026-11-20T02:43:10.000Z"
   }
  ],
  "news": [
   {
-   "t": "스마트폰으로 문제 찍고, AI 안경 쓰고…육안으로 적발 ‘한계’",
+   "t": "신발 깔창에 핸드폰 숨겨 반입한 수험생, 경찰 수사 받는다",
+   "src": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRVpmc0xXdFZidnNmVXI1ZkR4Wm9jOWdaSTlpQXpVSGRjcVBnZk5xbmlOSl9uU1BaaFI5MkFpWjVWeDJGeElrMXJDZ2hPdWVVRjVESWt4czlWUktXUFBLdGd1ZTF4WFVwMUFxZGFyUXl4NXJhMlZSMjRUeDd6VGF1MVJpSUI4blpTNjB6cWpnTEs?oc=5",
+   "d": "2026-11-20T09:27:00.000Z"
+  },
+  {
+   "t": "[사설] ‘한덕수 파기환송’ 잘못됐지만, 대법원장 탄핵은 끝까지 숙고해야",
    "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBQTjlaNjRTdmhrRDFSVXVWUF9HNmI5ZHZvNHdjWTN1dHZsUWRsVGp6bFJjNXEzaDdvYW41SnhVSVYwclQ1VFNfeWw3VzZPZ2RjcFg0SGJ3VkNRWkFhenhKR1gweVdHOHBVcmc?oc=5",
-   "d": "2026-11-20T00:05:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9UbTd0cW85R2UwZmpJNlVidDl6QUVUMDRQQzVsYlZaX3l0dVpOaTA4TzB3UHBnT3U0Ym5LNDFxZjlYQXdVem1Jdm9xcWYybDNOaE5YT2hrYXVvZXNmVlgwMk1QNlAtbFg5Umc?oc=5",
+   "d": "2026-11-20T11:26:00.000Z"
   },
   {
-   "t": "국민의힘, 조희대 탄핵 추진에 ‘반색’ “민주당도 참 힘든 길 간다”",
-   "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iSXI3Wmp1ekp4RTlRaHNmNU5CNDl5dmprQ0NKY2Y0WjlWeVNBc1Q3Qy1kX09GOHNXREhJTmxFYktHNnNPWWljNVVFQUlWLXl3UlBUX0tMYUJkUdIBX0FVX3lxTFA0ZC13SjViQWdmZTRBWTdSd1I4Xy1jZTd3NHFURjlTZ25ueU9OUmQ5WHF1cm5nSV9FMDRUMDB3c2lwdUlONUdBWjh5SGxpbmpBdDNjaFp5QV96X1hybE53?oc=5",
-   "d": "2026-11-20T02:00:00.000Z"
+   "t": "’민주유공자법’ 26년만 통과…野 “운동권 특혜법“ 반발",
+   "src": "연합뉴스TV",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE16Nzd5bWNibTlLQmpmY3pDcU1KUi1CWWh3TEtiUzNUaTR3cl82R3JQcTkxWEhaSDlvWXBjWllaY2VJdTMtWDMzQkctMkljaGo3Ny1HTnc3d2dpUUZsSGxLNGRBTGNhdlk?oc=5",
+   "d": "2026-11-20T11:58:00.000Z"
   },
   {
-   "t": "미중러 정상회담: 트럼프·푸틴·시진핑 화려한 만남 뒤...실질적 성과는 미미",
-   "src": "BBC",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE13ekVmTEd4T3hjdHBmTk1Kd1VTcGllWlVuNGhEN2pnOEEtYXdjM0tEZ2pNSFhMLXByOFFyZjlwcmZBa2lLd21oaVFBWU5lNXJrUTVFYUxmQzZKQnptd1HSAWNBVV95cUxNcm50Mk1OZmVQQmd0SDdUTVJhLWk3eU5MUFFrNEtqc2RDMzhrNXZBRlkyWE43VXVzWndTN0hUOEhMUnV1SHprbWFZdy13VEpHOFhzVlZRSVBkVUZVbHNCTlZzZzA?oc=5",
-   "d": "2026-11-20T02:22:55.000Z"
-  },
-  {
-   "t": "중국, APEC ‘다카이치 홀대’ 지적에 “적절한 안내·환대 조치 제공했다”",
-   "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5UeFhxVjJMWmUzOUQyd3Jja0Y5Tm5hcjZ4ekR4MHdELTJwWVNzUlZGVnlEUHRZSUY4T29mSEJQenpzU3hXZlF2bkd2aVhYRklsRk5XYjJ2cE5yd9IBX0FVX3lxTFBadkd4Y05DZTVqTDFobDlJU0U2NGVuNVZ4djY2Vjc2ZGJXMkhxZ2pLTV80MDdqbTFjemw3SzJwX2lGR3JfWlJGUEpWbThKaUpNcGcxVk5DN2YyRG5mQmJj?oc=5",
-   "d": "2026-11-19T23:07:00.000Z"
-  },
-  {
-   "t": "[COP31, 정치와 삶 사이②] 피해를 수치로 헤아릴 수도, 말로 다 담을 수도 없다",
-   "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9lS1JZQkdXZDBqbHhfZjBNUUtNbC1WRE1ZNlhJemduRl9FclE5TTMtX2pfS0hfeVZGbmR2WVRiZjhjYXV1dWt2VWIzOGtMUnZCQTBPWGZwTkFfUdIBX0FVX3lxTE1pMHdDbGVFOUlUd0NPeUU0aVNWTkhPeUpNSTFPZENSUl84dlctamw3NE5TWDZiN0dodEpVSDVMc1hZbndxSEpPWmJlaFpnZ0laX1dfU1g4dW5LLTZicEM0?oc=5",
-   "d": "2026-11-19T21:00:00.000Z"
-  },
-  {
-   "t": "\"AI로 의대·서울대 얼마나 갔을지 감도 안 온다\"…무너진 신뢰",
+   "t": "\"서울대 의대 합격컷 300점 만점에 298점\"…연고대는?",
    "src": "한국경제",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5RTGxsd0JYWjB6Y01zLVJESlFGSk5ZNkhaM2ZNUEtoa1BTYWhwcUpEclZVQ09iUlR0dkNQSnNhTHNQaGlLc3F0anpKU2JVOFdwc3hqUjhPTlc2dw?oc=5",
-   "d": "2026-11-19T21:58:58.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8zWHA0YTZ3ZEpsN3IxakVsLU14dk42WjA2c0NXU2JrYUROVXNpc1dxbzZYNXVXSk1LWU85QTJOa0ZzVnRNTzAxallWN25KdmRmUGZoWWNXS2d3dw?oc=5",
+   "d": "2026-11-20T02:17:59.000Z"
+  },
+  {
+   "t": "‘AI 커닝’ 비상, 경기도 중등 교사 임용시험에 전파탐지기 투입",
+   "src": "KBS 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1Ga2tIMHlxVm95Z0JFdUktV2FkRE9FdFlDekdnUy1zVDFUMEVpWjlvY0JWT19FbFZpUEc1YUNuSWQ0UmZ0cTYxU3J3TWJBSFVFWTZIaGJRMUE0bXc?oc=5",
+   "d": "2026-11-20T05:24:00.000Z"
+  },
+  {
+   "t": "이 대통령, 김종철 경찰청장 후보자 임명안 재가",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA0SjA5Q2o1WE9XcnhLcEZoV0pOeWtFdTdTYlpZWDViNnZ5M2tHVWpKMVI0enJFa1VUUU14NDhSUEt0YXk3bjI0NGp3SXJsUFlPZXdhTUNSS3NBQdIBX0FVX3lxTE5sVVJIT1lRVHNDeXIxYy1BbTE1OG9qcXk5bC0ySlotTDhXVFVzV29yQUQyZFlRMFJHOVNBdkg3YVZqek5qVE5odEc4ZzRMOEllc08waEpPeDdzUmFoZEE0?oc=5",
+   "d": "2026-11-20T10:17:00.000Z"
   }
  ],
  "week": [
