@@ -13,7 +13,7 @@ service cloud.firestore {
     }
     function knownCol(col) {
       return col in ['tasks', 'events', 'biz', 'leads', 'logs', 'notes', 'links',
-                     'settings', 'allocs', 'ledger', 'probe'];
+                     'work', 'timelog', 'settings', 'allocs', 'ledger', 'probe'];
     }
     function okShape() {
       let d = request.resource.data;

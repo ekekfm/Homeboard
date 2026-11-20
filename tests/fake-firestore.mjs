@@ -6,9 +6,10 @@ const denied = () => Object.assign(new Error("permission-denied"), { code: "perm
 const copy = (x) => JSON.parse(JSON.stringify(x));
 
 export class FakeServer {
-  constructor() { this.docs = new Map(); this.clients = new Set(); this.writes = 0; }
+  constructor() { this.docs = new Map(); this.clients = new Set(); this.writes = 0; this.denyCols = new Set(); }
   key(uid, col, id) { return uid + "/" + col + "/" + id; }
   apply(uid, col, id, doc, isDelete) {
+    if (this.denyCols.has(col)) throw denied();
     const k = this.key(uid, col, id), cur = this.docs.get(k);
     if (isDelete) {
       if (!cur || doc.v !== cur.v + 1) throw denied();
@@ -46,7 +47,8 @@ export class FakeClient {
     if (this.queue.some((q) => q.uid === uid && q.col === col && q.id === doc.id)) return;
     this.emit(uid, col, [doc], false);
   }
-  listen(uid, col, cb) {
+  listen(uid, col, cb, err) {
+    if (this.server.denyCols.has(col)) { setTimeout(() => err && err(denied()), 5); return () => {}; }
     const sub = { uid, col, cb };
     this.subs.push(sub);
     setTimeout(() => {

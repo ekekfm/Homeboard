@@ -19,12 +19,12 @@ function device(server, S, opts = {}) {
   dev.core = new SyncCore({
     uid: UID, dev: opts.name || "d", storage, app, ledgerOn: () => ledger,
     backend: { listen: (u, c, cb, err) => client.listen(u, c, cb, err), write: (...a) => client.write(...a), getServer: (...a) => client.getServer(...a) },
-    onConflict: () => { dev.conflicts++; },
+    onConflict: () => { dev.conflicts++; }, retryMs: 300,
   });
   dev.save = () => dev.core.changed();   // 화면의 save()와 같은 역할
   return dev;
 }
-const blank = () => ({ tasks: [], events: [], biz: [], leads: [], logs: [], notes: [], links: [], config: { region: "서울" }, money: {}, allocs: [] });
+const blank = () => ({ tasks: [], events: [], biz: [], leads: [], logs: [], notes: [], links: [], config: { region: "서울" }, money: {}, allocs: [], work: [], timelog: [] });
 const titles = (d) => d.S.tasks.map((t) => t.title).sort();
 
 let passed = 0;
@@ -120,6 +120,22 @@ await test("앱을 다시 열어도(새로고침) 바뀐 것이 없으면 아무
   a2.core.start(); await settle(); await settle();
   assert.equal(server.writes, before);
   a2.core.stop();
+});
+
+await test("보안 규칙에 아직 없는 컬렉션(업무)은 보내지 않고 기다렸다가, 규칙이 바뀌면 올라간다", async () => {
+  const srv = new FakeServer();
+  srv.denyCols.add("work");
+  const S1 = blank(); S1.work = [{ id: "w1", title: "법인 설립 계획", status: "진행 중" }];
+  const d = device(srv, S1, { name: "C" });
+  d.core.start(); await settle();
+  assert.equal(srv.all(UID, "work").length, 0);
+  assert.equal(d.core.conflicts().length, 0, "충돌 기록을 만들지 않음");
+  assert.ok(d.core.error, "오류 표시");
+  srv.denyCols.delete("work");
+  await sleep(500); await settle();
+  assert.equal(srv.all(UID, "work").length, 1);
+  assert.equal(d.core.error, null, "오류 표시가 사라짐");
+  d.core.stop();
 });
 
 b.core.stop();

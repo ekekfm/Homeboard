@@ -27,11 +27,11 @@ export function hash(v) {
 export function clean(v) { return JSON.parse(JSON.stringify(v)); }
 export function rid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
 
-const LISTS = ["tasks", "events", "biz", "leads", "logs", "notes", "links"];
+const LISTS = ["tasks", "events", "biz", "leads", "logs", "notes", "links", "work", "timelog"];
 export const FIN = ["allocs", "ledger"];          // 가계부·자산배분: 보안 점검을 통과한 뒤에만 동기화
 const NO_CONFLICT = ["links", "settings"];         // 바로가기·설정은 서버 쪽을 그대로 따른다
 export const LABEL = { tasks: "할 일", events: "일정", biz: "사업", leads: "상담", logs: "기록", notes: "메모",
-  links: "앱 바로가기", settings: "설정", allocs: "자산배분", ledger: "가계부" };
+  links: "앱 바로가기", work: "업무", timelog: "작업 시간", settings: "설정", allocs: "자산배분", ledger: "가계부" };
 
 // 화면 상태(S)와 컬렉션 사이의 변환
 export function collections() {
@@ -101,8 +101,8 @@ export class SyncCore {
   activeCols() { return Object.keys(this.cols).filter((c) => !FIN.includes(c) || this.ledgerOn()); }
   status() { if (this.onStatus) this.onStatus({ pending: this.pending, error: this.error, ready: this.activeCols().every((c) => this.ready[c]) }); }
 
-  start() { for (const c of this.activeCols()) this.listen(c); this.status(); }
-  stop() { for (const c of Object.keys(this.unsubs)) this.unsubs[c](); this.unsubs = {}; clearTimeout(this.timer); this.saveBase(true); }
+  start() { this.started = true; for (const c of this.activeCols()) this.listen(c); this.status(); }
+  stop() { this.started = false; for (const c of Object.keys(this.unsubs)) this.unsubs[c](); this.unsubs = {}; clearTimeout(this.timer); for (const k in (this.retry || {})) clearTimeout(this.retry[k]); this.saveBase(true); }
   refreshCols() {
     const want = this.activeCols();
     for (const c of Object.keys(this.unsubs)) if (!want.includes(c)) { this.unsubs[c](); delete this.unsubs[c]; }
@@ -113,7 +113,14 @@ export class SyncCore {
     if (this.unsubs[c]) return;
     this.unsubs[c] = this.backend.listen(this.uid, c,
       (docs, fromCache) => this.onDocs(c, docs, fromCache),
-      (e) => { this.error = e; this.status(); });
+      (e) => {
+        // 듣기가 끊겼다(예: 보안 규칙에 아직 없는 컬렉션). 30초 뒤 다시 시도한다.
+        this.error = e; this.status();
+        if (this.unsubs[c]) { delete this.unsubs[c]; }
+        clearTimeout(this.retry && this.retry[c]);
+        this.retry = this.retry || {};
+        this.retry[c] = setTimeout(() => { if (this.started && this.activeCols().includes(c)) this.listen(c); }, this.retryMs || 30000);
+      });
   }
 
   // 서버(또는 서버에서 받아 둔 저장본)에서 온 문서를 화면 상태에 반영한다
@@ -142,6 +149,7 @@ export class SyncCore {
       base[d.id] = { v: d.v, h: d.deleted ? "" : hash(d.data), w: d.wid || "", d: !!d.deleted };
       changed = true;
     }
+    if (!fromCache && this.error && /permission/i.test(String(this.error.code || this.error.message || this.error))) { this.error = null; this.status(); }
     if (!fromCache && !this.ready[c]) { this.ready[c] = true; this.status(); }
     if (changed) {
       this.cols[c].set(S, items.filter((x) => x != null));
