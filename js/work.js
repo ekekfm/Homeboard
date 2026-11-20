@@ -36,6 +36,13 @@
   function byId(id) { return works().filter(function (w) { return w.id === id; })[0]; }
   function hm(min) { min = Math.round(min || 0); var h = Math.floor(min / 60), m = min % 60; return h ? h + "시간" + (m ? " " + m + "분" : "") : m + "분"; }
   function blockers(w) { return (w.deps || []).map(byId).filter(function (d) { return d && d.status !== "완료"; }); }
+  /* 업무에 연결된 가계부 지출(일회성·반복) */
+  function spending(w) {
+    var list = [], m = S().money || {};
+    Object.keys(m).forEach(function (k) { Object.keys(m[k] || {}).forEach(function (id) { var e = m[k][id]; if (e.work === w.id && e.type === "out") list.push(Object.assign({ id: id, key: k }, e)); }); });
+    list.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    return { list: list, total: list.reduce(function (a, e) { return a + (+e.amt || 0); }, 0) };
+  }
   function progress(w) { var c = w.checklist || []; if (!c.length) return null; var d = c.filter(function (x) { return x.done; }).length; return { done: d, total: c.length, pct: Math.round(d / c.length * 100) }; }
   function weekRange(off) {
     var d = new Date(); d.setHours(0, 0, 0, 0);
@@ -192,10 +199,13 @@
     if (w.next) sub.push("다음: " + w.next);
     if (pg) sub.push("체크 " + pg.done + "/" + pg.total);
     if (weekMin) sub.push("이번 주 " + hm(weekMin));
+    var sp = (w.approved || w.est) ? spending(w) : null, overB = sp && w.approved && sp.total > w.approved;
+    if (sp) sub.push("지출 " + W.won(sp.total) + (w.approved ? " / 승인 " + W.won(w.approved) : ""));
     d.appendChild(h("summary", null,
       h("span", { class: "pill " + (STATUS_CLASS[w.status] || "plain") }, w.status),
       h("span", { class: "main" }, h("b", { class: w.status === "완료" ? "done" : null }, w.title),
         bl.length ? h("span", { class: "pill crit", style: "margin-left:6px" }, "차단됨") : null,
+        overB ? h("span", { class: "pill crit", style: "margin-left:6px" }, "예산 초과") : null,
         sub.length ? h("div", { class: "sub" }, sub.join(" · ")) : null,
         pg ? h("div", { class: "meter thin" }, h("i", { style: "width:" + pg.pct + "%" })) : null)));
     if (d.open) d.appendChild(body(w, bl));
@@ -258,6 +268,8 @@
         var $ = W.$; $("#w-time-box").open = true; $("#wt-work").value = w.id; if (CAT_AREA[w.cat]) $("#wt-area").value = CAT_AREA[w.cat];
         $("#w-time-box").scrollIntoView({ behavior: "smooth", block: "start" }); setTimeout(function () { $("#wt-min").focus(); }, 300);
       } }, "시간 기록"))));
+    /* 예산 */
+    b.appendChild(field("예산", budget(w)));
     /* 날짜·삭제 */
     b.appendChild(h("div", { class: "row wfoot" },
       h("span", { class: "muted" }, [w.created ? "등록 " + W.nice(w.created) : "", w.doneAt ? "완료 " + W.nice(w.doneAt) : ""].filter(Boolean).join(" · ")),
@@ -265,6 +277,46 @@
         CATS.map(function (c) { return h("option", { value: c, selected: c === w.cat ? true : null }, c); })),
       W.delBtn(function () { works().forEach(function (x) { if ((x.deps || []).indexOf(w.id) >= 0) x.deps = x.deps.filter(function (y) { return y !== w.id; }); }); W.del("work", w.id); })));
     return b;
+  }
+  function budget(w) {
+    var h = W.h, sp = spending(w), rest = (+w.approved || 0) - sp.total;
+    var num = function (key, ph) {
+      return h("label", { class: "bnum" }, h("span", null, ph),
+        h("input", { class: "field", type: "number", inputmode: "numeric", min: "0", step: "10000", placeholder: "원", value: w[key] || "", "data-focus": key + "-" + w.id,
+          onchange: function (e) { var p = {}; p[key] = Math.round(+e.target.value || 0); patch(w.id, p); } }));
+    };
+    var box = h("div", { class: "wbudget" });
+    box.appendChild(h("div", { class: "row" }, num("est", "예상"), num("approved", "승인")));
+    box.appendChild(h("p", { class: rest < 0 && w.approved ? "warnline" : "muted", style: "margin:4px 0;font-size:13.5px" },
+      rest < 0 && w.approved ? h("span", { class: "pill crit" }, "예산 초과") : null,
+      " 실제 지출 " + W.won(sp.total) + (w.approved ? (rest < 0 ? " · 승인 예산보다 " + W.won(-rest) + " 많음" : " · 남은 승인 예산 " + W.won(rest)) : " · 승인 예산을 적으면 남은 금액을 계산합니다")));
+    /* 지출 추가 → 가계부에 '사업' 지출로 기록 */
+    var amt = h("input", { class: "field", type: "number", inputmode: "numeric", min: "1", placeholder: "지출 금액(원)", style: "flex:1 1 130px" });
+    var memo = h("input", { class: "field grow", placeholder: "내용 (선택)" });
+    var date = h("input", { class: "field", type: "date", value: W.today(), style: "width:auto" });
+    var kind = h("select", { class: "field", style: "width:auto", "aria-label": "일회성·반복" }, h("option", { value: "once" }, "일회성"), h("option", { value: "monthly" }, "매달 반복"));
+    box.appendChild(h("div", { class: "row" }, amt, memo, date, kind, h("button", { class: "btn sm", type: "button", onclick: function () {
+      var a = Math.round(+amt.value || 0), d = date.value || W.today();
+      if (a <= 0) { W.toast("지출 금액을 적어 주세요"); return; }
+      var title = w.title + (memo.value.trim() ? " · " + memo.value.trim() : "");
+      if (kind.value === "monthly") {
+        var r = { id: W.newId(), title: title, amt: a, cat: "사업", acct: "main", day: +d.slice(8, 10), active: true, work: w.id };
+        (S().recurring || (S().recurring = [])).push(r);
+        if (window.WBMoney) window.WBMoney.post(d.slice(0, 7), r); else W.save();
+        W.toast("매달 " + (+d.slice(8, 10)) + "일 반복 지출로 등록하고 이번 달 것을 기록했습니다");
+      } else {
+        W.moneyAdd(d.slice(0, 7), { type: "out", amt: a, cat: "사업", memo: title, date: d, work: w.id });
+        W.toast("가계부에 사업 지출로 기록했습니다");
+      }
+      force = true;
+    } }, "지출 추가")));
+    if (sp.list.length) box.appendChild(h("ul", { class: "list" }, sp.list.slice(0, 8).map(function (e) {
+      return h("li", null, h("span", { class: "pill " + (e.rec ? "info" : "plain") }, e.rec ? "반복" : "일회성"),
+        h("span", { class: "main" }, h("b", { class: "amt" }, W.won(e.amt)), h("div", { class: "sub" }, W.nice(e.date) + (e.memo ? " · " + e.memo : ""))),
+        W.delBtn(function () { force = true; W.moneyDel(e.key, e.id); }));
+    })));
+    if (sp.list.length > 8) box.appendChild(h("p", { class: "muted", style: "font-size:13px" }, "외 " + (sp.list.length - 8) + "건은 가계부 달력에서 볼 수 있습니다."));
+    return box;
   }
   function field(label, el) { return W.h("div", { class: "wfield" }, W.h("span", { class: "wlabel" }, label), el); }
 

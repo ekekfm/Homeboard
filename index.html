@@ -142,6 +142,14 @@
     </div>
     <div id="w-list"></div>
   </div>
+  <div class="card wide">
+    <h2>신규 사업 아이디어 <small id="idea-count"></small></h2>
+    <form class="add" id="idea-form">
+      <input class="grow" id="idea-title" placeholder="아이디어 이름" required autocomplete="off">
+      <button class="btn" type="submit">추가</button>
+    </form>
+    <div id="idea-list"></div>
+  </div>
 </section>
 
 <!-- 일정 -->
@@ -177,18 +185,35 @@
       <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-cal" value="cal" checked><span>달력</span></label>
       <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-asset" value="asset"><span>자산</span></label>
       <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-alloc" value="alloc"><span>자산배분</span></label>
+      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-budget" value="budget"><span>예산</span></label>
     </div>
   </div>
 
   <!-- 2. 자산 -->
   <div class="card hero wide" data-mt="asset"><div id="a-hero"></div></div>
-  <div class="card wide" data-mt="asset"><h2>월별 자산 <small>달력에 적은 수입·지출이 자동 반영됩니다</small></h2><div class="chart" id="a-chart"></div></div>
   <div class="card wide" data-mt="asset">
-    <h2>시작 자산 <small>기록을 시작하기 전에 가지고 있던 금액</small></h2>
+    <h2>계좌 <small>잔액은 시작 금액과 달력 기록으로 자동 계산합니다</small></h2>
+    <div id="acct-list"></div>
+    <details id="acct-add"><summary>계좌 추가</summary>
+      <form class="add" id="acct-form" style="margin-top:10px">
+        <input class="grow" id="acct-name" placeholder="이름 (예: 토스 통장, 신한카드)" required autocomplete="off">
+        <select id="acct-kind" aria-label="종류">
+          <option value="bank">통장</option><option value="cash">현금</option><option value="invest">증권·투자</option><option value="other">기타 자산</option>
+          <option value="card">신용카드(부채)</option><option value="loan">대출(부채)</option>
+        </select>
+        <input id="acct-open" type="number" inputmode="numeric" placeholder="시작 금액(원)" style="flex:1 1 150px">
+        <button class="btn" type="submit">추가</button>
+        <p class="muted" style="flex:1 1 100%;margin:0;font-size:13px">신용카드·대출은 갚아야 할 금액을 양수로 적으세요. 카드로 쓴 돈은 지출로, 카드값 납부는 통장 → 카드 이체로 적으면 이중으로 잡히지 않습니다.</p>
+      </form>
+    </details>
+  </div>
+  <div class="card wide" data-mt="asset"><h2>월별 순자산 <small>달력에 적은 수입·지출 기준, 투자 평가액 제외</small></h2><div class="chart" id="a-chart"></div></div>
+  <div class="card wide" data-mt="asset">
+    <h2>기본 계좌 시작 금액 <small>기록을 시작하기 전에 가지고 있던 금액</small></h2>
     <form class="add" id="base-form" style="margin:0">
       <input id="base-amt" type="number" inputmode="numeric" placeholder="금액(원)" style="flex:1 1 160px">
       <button class="btn" type="submit">저장</button>
-      <p class="muted" style="flex:1 1 100%;margin:0;font-size:13px">총자산 = 시작 자산 + 달력에 적은 수입 − 지출. 비워 두면 0원에서 시작합니다.</p>
+      <p class="muted" style="flex:1 1 100%;margin:0;font-size:13px">순자산 = 모든 계좌의 시작 금액 + 달력에 적은 수입 − 지출(이체는 빼고 계산). 비워 두면 0원에서 시작합니다.</p>
     </form>
   </div>
 
@@ -212,11 +237,31 @@
   <div class="card" data-mt="alloc"><h2>이번 달 배분</h2><div id="al-box"></div></div>
   <div class="card wide" data-mt="alloc"><h2>전체 누적</h2><div class="tiles" id="al-total"></div></div>
 
+  <!-- 4. 예산 -->
+  <div class="card wide" data-mt="budget">
+    <h2>분류별 월 예산 <small id="bud-month"></small></h2>
+    <div id="bud-box"></div>
+  </div>
+  <div class="card wide" data-mt="budget">
+    <h2>반복 지출 <small>매달 같은 날 나가는 돈</small></h2>
+    <form class="add" id="rec-form">
+      <input class="grow" id="rec-title" placeholder="이름 (예: 통신비)" required autocomplete="off">
+      <input id="rec-amt" type="number" inputmode="numeric" min="1" placeholder="금액(원)" required style="flex:1 1 120px">
+      <select id="rec-cat" aria-label="분류"></select>
+      <select id="rec-acct" aria-label="계좌"></select>
+      <input id="rec-day" type="number" inputmode="numeric" min="1" max="31" placeholder="매달 며칠" required style="width:110px">
+      <button class="btn" type="submit">추가</button>
+    </form>
+    <ul class="list" id="rec-list"></ul>
+  </div>
+
   <!-- 3. 달력 -->
+  <div class="card wide" id="rec-due" hidden></div>
   <div class="card wide" data-mt="cal">
     <h2><span class="row"><button class="btn ghost sm" id="m-prev" type="button" aria-label="이전 달">‹</button><span id="m-label"></span><button class="btn ghost sm" id="m-next" type="button" aria-label="다음 달">›</button></span>
       <button class="btn ghost sm" id="m-now" type="button">이번 달</button></h2>
     <div class="tiles" id="m-tiles"></div>
+    <div id="bud-warn"></div>
     <div class="cal" id="cal"></div>
   </div>
   <div class="card" data-mt="cal">
@@ -225,7 +270,10 @@
       <div class="seg" role="radiogroup" aria-label="수입 지출">
         <label><input type="radio" name="mtype" id="mt-out" value="out" checked><span>지출</span></label>
         <label><input type="radio" name="mtype" id="mt-in" value="in"><span>수입</span></label>
+        <label><input type="radio" name="mtype" id="mt-tr" value="tr"><span>이체</span></label>
       </div>
+      <select id="m-acct" aria-label="계좌"></select>
+      <select id="m-to" aria-label="받는 계좌" hidden></select>
       <input id="m-amt" type="number" inputmode="numeric" min="1" placeholder="금액(원)" required>
       <div class="chips" aria-label="금액 빠른 추가">
         <button type="button" data-plus="1000">+1천</button><button type="button" data-plus="5000">+5천</button><button type="button" data-plus="10000">+1만</button><button type="button" data-plus="50000">+5만</button><button type="button" data-plus="0">지우기</button>
@@ -285,6 +333,8 @@
 <div class="toast" id="toast" role="status"></div>
 
 <script src="js/work.js"></script>
+<script src="js/money.js"></script>
+<script src="js/ideas.js"></script>
 <script>
 (function(){
 "use strict";
@@ -311,8 +361,8 @@ function stamp(iso){if(!iso)return"";var d=new Date(iso);if(isNaN(d))return"";re
 function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(function(){t.classList.remove("on")},2600)}
 
 /* ---------- 저장: 이 기기(localStorage) ---------- */
-var KEY="homeboard-v2",COLS=["tasks","events","biz","leads","logs","notes","links","work","timelog"];
-var S={tasks:[],events:[],biz:[],leads:[],logs:[],notes:[],links:null,config:{region:"서울"},money:{},allocs:[],work:[],timelog:[]};
+var KEY="homeboard-v2",COLS=["tasks","events","biz","leads","logs","notes","links","work","timelog","accounts","recurring","budgets","ideas"];
+var S={tasks:[],events:[],biz:[],leads:[],logs:[],notes:[],links:null,config:{region:"서울"},money:{},allocs:[],work:[],timelog:[],accounts:[],recurring:[],budgets:[],ideas:[]};
 var noteTag="",brief=null,wxData=null,viewMonth=nowKey(),selDay=today(),moneyTab="cal",editApps=false,logFilter="전체";
 /* 자주 쓰는 앱: addr=앱 주소(아이폰·안드로이드 공통), pkg=안드로이드 패키지, android/ios=기기별 주소, web=PC용 */
 var APPS={
@@ -493,20 +543,23 @@ var CATS=["식비","교통","주거·통신","사업","취미","쇼핑","저축�
 function signed(n){return (n<0?"-":"")+won(Math.abs(n))}
 function monthSum(key){var it=S.money[key]||{},inc=0,out=0,cats={},rows=[],byDay={},inDay={};
   Object.keys(it).forEach(function(id){var e=it[id],a=+e.amt||0,dd=+String(e.date).slice(8,10);rows.push(Object.assign({id:id},e));
+    if(e.type==="tr")return;
     if(e.type==="in"){inc+=a;inDay[dd]=(inDay[dd]||0)+a}else{out+=a;cats[e.cat||"기타"]=(cats[e.cat||"기타"]||0)+a;byDay[dd]=(byDay[dd]||0)+a}});
   rows.sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:a.id<b.id?1:-1});
   var p=key.split("-");return{inc:inc,out:out,cats:cats,rows:rows,byDay:byDay,inDay:inDay,days:new Date(+p[0],+p[1],0).getDate(),isNow:key===nowKey()}}
 function nextKey(k){var p=k.split("-"),d=new Date(+p[0],+p[1],1);return d.getFullYear()+"-"+pad(d.getMonth()+1)}
-/* 월별 자산 = 시작 자산 + 그 달까지의 수입 − 지출 (달력 기록에서 자동 계산) */
+/* 계좌 시작 금액 합계(자산은 +, 카드·대출은 −). 기본 계좌 = 예전 "시작 자산" */
+function openSum(){var t=+S.config.base||0;(S.accounts||[]).forEach(function(a){var v=+a.opening||0;t+=(a.kind==="card"||a.kind==="loan")?-v:v});return t}
+/* 월별 순자산 = 계좌 시작 금액 + 그 달까지의 수입 − 지출 (이체는 계좌끼리 옮긴 것이라 빼고 계산) */
 function assetSeries(){var keys=Object.keys(S.money).filter(function(k){return Object.keys(S.money[k]).length}).sort(),now=nowKey();
-  var k=keys.length&&keys[0]<now?keys[0]:now,end=keys.length&&keys[keys.length-1]>now?keys[keys.length-1]:now,run=+S.config.base||0,out=[];
+  var k=keys.length&&keys[0]<now?keys[0]:now,end=keys.length&&keys[keys.length-1]>now?keys[keys.length-1]:now,run=openSum(),out=[];
   for(var guard=0;guard<600;guard++){var m=monthSum(k);run+=m.inc-m.out;out.push({key:k,val:run,inc:m.inc,out:m.out});if(k>=end)break;k=nextKey(k)}
   return out}
 function assetHero(ser){var last=ser[ser.length-1],cur=ser.filter(function(x){return x.key===nowKey()})[0]||{inc:0,out:0},box=h("div");
-  box.appendChild(h("div",{class:"k",text:"총자산"}));
+  box.appendChild(h("div",{class:"k",text:"순자산 (기록 기준)"}));
   box.appendChild(h("div",{class:"big",text:signed(last.val)}));
   box.appendChild(h("div",{class:"facts"},h("span",null,"이번 달 수입 ",h("b",{text:"+"+won(cur.inc)})),h("span",null,"지출 ",h("b",{text:"-"+won(cur.out)})),h("span",null,"수지 ",h("b",{text:signed(cur.inc-cur.out)})),
-    h("span",null,"시작 자산 ",h("b",{text:won(+S.config.base||0)}))));
+    h("span",null,"계좌 시작 금액 합계 ",h("b",{text:won(openSum())}))));
   return box}
 function assetChart(el,all){el.textContent="";var ser=all.slice(-12),mx=0,mn=0;ser.forEach(function(x){mx=Math.max(mx,x.val);mn=Math.min(mn,x.val)});
   if(!mx&&!mn){el.appendChild(h("p",{class:"empty",text:"달력에 수입·지출을 적거나 시작 자산을 넣으면 달마다 자산이 막대로 표시됩니다."}));return}
@@ -659,7 +712,7 @@ function render(){
     h("span",null,"수입 − 지출 ",h("b",{text:signed(cur.inc-cur.out)})),h("span",null,"배분한 금액 ",h("b",{text:won(ar.total)}))));
   allocBox($("#al-box"),ar,cur.out);
   var hm=$("#home-money");hm.textContent="";
-  hm.appendChild(h("div",{class:"muted",style:"font-size:13px",text:"총자산"}));hm.appendChild(h("div",{class:"big",text:signed(total)}));
+  hm.appendChild(h("div",{class:"muted",style:"font-size:13px",text:"순자산"}));hm.appendChild(h("div",{class:"big",text:signed(total)}));
   hm.appendChild(h("div",{class:"tiles"},tile("이번 달 수입","+"+won(cur.inc)),tile("이번 달 지출","-"+won(cur.out)),tile("배분할 수 있는 돈",won(Math.max(0,can)))));
   var lb=latest(),lbToday=lb&&lb.b.date===td,lbCount=lbToday?((lb.s.economy||[]).length+(lb.s.stock||[]).length+(lb.s.news||[]).length):0,hs=$("#hstats");hs.textContent="";
   [["#plan","남은 할 일",open.length+"개"],["#work","진행 중 업무",(S.work||[]).filter(function(w){return w.status==="진행 중"}).length+"개"],["#money","오늘 지출",won(cur.byDay[new Date().getDate()]||0)],["#news",lbToday?lb.name+" 뉴스":"오늘 뉴스",lbToday?lbCount+"건":"대기 중"]].forEach(function(x){
@@ -675,8 +728,10 @@ function render(){
   calendar($("#cal"),m);
   $("#d-title").textContent=nice(selDay)+" 기록";
   fill($("#m-list"),m.rows.filter(function(e){return e.date===selDay}).map(function(e){
-    return h("li",null,h("span",{class:"pill "+(e.type==="in"?"good":"plain"),text:e.type==="in"?"수입":(e.cat||"기타")}),
-      h("span",{class:"main"},h("b",{class:"amt",text:(e.type==="in"?"+":"-")+won(e.amt)}),e.memo?h("div",{class:"sub",text:e.memo}):null),delBtn(function(){moneyDel(viewMonth,e.id)}))}),"이 날 기록이 없습니다. 위에서 바로 적으세요.");
+    var an=window.WBAcctName||function(){return""},tr=e.type==="tr";
+    return h("li",null,h("span",{class:"pill "+(e.type==="in"?"good":tr?"info":"plain"),text:e.type==="in"?"수입":tr?"이체":(e.cat||"기타")}),
+      h("span",{class:"main"},h("b",{class:"amt",text:(tr?"":e.type==="in"?"+":"-")+won(e.amt)}),
+        h("div",{class:"sub",text:[tr?an(e.acct)+" → "+an(e.to):an(e.acct),e.memo].filter(Boolean).join(" · ")})),delBtn(function(){moneyDel(viewMonth,e.id)}))}),"이 날 기록이 없습니다. 위에서 바로 적으세요.");
   var bars=$("#m-bars");bars.textContent="";var ck=Object.keys(m.cats).sort(function(a,b){return m.cats[b]-m.cats[a]}),mx=ck.length?m.cats[ck[0]]:0;
   if(!ck.length)bars.appendChild(h("p",{class:"empty",text:"지출을 기록하면 분류별로 보여줍니다."}));
   ck.forEach(function(c){bars.appendChild(h("div",{class:"b",title:c+" "+won(m.cats[c])},h("span",{text:c}),h("span",{class:"t"},h("i",{style:"width:"+Math.max(2,Math.round(m.cats[c]/mx*100))+"%"})),
@@ -751,11 +806,14 @@ $("#event-allday").addEventListener("change",function(e){$("#event-time").disabl
 $("#event-repeat").addEventListener("change",function(e){$("#event-until").hidden=!e.target.value});
 var mc=$("#m-cats");CATS.forEach(function(c,i){mc.appendChild(h("label",null,h("input",{type:"radio",name:"mcat",id:"mc-"+i,value:c,checked:i===0?true:null}),h("span",{text:c})))});
 function mtype(){return document.querySelector('input[name="mtype"]:checked').value}
-document.querySelectorAll('input[name="mtype"]').forEach(function(r){r.addEventListener("change",function(){mc.hidden=mtype()==="in"})});
+document.querySelectorAll('input[name="mtype"]').forEach(function(r){r.addEventListener("change",function(){mc.hidden=mtype()!=="out";$("#m-to").hidden=mtype()!=="tr"})});
 document.querySelectorAll('input[name="mtab"]').forEach(function(r){r.addEventListener("change",function(){moneyTab=r.value;draw()})});
 document.querySelectorAll("[data-plus]").forEach(function(b){b.addEventListener("click",function(){var p=+b.dataset.plus;$("#m-amt").value=p?(+$("#m-amt").value||0)+p:""})});
-on("#money-form",function(){var a=+val("#m-amt");if(!(a>0))return;var type=mtype();
-  moneyAdd(selDay.slice(0,7),{type:type,amt:a,cat:type==="in"?"수입":document.querySelector('input[name="mcat"]:checked').value,memo:val("#m-memo"),date:selDay});
+on("#money-form",function(){var a=Math.round(+val("#m-amt"));if(!(a>0))return;var type=mtype(),acct=$("#m-acct").value||"main",to=$("#m-to").value;
+  if(type==="tr"&&(!to||to===acct)){toast("받는 계좌를 보내는 계좌와 다르게 골라 주세요");return}
+  var o={type:type,amt:a,cat:type==="in"?"수입":type==="tr"?"이체":document.querySelector('input[name="mcat"]:checked').value,memo:val("#m-memo"),date:selDay};
+  if(acct!=="main")o.acct=acct;if(type==="tr")o.to=to;
+  moneyAdd(selDay.slice(0,7),o);
   $("#m-amt").value="";$("#m-memo").value="";toast("기록했습니다")});
 on("#base-form",function(){S.config.base=+val("#base-amt")||0;save();draw();toast("시작 자산을 저장했습니다")});
 on("#al-form",function(){var a=+val("#al-amt");if(!(a>0))return;
@@ -800,7 +858,9 @@ window.addEventListener("resize",draw);
 
 /* ---------- 업무 화면(js/work.js)이 쓰는 도구 ---------- */
 window.WB={state:function(){return S},h:h,$:$,fill:fill,delBtn:delBtn,pill:pill,tile:tile,sortBy:sortBy,today:today,nice:nice,ymd:ymd,pad:pad,
-  toast:toast,add:add,upd:upd,del:del,save:save,draw:draw,newId:newId,on:on,val:val};
+  toast:toast,add:add,upd:upd,del:del,save:save,draw:draw,newId:newId,on:on,val:val,
+  won:won,signed:signed,short:short,monthSum:monthSum,moneyAdd:moneyAdd,moneyDel:moneyDel,nowKey:nowKey,CATS:CATS,
+  selDay:function(){return selDay},viewMonth:function(){return viewMonth}};
 
 /* ---------- 동기화(js/sync.js)와 연결 ---------- */
 window.WBApp={

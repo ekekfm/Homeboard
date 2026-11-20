@@ -342,3 +342,20 @@ ul.list li.pinned{background:var(--accent-soft);border-radius:10px;padding-left:
   .wfield{grid-template-columns:1fr;gap:4px}
   .wlabel{padding-top:0}
 }
+/* ---------- 계좌·예산·업무 예산 ---------- */
+.budrows{display:grid;gap:10px}
+.budrow{display:grid;grid-template-columns:84px minmax(0,1fr) auto 128px;gap:10px;align-items:center;font-size:14px}
+.budrow .meter{margin:0;height:8px}
+.budrow .amt{white-space:nowrap;color:var(--muted);font-size:13px;display:flex;gap:6px;align-items:center}
+.budrow.over .nm{color:var(--crit);font-weight:600}
+.budrow .field{width:100%;min-height:38px;padding:6px 10px}
+.warnline.warn{color:var(--warn)}
+.wbudget .row{gap:8px}
+.wbudget .field{width:auto;min-height:40px}
+.bnum{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.bnum .field{width:150px}
+@media (max-width:640px){
+  .budrow{grid-template-columns:72px minmax(0,1fr) 108px;grid-template-areas:"n m i" "a a a"}
+  .budrow .nm{grid-area:n} .budrow .meter{grid-area:m} .budrow .field{grid-area:i} .budrow .amt{grid-area:a;margin-top:-6px}
+  .bnum .field{width:120px}
+}

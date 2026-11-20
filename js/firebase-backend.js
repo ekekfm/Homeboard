@@ -3,7 +3,7 @@
 const V = "13.2.0";
 const B = "https://www.gstatic.com/firebasejs/" + V + "/";
 
-const COLS = ["tasks", "events", "biz", "leads", "logs", "notes", "links", "work", "timelog", "settings", "allocs", "ledger"];
+const COLS = ["tasks", "events", "biz", "leads", "logs", "notes", "links", "work", "timelog", "ideas", "settings", "allocs", "ledger", "accounts", "recurring", "budgets"];
 
 export async function createBackend(config) {
   const [{ initializeApp }, A, F] = await Promise.all([

@@ -19,7 +19,7 @@ export class FakeServer {
       if (cur ? doc.v !== cur.v + 1 : doc.v !== 1) throw denied();
       if (col === "ledger") {
         const x = doc.data;
-        if (!Number.isInteger(x.amt) || x.amt <= 0 || !["in", "out"].includes(x.type) || !/^\d{4}-\d{2}-\d{2}$/.test(String(x.date))) throw denied();
+        if (!Number.isInteger(x.amt) || x.amt <= 0 || !["in", "out", "tr"].includes(x.type) || (x.type === "tr" && !x.to) || !/^\d{4}-\d{2}-\d{2}$/.test(String(x.date))) throw denied();
       }
       this.docs.set(k, { data: copy(doc.data), v: doc.v, wid: doc.wid, deleted: false });
     }

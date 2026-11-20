@@ -4,7 +4,7 @@ rules_version = '2';
 // - 정해진 컬렉션에만, 정해진 칸만 저장할 수 있다.
 // - 새 기록은 v = 1, 고칠 때는 직전 v + 1 이어야 한다(동시 수정·중복 입력 방지).
 // - 문서를 완전히 지우는 요청은 막는다(지우기는 deletedAt 표시로만).
-// - 가계부 금액은 1원 이상의 정수여야 한다.
+// - 가계부 금액은 1원 이상의 정수여야 한다. 이체(tr)는 받는 계좌가 있어야 한다.
 service cloud.firestore {
   match /databases/{database}/documents {
 
@@ -13,7 +13,8 @@ service cloud.firestore {
     }
     function knownCol(col) {
       return col in ['tasks', 'events', 'biz', 'leads', 'logs', 'notes', 'links',
-                     'work', 'timelog', 'settings', 'allocs', 'ledger', 'probe'];
+                     'work', 'timelog', 'ideas', 'settings', 'allocs', 'ledger',
+                     'accounts', 'recurring', 'budgets', 'probe'];
     }
     function okShape() {
       let d = request.resource.data;
@@ -31,7 +32,8 @@ service cloud.firestore {
       let x = request.resource.data.data;
       return col != 'ledger' || (
         x.amt is int && x.amt > 0 && x.amt <= 100000000000
-        && x.type in ['in', 'out']
+        && x.type in ['in', 'out', 'tr']
+        && (x.type != 'tr' || (x.to is string && x.to.size() > 0))
         && x.date is string && x.date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$'));
     }
     function okAmount(col) {

@@ -109,6 +109,22 @@ await test("가계부 동기화를 켜면 올라가고, 금액이 잘못된 기�
   assert.equal(server.writes, before, "거부된 기록을 계속 다시 보내지 않음");
 });
 
+await test("이체·계좌·예산·반복 지출도 가계부와 함께 동기화되고, 받는 계좌 없는 이체는 거부된다", async () => {
+  a.S.accounts = [{ id: "ac1", name: "신한카드", kind: "card", opening: 300000 }];
+  a.S.budgets = [{ id: "식비", cat: "식비", amt: 300000 }];
+  a.S.recurring = [{ id: "r1", title: "통신비", amt: 55000, cat: "주거·통신", acct: "main", day: 25, active: true }];
+  a.S.money["2026-11"].m3 = { type: "tr", amt: 100000, cat: "이체", date: "2026-11-21", acct: "main", to: "ac1" };
+  a.S.money["2026-11"].m4 = { type: "tr", amt: 5000, cat: "이체", date: "2026-11-21" };
+  a.save(); await settle(); await settle();
+  assert.equal(server.all(UID, "accounts").length, 1);
+  assert.equal(server.all(UID, "budgets").length, 1);
+  assert.equal(server.all(UID, "recurring").length, 1);
+  const led = server.all(UID, "ledger").map((d) => d.id).sort();
+  assert.ok(led.includes("m3") && !led.includes("m4"));
+  assert.equal(server.all(UID, "accounts").length + server.all(UID, "budgets").length, 2);
+  assert.ok(!b.S.accounts || b.S.accounts.length === 0, "가계부를 안 켠 기기에는 계좌도 안 내려감");
+});
+
 await test("가계부를 켜지 않은 기기에는 가계부가 내려오지 않는다", async () => {
   assert.deepEqual(Object.keys(b.S.money), []);
 });
