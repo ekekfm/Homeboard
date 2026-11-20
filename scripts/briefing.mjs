@@ -1,4 +1,4 @@
-// 하루 세 번(아침·오후·밤) GitHub Actions가 실행: 구글 뉴스(한국) 헤드라인을 받아 data/briefing.json 에 시간대별로 저장한다.
+// 매일 아침 GitHub Actions가 실행: 구글 뉴스(한국) 경제·증권·주요 헤드라인을 받아 data/briefing.json 에 저장한다.
 import { readFile, writeFile } from "node:fs/promises";
 
 const FILE = new URL("../data/briefing.json", import.meta.url);
@@ -31,12 +31,10 @@ async function headlines(url) {
   }).filter((x) => x.t && /^https?:\/\//.test(x.url));
 }
 
-// 한국 시간 기준 시간대: 05~11시 아침, 11~17시 오후, 17~05시 밤 (자정 넘어 실행되면 전날 밤으로 본다)
+// 뉴스는 하루 한 번(아침)만 모은다. 날짜는 한국 날짜.
 function slotOf(now) {
   const kst = new Date(now.getTime() + 9 * 3600 * 1000);
-  const hour = kst.getUTCHours();
-  if (hour < 5) return { date: new Date(kst.getTime() - 86400000).toISOString().slice(0, 10), slot: "night" };
-  return { date: kst.toISOString().slice(0, 10), slot: hour < 11 ? "morning" : hour < 17 ? "afternoon" : "night" };
+  return { date: kst.toISOString().slice(0, 10), slot: "morning" };
 }
 
 const now = process.env.BRIEFING_NOW ? new Date(process.env.BRIEFING_NOW) : new Date();
@@ -45,6 +43,13 @@ const { date, slot } = slotOf(now);
 let prev = {};
 try { prev = JSON.parse(await readFile(FILE, "utf8")); } catch {}
 const slots = prev.date === date && prev.slots ? { ...prev.slots } : {};
+
+// 아침 예약 실행이 빠질 때를 대비해 예비 실행이 한 번 더 온다.
+// 오늘 아침 뉴스가 이미 있으면 예비 실행은 아무것도 하지 않는다 (수동 실행은 항상 새로 받는다).
+if (process.env.GITHUB_EVENT_NAME === "schedule" && slots[slot]) {
+  console.log(`${date} ${slot}: 이미 갱신된 시간대라 이번 예비 실행은 건너뜁니다.`);
+  process.exit(0);
+}
 
 // 같은 날 다른 시간대에 이미 나온 헤드라인은 빼서, 시간대마다 새 소식이 보이게 한다
 const seen = new Set();

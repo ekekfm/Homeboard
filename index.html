@@ -3,38 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>홈보드</title>
-<meta name="theme-color" content="#12235a">
+<title>업무 보드</title>
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="홈보드">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="업무 보드">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* 남색과 흰색. PC는 남색 메뉴 + 흰 카드 격자, 폰은 남색 머리띠 + 흰 카드 + 아래 탭. */
+/* 흰색 바탕에 남색 포인트만. 다크 모드 없음(기기 설정과 상관없이 흰 화면). */
 :root{
-  --bg:#f2f4f9; --surface:#ffffff; --sunken:#e9edf6; --ink:#0f1a3c; --muted:#56628a; --line:#d8deee;
+  color-scheme:light;
+  --bg:#ffffff; --surface:#ffffff; --sunken:#f4f6fa; --ink:#111827; --muted:#5b6478; --line:#e2e8f0;
   --navy:#12235a; --navy-2:#2a45a4; --on-navy:#ffffff; --on-navy-muted:#bfc9ec; --accent:#1f3a93; --accent-soft:#e1e7fa;
-  --gold:#e8b14a; --gold-ink:#3b2a05;
+  --gold:#12235a; --gold-ink:#ffffff;
   --good:#1f7a45; --warn:#93620a; --crit:#b3352c; --info:#1f3a93;
   --good-bg:#e0f1e6; --warn-bg:#f6ecd3; --crit-bg:#f8e3e0; --info-bg:#e1e7fa;
   --display:"Hahmlet","Noto Serif KR",serif;
   --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --c1:#3355c4; --c2:#5b93f0; --c3:#12a594;
   --r:14px;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#0a1024; --surface:#121a36; --sunken:#1a2447; --ink:#eaeefa; --muted:#98a4cb; --line:#26315c;
-    --navy:#172a6e; --navy-2:#2a44a6; --on-navy:#ffffff; --on-navy-muted:#c3cdf0; --accent:#9db2ff; --accent-soft:#1d2a57;
-    --good:#72d091; --warn:#e3b65c; --crit:#f28d83; --info:#9db2ff;
-    --good-bg:#15301f; --warn-bg:#352b12; --crit-bg:#3b1d1a; --info-bg:#1d2a57;
-  }
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -289,12 +282,41 @@ a.tl-title:hover{text-decoration:underline;text-underline-offset:3px}
   .view.on .wide{grid-column:1/-1}
 }
 @media (prefers-reduced-motion:no-preference){.meter i,.bars i{transition:width .3s}}
+
+/* ---------- 흰 바탕 + 남색 포인트 ---------- */
+body::before{background:#fff}
+header.top{--on-navy:var(--navy);--on-navy-muted:var(--muted);background:#fff;border-bottom:1px solid var(--line)}
+.datecard{box-shadow:none;border:1px solid var(--line)}
+.wxchip{background:var(--sunken);border-color:var(--line)}
+.wxchip .rain{color:var(--navy)}
+nav.tabs{background:#fff;border-radius:0;box-shadow:0 1px 0 var(--line);padding:6px 0 0}
+nav.tabs a{color:var(--muted);border-radius:0;padding:10px 6px 12px}
+nav.tabs a[aria-current="page"]{background:transparent;color:var(--navy);box-shadow:inset 0 -3px 0 var(--navy)}
+nav.tabs a:focus-visible{outline-color:var(--navy)}
+.card{box-shadow:0 1px 2px rgba(17,24,39,.04)}
+.hero{--on-navy:var(--ink);--on-navy-muted:var(--muted);background:#fff;border:1.5px solid var(--navy)}
+.hero .big{color:var(--navy)}
+.hero .btn.ghost{color:var(--navy);border-color:var(--line)}
+.hero .meter{background:var(--sunken)} .hero .meter i{background:var(--navy)}
+.hero .meter.over i{background:var(--crit)}
+/* 동기화 */
+.syncchip{display:inline-block;text-decoration:none;margin-top:4px;font-size:12px;font-weight:600;color:var(--navy);background:var(--accent-soft);border-radius:99px;padding:1px 9px}
+.syncchip.wait{color:var(--warn);background:var(--warn-bg)}
+.syncchip.bad{color:var(--crit);background:var(--crit-bg)}
+.syncchip.off{color:var(--muted);background:var(--sunken)}
+#sync-card .sync-state{margin:0 0 10px;font-weight:600;color:var(--navy)}
+#sync-card .sync-state.bad,#sync-card .sync-err{color:var(--crit)}
+#sync-card details{margin:0 0 10px}
+#sync-card summary{cursor:pointer;color:var(--accent);font-size:14px}
+#sync-card .sync-sec{border-top:1px solid var(--line);padding-top:10px;margin-bottom:10px}
+#sync-card .sync-sec p{font-size:13.5px;margin:0 0 8px}
+#sync-card ul.list li{align-items:center;flex-wrap:wrap}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <a class="datecard" href="#plan" aria-label="일정 보기"><span class="dc-m" id="dc-m"></span><span class="dc-d" id="dc-d"></span></a>
-  <div class="dt"><h1 id="today"></h1><p id="year"></p></div>
+  <div class="dt"><h1 id="today"></h1><p id="year"></p><a class="syncchip" id="syncchip" href="#home" hidden></a></div>
   <a class="wxchip" id="wxchip" href="#news" hidden></a>
 </div></header>
 <nav class="tabs" aria-label="메뉴"><div class="wrap">
@@ -359,6 +381,7 @@ a.tl-title:hover{text-decoration:underline;text-underline-offset:3px}
       </div>
     </div>
   </div>
+  <div class="card wide" id="sync-card" aria-live="polite"></div>
   <div class="card wide">
     <details>
       <summary>설정과 백업</summary>
@@ -370,7 +393,7 @@ a.tl-title:hover{text-decoration:underline;text-underline-offset:3px}
         <button class="btn ghost" id="notif-btn" type="button">기기 알림 켜기</button>
         <span class="muted" id="notif-state" style="font-size:13px;flex:1 1 220px"></span>
       </div>
-      <p class="muted" style="font-size:14px;margin:0 0 10px">기록은 이 기기 안에만 저장됩니다. 폰과 PC는 따로 저장되므로, 옮기거나 보관하려면 백업 파일을 쓰세요.</p>
+      <p class="muted" style="font-size:14px;margin:0 0 10px">로그인하지 않으면 기록은 이 기기에만 저장됩니다. 백업 파일은 로그인과 상관없이 언제든 저장하고 불러올 수 있습니다.</p>
       <div class="row">
         <button class="btn ghost" id="backup" type="button">백업 파일 저장</button>
         <label class="btn ghost" for="restore" style="display:inline-flex;align-items:center">백업 파일 불러오기</label>
@@ -606,7 +629,8 @@ function load(){try{var d=JSON.parse(localStorage.getItem(KEY)||"null");if(d)for
   if(!S.links)S.links=DEFAULT_APPS.map(function(k,i){return{id:"a"+i,app:k,name:APPS[k].name,ord:i}}).concat([{id:"a9",name:"카토리지",url:"https://cartorage.kr",ord:9}]);
   /* 예전 기본 바로가기(웹 주소)는 같은 앱의 앱 실행 버튼으로 바꾼다 */
   S.links.forEach(function(l){var k=LEGACY_APP[l.id];if(k&&!l.app&&l.url){l.app=k;l.name=APPS[k].name;delete l.url}})}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){toast("저장 공간이 부족합니다. 백업 후 오래된 기록을 지우세요.")}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){toast("저장 공간이 부족합니다. 백업 후 오래된 기록을 지우세요.")}
+  if(window.WBSync)window.WBSync.changed()}
 function add(col,data){S[col].push(Object.assign({id:newId()},data));save();draw()}
 function upd(col,id,patch){S[col].forEach(function(x){if(x.id===id)Object.assign(x,patch)});save();draw()}
 function del(col,id){S[col]=S[col].filter(function(x){return x.id!==id});save();draw()}
@@ -643,7 +667,7 @@ function loadWeather(force){var region=(S.config.region||"서울").trim();
   }).catch(function(e){if(!wxData||wxData.region!==region||!wxData.days){wxData={region:region,error:(e&&e.message==="place")?"place":"net"};draw()}})}
 function loadBrief(){getJSON("data/briefing.json").then(function(b){brief=normBrief(b);draw();sysNotify()}).catch(function(){brief=brief||{error:true};draw()})}
 /* 뉴스는 하루 세 번(아침·오후·밤) 갱신된다. 예전 형식(slots 없음)도 받아준다. */
-var SLOTS=[["morning","아침","오전 7시"],["afternoon","오후","오후 1시"],["night","밤","오후 9시"]],SLOTNAME={morning:"아침",afternoon:"오후",night:"밤"};
+var SLOTS=[["morning","아침","오전 7시"]],SLOTNAME={morning:"아침",afternoon:"오후",night:"밤"};
 function kstSlot(iso){var k=new Date(Date.parse(iso)+9*3600000),hr=k.getUTCHours();
   if(hr<5)return{date:new Date(k.getTime()-86400000).toISOString().slice(0,10),slot:"night"};
   return{date:k.toISOString().slice(0,10),slot:hr<11?"morning":hr<17?"afternoon":"night"}}
@@ -651,7 +675,7 @@ function normBrief(b){if(!b||typeof b!=="object")return{error:true};if(b.slots)r
   if(!b.updatedAt)return{slots:{},week:b.week||[]};var k=kstSlot(b.updatedAt),sl={};sl[k.slot]={at:b.updatedAt,economy:b.economy||[],news:b.news||[]};
   return{date:k.date,slot:k.slot,updatedAt:b.updatedAt,slots:sl,week:b.week||[]}}
 function hhmm(iso){var d=new Date(iso);return isNaN(d)?"":pad(d.getHours())+":"+pad(d.getMinutes())}
-function latest(){var b=brief;if(!b||b.error||!b.slot||!b.slots||!b.slots[b.slot])return null;return{b:b,s:b.slots[b.slot],name:SLOTNAME[b.slot]||"",id:b.date+"-"+b.slot+"-"+(b.slots[b.slot].at||"")}}
+function latest(){var b=brief,k="morning";if(!b||b.error||!b.slots||!b.slots[k])return null;return{b:b,s:b.slots[k],name:"아침",id:b.date+"-"+k+"-"+(b.slots[k].at||"")}}
 function wxLine(){var w=wxData,t=w&&w.days&&w.days[0];if(!w)return"날씨를 불러오는 중입니다.";if(!t)return"날씨를 불러오지 못했습니다.";
   return"오늘 강수확률 "+(t.pop!=null?t.pop+"%":"정보 없음")+" · "+t.c+" · 최고 "+t.hi+"° / 최저 "+t.lo+"°"}
 function headline(l){return(l.s.news||[])[0]||(l.s.economy||[])[0]||null}
@@ -663,13 +687,10 @@ function ago(iso){var t=Date.parse(iso||"");if(isNaN(t))return"";var m=Math.roun
 function newsList(items,num){return h("ol",{class:"nl"+(num?"":" plain")},items.map(function(n,i){var ok=n.url&&/^https?:\/\//.test(n.url);
   return h("li",null,h("a",{href:ok?n.url:null,target:"_blank",rel:"noopener"},num?h("span",{class:"no","aria-hidden":"true",text:i+1}):null,
     h("span",{class:"tx"},h("span",{class:"hl",text:n.t||""}),h("span",{class:"meta",text:[n.src,ago(n.d)].filter(Boolean).join(" · ")}))))}))}
-function curSlot(){var b=brief||{};return selSlot||b.slot||"morning"}
-function slotBar(el){var b=brief||{},slots=b.slots||{},isToday=!b.date||b.date===today(),cur=curSlot();el.textContent="";
-  el.appendChild(h("div",{class:"sb-date"},h("b",{text:isToday?"오늘의 소식":nice(b.date)+" 소식"}),
-    h("span",{text:isToday?nice(today()):"오늘 소식은 오전 7시쯤부터 도착합니다"})));
-  el.appendChild(h("div",{class:"sb-seg",role:"tablist","aria-label":"시간대 선택"},SLOTS.map(function(sd){var x=slots[sd[0]],on=sd[0]===cur;
-    return h("button",{type:"button",role:"tab","aria-selected":on?"true":"false",class:(on?"on":"")+(x?"":" wait"),onclick:function(){selSlot=sd[0];draw()}},
-      h("span",{class:"n",text:sd[1]}),h("span",{class:"t",text:x?hhmm(x.at)+" 업데이트":sd[2]+" 예정"}))})))}
+function curSlot(){return"morning"}
+function slotBar(el){var b=brief||{},x=(b.slots||{}).morning,isToday=!b.date||b.date===today();el.textContent="";
+  el.appendChild(h("div",{class:"sb-date"},h("b",{text:isToday?"오늘 아침 뉴스":nice(b.date)+" 아침 뉴스"}),
+    h("span",{text:x?(isToday?"":nice(b.date)+" ")+hhmm(x.at)+" 업데이트 · 매일 오전 7시쯤 갱신":"매일 오전 7시쯤 갱신됩니다"})))}
 function listCard(el,title,key,emptyMsg){var b=brief||{},cur=curSlot(),x=(b.slots||{})[cur],items=(x&&x[key])||[];el.textContent="";
   el.appendChild(h("h2",null,h("span",{text:title}),h("small",{text:items.length?SLOTNAME[cur]+" · "+items.length+"건":""})));
   if(b.error){el.appendChild(h("p",{class:"empty",text:"뉴스를 불러오지 못했습니다. 인터넷 연결을 확인하세요."}));return}
@@ -694,13 +715,13 @@ function sysNotify(){var l=latest();if(!l)return;
   if(!document.hidden||!("Notification" in window)||Notification.permission!=="granted"){if(!document.hidden)lsSet("homeboard-notified",l.id);return}
   if(lsGet("homeboard-notified")===l.id)return;lsSet("homeboard-notified",l.id);
   var hl=headline(l),body=wxLine()+(hl?"\n"+hl.t:"");
-  if(navigator.serviceWorker&&navigator.serviceWorker.controller)navigator.serviceWorker.ready.then(function(r){return r.showNotification("홈보드 · "+l.name+" 소식",{body:body,icon:"icons/icon-192.png",tag:"homeboard-brief",data:{url:"./#news"}})}).catch(function(){});
-  else try{new Notification("홈보드 · "+l.name+" 소식",{body:body,icon:"icons/icon-192.png",tag:"homeboard-brief"})}catch(e){}}
+  if(navigator.serviceWorker&&navigator.serviceWorker.controller)navigator.serviceWorker.ready.then(function(r){return r.showNotification("업무 보드 · "+l.name+" 소식",{body:body,icon:"icons/icon-192.png",tag:"homeboard-brief",data:{url:"./#news"}})}).catch(function(){});
+  else try{new Notification("업무 보드 · "+l.name+" 소식",{body:body,icon:"icons/icon-192.png",tag:"homeboard-brief"})}catch(e){}}
 function renderNotifSetting(){var row=$("#notif-row");if(!("Notification" in window)){row.hidden=true;return}row.hidden=false;
   var p=Notification.permission,st=$("#notif-state"),b=$("#notif-btn");b.hidden=p!=="default";
-  st.textContent=p==="granted"?"기기 알림 켜짐: 홈보드를 열어 둔 채 다른 화면을 보고 있을 때 새 소식을 기기 알림으로도 띄웁니다."
+  st.textContent=p==="granted"?"기기 알림 켜짐: 업무 보드를 열어 둔 채 다른 화면을 보고 있을 때 새 소식을 기기 알림으로도 띄웁니다."
     :p==="denied"?"알림이 차단되어 있습니다. 브라우저(또는 휴대폰) 설정에서 이 사이트의 알림을 허용하세요."
-    :"홈보드를 열어 둔 채 다른 화면을 볼 때도 새 소식을 기기 알림으로 받습니다."}
+    :"업무 보드를 열어 둔 채 다른 화면을 볼 때도 새 소식을 기기 알림으로 받습니다."}
 function weather(el,meta){var w=wxData;el.textContent="";meta.textContent=w&&w.at?(w.region+" · "+stamp(w.at)):"";
   if(!w){el.appendChild(h("p",{class:"empty",text:"날씨를 불러오는 중입니다."}));return}
   if(w.error){el.appendChild(h("p",{class:"empty",text:w.error==="place"?"'"+w.region+"' 지역을 찾지 못했습니다. 홈 > 설정에서 '서울', '부산'처럼 시 이름으로 바꿔 보세요.":"날씨 서버에 연결하지 못했습니다. 인터넷 연결을 확인하세요."}));
@@ -905,7 +926,7 @@ function render(){
   var l=latest(),hn=$("#home-news");hn.textContent="";
   $("#home-news-meta").textContent=l?(l.name+" · "+hhmm(l.s.at)):"";
   if(l)hn.appendChild(newsList((l.s.news||[]).slice(0,2).concat((l.s.economy||[]).slice(0,1),(l.s.stock||[]).slice(0,1)),false));
-  else hn.appendChild(h("p",{class:"empty",text:b.error?"뉴스를 불러오지 못했습니다. 인터넷 연결을 확인하세요.":"아직 뉴스가 없습니다. 오전 7시, 오후 1시, 오후 9시쯤 채워집니다."}));
+  else hn.appendChild(h("p",{class:"empty",text:b.error?"뉴스를 불러오지 못했습니다. 인터넷 연결을 확인하세요.":"아직 뉴스가 없습니다. 매일 오전 7시쯤 채워집니다."}));
   renderNotice();renderNotifSetting();
   /* 머리띠 */
   var d=new Date(),yp=$("#year");$("#dc-m").textContent=(d.getMonth()+1)+"월";$("#dc-d").textContent=d.getDate();$("#today").textContent=DOW[d.getDay()]+"요일";
@@ -970,7 +991,7 @@ $("#backup").addEventListener("click",function(){var a=h("a",{href:URL.createObj
 $("#restore").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();
   r.onload=function(){try{var d=JSON.parse(r.result);if(!d||typeof d!=="object"||!Array.isArray(d.tasks))throw 0;
       for(var k in S)if(d[k]!=null)S[k]=d[k];save();$("#cfg-region").value=S.config.region||"";fillBase();loadWeather(true);draw();toast("백업을 불러왔습니다")}
-    catch(x){toast("홈보드 백업 파일이 아닙니다")}e.target.value=""};r.readAsText(f)});
+    catch(x){toast("업무 보드(홈보드) 백업 파일이 아닙니다")}e.target.value=""};r.readAsText(f)});
 
 /* ---------- 화면 전환 ---------- */
 var VIEWS=["home","plan","money","notes","news","stock"];
@@ -980,6 +1001,17 @@ function route(){var v=(location.hash||"").slice(1);if(VIEWS.indexOf(v)<0)v="hom
   window.scrollTo(0,0);draw()}
 window.addEventListener("hashchange",route);
 window.addEventListener("resize",draw);
+
+/* ---------- 동기화(js/sync.js)와 연결 ---------- */
+window.WBApp={
+  state:function(){return S},
+  save:function(){save();draw()},
+  /* 서버에서 받은 내용 반영: 이 기기에 저장하고 다시 그린다(서버로 다시 보내지 않음) */
+  commit:function(col){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}
+    if(col==="settings"){var r=$("#cfg-region");if(r&&document.activeElement!==r)r.value=S.config.region||""}
+    draw()},
+  toast:toast
+};
 
 /* ---------- 시작 ---------- */
 load();
@@ -992,5 +1024,6 @@ if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catc
 if("serviceWorker" in navigator&&location.protocol==="https:")navigator.serviceWorker.register("sw.js").catch(function(){});
 })();
 </script>
+<script type="module" src="js/sync.js"></script>
 </body>
 </html>

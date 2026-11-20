@@ -1,6 +1,9 @@
-/* 홈보드 서비스 워커: 앱 화면은 저장해 두고 오프라인에서도 열리게, 뉴스는 항상 새로 받아온다. */
-const CACHE = "homeboard-v15";
-const SHELL = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
+/* 업무 보드 서비스 워커: 앱 화면과 Firebase 코드는 저장해 두고 오프라인에서도 열리게, 뉴스는 항상 새로 받아온다.
+   Firestore·로그인 통신(googleapis.com 등)은 건드리지 않는다. */
+const CACHE = "homeboard-v17";
+const FIREBASE_V = "13.2.0"; // js/firebase-backend.js의 V와 같게
+const SHELL = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png",
+  "js/sync.js", "js/sync-core.js", "js/firebase-backend.js", "js/firebase-config.js"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -16,7 +19,8 @@ self.addEventListener("fetch", (e) => {
   const url = new URL(req.url);
   const sameOrigin = url.origin === self.location.origin;
   const isFont = url.hostname === "fonts.googleapis.com" || url.hostname === "fonts.gstatic.com";
-  if (!sameOrigin && !isFont) return; // 날씨 등 외부 요청은 그대로 통과
+  const isFirebaseLib = url.hostname === "www.gstatic.com" && url.pathname.startsWith("/firebasejs/" + FIREBASE_V + "/");
+  if (!sameOrigin && !isFont && !isFirebaseLib) return; // 날씨·Firestore·로그인 등 외부 요청은 그대로 통과
 
   const put = (res) => {
     if (res && (res.ok || res.type === "opaque")) {
@@ -30,7 +34,7 @@ self.addEventListener("fetch", (e) => {
     e.respondWith(fetch(req).then(put).catch(() => caches.match(req)));
     return;
   }
-  if (isFont) {
+  if (isFont || isFirebaseLib) {
     e.respondWith(caches.match(req).then((hit) => hit || fetch(req).then(put)));
     return;
   }
@@ -38,7 +42,7 @@ self.addEventListener("fetch", (e) => {
   e.respondWith(fetch(req).then(put).catch(() => caches.match(req).then((hit) => hit || caches.match("index.html"))));
 });
 
-// 기기 알림을 누르면 홈보드를 앞으로 가져오거나 새로 연다
+// 기기 알림을 누르면 업무 보드를 앞으로 가져오거나 새로 연다
 self.addEventListener("notificationclick", (e) => {
   e.notification.close();
   const url = new URL((e.notification.data && e.notification.data.url) || "./", self.registration.scope).href;
