@@ -27,6 +27,7 @@
   <a href="#home">홈</a><a href="#work">업무</a><a href="#plan">일정</a><a href="#money">가계부</a><a href="#notes">메모</a><a href="#news">뉴스</a><a href="#stock">증권뉴스</a>
 </div></nav>
 <div class="notice" id="notice" role="status" aria-live="polite" hidden></div>
+<div class="remind" id="remind" role="alertdialog" aria-live="assertive" aria-labelledby="rm-title" hidden></div>
 <div class="shell">
 <main>
 
@@ -167,29 +168,28 @@
     <h2><span class="row"><button class="btn ghost sm" id="p-prev" type="button" aria-label="이전 달">‹</button><span id="p-label"></span><button class="btn ghost sm" id="p-next" type="button" aria-label="다음 달">›</button></span>
       <button class="btn ghost sm" id="p-now" type="button">오늘</button></h2>
     <div class="pscroll" id="p-scroll" aria-label="달력. 좌우로 밀면 달이 바뀝니다"></div>
-    <p class="muted" style="font-size:12.5px;margin:6px 0 0">좌우로 밀거나 ‹ › 를 누르면 달이 바뀝니다. 날짜를 누르면 아래에서 그날 일정과 할 일을 적습니다.</p>
+    <p class="muted" style="font-size:12.5px;margin:6px 0 0">좌우로 밀거나 ‹ › 를 누르면 달이 바뀝니다. 날짜를 누르면 그날 일정 창이 열립니다.</p>
   </div>
-  <div class="card">
-    <h2 id="p-day-title"></h2>
-    <form class="add" id="p-form">
-      <div class="seg" role="radiogroup" aria-label="종류">
-        <label><input type="radio" name="ptype" id="pt-ev" value="event" checked><span>일정</span></label>
-        <label><input type="radio" name="ptype" id="pt-task" value="task"><span>할 일</span></label>
-      </div>
-      <input class="grow" id="p-title" placeholder="일정 이름" required autocomplete="off">
-      <span class="row" id="p-evopts" style="gap:8px">
-        <input id="p-time" type="time" aria-label="시간">
-        <label class="row" style="gap:6px;font-size:14px"><input type="checkbox" id="p-allday"> 하루 종일</label>
-        <select id="p-repeat" aria-label="반복"><option value="">반복 없음</option><option value="weekly">매주</option><option value="monthly">매월</option><option value="yearly">매년</option></select>
-        <input id="p-until" type="date" aria-label="반복 끝나는 날(선택)" title="반복 끝나는 날(선택)" hidden>
-      </span>
-      <button class="btn" type="submit">추가</button>
-    </form>
-    <ul class="list" id="p-day-list"></ul>
-  </div>
-  <div class="card">
-    <h2>할 일 전체 <button class="btn ghost sm" id="tasks-clear" type="button">완료 항목 지우기</button></h2>
-    <ul class="list" id="tasks"></ul>
+  <div class="pmodal" id="p-modal" hidden>
+    <div class="pm-back" id="p-back"></div>
+    <div class="pm-sheet" role="dialog" aria-modal="true" aria-labelledby="p-day-title">
+      <h2><span id="p-day-title"></span><button class="btn ghost sm" id="p-close" type="button" aria-label="닫기">닫기</button></h2>
+      <form class="pform" id="p-form">
+        <input id="p-title" placeholder="일정 이름" required autocomplete="off">
+        <div class="row" style="gap:8px;flex-wrap:wrap">
+          <input id="p-time" type="time" aria-label="시간">
+          <label class="row" style="gap:6px;font-size:14px"><input type="checkbox" id="p-allday"> 하루 종일</label>
+          <select id="p-repeat" aria-label="반복"><option value="">반복 없음</option><option value="weekly">매주</option><option value="monthly">매월</option><option value="yearly">매년</option></select>
+          <input id="p-until" type="date" aria-label="반복 끝나는 날(선택)" title="반복 끝나는 날(선택)" hidden>
+        </div>
+        <div class="row" style="gap:8px;flex-wrap:wrap">
+          <select id="p-remind" aria-label="알림"><option value="">알림 없음</option><option value="0">일정 시각에</option><option value="10">10분 전</option><option value="30">30분 전</option><option value="60">1시간 전</option><option value="1440">하루 전</option></select>
+          <button class="btn" type="submit">추가</button>
+        </div>
+        <p class="muted" id="p-remind-hint" style="font-size:12px;margin:0">알림은 업무 보드를 열었을 때(또는 열어 둔 동안) 창으로 띄웁니다. 시간이 없는 일정은 그날 오전 9시를 기준으로 합니다.</p>
+      </form>
+      <ul class="list" id="p-day-list"></ul>
+    </div>
   </div>
 </section>
 
@@ -353,6 +353,7 @@
 <script src="js/ideas.js"></script>
 <script src="js/notify.js"></script>
 <script src="js/plan.js"></script>
+<script src="js/remind.js"></script>
 <script src="js/notes.js"></script>
 <script>
 (function(){
@@ -734,8 +735,6 @@ function render(){
     pr.appendChild(h("button",{type:"button",onclick:function(){add("links",{app:k,name:APPS[k].name,ord:Date.now()});toast(APPS[k].name+" 추가")}},"+ "+APPS[k].name))});
   if(!pr.childNodes.length)pr.appendChild(h("span",{class:"muted",style:"font-size:13px",text:"목록의 앱을 모두 추가했습니다."}));
   }
-  /* 일정 */
-  fill($("#tasks"),sortBy(S.tasks,function(t){return (t.done?"1":"0")+(t.due||"9999")+t.id}).map(taskRow),"할 일이 없습니다.");
   /* 가계부 */
   document.querySelectorAll("[data-mt]").forEach(function(el){el.hidden=el.dataset.mt!==moneyTab});
   var cur=monthSum(nowKey()),ser=assetSeries(),total=ser[ser.length-1].val;
@@ -837,7 +836,6 @@ on("#app-form",function(f){var nm=val("#app-name"),addr=val("#app-addr"),pkg=val
   add("links",o);f.reset();toast(nm+" 추가")});
 on("#cfg",function(){S.config.region=val("#cfg-region")||"서울";save();loadWeather(true);toast("저장했습니다")});
 $("#apps-edit").addEventListener("click",function(){editApps=!editApps;draw()});
-$("#tasks-clear").addEventListener("click",function(){var n=S.tasks.length;S.tasks=S.tasks.filter(function(t){return !t.done});if(n===S.tasks.length){toast("완료한 항목이 없습니다");return}save();draw()});
 function setMonth(k){viewMonth=k;selDay=k===nowKey()?today():k+"-01";draw()}
 function shift(n){var p=viewMonth.split("-"),d=new Date(+p[0],+p[1]-1+n,1);setMonth(d.getFullYear()+"-"+pad(d.getMonth()+1))}
 $("#m-prev").addEventListener("click",function(){shift(-1)});$("#m-next").addEventListener("click",function(){shift(1)});$("#m-now").addEventListener("click",function(){setMonth(nowKey())});

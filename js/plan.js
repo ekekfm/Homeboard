@@ -1,8 +1,9 @@
-/* 일정 탭: 좌우로 밀어 넘기는 달력 + 고른 날의 일정·할 일 입력 */
+/* 일정 탭: 좌우로 밀어 넘기는 달력 + 날짜를 누르면 그날 일정 창(일정 등록·알림 설정) */
 (function () {
   "use strict";
   var DOW = ["일", "월", "화", "수", "목", "금", "토"];
-  var W, ready = false, month = "", sel = "", busy = false, settleT = 0, lastSig = "";
+  var REMIND = { "0": "일정 시각에", "10": "10분 전", "30": "30분 전", "60": "1시간 전", "1440": "하루 전" };
+  var W, ready = false, month = "", sel = "", busy = false, settleT = 0, lastSig = "", opened = false, lastFocus = null;
 
   function S() { return W.state(); }
   function mkey(d) { return d.getFullYear() + "-" + W.pad(d.getMonth() + 1); }
@@ -10,7 +11,29 @@
   function evsOn(date) {
     return W.sortBy((S().events || []).filter(function (e) { return W.occurs(e, date); }), function (e) { return e.time || ""; });
   }
-  function tasksOn(date) { return (S().tasks || []).filter(function (t) { return t.due === date; }); }
+
+  function openDay(date) {
+    sel = date; lastSig = "";
+    if (!opened) lastFocus = document.activeElement;
+    opened = true;
+    W.$("#p-modal").hidden = false;
+    document.body.classList.add("modal-open");
+    W.draw();
+    setTimeout(function () { var t = W.$("#p-title"); if (t && window.matchMedia("(hover:hover)").matches) t.focus(); }, 30);
+  }
+  function closeDay() {
+    if (!opened) return;
+    opened = false;
+    W.$("#p-modal").hidden = true;
+    document.body.classList.remove("modal-open");
+    if (lastFocus && lastFocus.focus) try { lastFocus.focus(); } catch (e) {}
+  }
+
+  function resetForm() {
+    var $ = W.$;
+    $("#p-title").value = ""; $("#p-time").value = ""; $("#p-allday").checked = false; $("#p-time").disabled = false;
+    $("#p-repeat").value = ""; $("#p-until").value = ""; $("#p-until").hidden = true; $("#p-remind").value = "";
+  }
 
   function setup() {
     W = window.WB; ready = true;
@@ -29,29 +52,25 @@
       }, 140);
     }, { passive: true });
     window.addEventListener("resize", center);
-    document.querySelectorAll('input[name="ptype"]').forEach(function (r) { r.addEventListener("change", formMode); });
+    $("#p-close").addEventListener("click", closeDay);
+    $("#p-back").addEventListener("click", closeDay);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && opened) closeDay(); });
+    window.addEventListener("hashchange", closeDay);
     $("#p-allday").addEventListener("change", function (e) { $("#p-time").disabled = e.target.checked; if (e.target.checked) $("#p-time").value = ""; });
     $("#p-repeat").addEventListener("change", function (e) { $("#p-until").hidden = !e.target.value; });
-    W.on("#p-form", function (f) {
+    W.on("#p-form", function () {
       var title = W.val("#p-title"); if (!title) return;
-      if (type() === "task") {
-        W.add("tasks", { text: title, due: sel, done: false });
-        W.toast(W.nice(sel) + " 할 일을 추가했습니다");
-      } else {
-        var all = $("#p-allday").checked, rp = $("#p-repeat").value, o = { title: title, date: sel, time: all ? "" : W.val("#p-time") };
-        if (all) o.allDay = true;
-        if (rp) { o.repeat = rp; if (W.val("#p-until")) o.until = W.val("#p-until"); }
-        W.add("events", o);
-        W.toast(W.nice(sel) + " 일정을 추가했습니다");
-      }
-      $("#p-title").value = ""; $("#p-time").value = ""; $("#p-allday").checked = false; $("#p-time").disabled = false;
-      $("#p-repeat").value = ""; $("#p-until").value = ""; $("#p-until").hidden = true;
+      var all = $("#p-allday").checked, rp = $("#p-repeat").value, rm = $("#p-remind").value;
+      var o = { title: title, date: sel, time: all ? "" : W.val("#p-time") };
+      if (all) o.allDay = true;
+      if (rp) { o.repeat = rp; if (W.val("#p-until")) o.until = W.val("#p-until"); }
+      if (rm !== "") o.remind = +rm;
+      W.add("events", o);
+      W.toast(W.nice(sel) + " 일정을 추가했습니다" + (rm !== "" ? " · 알림 " + REMIND[rm] : ""));
+      resetForm();
       $("#p-title").focus();
     });
-    formMode();
   }
-  function type() { return (document.querySelector('input[name="ptype"]:checked') || {}).value || "event"; }
-  function formMode() { var ev = type() === "event"; W.$("#p-evopts").hidden = !ev; W.$("#p-title").placeholder = ev ? "일정 이름" : "할 일"; }
   function go(n, fromScroll) {
     month = shiftMonth(month, n);
     if (sel.slice(0, 7) !== month) sel = month === mkey(new Date()) ? W.today() : month + "-01";
@@ -66,15 +85,14 @@
     DOW.forEach(function (d, i) { g.appendChild(h("div", { class: "pdow" + (i === 0 ? " sun" : i === 6 ? " sat" : "") }, d)); });
     for (var i = 0; i < first; i++) g.appendChild(h("div", { class: "pcell blank" }));
     for (var d = 1; d <= days; d++) (function (d) {
-      var date = k + "-" + W.pad(d), ev = evsOn(date), tk = tasksOn(date), open = tk.filter(function (t) { return !t.done; }).length, wd = (first + d - 1) % 7;
-      var label = d + "일" + (ev.length ? " 일정 " + ev.length + "개" : "") + (tk.length ? " 할 일 " + tk.length + "개" : "");
+      var date = k + "-" + W.pad(d), ev = evsOn(date), wd = (first + d - 1) % 7;
+      var label = d + "일" + (ev.length ? " 일정 " + ev.length + "개" : "") + ". 누르면 일정 창이 열립니다";
       g.appendChild(h("button", { type: "button", class: "pcell" + (date === td ? " today" : "") + (date === sel ? " sel" : "") + (wd === 0 ? " sun" : wd === 6 ? " sat" : ""),
-        "aria-label": label, "aria-pressed": date === sel ? "true" : "false",
-        onclick: function () { sel = date; lastSig = ""; W.draw(); } },
+        "aria-label": label, "aria-haspopup": "dialog",
+        onclick: function () { openDay(date); } },
         h("span", { class: "n" }, d),
-        ev.slice(0, 2).map(function (e) { return h("span", { class: "ev" }, e.title); }),
-        ev.length > 2 ? h("span", { class: "more" }, "+" + (ev.length - 2)) : null,
-        tk.length ? h("span", { class: "tk" + (open ? "" : " done") }, "할 일 " + (open || tk.length)) : null));
+        ev.slice(0, 2).map(function (e) { return h("span", { class: "ev" }, (e.remind != null ? "🔔" : "") + e.title); }),
+        ev.length > 2 ? h("span", { class: "more" }, "+" + (ev.length - 2)) : null));
     })(d);
     return g;
   }
@@ -89,28 +107,27 @@
   }
 
   function dayList() {
-    var h = W.h, $ = W.$, ev = evsOn(sel), tk = W.sortBy(tasksOn(sel), function (t) { return (t.done ? "1" : "0") + t.id; });
+    var h = W.h, $ = W.$, ev = evsOn(sel);
     $("#p-day-title").textContent = W.nice(sel) + (sel === W.today() ? " · 오늘" : "");
     var items = ev.map(function (e) {
+      var sub = [];
+      if (e.repeat) sub.push("↻ " + W.REP[e.repeat] + (e.until ? " ~" + W.nice(e.until) : ""));
+      if (e.remind != null && REMIND[String(e.remind)]) sub.push("🔔 " + REMIND[String(e.remind)]);
       return h("li", null, h("span", { class: "pill info" }, e.time || "종일"),
-        h("span", { class: "main" }, h("b", null, e.title),
-          e.repeat ? h("div", { class: "sub" }, "↻ " + W.REP[e.repeat] + (e.until ? " ~" + W.nice(e.until) : "")) : null),
+        h("span", { class: "main" }, h("b", null, e.title), sub.length ? h("div", { class: "sub" }, sub.join(" · ")) : null),
         W.delBtn(function () { W.del("events", e.id); if (e.repeat) W.toast("반복 일정 전체를 지웠습니다"); }));
-    }).concat(tk.map(function (t) {
-      return h("li", null, h("input", { type: "checkbox", checked: t.done ? true : null, "aria-label": "완료", onchange: function (e) { W.upd("tasks", t.id, { done: e.target.checked }); } }),
-        h("span", { class: "main" + (t.done ? " done" : "") }, t.text || t.title, h("div", { class: "sub" }, "할 일")),
-        W.delBtn(function () { W.del("tasks", t.id); }));
-    }));
-    W.fill($("#p-day-list"), items, "이 날 일정과 할 일이 없습니다. 위에서 바로 적으세요.");
+    });
+    W.fill($("#p-day-list"), items, "이 날 일정이 없습니다. 위에서 바로 적으세요.");
   }
 
   function render() {
     if (!window.WB) return;
     if (!ready) setup();
-    if (!W.$("#v-plan").classList.contains("on")) return;
-    var sig = month + "|" + sel + "|" + JSON.stringify(S().events || []) + JSON.stringify((S().tasks || []).map(function (t) { return [t.id, t.due, t.done, t.text]; })) + W.today();
+    if (!W.$("#v-plan").classList.contains("on")) { if (opened) closeDay(); return; }
+    var sig = month + "|" + sel + "|" + JSON.stringify(S().events || []) + W.today();
     if (sig !== lastSig && !busy) { lastSig = sig; paintCal(); }
-    dayList();
+    if (opened) dayList();
   }
+  window.WBRemindLabel = REMIND;
   (window.WBViews = window.WBViews || []).push(render);
 })();
