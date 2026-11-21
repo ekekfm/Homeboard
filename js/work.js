@@ -1,7 +1,6 @@
 /* 업무 화면: 업무 목록(상태·다음 행동·체크리스트·선행 업무·메모), 주간 작업 시간 */
 (function () {
   "use strict";
-  var CATS = ["카토리지 사업", "경영·재무", "신규 사업·브랜드", "투자·부동산", "콘텐츠·학습"];
   var STATUS = ["예정", "진행 중", "완료", "보류"];
   var STATUS_CLASS = { "예정": "plain", "진행 중": "info", "완료": "good", "보류": "warn" };
   /* 주간 시간 계획(분). 합계 20시간 = 분야별 15시간 + 유동 5시간 */
@@ -63,7 +62,7 @@
     W = window.WB; ready = true;
     var $ = W.$;
     /* 분류·분야 선택지 */
-    CATS.forEach(function (c) { $("#w-cat").appendChild(W.h("option", { value: c }, c)); });
+    $("#w-cated").appendChild(W.catEditor("work", "업무 분류"));
     AREAS.forEach(function (a) { $("#wt-area").appendChild(W.h("option", { value: a[0] }, a[0])); });
     $("#wt-date").value = W.today();
     W.on("#w-form", function (f) {
@@ -159,6 +158,12 @@
       h("p", null, "작업 지시서의 기존 업무 29개(완료 10 · 진행 중 15 · 예정 3 · 보류 1)를 상태 그대로 가져옵니다. 완료일처럼 모르는 값은 비워 둡니다."),
       h("button", { class: "btn", type: "button", onclick: importSeed }, "기존 업무 29개 가져오기"),
       h("button", { class: "btn ghost sm", type: "button", onclick: function () { S().config.workImported = "skip"; save(); } }, "안 가져옴")));
+    var CATS = W.cats("work"), extra = {};
+    all.forEach(function (w) { if (w.cat && CATS.indexOf(w.cat) < 0) extra[w.cat] = 1; });
+    CATS = CATS.concat(Object.keys(extra));       /* 편집에서 뺀 분류라도 그 분류의 업무가 남아 있으면 보여준다 */
+    var sel = $("#w-cat");
+    if (document.activeElement !== sel) { var keep = sel.value; sel.textContent = ""; W.cats("work").forEach(function (c) { sel.appendChild(h("option", { value: c }, c)); }); if (keep) sel.value = keep; }
+    if (catF && CATS.indexOf(catF) < 0) catF = "";
     chips($("#w-cats"), [["", "전체"]].concat(CATS.map(function (c) { return [c, c]; })), catF, function (v) { catF = v; });
     chips($("#w-stats"), [["", "모든 상태"]].concat(STATUS.map(function (s) { return [s, s + " " + counts[s]]; })).concat([["차단됨", "차단됨 " + blocked]]), statF, function (v) { statF = v; });
 
@@ -178,8 +183,8 @@
     if (!shown.length) { listEl.appendChild(h("p", { class: "empty", text: all.length ? "조건에 맞는 업무가 없습니다." : "아직 업무가 없습니다. 위에서 추가하거나 기존 업무를 가져오세요." })); return; }
     var weekR = weekRange(0), weekMin = {};
     logs().forEach(function (x) { if (x.workId && inWeek(weekR, x)) weekMin[x.workId] = (weekMin[x.workId] || 0) + (+x.min || 0); });
-    CATS.concat(["기타"]).forEach(function (cat) {
-      var rows = shown.filter(function (w) { return (CATS.indexOf(w.cat) >= 0 ? w.cat : "기타") === cat; });
+    CATS.concat(["분류 없음"]).forEach(function (cat) {
+      var rows = shown.filter(function (w) { return (CATS.indexOf(w.cat) >= 0 ? w.cat : "분류 없음") === cat; });
       if (!rows.length) return;
       var order = { "진행 중": 0, "예정": 1, "보류": 2, "완료": 3 };
       rows = W.sortBy(rows, function (w) { return (order[w.status] != null ? order[w.status] : 4) + (w.title || ""); });
@@ -274,7 +279,7 @@
     b.appendChild(h("div", { class: "row wfoot" },
       h("span", { class: "muted" }, [w.created ? "등록 " + W.nice(w.created) : "", w.doneAt ? "완료 " + W.nice(w.doneAt) : ""].filter(Boolean).join(" · ")),
       h("select", { class: "field", "aria-label": "분류 바꾸기", onchange: function (e) { patch(w.id, { cat: e.target.value }); } },
-        CATS.map(function (c) { return h("option", { value: c, selected: c === w.cat ? true : null }, c); })),
+        W.cats("work").concat(W.cats("work").indexOf(w.cat) < 0 && w.cat ? [w.cat] : []).map(function (c) { return h("option", { value: c, selected: c === w.cat ? true : null }, c); })),
       W.delBtn(function () { works().forEach(function (x) { if ((x.deps || []).indexOf(w.id) >= 0) x.deps = x.deps.filter(function (y) { return y !== w.id; }); }); W.del("work", w.id); })));
     return b;
   }

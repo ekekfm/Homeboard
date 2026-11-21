@@ -3,7 +3,7 @@
 const V = "13.2.0";
 const B = "https://www.gstatic.com/firebasejs/" + V + "/";
 
-const COLS = ["tasks", "events", "biz", "leads", "logs", "notes", "links", "work", "timelog", "ideas", "settings", "allocs", "ledger", "accounts", "recurring", "budgets"];
+const COLS = ["tasks", "events", "biz", "leads", "logs", "notes", "links", "work", "timelog", "ideas", "notebooks", "settings", "allocs", "ledger", "accounts", "recurring", "budgets"];
 
 export async function createBackend(config) {
   const [{ initializeApp }, A, F] = await Promise.all([
@@ -36,6 +36,7 @@ export async function createBackend(config) {
       await A.signInWithPopup(auth, p);
     },
     signOut() { return A.signOut(auth); },
+
 
     listen(uid, col, onDocs, onErr) {
       return F.onSnapshot(F.collection(db, "users", uid, col), { includeMetadataChanges: true },

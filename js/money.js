@@ -56,7 +56,6 @@
       var o = { name: W.val("#acct-name"), kind: $("#acct-kind").value, opening: Math.round(+W.val("#acct-open") || 0), ord: Date.now() };
       W.add("accounts", o); f.reset(); $("#acct-add").open = false; W.toast(o.name + " 계좌를 추가했습니다");
     });
-    W.CATS.forEach(function (c) { if (c !== "저축·투자") $("#rec-cat").appendChild(W.h("option", { value: c }, c)); });
     W.on("#rec-form", function (f) {
       var day = Math.min(31, Math.max(1, Math.round(+W.val("#rec-day") || 1)));
       W.add("recurring", { title: W.val("#rec-title"), amt: Math.round(+W.val("#rec-amt") || 0), cat: $("#rec-cat").value, acct: $("#rec-acct").value || "main", day: day, active: true });
@@ -102,6 +101,7 @@
     opts(W.$("#m-acct"), list);
     opts(W.$("#m-to"), list, "받는 계좌");
     opts(W.$("#rec-acct"), list);
+    opts(W.$("#rec-cat"), W.cats("money").filter(function (c) { return c !== "저축·투자"; }).map(function (c) { return [c, c]; }));
   }
 
   /* ---------- 예산 ---------- */
@@ -117,7 +117,7 @@
     if (box.contains(document.activeElement)) return;
     box.textContent = "";
     var tb = 0, ts = 0, rows = h("div", { class: "budrows" });
-    W.CATS.filter(function (c) { return c !== "저축·투자"; }).forEach(function (c) {
+    W.cats("money").filter(function (c) { return c !== "저축·투자"; }).forEach(function (c) {
       var spent = m.cats[c] || 0, b = bud[c] || 0, pct = b ? Math.round(spent / b * 100) : 0;
       tb += b; if (b) ts += spent;
       var inp = h("input", { class: "field", type: "number", inputmode: "numeric", min: "0", step: "10000", value: b || "", placeholder: "예산 없음", "aria-label": c + " 월 예산(원)",

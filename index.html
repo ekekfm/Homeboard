@@ -20,7 +20,7 @@
 <body>
 <header class="top"><div class="wrap">
   <a class="datecard" href="#plan" aria-label="일정 보기"><span class="dc-m" id="dc-m"></span><span class="dc-d" id="dc-d"></span></a>
-  <div class="dt"><h1 id="today"></h1><p id="year"></p><a class="syncchip" id="syncchip" href="#home" hidden></a></div>
+  <div class="dt"><h1 id="today"></h1><p id="year"></p><a class="syncchip" id="syncchip" href="#home" hidden></a><a class="bell" id="bell" href="#inbox">알림</a></div>
   <a class="wxchip" id="wxchip" href="#news" hidden></a>
 </div></header>
 <nav class="tabs" aria-label="메뉴"><div class="wrap">
@@ -107,6 +107,14 @@
   </div>
 </section>
 
+<!-- 알림 센터 -->
+<section class="view" id="v-inbox">
+  <div class="card wide">
+    <h2>알림 센터 <button class="btn ghost sm" id="inbox-all" type="button">모두 읽음</button></h2>
+    <ul class="list" id="inbox-list"></ul>
+  </div>
+</section>
+
 <!-- 업무 -->
 <section class="view" id="v-work">
   <div class="card wide">
@@ -135,6 +143,7 @@
       <select id="w-status" aria-label="상태"><option>예정</option><option>진행 중</option><option>완료</option><option>보류</option></select>
       <button class="btn" type="submit">추가</button>
     </form>
+    <div id="w-cated"></div>
     <div class="wfilter">
       <div class="chips" id="w-cats" role="group" aria-label="분류로 거르기"></div>
       <div class="chips" id="w-stats" role="group" aria-label="상태로 거르기"></div>
@@ -152,29 +161,35 @@
   </div>
 </section>
 
-<!-- 일정 -->
+<!-- 일정: 달력 -->
 <section class="view" id="v-plan">
-  <div class="card">
-    <h2>할 일 <button class="btn ghost sm" id="tasks-clear" type="button">완료 항목 지우기</button></h2>
-    <form class="add" id="task-form">
-      <input class="grow" id="task-text" placeholder="할 일" required autocomplete="off">
-      <input id="task-due" type="date" aria-label="마감일">
-      <button class="btn" type="submit">추가</button>
-    </form>
-    <ul class="list" id="tasks"></ul>
+  <div class="card wide">
+    <h2><span class="row"><button class="btn ghost sm" id="p-prev" type="button" aria-label="이전 달">‹</button><span id="p-label"></span><button class="btn ghost sm" id="p-next" type="button" aria-label="다음 달">›</button></span>
+      <button class="btn ghost sm" id="p-now" type="button">오늘</button></h2>
+    <div class="pscroll" id="p-scroll" aria-label="달력. 좌우로 밀면 달이 바뀝니다"></div>
+    <p class="muted" style="font-size:12.5px;margin:6px 0 0">좌우로 밀거나 ‹ › 를 누르면 달이 바뀝니다. 날짜를 누르면 아래에서 그날 일정과 할 일을 적습니다.</p>
   </div>
   <div class="card">
-    <h2>일정 <small>앞으로 60일</small></h2>
-    <form class="add" id="event-form">
-      <input class="grow" id="event-title" placeholder="일정 이름" required autocomplete="off">
-      <input id="event-date" type="date" required aria-label="날짜">
-      <input id="event-time" type="time" aria-label="시간">
-      <label class="row" style="gap:6px;font-size:14px"><input type="checkbox" id="event-allday"> 하루 종일</label>
-      <select id="event-repeat" aria-label="반복"><option value="">반복 없음</option><option value="weekly">매주</option><option value="monthly">매월</option><option value="yearly">매년</option></select>
-      <input id="event-until" type="date" aria-label="반복 끝나는 날(선택)" title="반복 끝나는 날(선택)" hidden>
+    <h2 id="p-day-title"></h2>
+    <form class="add" id="p-form">
+      <div class="seg" role="radiogroup" aria-label="종류">
+        <label><input type="radio" name="ptype" id="pt-ev" value="event" checked><span>일정</span></label>
+        <label><input type="radio" name="ptype" id="pt-task" value="task"><span>할 일</span></label>
+      </div>
+      <input class="grow" id="p-title" placeholder="일정 이름" required autocomplete="off">
+      <span class="row" id="p-evopts" style="gap:8px">
+        <input id="p-time" type="time" aria-label="시간">
+        <label class="row" style="gap:6px;font-size:14px"><input type="checkbox" id="p-allday"> 하루 종일</label>
+        <select id="p-repeat" aria-label="반복"><option value="">반복 없음</option><option value="weekly">매주</option><option value="monthly">매월</option><option value="yearly">매년</option></select>
+        <input id="p-until" type="date" aria-label="반복 끝나는 날(선택)" title="반복 끝나는 날(선택)" hidden>
+      </span>
       <button class="btn" type="submit">추가</button>
     </form>
-    <ul class="list" id="events"></ul>
+    <ul class="list" id="p-day-list"></ul>
+  </div>
+  <div class="card">
+    <h2>할 일 전체 <button class="btn ghost sm" id="tasks-clear" type="button">완료 항목 지우기</button></h2>
+    <ul class="list" id="tasks"></ul>
   </div>
 </section>
 
@@ -279,6 +294,7 @@
         <button type="button" data-plus="1000">+1천</button><button type="button" data-plus="5000">+5천</button><button type="button" data-plus="10000">+1만</button><button type="button" data-plus="50000">+5만</button><button type="button" data-plus="0">지우기</button>
       </div>
       <div class="seg" id="m-cats" role="radiogroup" aria-label="분류" style="flex:1 1 100%"></div>
+      <div id="m-cated" style="flex:1 1 100%"></div>
       <input class="grow" id="m-memo" placeholder="내용 (선택)" autocomplete="off">
       <button class="btn" type="submit">기록</button>
     </form>
@@ -289,28 +305,28 @@
 
 <!-- 메모 -->
 <section class="view" id="v-notes">
-  <div class="card wide">
-    <h2>메모 · 아이디어 · 꿀팁</h2>
-    <form class="add" id="note-form">
-      <div class="seg" role="radiogroup" aria-label="종류">
-        <label><input type="radio" name="ntag" id="nt-memo" value="메모" checked><span>메모</span></label>
-        <label><input type="radio" name="ntag" id="nt-idea" value="아이디어"><span>아이디어</span></label>
-        <label><input type="radio" name="ntag" id="nt-tip" value="꿀팁"><span>꿀팁</span></label>
+  <div class="nb-layout wide">
+    <aside class="card nb-side" id="nb-side" aria-label="노트북"></aside>
+    <div class="card nb-main">
+      <h2 id="nb-title"></h2>
+      <div class="nb-tabs" id="nb-tabs" role="tablist" aria-label="목차" hidden></div>
+      <form class="add" id="note-form">
+        <textarea id="note-text" placeholder="메모 내용" required></textarea>
+        <input class="grow" id="note-tags" placeholder="태그 (쉼표로 구분, 예: 카토리지, 세금)" autocomplete="off">
+        <select class="grow" id="note-work" aria-label="연결할 업무(선택)"></select>
+        <button class="btn" type="submit">저장</button>
+        <p class="muted" id="note-where" style="flex:1 1 100%;margin:0;font-size:13px"></p>
+      </form>
+      <div class="wfilter">
+        <div class="chips" id="note-tagchips" role="group" aria-label="태그로 거르기"></div>
+        <input class="grow" id="note-q" type="search" placeholder="메모 검색" aria-label="메모 검색">
       </div>
-      <textarea id="note-text" placeholder="내용" required></textarea>
-      <input class="grow" id="note-tags" placeholder="태그 (쉼표로 구분, 예: 카토리지, 세금)" autocomplete="off">
-      <select class="grow" id="note-work" aria-label="연결할 업무(선택)"></select>
-      <button class="btn" type="submit">저장</button>
-    </form>
-    <div class="wfilter">
-      <div class="chips" id="note-tagchips" role="group" aria-label="태그로 거르기"></div>
-      <input class="grow" id="note-q" type="search" placeholder="검색" aria-label="메모 검색">
+      <ul class="list" id="notes"></ul>
+      <details id="note-trash" style="margin-top:12px"><summary>휴지통 <span id="note-trash-n"></span></summary>
+        <p class="muted" style="font-size:13px;margin:6px 0">지운 메모는 30일 동안 여기에 남았다가 자동으로 정리됩니다.</p>
+        <ul class="list" id="notes-trash"></ul>
+      </details>
     </div>
-    <ul class="list" id="notes"></ul>
-    <details id="note-trash" style="margin-top:12px"><summary>휴지통 <span id="note-trash-n"></span></summary>
-      <p class="muted" style="font-size:13px;margin:6px 0">지운 메모는 30일 동안 여기에 남았다가 자동으로 정리됩니다.</p>
-      <ul class="list" id="notes-trash"></ul>
-    </details>
   </div>
 </section>
 
@@ -335,6 +351,9 @@
 <script src="js/work.js"></script>
 <script src="js/money.js"></script>
 <script src="js/ideas.js"></script>
+<script src="js/notify.js"></script>
+<script src="js/plan.js"></script>
+<script src="js/notes.js"></script>
 <script>
 (function(){
 "use strict";
@@ -361,8 +380,8 @@ function stamp(iso){if(!iso)return"";var d=new Date(iso);if(isNaN(d))return"";re
 function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(function(){t.classList.remove("on")},2600)}
 
 /* ---------- 저장: 이 기기(localStorage) ---------- */
-var KEY="homeboard-v2",COLS=["tasks","events","biz","leads","logs","notes","links","work","timelog","accounts","recurring","budgets","ideas"];
-var S={tasks:[],events:[],biz:[],leads:[],logs:[],notes:[],links:null,config:{region:"서울"},money:{},allocs:[],work:[],timelog:[],accounts:[],recurring:[],budgets:[],ideas:[]};
+var KEY="homeboard-v2",COLS=["tasks","events","biz","leads","logs","notes","links","work","timelog","accounts","recurring","budgets","ideas","notebooks"];
+var S={tasks:[],events:[],biz:[],leads:[],logs:[],notes:[],notebooks:[],links:null,config:{region:"서울"},money:{},allocs:[],work:[],timelog:[],accounts:[],recurring:[],budgets:[],ideas:[]};
 var noteTag="",brief=null,wxData=null,viewMonth=nowKey(),selDay=today(),moneyTab="cal",editApps=false,logFilter="전체";
 /* 자주 쓰는 앱: addr=앱 주소(아이폰·안드로이드 공통), pkg=안드로이드 패키지, android/ios=기기별 주소, web=PC용 */
 var APPS={
@@ -539,7 +558,23 @@ function newsRow(n){var a=h("a",{class:"t",text:n.t||"",href:n.url&&/^https?:\/\
   return h("li",null,a,n.src?h("div",{class:"sub",text:n.src}):null)}
 
 /* ---------- 가계부 계산 ---------- */
-var CATS=["식비","교통","주거·통신","사업","취미","쇼핑","저축·투자","기타"];
+var DEFAULT_CATS={money:["식비","교통","주거·통신","사업","취미","쇼핑","저축·투자","기타"],work:["카토리지 사업","경영·재무","신규 사업·브랜드","투자·부동산","콘텐츠·학습"]};
+function cats(k){var c=S.config.cats&&S.config.cats[k];return c&&c.length?c.slice():DEFAULT_CATS[k].slice()}
+function setCats(k,list){var o=Object.assign({},S.config.cats||{});o[k]=list;S.config.cats=o;save();draw()}
+/* 분류 편집: 칩을 눌러 빼고, 칸에 적어 더한다. 이미 적은 기록의 분류 이름은 그대로 남는다. */
+function catEditor(k,label){var d=h("details",{class:"cated"}),box=h("div",{class:"chips"}),inp=h("input",{class:"field",placeholder:"새 "+label+" 이름",maxlength:"20"});
+  function paint(){box.textContent="";cats(k).forEach(function(c){box.appendChild(h("button",{type:"button",title:"누르면 뺍니다",onclick:function(){var l=cats(k);if(l.length<=1){toast("하나는 남겨 두어야 합니다");return}
+    setCats(k,l.filter(function(x){return x!==c}));toast("'"+c+"' 분류를 뺐습니다. 이미 적은 기록은 그대로입니다")}},c+" ×"))})}
+  function addOne(){var v=inp.value.trim();if(!v)return;var l=cats(k);if(l.indexOf(v)>=0){toast("이미 있는 분류입니다");return}l.push(v);setCats(k,l);inp.value="";toast("'"+v+"' 분류를 추가했습니다")}
+  inp.addEventListener("keydown",function(e){if(e.key==="Enter"&&!e.isComposing){e.preventDefault();addOne()}});
+  d.appendChild(h("summary",null,label+" 직접 편집"));d.appendChild(box);
+  d.appendChild(h("div",{class:"row",style:"margin-top:6px"},inp,h("button",{class:"btn ghost sm",type:"button",onclick:addOne},"추가")));
+  d.addEventListener("toggle",paint);paint();d.paint=paint;return d}
+var catSig={};
+function radioCats(el,name,k,keepFirst){var l=cats(k),sig=l.join("|");if(catSig[name]===sig)return;catSig[name]=sig;
+  var cur=(document.querySelector('input[name="'+name+'"]:checked')||{}).value;el.textContent="";
+  l.forEach(function(c,i){el.appendChild(h("label",null,h("input",{type:"radio",name:name,value:c,checked:(cur?c===cur:i===0)?true:null}),h("span",{text:c})))});
+  if(!document.querySelector('input[name="'+name+'"]:checked')&&el.querySelector("input"))el.querySelector("input").checked=true}
 function signed(n){return (n<0?"-":"")+won(Math.abs(n))}
 function monthSum(key){var it=S.money[key]||{},inc=0,out=0,cats={},rows=[],byDay={},inDay={};
   Object.keys(it).forEach(function(id){var e=it[id],a=+e.amt||0,dd=+String(e.date).slice(8,10);rows.push(Object.assign({id:id},e));
@@ -605,7 +640,7 @@ function occurs(e,date){if(!e.date)return false;if(date===e.date)return true;if(
   if(e.repeat==="monthly")return a.getDate()===b.getDate();
   if(e.repeat==="yearly")return a.getDate()===b.getDate()&&a.getMonth()===b.getMonth();
   return false}
-var REP={weekly:"매주",monthly:"매월",yearly:"매년"};
+var REP={weekly:"매주",monthly:"매월",yearly:"매년"};window.WBOccurs=occurs;
 function upcoming(days){var out=[],d=new Date(),i,k;d.setHours(0,0,0,0);
   for(i=0;i<days;i++){k=ymd(new Date(d.getTime()+i*86400000));S.events.forEach(function(e){if(occurs(e,k))out.push({e:e,date:k})})}
   return out}
@@ -670,6 +705,7 @@ function quickLabel(q){var KN={task:"할 일",event:"일정",spend:"지출",memo
   return{kind:KN[q.kind],rest:parts.join(" · ")}}
 function render(){
   var td=today();
+  radioCats($("#m-cats"),"mcat","money");
   (window.WBViews||[]).forEach(function(f){try{f()}catch(e){if(window.console)console.error(e)}});
   var open=sortBy(S.tasks.filter(function(t){return !t.done&&(!t.due||t.due<=td)}),function(t){return t.due||"9"});
   var evs=sortBy(S.events.filter(function(e){return occurs(e,td)}),function(e){return e.time||""});
@@ -700,7 +736,6 @@ function render(){
   }
   /* 일정 */
   fill($("#tasks"),sortBy(S.tasks,function(t){return (t.done?"1":"0")+(t.due||"9999")+t.id}).map(taskRow),"할 일이 없습니다.");
-  fill($("#events"),sortBy(upcoming(60),function(o){return o.date+(o.e.time||"")}).slice(0,60).map(eventRow),"예정된 일정이 없습니다.");
   /* 가계부 */
   document.querySelectorAll("[data-mt]").forEach(function(el){el.hidden=el.dataset.mt!==moneyTab});
   var cur=monthSum(nowKey()),ser=assetSeries(),total=ser[ser.length-1].val;
@@ -736,30 +771,6 @@ function render(){
   if(!ck.length)bars.appendChild(h("p",{class:"empty",text:"지출을 기록하면 분류별로 보여줍니다."}));
   ck.forEach(function(c){bars.appendChild(h("div",{class:"b",title:c+" "+won(m.cats[c])},h("span",{text:c}),h("span",{class:"t"},h("i",{style:"width:"+Math.max(2,Math.round(m.cats[c]/mx*100))+"%"})),
     h("span",{class:"n"},won(m.cats[c]),h("small",{text:Math.round(m.cats[c]/m.out*100)+"%"}))))});
-  /* 메모 */
-  var q=($("#note-q").value||"").trim().toLowerCase(),live=S.notes.filter(function(n){return !n.trashed}),dead=S.notes.filter(function(n){return n.trashed});
-  var tc=$("#note-tagchips"),allTags={};live.forEach(function(n){(n.tags||[]).forEach(function(t){allTags[t]=(allTags[t]||0)+1})});tc.textContent="";
-  if(noteTag&&!allTags[noteTag]&&noteTag!=="📌")noteTag="";
-  [["","전체"],["📌","고정"]].concat(Object.keys(allTags).sort().map(function(t){return[t,"#"+t]})).forEach(function(x){
-    tc.appendChild(h("button",{type:"button","aria-pressed":noteTag===x[0]?"true":"false",class:noteTag===x[0]?"on":"",onclick:function(){noteTag=x[0];draw()}},x[1]))});
-  var nw=$("#note-work");if(document.activeElement!==nw){var keep=nw.value;nw.textContent="";nw.appendChild(h("option",{value:""},"업무 연결 없음"));
-    sortBy((S.work||[]).filter(function(w){return w.status!=="완료"}),function(w){return w.title}).forEach(function(w){nw.appendChild(h("option",{value:w.id},w.title))});nw.value=keep}
-  var wname={};(S.work||[]).forEach(function(w){wname[w.id]=w.title});
-  fill($("#notes"),live.filter(function(n){if(noteTag==="📌"&&!n.pinned)return false;if(noteTag&&noteTag!=="📌"&&(n.tags||[]).indexOf(noteTag)<0)return false;
-      return !q||((n.text||"")+" "+(n.tag||"")+" "+(n.tags||[]).join(" ")+" "+(wname[n.workId]||"")).toLowerCase().indexOf(q)>=0})
-    .sort(function(a,b){return (b.pinned?1:0)-(a.pinned?1:0)||(a.id<b.id?1:-1)}).map(function(n){
-    return h("li",{class:n.pinned?"pinned":null},h("span",{class:"pill "+(n.tag==="아이디어"?"info":n.tag==="꿀팁"?"good":"plain"),text:n.tag||"메모"}),
-      h("span",{class:"main"},h("div",{style:"white-space:pre-wrap",text:n.text}),
-        h("div",{class:"sub"},stamp(n.at).replace(" 기준",""),(n.tags||[]).map(function(t){return h("span",{class:"tag",text:"#"+t})}),
-          n.workId&&wname[n.workId]?h("a",{class:"tag work",href:"#work",onclick:function(){window.WBOpenWork=n.workId}},"업무: "+wname[n.workId]):null)),
-      h("button",{class:"btn ghost sm",type:"button","aria-pressed":n.pinned?"true":"false",title:n.pinned?"고정 풀기":"맨 위에 고정",onclick:function(){upd("notes",n.id,{pinned:!n.pinned})}},n.pinned?"고정됨":"고정"),
-      h("button",{class:"btn ghost sm danger",type:"button",onclick:function(){upd("notes",n.id,{trashed:new Date().toISOString(),pinned:false});toast("휴지통으로 옮겼습니다")}},"지우기"))}),
-    q||noteTag?"맞는 메모가 없습니다.":"저장된 메모가 없습니다.");
-  $("#note-trash").hidden=!dead.length;$("#note-trash-n").textContent=dead.length?dead.length+"개":"";
-  fill($("#notes-trash"),dead.sort(function(a,b){return a.trashed<b.trashed?1:-1}).map(function(n){
-    return h("li",null,h("span",{class:"main"},h("div",{class:"done",style:"white-space:pre-wrap",text:n.text}),h("div",{class:"sub",text:"지운 날 "+nice(String(n.trashed).slice(0,10))})),
-      h("button",{class:"btn ghost sm",type:"button",onclick:function(){var c=Object.assign({},n);delete c.trashed;S.notes=S.notes.map(function(x){return x.id===n.id?c:x});save();draw();toast("되돌렸습니다")}},"되돌리기"),
-      delBtn(function(){del("notes",n.id)}))}),"휴지통이 비었습니다.");
   /* 뉴스·증권뉴스 */
   slotBar($("#sb-news"));slotBar($("#sb-stock"));
   listCard($("#news-eco"),"경제","economy","이 시간대에는 경제 기사가 없습니다.");
@@ -798,13 +809,7 @@ on("#quick",function(){var q=parseQuick(val("#q-text"),qtype()),l=quickLabel(q);
   else if(q.kind==="memo")add("notes",{text:q.title,tag:"메모",at:new Date().toISOString()});
   else moneyAdd(q.date.slice(0,7),{type:"out",amt:q.amt,cat:"기타",memo:q.title,date:q.date});
   $("#q-text").value="";showPrev();toast(l.kind+"(으)로 기록했습니다 · "+l.rest)});
-on("#task-form",function(f){add("tasks",{text:val("#task-text"),due:val("#task-due"),done:false});f.reset()});
-on("#event-form",function(f){var all=$("#event-allday").checked,rp=$("#event-repeat").value,o={title:val("#event-title"),date:val("#event-date"),time:all?"":val("#event-time")};
-  if(all)o.allDay=true;if(rp){o.repeat=rp;if(val("#event-until"))o.until=val("#event-until")}
-  add("events",o);f.reset();$("#event-date").value=today();$("#event-until").hidden=true;$("#event-time").disabled=false});
-$("#event-allday").addEventListener("change",function(e){$("#event-time").disabled=e.target.checked;if(e.target.checked)$("#event-time").value=""});
-$("#event-repeat").addEventListener("change",function(e){$("#event-until").hidden=!e.target.value});
-var mc=$("#m-cats");CATS.forEach(function(c,i){mc.appendChild(h("label",null,h("input",{type:"radio",name:"mcat",id:"mc-"+i,value:c,checked:i===0?true:null}),h("span",{text:c})))});
+var mc=$("#m-cats");radioCats(mc,"mcat","money");$("#m-cated").appendChild(catEditor("money","지출 분류"));
 function mtype(){return document.querySelector('input[name="mtype"]:checked').value}
 document.querySelectorAll('input[name="mtype"]').forEach(function(r){r.addEventListener("change",function(){mc.hidden=mtype()!=="out";$("#m-to").hidden=mtype()!=="tr"})});
 document.querySelectorAll('input[name="mtab"]').forEach(function(r){r.addEventListener("change",function(){moneyTab=r.value;draw()})});
@@ -821,9 +826,6 @@ on("#al-form",function(){var a=+val("#al-amt");if(!(a>0))return;
   $("#al-amt").value="";$("#al-memo").value="";toast("배분을 기록했습니다")});
 function fillBase(){$("#base-amt").value=S.config.base||""}
 $("#notif-btn").addEventListener("click",function(){try{Promise.resolve(Notification.requestPermission()).then(function(){draw()},function(){draw()})}catch(e){draw()}});
-function tagList(v){var seen={};return String(v||"").split(/[,#]/).map(function(x){return x.trim()}).filter(function(x){if(!x||seen[x])return false;seen[x]=1;return true}).slice(0,10)}
-on("#note-form",function(){var o={text:val("#note-text"),tag:document.querySelector('input[name="ntag"]:checked').value,at:new Date().toISOString()},tg=tagList(val("#note-tags")),wk=$("#note-work").value;
-  if(tg.length)o.tags=tg;if(wk)o.workId=wk;add("notes",o);$("#note-text").value="";$("#note-tags").value="";$("#note-work").value=""});
 on("#app-form",function(f){var nm=val("#app-name"),addr=val("#app-addr"),pkg=val("#app-pkg"),sc=val("#app-sc"),web=val("#app-web");
   if(addr&&!/:\/\//.test(addr))addr=addr.replace(/:?$/,"")+"://";
   if(addr&&!okUrl(addr)){toast("앱 주소 형식을 확인하세요 (예: kakaotalk://)");return}
@@ -836,7 +838,6 @@ on("#app-form",function(f){var nm=val("#app-name"),addr=val("#app-addr"),pkg=val
 on("#cfg",function(){S.config.region=val("#cfg-region")||"서울";save();loadWeather(true);toast("저장했습니다")});
 $("#apps-edit").addEventListener("click",function(){editApps=!editApps;draw()});
 $("#tasks-clear").addEventListener("click",function(){var n=S.tasks.length;S.tasks=S.tasks.filter(function(t){return !t.done});if(n===S.tasks.length){toast("완료한 항목이 없습니다");return}save();draw()});
-$("#note-q").addEventListener("input",draw);
 function setMonth(k){viewMonth=k;selDay=k===nowKey()?today():k+"-01";draw()}
 function shift(n){var p=viewMonth.split("-"),d=new Date(+p[0],+p[1]-1+n,1);setMonth(d.getFullYear()+"-"+pad(d.getMonth()+1))}
 $("#m-prev").addEventListener("click",function(){shift(-1)});$("#m-next").addEventListener("click",function(){shift(1)});$("#m-now").addEventListener("click",function(){setMonth(nowKey())});
@@ -848,7 +849,7 @@ $("#restore").addEventListener("change",function(e){var f=e.target.files[0];if(!
     catch(x){toast("업무 보드(홈보드) 백업 파일이 아닙니다")}e.target.value=""};r.readAsText(f)});
 
 /* ---------- 화면 전환 ---------- */
-var VIEWS=["home","work","plan","money","notes","news","stock"];
+var VIEWS=["home","work","plan","money","notes","news","stock","inbox"];
 function route(){var v=(location.hash||"").slice(1);if(VIEWS.indexOf(v)<0)v="home";
   VIEWS.forEach(function(k){$("#v-"+k).classList.toggle("on",k===v)});
   document.querySelectorAll("nav.tabs a").forEach(function(a){if(a.getAttribute("href")==="#"+v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
@@ -859,7 +860,7 @@ window.addEventListener("resize",draw);
 /* ---------- 업무 화면(js/work.js)이 쓰는 도구 ---------- */
 window.WB={state:function(){return S},h:h,$:$,fill:fill,delBtn:delBtn,pill:pill,tile:tile,sortBy:sortBy,today:today,nice:nice,ymd:ymd,pad:pad,
   toast:toast,add:add,upd:upd,del:del,save:save,draw:draw,newId:newId,on:on,val:val,
-  won:won,signed:signed,short:short,monthSum:monthSum,moneyAdd:moneyAdd,moneyDel:moneyDel,nowKey:nowKey,CATS:CATS,
+  won:won,signed:signed,short:short,monthSum:monthSum,moneyAdd:moneyAdd,moneyDel:moneyDel,nowKey:nowKey,cats:cats,catEditor:catEditor,occurs:occurs,REP:REP,
   selDay:function(){return selDay},viewMonth:function(){return viewMonth}};
 
 /* ---------- 동기화(js/sync.js)와 연결 ---------- */
@@ -876,7 +877,7 @@ window.WBApp={
 /* ---------- 시작 ---------- */
 load();
 (function(){var cut=new Date(Date.now()-30*86400000).toISOString(),n=S.notes.length;S.notes=S.notes.filter(function(x){return !x.trashed||x.trashed>cut});if(S.notes.length!==n)save()})();
-["#event-date","#al-date"].forEach(function(x){$(x).value=today()});
+["#al-date"].forEach(function(x){$(x).value=today()});
 $("#cfg-region").value=S.config.region||"";fillBase();
 route();render();initAppDrag();loadWeather(false);loadBrief();
 document.addEventListener("visibilitychange",function(){if(!document.hidden){loadWeather(false);loadBrief();draw()}});

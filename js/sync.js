@@ -200,6 +200,7 @@ let paintTimer = 0;
 function paintSoon() { clearTimeout(paintTimer); paintTimer = setTimeout(paint, 150); }
 
 window.WBSync = { changed() { if (core) core.changed(); } };
+
 window.addEventListener("online", paintSoon);
 if (chip) chip.addEventListener("click", () => setTimeout(() => box && box.scrollIntoView({ behavior: "smooth", block: "start" }), 80));
 window.addEventListener("offline", paintSoon);

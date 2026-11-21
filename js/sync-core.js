@@ -27,11 +27,11 @@ export function hash(v) {
 export function clean(v) { return JSON.parse(JSON.stringify(v)); }
 export function rid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
 
-const LISTS = ["tasks", "events", "biz", "leads", "logs", "notes", "links", "work", "timelog", "ideas"];
+const LISTS = ["tasks", "events", "biz", "leads", "logs", "notes", "links", "work", "timelog", "ideas", "notebooks"];
 export const FIN = ["allocs", "ledger", "accounts", "recurring", "budgets"]; // 가계부 관련: 보안 점검을 통과한 뒤에만 동기화
 const NO_CONFLICT = ["links", "settings"];         // 바로가기·설정은 서버 쪽을 그대로 따른다
 export const LABEL = { tasks: "할 일", events: "일정", biz: "사업", leads: "상담", logs: "기록", notes: "메모",
-  links: "앱 바로가기", work: "업무", timelog: "작업 시간", ideas: "아이디어", settings: "설정", allocs: "자산배분", ledger: "가계부", accounts: "계좌", recurring: "반복 지출", budgets: "예산" };
+  links: "앱 바로가기", work: "업무", timelog: "작업 시간", ideas: "아이디어", notebooks: "노트북", settings: "설정", allocs: "자산배분", ledger: "가계부", accounts: "계좌", recurring: "반복 지출", budgets: "예산" };
 
 // 화면 상태(S)와 컬렉션 사이의 변환
 export function collections() {
