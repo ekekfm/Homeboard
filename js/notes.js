@@ -3,7 +3,7 @@
    - 태그, 맨 위 고정, 업무 연결, 휴지통(30일)은 그대로. */
 (function () {
   "use strict";
-  var W, ready = false, nb = "all", sec = "", tag = "", pending = false, force = false, sideOpen = false, pageBusy = false, pageTouch = false, pageProg = false, pageT = 0;
+  var W, ready = false, nb = "all", sec = "", tag = "", pending = false, force = false, sideOpen = false;
 
   function S() { return W.state(); }
   function books() { return W.sortBy(S().notebooks || (S().notebooks = []), function (b) { return (b.ord || 0) + b.name; }); }
@@ -40,38 +40,10 @@
       $("#note-text").value = ""; $("#note-tags").value = ""; $("#note-work").value = "";
     });
     $("#note-q").addEventListener("input", W.draw);
-    /* 노트북 안에서는 메모 목록이 목차별 칸으로 옆으로 이어져 있다. 좌우로 밀면 옆 목차 칸으로 넘어간다 */
-    var pg = $("#nb-pages");
-    pg.addEventListener("scroll", function () {
-      pageBusy = true; clearTimeout(pageT);
-      pageT = setTimeout(function () {
-        pageBusy = false;
-        var o = order(), w = pg.clientWidth || 1, i = Math.round(pg.scrollLeft / w);
-        i = Math.max(0, Math.min(o.length - 1, i));
-        if (pageProg) { /* 코드가 옮긴 경우: 고른 목차 칸에 맞춰 두기만 한다 */
-          pageProg = false;
-          var want = o.indexOf(sec);
-          if (want >= 0 && want !== i) { markProg(); pg.scrollLeft = want * w; i = want; }
-          fitHeight(i); return;
-        }
-        fitHeight(i);
-        if (o.length && o[i] !== sec) { sec = o[i]; force = true; W.draw(); }
-      }, 120);
-    }, { passive: true });
-    pg.addEventListener("touchstart", function () { pageTouch = true; pageProg = false; }, { passive: true });
-    pg.addEventListener("touchend", function () { pageTouch = false; }, { passive: true });
-    pg.addEventListener("touchcancel", function () { pageTouch = false; }, { passive: true });
-    window.addEventListener("resize", function () { var i = order().indexOf(sec); if (i >= 0 && !pg.hidden) { markProg(); pg.scrollLeft = i * pg.clientWidth; fitHeight(i); } });
     $("#nb-side").addEventListener("focusout", function () { if (pending) { pending = false; setTimeout(W.draw, 0); } });
   }
 
   function order() { var b = book(nb); return b ? [""].concat((b.sections || []).map(function (x) { return x.id; })) : []; }
-  /* 코드가 스크롤을 옮길 때 표시. 스크롤이 실제로 일어나지 않았으면 곧 지운다 */
-  function markProg() { pageProg = true; setTimeout(function () { if (!pageBusy) pageProg = false; }, 80); }
-  function fitHeight(i) {
-    var pg = W.$("#nb-pages"), p = pg.children[i];
-    if (p) pg.style.height = p.offsetHeight + "px";
-  }
   /* 목차 탭: 가로로 스크롤되는 띠. 고른 목차가 보이도록 옮긴다 */
   function tabs() {
     var h = W.h, el = W.$("#nb-tabs"), b = book(nb);
@@ -179,7 +151,7 @@
       if (tag && (n.tags || []).indexOf(tag) < 0) return false;
       return !q || ((n.text || "") + " " + (n.tags || []).join(" ") + " " + (wname[n.workId] || "") + " " + where(n)).toLowerCase().indexOf(q) >= 0;
     }).sort(function (a, c) { return (c.pinned ? 1 : 0) - (a.pinned ? 1 : 0) || (a.id < c.id ? 1 : -1); });
-    var row = function (n) {
+    W.fill($("#notes"), shown.map(function (n) {
       var cur = (n.nb && book(n.nb) ? n.nb : "") + (n.nb && book(n.nb) ? "|" + (n.sec || "") : "");
       return h("li", { class: n.pinned ? "pinned" : null },
         h("span", { class: "main" }, h("div", { style: "white-space:pre-wrap", text: n.text }),
@@ -193,31 +165,7 @@
           moveOpts.map(function (o) { return h("option", { value: o[0], selected: o[0] === cur || (!cur && !o[0]) ? true : null }, o[1]); })),
         h("button", { class: "btn ghost sm", type: "button", "aria-pressed": n.pinned ? "true" : "false", onclick: function () { W.upd("notes", n.id, { pinned: !n.pinned }); } }, n.pinned ? "고정됨" : "고정"),
         h("button", { class: "btn ghost sm danger", type: "button", onclick: function () { W.upd("notes", n.id, { trashed: new Date().toISOString(), pinned: false }); W.toast("휴지통으로 옮겼습니다"); } }, "지우기"));
-    };
-    var b2 = book(nb), pg = $("#nb-pages"), useP = !!(b2 && !q && (b2.sections || []).length);
-    $("#notes").hidden = useP; pg.hidden = !useP;
-    if (!useP) {
-      if (pg.childNodes.length) { markProg(); pg.textContent = ""; } pg.style.height = "";
-      W.fill($("#notes"), shown.map(row), q ? "검색 결과가 없습니다." : tag ? "이 태그의 메모가 없습니다." : "이곳에 메모가 없습니다. 위에서 적어 보세요.");
-    } else if (!pageTouch && !(pageBusy && !pageProg)) {
-      $("#notes").textContent = "";
-      markProg(); /* 다시 그리면 스크롤 위치가 잠깐 0으로 바뀌며 scroll 이벤트가 난다: 목차를 바꾸지 않게 표시 */
-      var o = order(), idx = Math.max(0, o.indexOf(sec)), oldLeft = pg.scrollLeft, w = pg.clientWidth || 1, oldIdx = Math.round(oldLeft / w);
-      var pool = all.filter(function (n) { return n.nb === b2.id && (!tag || (n.tags || []).indexOf(tag) >= 0); })
-        .sort(function (a, c) { return (c.pinned ? 1 : 0) - (a.pinned ? 1 : 0) || (a.id < c.id ? 1 : -1); });
-      pg.textContent = "";
-      o.forEach(function (id) {
-        var ul = h("ul", { class: "list" }), sname = id ? ((b2.sections || []).filter(function (x) { return x.id === id; })[0] || {}).name : "전체";
-        W.fill(ul, pool.filter(function (n) { return !id || n.sec === id; }).map(row), tag ? "이 목차에 이 태그의 메모가 없습니다." : "'" + sname + "' 목차에 메모가 없습니다. 위에서 적어 보세요.");
-        pg.appendChild(h("div", { class: "nb-page", "aria-hidden": id === sec ? null : "true", "data-sec": id }, ul));
-      });
-      w = pg.clientWidth || 1;
-      var same = pg.dataset.book === b2.id;
-      pg.dataset.book = b2.id;
-      if (same && oldIdx !== idx && Math.abs(oldIdx - idx) <= 3) { pg.scrollLeft = oldLeft; markProg(); pg.scrollTo({ left: idx * w, behavior: "smooth" }); }
-      else if (Math.abs(pg.scrollLeft - idx * w) > 1) { markProg(); pg.scrollLeft = idx * w; }
-      fitHeight(idx);
-    }
+    }), q ? "검색 결과가 없습니다." : tag ? "이 태그의 메모가 없습니다." : "이곳에 메모가 없습니다. 위에서 적어 보세요.");
     $("#note-trash").hidden = !dead.length;
     $("#note-trash-n").textContent = dead.length ? dead.length + "개" : "";
     W.fill($("#notes-trash"), dead.sort(function (a, c) { return a.trashed < c.trashed ? 1 : -1; }).map(function (n) {

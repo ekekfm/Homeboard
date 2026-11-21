@@ -33,37 +33,48 @@
 
 <!-- 홈 -->
 <section class="view" id="v-home">
-  <nav class="hstats wide" id="hstats" aria-label="오늘 요약"></nav>
-  <form class="card wide qcap" id="quick">
-    <div class="seg" role="radiogroup" aria-label="기록 종류">
-      <label><input type="radio" name="qtype" id="qt-auto" value="auto" checked><span>자동</span></label>
-      <label><input type="radio" name="qtype" id="qt-task" value="task"><span>할 일</span></label>
-      <label><input type="radio" name="qtype" id="qt-event" value="event"><span>일정</span></label>
-      <label><input type="radio" name="qtype" id="qt-spend" value="spend"><span>지출</span></label>
-      <label><input type="radio" name="qtype" id="qt-memo" value="memo"><span>메모</span></label>
-    </div>
-    <div class="qrow">
-      <label for="q-text" class="sr">빠른 기록</label>
-      <input id="q-text" placeholder="예: 내일 3시 미팅 · 점심 12000 · 은행 가기" autocomplete="off" required>
-      <button class="btn" type="submit">기록</button>
-    </div>
-    <p class="qprev" id="q-prev" aria-live="polite">시간을 적으면 일정, 금액을 적으면 지출, 나머지는 할 일로 기록됩니다.</p>
-  </form>
-  <div class="card">
-    <h2><span>오늘 흐름</span> <a href="#plan" class="muted" style="font-size:13px;font-weight:400">일정 전체</a></h2>
-    <div id="home-tl"></div>
-    <h3 class="subh">할 일 <small id="home-task-count"></small></h3>
-    <ul class="list" id="home-tasks"></ul>
+  <div class="hbar wide" id="home-bar"><button class="hb-edit" id="home-edit" type="button" aria-pressed="false">⇅ 홈 순서</button></div>
+  <div class="hblk wide" data-blk="stats" data-name="오늘 요약">
+    <nav class="hstats" id="hstats" aria-label="오늘 요약"></nav>
   </div>
-  <div class="hside">
+  <div class="hblk wide" data-blk="quick" data-name="빠른 기록">
+    <form class="card qcap" id="quick">
+      <div class="seg" role="radiogroup" aria-label="기록 종류">
+        <label><input type="radio" name="qtype" id="qt-auto" value="auto" checked><span>자동</span></label>
+        <label><input type="radio" name="qtype" id="qt-task" value="task"><span>할 일</span></label>
+        <label><input type="radio" name="qtype" id="qt-event" value="event"><span>일정</span></label>
+        <label><input type="radio" name="qtype" id="qt-spend" value="spend"><span>지출</span></label>
+        <label><input type="radio" name="qtype" id="qt-memo" value="memo"><span>메모</span></label>
+      </div>
+      <div class="qrow">
+        <label for="q-text" class="sr">빠른 기록</label>
+        <input id="q-text" placeholder="예: 내일 3시 미팅 · 점심 12000 · 은행 가기" autocomplete="off" required>
+        <button class="btn" type="submit">기록</button>
+      </div>
+      <p class="qprev" id="q-prev" aria-live="polite">시간을 적으면 일정, 금액을 적으면 지출, 나머지는 할 일로 기록됩니다.</p>
+    </form>
+  </div>
+  <div class="hblk" data-blk="flow" data-name="오늘 흐름 · 할 일">
+    <div class="card">
+      <h2><span>오늘 흐름</span> <a href="#plan" class="muted" style="font-size:13px;font-weight:400">일정 전체</a></h2>
+      <div id="home-tl"></div>
+      <h3 class="subh">할 일 <small id="home-task-count"></small></h3>
+      <ul class="list" id="home-tasks"></ul>
+    </div>
+  </div>
+  <div class="hblk" data-blk="money" data-name="가계부">
     <div class="card hmoney">
       <h2>가계부 <a href="#money" class="muted" style="font-size:13px;font-weight:400">자세히</a></h2>
       <div id="home-money"></div>
     </div>
+  </div>
+  <div class="hblk" data-blk="news" data-name="오늘의 이슈">
     <div class="card">
       <h2><span>오늘의 이슈 <small id="home-news-meta"></small></span> <a href="#news" class="muted" style="font-size:13px;font-weight:400">전체 보기</a></h2>
       <div id="home-news"></div>
     </div>
+  </div>
+  <div class="hblk" data-blk="apps" data-name="앱 바로가기">
     <div class="card">
       <h2>앱 바로가기 <button class="btn ghost sm" id="apps-edit" type="button">편집</button></h2>
       <div class="apps" id="apps"></div>
@@ -86,25 +97,29 @@
       </div>
     </div>
   </div>
-  <div class="card wide" id="sync-card" aria-live="polite"></div>
-  <div class="card wide">
-    <details>
-      <summary>설정과 백업</summary>
-      <form class="add" id="cfg" style="margin-top:12px">
-        <label class="row">날씨 지역 <input id="cfg-region" placeholder="예: 서울" style="width:140px"></label>
-        <button class="btn" type="submit">저장</button>
-      </form>
-      <div class="row" id="notif-row" style="margin:0 0 12px" hidden>
-        <button class="btn ghost" id="notif-btn" type="button">기기 알림 켜기</button>
-        <span class="muted" id="notif-state" style="font-size:13px;flex:1 1 220px"></span>
-      </div>
-      <p class="muted" style="font-size:14px;margin:0 0 10px">로그인하지 않으면 기록은 이 기기에만 저장됩니다. 백업 파일은 로그인과 상관없이 언제든 저장하고 불러올 수 있습니다.</p>
-      <div class="row">
-        <button class="btn ghost" id="backup" type="button">백업 파일 저장</button>
-        <label class="btn ghost" for="restore" style="display:inline-flex;align-items:center">백업 파일 불러오기</label>
-        <input id="restore" type="file" accept="application/json,.json" style="position:absolute;opacity:0;width:1px;height:1px">
-      </div>
-    </details>
+  <div class="hblk wide" data-blk="sync" data-name="동기화">
+    <div class="card" id="sync-card" aria-live="polite"></div>
+  </div>
+  <div class="hblk wide" data-blk="settings" data-name="설정과 백업">
+    <div class="card">
+      <details>
+        <summary>설정과 백업</summary>
+        <form class="add" id="cfg" style="margin-top:12px">
+          <label class="row">날씨 지역 <input id="cfg-region" placeholder="예: 서울" style="width:140px"></label>
+          <button class="btn" type="submit">저장</button>
+        </form>
+        <div class="row" id="notif-row" style="margin:0 0 12px" hidden>
+          <button class="btn ghost" id="notif-btn" type="button">기기 알림 켜기</button>
+          <span class="muted" id="notif-state" style="font-size:13px;flex:1 1 220px"></span>
+        </div>
+        <p class="muted" style="font-size:14px;margin:0 0 10px">로그인하지 않으면 기록은 이 기기에만 저장됩니다. 백업 파일은 로그인과 상관없이 언제든 저장하고 불러올 수 있습니다.</p>
+        <div class="row">
+          <button class="btn ghost" id="backup" type="button">백업 파일 저장</button>
+          <label class="btn ghost" for="restore" style="display:inline-flex;align-items:center">백업 파일 불러오기</label>
+          <input id="restore" type="file" accept="application/json,.json" style="position:absolute;opacity:0;width:1px;height:1px">
+        </div>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -322,7 +337,6 @@
         <input class="grow" id="note-q" type="search" placeholder="메모 검색" aria-label="메모 검색">
       </div>
       <ul class="list" id="notes"></ul>
-      <div class="nb-pages" id="nb-pages" aria-label="목차별 메모. 좌우로 밀면 옆 목차로 넘어갑니다" hidden></div>
       <details id="note-trash" style="margin-top:12px"><summary>휴지통 <span id="note-trash-n"></span></summary>
         <p class="muted" style="font-size:13px;margin:6px 0">지운 메모는 30일 동안 여기에 남았다가 자동으로 정리됩니다.</p>
         <ul class="list" id="notes-trash"></ul>
@@ -334,16 +348,13 @@
 <!-- 뉴스 -->
 <section class="view" id="v-news">
   <div class="card wide"><h2>날씨 <small id="wx2-meta"></small></h2><div id="wx2"></div></div>
-  <div class="slotbar wide" id="sb-news"></div>
-  <div class="card" id="news-eco"></div>
-  <div class="card" id="news-main"></div>
+  <div class="nacc wide" id="news-acc"></div>
   <div class="card wide"><h2>이번 주 경제 헤드라인</h2><div id="week"></div></div>
 </section>
 
 <!-- 증권뉴스 -->
 <section class="view" id="v-stock">
-  <div class="slotbar reading" id="sb-stock"></div>
-  <div class="card reading" id="stock-list"></div>
+  <div class="nacc reading" id="stock-acc"></div>
 </section>
 </main>
 </div>
@@ -355,6 +366,8 @@
 <script src="js/notify.js"></script>
 <script src="js/plan.js"></script>
 <script src="js/remind.js"></script>
+<script src="js/swipe.js"></script>
+<script src="js/homeorder.js"></script>
 <script src="js/notes.js"></script>
 <script>
 (function(){
@@ -491,16 +504,17 @@ function loadWeather(force){var region=(S.config.region||"서울").trim();
     try{localStorage.setItem("homeboard-wx",JSON.stringify(wxData))}catch(e){}draw()
   }).catch(function(e){if(!wxData||wxData.region!==region||!wxData.days){wxData={region:region,error:(e&&e.message==="place")?"place":"net"};draw()}})}
 function loadBrief(){getJSON("data/briefing.json").then(function(b){brief=normBrief(b);draw();sysNotify()}).catch(function(){brief=brief||{error:true};draw()})}
-/* 뉴스는 하루 세 번(아침·오후·밤) 갱신된다. 예전 형식(slots 없음)도 받아준다. */
-var SLOTS=[["morning","아침","오전 7시"]],SLOTNAME={morning:"아침",afternoon:"오후",night:"밤"};
+/* 뉴스는 하루 세 번(아침·점심·저녁) 갱신된다. 예전 형식(slots 없음)도 받아준다. 키 이름은 예전 파일과 맞추려고 그대로 둔다. */
+var SLOTS=[["morning","아침","오전 7시"],["afternoon","점심","낮 12시"],["night","저녁","오후 6시"]],SLOTNAME={morning:"아침",afternoon:"점심",night:"저녁"};
 function kstSlot(iso){var k=new Date(Date.parse(iso)+9*3600000),hr=k.getUTCHours();
   if(hr<5)return{date:new Date(k.getTime()-86400000).toISOString().slice(0,10),slot:"night"};
-  return{date:k.toISOString().slice(0,10),slot:hr<11?"morning":hr<17?"afternoon":"night"}}
+  return{date:k.toISOString().slice(0,10),slot:hr<11?"morning":hr<16?"afternoon":"night"}}
 function normBrief(b){if(!b||typeof b!=="object")return{error:true};if(b.slots)return b;
   if(!b.updatedAt)return{slots:{},week:b.week||[]};var k=kstSlot(b.updatedAt),sl={};sl[k.slot]={at:b.updatedAt,economy:b.economy||[],news:b.news||[]};
   return{date:k.date,slot:k.slot,updatedAt:b.updatedAt,slots:sl,week:b.week||[]}}
 function hhmm(iso){var d=new Date(iso);return isNaN(d)?"":pad(d.getHours())+":"+pad(d.getMinutes())}
-function latest(){var b=brief,k="morning";if(!b||b.error||!b.slots||!b.slots[k])return null;return{b:b,s:b.slots[k],name:"아침",id:b.date+"-"+k+"-"+(b.slots[k].at||"")}}
+function latest(){var b=brief;if(!b||b.error||!b.slots)return null;var k=null;SLOTS.forEach(function(z){if(b.slots[z[0]])k=z[0]});if(!k)return null;
+  return{b:b,s:b.slots[k],name:SLOTNAME[k],slot:k,id:b.date+"-"+k+"-"+(b.slots[k].at||"")}}
 function wxLine(){var w=wxData,t=w&&w.days&&w.days[0];if(!w)return"날씨를 불러오는 중입니다.";if(!t)return"날씨를 불러오지 못했습니다.";
   return"오늘 강수확률 "+(t.pop!=null?t.pop+"%":"정보 없음")+" · "+t.c+" · 최고 "+t.hi+"° / 최저 "+t.lo+"°"}
 function headline(l){return(l.s.news||[])[0]||(l.s.economy||[])[0]||null}
@@ -512,17 +526,28 @@ function ago(iso){var t=Date.parse(iso||"");if(isNaN(t))return"";var m=Math.roun
 function newsList(items,num){return h("ol",{class:"nl"+(num?"":" plain")},items.map(function(n,i){var ok=n.url&&/^https?:\/\//.test(n.url);
   return h("li",null,h("a",{href:ok?n.url:null,target:"_blank",rel:"noopener"},num?h("span",{class:"no","aria-hidden":"true",text:i+1}):null,
     h("span",{class:"tx"},h("span",{class:"hl",text:n.t||""}),h("span",{class:"meta",text:[n.src,ago(n.d)].filter(Boolean).join(" · ")}))))}))}
-function curSlot(){return"morning"}
-function slotBar(el){var b=brief||{},x=(b.slots||{}).morning,isToday=!b.date||b.date===today();el.textContent="";
-  el.appendChild(h("div",{class:"sb-date"},h("b",{text:isToday?"오늘 아침 뉴스":nice(b.date)+" 아침 뉴스"}),
-    h("span",{text:x?(isToday?"":nice(b.date)+" ")+hhmm(x.at)+" 업데이트 · 매일 오전 7시쯤 갱신":"매일 오전 7시쯤 갱신됩니다"})))}
-function listCard(el,title,key,emptyMsg){var b=brief||{},cur=curSlot(),x=(b.slots||{})[cur],items=(x&&x[key])||[];el.textContent="";
-  el.appendChild(h("h2",null,h("span",{text:title}),h("small",{text:items.length?SLOTNAME[cur]+" · "+items.length+"건":""})));
-  if(b.error){el.appendChild(h("p",{class:"empty",text:"뉴스를 불러오지 못했습니다. 인터넷 연결을 확인하세요."}));return}
-  if(!x){var sd=SLOTS.filter(function(z){return z[0]===cur})[0];
-    el.appendChild(h("p",{class:"empty",text:(!b.date||b.date===today())?SLOTNAME[cur]+" 소식은 "+sd[2]+"쯤 도착합니다.":"이 날은 "+SLOTNAME[cur]+" 업데이트가 없었습니다."}));return}
-  if(!items.length){el.appendChild(h("p",{class:"empty",text:emptyMsg}));return}
-  el.appendChild(newsList(items,true))}
+/* 뉴스 목차: 아침·점심·저녁을 누르면 펼쳐진다. 펼친 상태는 다시 그려도 유지한다. */
+var accOpen={},accSig={};
+function newsAcc(el,keys){var b=brief||{},sl=b.slots||{},isToday=!b.date||b.date===today(),l=latest(),dkey=(b.date||"")+"|";
+  var sig=JSON.stringify([b.date,b.error,SLOTS.map(function(z){var x=sl[z[0]];return x?[x.at,keys.map(function(k){return(x[k]||[]).length})]:0}),isToday]);
+  if(selSlot)accOpen[el.id+dkey+selSlot]=true; /* 홈에서 "○○ 뉴스 도착"을 누르면 그 목차를 펼친다 */
+  if(accSig[el.id]===sig){el.querySelectorAll("details[data-slot]").forEach(function(d){var o=!!accOpen[el.id+dkey+d.dataset.slot];if(d.open!==o)d.open=o});return}
+  accSig[el.id]=sig;el.textContent="";
+  if(b.error){el.appendChild(h("div",{class:"card"},h("p",{class:"empty",text:"뉴스를 불러오지 못했습니다. 인터넷 연결을 확인하세요."})));return}
+  var anyOpen=SLOTS.some(function(z){return accOpen[el.id+dkey+z[0]]!==undefined});
+  if(!anyOpen&&l)accOpen[el.id+dkey+l.slot]=true;
+  el.appendChild(h("p",{class:"nacc-date",text:(isToday?"오늘":nice(b.date))+" 뉴스 · 하루 세 번(오전 7시·낮 12시·오후 6시쯤) 갱신"}));
+  SLOTS.forEach(function(z){var x=sl[z[0]],cnt=x?keys.map(function(k){return(x[k]||[]).length}).reduce(function(p,c){return p+c},0):0;
+    var meta=x?hhmm(x.at)+" 업데이트 · "+cnt+"건":isToday?z[2]+"쯤 도착 예정":"업데이트 없음";
+    var d=h("details",{class:"card nslot"+(x?"":" wait"),"data-slot":z[0]},
+      h("summary",null,h("span",{class:"ns-name",text:z[1]+" 뉴스"}),h("span",{class:"ns-meta",text:meta}),h("span",{class:"ns-chev","aria-hidden":"true"})));
+    if(!x)d.appendChild(h("p",{class:"empty",text:isToday?z[1]+" 소식은 "+z[2]+"쯤 도착합니다. GitHub 예약 실행이라 늦어질 수 있습니다.":"이 날은 "+z[1]+" 업데이트가 없었습니다."}));
+    else keys.forEach(function(k){var items=x[k]||[],nm={economy:"경제",news:"주요 뉴스",stock:"증권 뉴스"}[k];
+      if(keys.length>1)d.appendChild(h("h3",{class:"ns-sub",text:nm+" "+items.length+"건"}));
+      d.appendChild(items.length?newsList(items,true):h("p",{class:"empty",text:"이 시간대에는 "+nm+"가 없습니다."}))});
+    d.open=!!accOpen[el.id+dkey+z[0]];
+    d.addEventListener("toggle",function(){accOpen[el.id+dkey+z[0]]=d.open});
+    el.appendChild(d)})}
 function renderNotice(){var el=$("#notice"),l=latest();
   if(!l||l.id===lsGet("homeboard-seen")||l.id===noticeHidden){el.hidden=true;return}
   function done(){noticeHidden=l.id;lsSet("homeboard-seen",l.id);el.hidden=true}
@@ -533,7 +558,7 @@ function renderNotice(){var el=$("#notice"),l=latest();
   if(hl)el.appendChild(h("div",{class:"nr"},h("span",{class:"lb",text:"뉴스"}),h("span",null,
     h("a",{href:hl.url&&/^https?:\/\//.test(hl.url)?hl.url:null,target:"_blank",rel:"noopener",text:hl.t}),hl.src?h("span",{class:"muted",text:" · "+hl.src}):null)));
   el.appendChild(h("div",{class:"acts"},h("button",{class:"btn ghost sm",type:"button",text:"닫기",onclick:done}),
-    h("button",{class:"btn sm",type:"button",text:"뉴스 보기",onclick:function(){done();location.hash="news"}})));
+    h("button",{class:"btn sm",type:"button",text:"뉴스 보기",onclick:function(){done();selSlot=l.slot;location.hash="news"}})));
   el.hidden=false}
 /* 기기 알림: 홈보드가 열려 있지만 화면에 안 보일 때(다른 탭·창) 새 소식을 알려준다. */
 function sysNotify(){var l=latest();if(!l)return;
@@ -662,7 +687,7 @@ function homeTimeline(){var td=today(),now=new Date(),nowMin=now.getHours()*60+n
   function mins(t){var p=String(t).split(":");return(+p[0])*60+(+p[1]||0)}
   var evs=S.events.filter(function(e){return occurs(e,td)});
   evs.forEach(function(e){items.push(e.time?{m:mins(e.time),time:e.time,title:e.title,sub:"일정",href:"#plan"}:{m:-1,time:"종일",title:e.title,sub:"일정 · 하루 종일",href:"#plan"})});
-  var b=brief||{},sl=b.slots||{},isToday=b.date===td,SH={morning:7,afternoon:13,night:21};
+  var b=brief||{},sl=b.slots||{},isToday=b.date===td,SH={morning:7,afternoon:12,night:18};
   SLOTS.forEach(function(sd){var x=isToday&&sl[sd[0]];
     if(x){var at=hhmm(x.at),top=(x.news||[])[0]||(x.economy||[])[0];
       items.push({m:mins(at),time:at,title:sd[1]+" 뉴스 도착",sub:"경제 "+(x.economy||[]).length+" · 증권 "+(x.stock||[]).length+" · 주요 "+(x.news||[]).length+(top?" · "+top.t:""),href:"#news",slot:sd[0]})}
@@ -750,8 +775,8 @@ function render(){
   hm.appendChild(h("div",{class:"muted",style:"font-size:13px",text:"순자산"}));hm.appendChild(h("div",{class:"big",text:signed(total)}));
   hm.appendChild(h("div",{class:"tiles"},tile("이번 달 수입","+"+won(cur.inc)),tile("이번 달 지출","-"+won(cur.out)),tile("배분할 수 있는 돈",won(Math.max(0,can)))));
   var lb=latest(),lbToday=lb&&lb.b.date===td,lbCount=lbToday?((lb.s.economy||[]).length+(lb.s.stock||[]).length+(lb.s.news||[]).length):0,hs=$("#hstats");hs.textContent="";
-  [["#plan","남은 할 일",open.length+"개"],["#work","진행 중 업무",(S.work||[]).filter(function(w){return w.status==="진행 중"}).length+"개"],["#money","오늘 지출",won(cur.byDay[new Date().getDate()]||0)],["#news",lbToday?lb.name+" 뉴스":"오늘 뉴스",lbToday?lbCount+"건":"대기 중"]].forEach(function(x){
-    hs.appendChild(h("a",{href:x[0]},h("span",{class:"k",text:x[1]}),h("b",{text:x[2]})))});
+  [["#home-tasks","남은 할 일",open.length+"개"],["#work","진행 중 업무",(S.work||[]).filter(function(w){return w.status==="진행 중"}).length+"개"],["#money","오늘 지출",won(cur.byDay[new Date().getDate()]||0)],["#news",lbToday?lb.name+" 뉴스":"오늘 뉴스",lbToday?lbCount+"건":"대기 중"]].forEach(function(x){
+    hs.appendChild(h("a",{href:x[0]==="#home-tasks"?"#home":x[0],onclick:x[0]==="#home-tasks"?function(e){e.preventDefault();var t=$("#home-tasks");if(t)t.closest(".hblk").scrollIntoView({behavior:"smooth",block:"start"})}:null},h("span",{class:"k",text:x[1]}),h("b",{text:x[2]})))});
   var names={inv:"투자",sav:"저축",use:"사용"},att=$("#al-total");att.textContent="";
   att.appendChild(tile("투자 누적",won(at.inv)));att.appendChild(tile("저축 누적",won(at.sav)));att.appendChild(tile("사용 누적",won(at.use)));
   fill($("#al-list"),mine.slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:a.id<b.id?1:-1}).map(function(a){
@@ -772,10 +797,7 @@ function render(){
   ck.forEach(function(c){bars.appendChild(h("div",{class:"b",title:c+" "+won(m.cats[c])},h("span",{text:c}),h("span",{class:"t"},h("i",{style:"width:"+Math.max(2,Math.round(m.cats[c]/mx*100))+"%"})),
     h("span",{class:"n"},won(m.cats[c]),h("small",{text:Math.round(m.cats[c]/m.out*100)+"%"}))))});
   /* 뉴스·증권뉴스 */
-  slotBar($("#sb-news"));slotBar($("#sb-stock"));
-  listCard($("#news-eco"),"경제","economy","이 시간대에는 경제 기사가 없습니다.");
-  listCard($("#news-main"),"주요 뉴스","news","이 시간대에는 주요 뉴스가 없습니다.");
-  listCard($("#stock-list"),"증권 뉴스","stock","이 시간대에는 증권 기사가 없습니다. 다음 업데이트부터 채워집니다.");
+  newsAcc($("#news-acc"),["economy","news"]);newsAcc($("#stock-acc"),["stock"]);selSlot=null;
   var b=brief||{},wk=(b.week||[]).slice().reverse(),we=$("#week");we.textContent="";
   if(!wk.length)we.appendChild(h("p",{class:"empty",text:"하루씩 쌓여 최근 7일의 헤드라인을 보여줍니다."}));
   wk.forEach(function(g){we.appendChild(h("div",{class:"wk-day",text:nice(g.date)}));we.appendChild(newsList(g.items||[],false))});
