@@ -66,11 +66,8 @@
 
   /* ---------- 계좌 ---------- */
   function renderAccounts() {
-    var h = W.h, box = W.$("#acct-list"), bal = balances(), asset = 0, debt = 0;
+    var h = W.h, box = W.$("#acct-list"), bal = balances();
     box.textContent = "";
-    accts().forEach(function (a) { var v = bal.shown[a.id]; if (DEBT[a.kind]) debt += -v; else asset += v; });
-    box.appendChild(h("div", { class: "tiles", style: "margin-bottom:10px" },
-      W.tile("자산 합계", W.won(asset)), W.tile("부채 합계", W.won(debt)), W.tile("순자산", W.signed(asset - debt))));
     var ul = h("ul", { class: "list" });
     accts().forEach(function (a) {
       var v = bal.shown[a.id], isDebt = !!DEBT[a.kind], valued = a.value != null && a.value !== "" && !isDebt;

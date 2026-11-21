@@ -213,59 +213,9 @@
   <div class="card wide" style="padding:8px">
     <div class="seg" role="radiogroup" aria-label="가계부 화면">
       <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-cal" value="cal" checked><span>달력</span></label>
-      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-asset" value="asset"><span>자산</span></label>
-      <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-alloc" value="alloc"><span>자산배분</span></label>
       <label style="flex:1;text-align:center"><input type="radio" name="mtab" id="mtab-budget" value="budget"><span>예산</span></label>
     </div>
   </div>
-
-  <!-- 2. 자산 -->
-  <div class="card hero wide" data-mt="asset"><div id="a-hero"></div></div>
-  <div class="card wide" data-mt="asset">
-    <h2>계좌 <small>잔액은 시작 금액과 달력 기록으로 자동 계산합니다</small></h2>
-    <div id="acct-list"></div>
-    <details id="acct-add"><summary>계좌 추가</summary>
-      <form class="add" id="acct-form" style="margin-top:10px">
-        <input class="grow" id="acct-name" placeholder="이름 (예: 토스 통장, 신한카드)" required autocomplete="off">
-        <select id="acct-kind" aria-label="종류">
-          <option value="bank">통장</option><option value="cash">현금</option><option value="invest">증권·투자</option><option value="other">기타 자산</option>
-          <option value="card">신용카드(부채)</option><option value="loan">대출(부채)</option>
-        </select>
-        <input id="acct-open" type="number" inputmode="numeric" placeholder="시작 금액(원)" style="flex:1 1 150px">
-        <button class="btn" type="submit">추가</button>
-        <p class="muted" style="flex:1 1 100%;margin:0;font-size:13px">신용카드·대출은 갚아야 할 금액을 양수로 적으세요. 카드로 쓴 돈은 지출로, 카드값 납부는 통장 → 카드 이체로 적으면 이중으로 잡히지 않습니다.</p>
-      </form>
-    </details>
-  </div>
-  <div class="card wide" data-mt="asset"><h2>월별 순자산 <small>달력에 적은 수입·지출 기준, 투자 평가액 제외</small></h2><div class="chart" id="a-chart"></div></div>
-  <div class="card wide" data-mt="asset">
-    <h2>기본 계좌 시작 금액 <small>기록을 시작하기 전에 가지고 있던 금액</small></h2>
-    <form class="add" id="base-form" style="margin:0">
-      <input id="base-amt" type="number" inputmode="numeric" placeholder="금액(원)" style="flex:1 1 160px">
-      <button class="btn" type="submit">저장</button>
-      <p class="muted" style="flex:1 1 100%;margin:0;font-size:13px">순자산 = 모든 계좌의 시작 금액 + 달력에 적은 수입 − 지출(이체는 빼고 계산). 비워 두면 0원에서 시작합니다.</p>
-    </form>
-  </div>
-
-  <!-- 3. 자산배분 -->
-  <div class="card hero wide" data-mt="alloc"><div id="al-hero"></div></div>
-  <div class="card" data-mt="alloc">
-    <h2>배분 기록하기</h2>
-    <form class="add" id="al-form">
-      <div class="seg" role="radiogroup" aria-label="배분 구분">
-        <label><input type="radio" name="alkind" id="alk-inv" value="inv" checked><span>투자</span></label>
-        <label><input type="radio" name="alkind" id="alk-sav" value="sav"><span>저축</span></label>
-        <label><input type="radio" name="alkind" id="alk-use" value="use"><span>사용</span></label>
-      </div>
-      <input id="al-date" type="date" required aria-label="날짜">
-      <input id="al-amt" type="number" inputmode="numeric" min="1" placeholder="금액(원)" required style="flex:1 1 130px">
-      <input class="grow" id="al-memo" placeholder="내용 (선택)" autocomplete="off">
-      <button class="btn" type="submit">기록</button>
-    </form>
-    <ul class="list" id="al-list"></ul>
-  </div>
-  <div class="card" data-mt="alloc"><h2>이번 달 배분</h2><div id="al-box"></div></div>
-  <div class="card wide" data-mt="alloc"><h2>전체 누적</h2><div class="tiles" id="al-total"></div></div>
 
   <!-- 4. 예산 -->
   <div class="card wide" data-mt="budget">
@@ -283,6 +233,22 @@
       <button class="btn" type="submit">추가</button>
     </form>
     <ul class="list" id="rec-list"></ul>
+  </div>
+  <div class="card wide" data-mt="budget">
+    <h2>계좌 관리 <small>잔액은 시작 금액과 달력 기록으로 자동 계산합니다</small></h2>
+    <div id="acct-list"></div>
+    <details id="acct-add"><summary>계좌 추가</summary>
+      <form class="add" id="acct-form" style="margin-top:10px">
+        <input class="grow" id="acct-name" placeholder="이름 (예: 토스 통장, 신한카드)" required autocomplete="off">
+        <select id="acct-kind" aria-label="종류">
+          <option value="bank">통장</option><option value="cash">현금</option><option value="invest">증권·투자</option><option value="other">기타 자산</option>
+          <option value="card">신용카드(부채)</option><option value="loan">대출(부채)</option>
+        </select>
+        <input id="acct-open" type="number" inputmode="numeric" placeholder="시작 금액(원)" style="flex:1 1 150px">
+        <button class="btn" type="submit">추가</button>
+        <p class="muted" style="flex:1 1 100%;margin:0;font-size:13px">신용카드·대출은 갚아야 할 금액을 양수로 적으세요. 카드로 쓴 돈은 지출로, 카드값 납부는 통장 → 카드 이체로 적으면 이중으로 잡히지 않습니다.</p>
+      </form>
+    </details>
   </div>
 
   <!-- 3. 달력 -->
@@ -763,25 +729,13 @@ function render(){
   }
   /* 가계부 */
   document.querySelectorAll("[data-mt]").forEach(function(el){el.hidden=el.dataset.mt!==moneyTab});
-  var cur=monthSum(nowKey()),ser=assetSeries(),total=ser[ser.length-1].val;
-  var ah=$("#a-hero");ah.textContent="";ah.appendChild(assetHero(ser));assetChart($("#a-chart"),ser);
-  var mine=S.allocs.filter(function(a){return String(a.date).slice(0,7)===nowKey()}),ar=allocSum(mine),at=allocSum(S.allocs);
-  var reserved=ar.inv+ar.sav+Math.max(ar.use,cur.out),can=cur.inc-reserved;
-  var alh=$("#al-hero");alh.textContent="";alh.appendChild(h("div",{class:"k",text:can<0?"배분 가능 금액을 넘긴 금액":"지금 배분할 수 있는 금액"}));alh.appendChild(h("div",{class:"big",text:won(Math.abs(can))}));
-  alh.appendChild(h("div",{class:"facts"},h("span",null,"이번 달 수입 ",h("b",{text:"+"+won(cur.inc)})),h("span",null,"지출 ",h("b",{text:"-"+won(cur.out)})),
-    h("span",null,"수입 − 지출 ",h("b",{text:signed(cur.inc-cur.out)})),h("span",null,"배분한 금액 ",h("b",{text:won(ar.total)}))));
-  allocBox($("#al-box"),ar,cur.out);
+  var cur=monthSum(nowKey()),todayOut=cur.byDay[new Date().getDate()]||0;
   var hm=$("#home-money");hm.textContent="";
-  hm.appendChild(h("div",{class:"muted",style:"font-size:13px",text:"순자산"}));hm.appendChild(h("div",{class:"big",text:signed(total)}));
-  hm.appendChild(h("div",{class:"tiles"},tile("이번 달 수입","+"+won(cur.inc)),tile("이번 달 지출","-"+won(cur.out)),tile("배분할 수 있는 돈",won(Math.max(0,can)))));
+  hm.appendChild(h("div",{class:"muted",style:"font-size:13px",text:"이번 달 지출"}));hm.appendChild(h("div",{class:"big",text:"-"+won(cur.out)}));
+  hm.appendChild(h("div",{class:"tiles"},tile("오늘 지출","-"+won(todayOut)),tile("이번 달 수입","+"+won(cur.inc)),tile("수입 − 지출",signed(cur.inc-cur.out))));
   var lb=latest(),lbToday=lb&&lb.b.date===td,lbCount=lbToday?((lb.s.economy||[]).length+(lb.s.stock||[]).length+(lb.s.news||[]).length):0,hs=$("#hstats");hs.textContent="";
   [["#home-tasks","남은 할 일",open.length+"개"],["#work","진행 중 업무",(S.work||[]).filter(function(w){return w.status==="진행 중"}).length+"개"],["#money","오늘 지출",won(cur.byDay[new Date().getDate()]||0)],["#news",lbToday?lb.name+" 뉴스":"오늘 뉴스",lbToday?lbCount+"건":"대기 중"]].forEach(function(x){
     hs.appendChild(h("a",{href:x[0]==="#home-tasks"?"#home":x[0],onclick:x[0]==="#home-tasks"?function(e){e.preventDefault();var t=$("#home-tasks");if(t)t.closest(".hblk").scrollIntoView({behavior:"smooth",block:"start"})}:null},h("span",{class:"k",text:x[1]}),h("b",{text:x[2]})))});
-  var names={inv:"투자",sav:"저축",use:"사용"},att=$("#al-total");att.textContent="";
-  att.appendChild(tile("투자 누적",won(at.inv)));att.appendChild(tile("저축 누적",won(at.sav)));att.appendChild(tile("사용 누적",won(at.use)));
-  fill($("#al-list"),mine.slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:a.id<b.id?1:-1}).map(function(a){
-    return h("li",null,h("span",{class:"pill "+(a.kind==="use"?"good":"info"),text:names[a.kind]||""}),
-      h("span",{class:"main"},h("b",{class:"amt",text:won(a.amt)}),h("div",{class:"sub",text:[nice(a.date),a.memo].filter(Boolean).join(" · ")})),delBtn(function(){del("allocs",a.id)}))}),"이번 달 배분 기록이 없습니다.");
   var m=monthSum(viewMonth),vp=viewMonth.split("-");
   $("#m-label").textContent=vp[0]+"년 "+(+vp[1])+"월";$("#m-now").hidden=m.isNow;
   var mt=$("#m-tiles");mt.textContent="";mt.appendChild(tile("수입",won(m.inc)));mt.appendChild(tile("지출",won(m.out)));mt.appendChild(tile("수지",signed(m.inc-m.out)));
@@ -842,11 +796,6 @@ on("#money-form",function(){var a=Math.round(+val("#m-amt"));if(!(a>0))return;va
   if(acct!=="main")o.acct=acct;if(type==="tr")o.to=to;
   moneyAdd(selDay.slice(0,7),o);
   $("#m-amt").value="";$("#m-memo").value="";toast("기록했습니다")});
-on("#base-form",function(){S.config.base=+val("#base-amt")||0;save();draw();toast("시작 자산을 저장했습니다")});
-on("#al-form",function(){var a=+val("#al-amt");if(!(a>0))return;
-  add("allocs",{kind:document.querySelector('input[name="alkind"]:checked').value,amt:a,memo:val("#al-memo"),date:val("#al-date")||today()});
-  $("#al-amt").value="";$("#al-memo").value="";toast("배분을 기록했습니다")});
-function fillBase(){$("#base-amt").value=S.config.base||""}
 $("#notif-btn").addEventListener("click",function(){try{Promise.resolve(Notification.requestPermission()).then(function(){draw()},function(){draw()})}catch(e){draw()}});
 on("#app-form",function(f){var nm=val("#app-name"),addr=val("#app-addr"),pkg=val("#app-pkg"),sc=val("#app-sc"),web=val("#app-web");
   if(addr&&!/:\/\//.test(addr))addr=addr.replace(/:?$/,"")+"://";
@@ -866,7 +815,7 @@ $("#backup").addEventListener("click",function(){var a=h("a",{href:URL.createObj
   document.body.appendChild(a);a.click();a.remove();toast("백업 파일을 저장했습니다")});
 $("#restore").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();
   r.onload=function(){try{var d=JSON.parse(r.result);if(!d||typeof d!=="object"||!Array.isArray(d.tasks))throw 0;
-      for(var k in S)if(d[k]!=null)S[k]=d[k];save();$("#cfg-region").value=S.config.region||"";fillBase();loadWeather(true);draw();toast("백업을 불러왔습니다")}
+      for(var k in S)if(d[k]!=null)S[k]=d[k];save();$("#cfg-region").value=S.config.region||"";loadWeather(true);draw();toast("백업을 불러왔습니다")}
     catch(x){toast("업무 보드(홈보드) 백업 파일이 아닙니다")}e.target.value=""};r.readAsText(f)});
 
 /* ---------- 화면 전환 ---------- */
@@ -898,8 +847,7 @@ window.WBApp={
 /* ---------- 시작 ---------- */
 load();
 (function(){var cut=new Date(Date.now()-30*86400000).toISOString(),n=S.notes.length;S.notes=S.notes.filter(function(x){return !x.trashed||x.trashed>cut});if(S.notes.length!==n)save()})();
-["#al-date"].forEach(function(x){$(x).value=today()});
-$("#cfg-region").value=S.config.region||"";fillBase();
+$("#cfg-region").value=S.config.region||"";
 route();render();initAppDrag();loadWeather(false);loadBrief();
 document.addEventListener("visibilitychange",function(){if(!document.hidden){loadWeather(false);loadBrief();draw()}});
 setInterval(function(){loadBrief();if(!document.hidden)loadWeather(false)},10*60000);

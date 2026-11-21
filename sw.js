@@ -1,6 +1,6 @@
 /* 업무 보드 서비스 워커: 앱 화면과 Firebase 코드는 저장해 두고 오프라인에서도 열리게, 뉴스는 항상 새로 받아온다.
    Firestore·로그인 통신(googleapis.com 등)은 건드리지 않는다. */
-const CACHE = "homeboard-v30";
+const CACHE = "homeboard-v31";
 const FIREBASE_V = "13.2.0"; // js/firebase-backend.js의 V와 같게
 const SHELL = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png",
   "css/app.css", "js/work.js", "js/money.js", "js/ideas.js", "js/notify.js", "js/plan.js", "js/remind.js", "js/swipe.js", "js/homeorder.js", "js/notes.js", "js/sync.js", "js/sync-core.js", "js/firebase-backend.js", "js/firebase-config.js"];
