@@ -453,3 +453,10 @@ body.modal-open{overflow:hidden}
 .remind .rt b{overflow-wrap:anywhere}
 .remind .acts{display:flex;gap:8px;justify-content:flex-end;margin-top:8px;flex-wrap:wrap}
 @media (prefers-reduced-motion:no-preference){.remind{animation:drop .25s ease-out}}
+
+/* 메모: 목차별 칸을 옆으로 이어 붙인 슬라이드 */
+.nb-pages{display:flex;align-items:flex-start;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;transition:height .2s ease}
+.nb-pages[hidden]{display:none}
+.nb-pages::-webkit-scrollbar{display:none}
+.nb-page{flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always}
+.nb-page .list{margin:0}
