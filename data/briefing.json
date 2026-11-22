@@ -1,7 +1,7 @@
 {
  "date": "2026-11-22",
- "slot": "afternoon",
- "updatedAt": "2026-11-22T02:03:29.668Z",
+ "slot": "night",
+ "updatedAt": "2026-11-22T10:57:55.632Z",
  "slots": {
   "afternoon": {
    "at": "2026-11-22T02:03:29.668Z",
@@ -119,82 +119,199 @@
      "d": "2026-11-21T23:09:00.000Z"
     }
    ]
+  },
+  "night": {
+   "at": "2026-11-22T10:57:55.632Z",
+   "economy": [
+    {
+     "t": "증시 급락 우려에 정부 긴급 대응‥안정펀드 가동 준비",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE90c3k3SlBZdEkyZzZHUzQ0enVVbTZwUmdjODBYcnpEeXJiOWZrazMyTFg5WGQxemIzTHVjVy0wdFZOdnk1TTFHeWZBUXdoR09YRVVQb3ZacWpVRFVfN1ZFVk1TZ1dPYVBVUGdFY1pCYjlYRGxP0gF0QVVfeXFMTXA5eHJ3ZWRiZXR1cnkxQ0x5VFJVbVNEMTFZeUNHR04wMUgtcjdrYktiRTd3VEh3MEMxRFFVTnpCTzJqVXN4SzNCVWFGSmRKbklCbzlMWTdSLTFvUHJDeE5WdUZialhqbmN0cDJpdWVJQ2p2TWM?oc=5",
+     "d": "2026-11-22T09:52:06.000Z"
+    },
+    {
+     "t": "외인매도에 5,000선도 깨진 코스피…호재에도 '받아줄 돈이 없다'",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE81ZDh0elpqUkM4eDZESjljQWZ4RnluVHVVY2xIN1pnVjhrOTh4YWctcndoNTBUSEppNy1UMFhwY3ZCNU5mTHNoa2VpeFNHRUlxZ1Y0T05zY2EyTVIzZjZFUWxiVmN0TUFVWFdoYnNMNVQ?oc=5",
+     "d": "2026-11-21T23:15:00.000Z"
+    },
+    {
+     "t": "서울 재건축 52곳 재초환 부담금…매매가 하락으로 이어질까?",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9jMnBOMHhxQTJjUVN0V0VsN1JZZDBoVXlXeHBNd2p4X3JIR0YwWWswTU9RNHZyMVZnYUlBX2tlZFVYS09Mb2RFWHRLN3FnZlNVWXNzRkM4QkpJTzFCMmVkSUJYcTZBVS0x?oc=5",
+     "d": "2026-11-22T08:15:00.000Z"
+    },
+    {
+     "t": "EU, 빅테크 디지털세 공식 제안…트럼프와 충돌 불가피",
+     "src": "한국무역협회-KITA.NET",
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQb3dVYXo1d3A3VWhQaWl4Zk5vZDVFS3VTUW0xRjJMRHdFbFZlcjdySUJ0MkdhQjlKRmcwVTRhcUswNmdYc1ljR1dRY3N1TkNFODZiVXFJc0Z0TFI5OVE1RmF4SHQydUE4WWV0OUxVamQ3WThPM04yanhTSS1qTWZsX1F2MGFkNkNfSXZWNElHLTd4NGdPdFZEanJSaGM2b3N6RVlzWjdhMDdSellHLTkyUHFkemRRdm92TFphajY5N1g0bldpMU05Rmp0elZaZ3Z6dkc2NGpn?oc=5",
+     "d": "2026-11-22T06:02:34.000Z"
+    },
+    {
+     "t": "\"이사회의 젠슨 황 축출 이유는 외도보다 상습적 폭언·거짓말\"",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOOE40V1RLaUcxMkFiNGZrS1JLUWEzM2lrR3ZrMUc4aElxbDdiTVRydHVqcEFvQWNnejRFWUkxNDZBSktRckhseURPYmhMYnJ4TXVScnZWRmZLWTRrS19ZMy1oeDVwcG11TUp3MlktczJzUFRQTzF0Z3JLYW54NmVhbzVrTQ?oc=5",
+     "d": "2026-11-22T06:52:45.000Z"
+    },
+    {
+     "t": "WSJ “러트닉 미 상무, ‘엔비디아 사태 등 경질 위기’에도 건재”",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9tbS1reml4eDl3eGlYbWdlaUdaZWRvOVEwUDNPRzNCWVZxRlgybS1jS2hJWV9WNG5JQkxZd1lkb0NjZ1hRakh3OEphQlZYdVlsNEI0UDA2Qk9BM1k?oc=5",
+     "d": "2026-11-22T02:16:00.000Z"
+    }
+   ],
+   "stock": [
+    {
+     "t": "[속보] 정부, 국내외 증시 급락에 ‘증시안정펀드’ 가동 준비",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOcjBPTG5NSy1VTkI3cmUzc3g3UlhaRzlhc1UxelFsQXg4R28wdktMWkw0Wmc2WjIxekdWOWVqWTRHaUtSQk9yMzZDZjJPTHZFWG9KNU1LdVNFbEVSNTBFSFExZ0FIcV9pS1NjakI2bERaazhPZ0FRajBWSDZ4SklzZ2hoYXpzSGc2UjVlSWdB?oc=5",
+     "d": "2026-11-22T09:22:53.000Z"
+    },
+    {
+     "t": "증시 급락에 정부 긴급 F4 회의‥시장 안정 대책 논의",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE55d196VXpIcXI0UUVsMnBuVkZ5bl9iUW5xQTJCYUp1QmRkZTBQYnRaV29UU3B3QzJtTGY3elNfNzVqRXAxYkhoaHpaRElXaUNMSjNlR2d6UEhXczdGYktIR3ZHLUNfUzF3UHJXMjdxa3ZxLUJ30gF0QVVfeXFMT0JKMTZ6WEQ4NjdIRG9QLTJ0a3pMMVdwLXVlMHh4Slh6UHpsak92T2FrWWF6OHBfNW1IaDM5NG9McGZNbFgyR3d4MjNlRExGbDJrc0FpSmt5ZG1VS29WdkdQVjI4X09zbkZVejFTVHgtOE9lY2E?oc=5",
+     "d": "2026-11-22T04:39:53.000Z"
+    },
+    {
+     "t": "’5천피’ 무너지고 미 증시 급락…’검은 월요일’ 우려",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ieGIyMEZTRTBjYTE4dlFsRExuTElVUmlsMzY4X1dVazFuQThuWTVEQU81VXItNjc4eGJIWFZRM3BJbUpTUEFHbER6Y0pyaHFFOHd4a3FONnpXZkJCTl9leUpSWjg4aGc?oc=5",
+     "d": "2026-11-22T10:23:00.000Z"
+    },
+    {
+     "t": "“내일 블랙 먼데이 막아라”…18년만에 증안펀드 가동 준비",
+     "src": "중앙일보",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxZE0tNVVrUlhKZTVKMC0zUWpZM2tMSHBOdXdzT1dPZ3IwU2pQOU1DUzNqT3dSdHFGMzJIODIwallIcVpNTGlGTUZSNHBUMEdfbHg2cUd3?oc=5",
+     "d": "2026-11-22T09:41:54.000Z"
+    },
+    {
+     "t": "국힘 “내일 ‘블랙먼데이’ 우려…증시 급락 긴급 대책 준비해야”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB6VWxZc3RGSi0xUHBRQzU4Qk5TVTJYWGluWFlON1VjOGo5OVdjcXBHUnpGQXVIOVJwR3gyMGp1WUFxUnU3dGI2NHBUNm5fbnVHT1hGNXV0dHVlczMwd1ZXaGplUlB6TVUya2c?oc=5",
+     "d": "2026-11-22T05:52:00.000Z"
+    },
+    {
+     "t": "경제부총리 오늘 ‘긴급 F4회의’ 소집…국내 증시 안정 대책 논의",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE95cDVpa1J6NFAxTlRwNlYya3Y0Q1ZqQXk2MDZjcXIwU3dQeDMxVWlWTGhqd2VTNVpwLUJ3TDZtY2Z0MkZQMTBVS19ENmJBVHdEVVhjS2Q1UnpEWHM?oc=5",
+     "d": "2026-11-22T02:45:00.000Z"
+    }
+   ],
+   "news": [
+    {
+     "t": "[사설]‘수능 혼란 책임’ 교육부 장관 사퇴, 시험체계 전면 개편 서둘러야",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBLLVFMbHVNT1NNUERhbF8zYm9TbUJFUkdWSlo4cmRkQzFZVTVJTU85Vlk4N3JuRG1Ha3pnSm5kMUxydF9oVWNuNERxZHJrSndZemNJRTlyM2pxd9IBX0FVX3lxTE1rYW11ekd6NTFWX240VW9GVjVwc21SN0wwSUhtRHpqVEFNQmtZREpHQWpFYU5HSzVsQk00N0JSb1FVZDlZTWg3dmgzWDVVTlZtWkN4YTVWdkk1SlBjQzBr?oc=5",
+     "d": "2026-11-22T09:10:00.000Z"
+    },
+    {
+     "t": "與 \"조희대 탄핵 사유, 한덕수 판결 아닌 절차상 문제\"",
+     "src": "한국경제",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBoeGZ4d0RlbDJUWjdZMTFDWGtHa1FFRGw3MFBlLVVFQ2N4SWNNdEZ1QzNHeXdMZVpKazNaLXk2THhiUmxIb1hmUnZidWNMZkotOG85VHlDMXBFdw?oc=5",
+     "d": "2026-11-22T08:30:02.000Z"
+    },
+    {
+     "t": "철도노조, ‘안전운행투쟁’ 26일로 연기…“사고 복구가 우선”",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1EMHBVdzM5S0VRYVpwdW1NQVdjQlVHWC1VSjZ6M2E1d2ljeWFKbU4zaC1XeVRBU3AyRHRDUGdYOHdIMTNKdWJ0TUV3U25YZDNQQVZGdWJSUTRoZ9IBX0FVX3lxTFAwbjAxOGdTUWJBOElnd295bUlrcTllU3o0cW5ib1JoM0NweXdXV0w4dnhUZmRiNzk2dUNVakl4eTdhSUQ1ZU1RemotUWxTZTZubUNwdFRFdFRYTVF2TFZV?oc=5",
+     "d": "2026-11-22T10:21:00.000Z"
+    },
+    {
+     "t": "“수중 52m에서 해광호 선체 발견”…실종자 수색 본격 추진",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Lcjh3Nlp5MnV5QWtqSmhzR0RzUzR0UUU3ek5ZbVJERkNKTVBNU2tjVlhwREM5cWJrWlNYZzlydjdKUVI5MmlvLVlQXzZWYmJFLVhZNlBNYlR1RlB0REhRbkU2WTdPalhx?oc=5",
+     "d": "2026-11-22T07:45:00.000Z"
+    },
+    {
+     "t": "[기고] 취임 100일, 김민석 대표께 드리는 ‘충정’",
+     "src": "경기일보",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5CLVRRejhEX1lVLWJ2SkhGaVlQeGRWQ1VWR1FCMS1kY3BKcmI0ZTNWM0d0NDZ3c2ZWMWNvTnJzUTEwaFlHRzl6THJuZjFsNzB2QXNpVmlqRVQ0dWc?oc=5",
+     "d": "2026-11-22T05:55:09.000Z"
+    },
+    {
+     "t": "앞치마에 금속탐지기까지, AI 부정행위가 바꾼 대학 논술시험장…대학들, 대책 마련 총력",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9VSF84b0xPRVhmN0NZQ2cyOXYyQUNWdHEzbWVDTnBfamhlcDVMVzZ4Q25wU0dmbC00Wkd6ZWcwMHF3ZEFTTExjYlJ2dnlfY3gwb21sVjhwcHRZd9IBX0FVX3lxTE9JZ0FJZk1kcmpDZEN4SEY5bUJYWUgzWFdraDlDWHIwUVJ6ckRYZ1YzWjlKMm5Ncjd6Uy1VNGtlb1JQdWdyMlliZ3B6TjgzVnhtbkphaXFLUlR0dGh5R1dR?oc=5",
+     "d": "2026-11-22T08:23:00.000Z"
+    }
+   ]
   }
  },
  "economy": [
   {
-   "t": "수출 1조 달러의 역설…최대 무역흑자에 美·인도·튀르키예 통상 압박 우려",
-   "src": "뉴스1",
-   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Lb3hKZTRDOGRyYmlVRHFTNC1tb2VvRlJ5cVNrQVIwemx4eFFwVXotWmV2Z05ZVEhuUXZNREotVW9ha2hueWE4clpVUnV6VTE1bDVDRlRMM0NMbFV4aHRz?oc=5",
-   "d": "2026-11-21T21:50:00.000Z"
+   "t": "증시 급락 우려에 정부 긴급 대응‥안정펀드 가동 준비",
+   "src": "MBC 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE90c3k3SlBZdEkyZzZHUzQ0enVVbTZwUmdjODBYcnpEeXJiOWZrazMyTFg5WGQxemIzTHVjVy0wdFZOdnk1TTFHeWZBUXdoR09YRVVQb3ZacWpVRFVfN1ZFVk1TZ1dPYVBVUGdFY1pCYjlYRGxP0gF0QVVfeXFMTXA5eHJ3ZWRiZXR1cnkxQ0x5VFJVbVNEMTFZeUNHR04wMUgtcjdrYktiRTd3VEh3MEMxRFFVTnpCTzJqVXN4SzNCVWFGSmRKbklCbzlMWTdSLTFvUHJDeE5WdUZialhqbmN0cDJpdWVJQ2p2TWM?oc=5",
+   "d": "2026-11-22T09:52:06.000Z"
   },
   {
-   "t": "AI 불확실성 vs 美 블랙프라이데이 기대…코스피 변동성 장세 [주간전망]",
-   "src": "한국경제",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9JX0k3Y1RXcUxFRUJxQVFoZl9jMktTVlRmZFc2c0dIX3JuUHJSa2VvdXFsWE1pUi1WVUJGMnUwUXY4UkdGSDZSREkzMURmU2ZZWnBUb1VhR1NBUQ?oc=5",
-   "d": "2026-11-21T23:00:05.000Z"
-  },
-  {
-   "t": "스페이스X 때보다는 '뚝'…서학개미, 상장첫날 앤트로픽 2천200억 매수",
-   "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9zYzJJOUsxZXZmNWxQZ0ZpM29jbFBHRHBVdFl0c19telpJOVZFWGxwaUVCVWRoT2thRDE3SHJZVmVJcWhVSVF4amNMU21YS1lteHNIaEN0TlA2S0nSAWBBVV95cUxPYTdmc1cwNUZiVVdhaEVxNFNueEN3V0toZzVPUTVYcmU0NUFKaGVMQm9yQ18yZm5tYmtDdjFBWnZ1U05Ra0lvX2FMbUZVODE2MElMSzR1Z0hKWklBdHczTFM?oc=5",
-   "d": "2026-11-21T21:10:02.000Z"
-  },
-  {
-   "t": "젠슨 황 퇴출 뒤엔 반복된 거짓말…“네 뇌에 오줌 누겠다” 폭언도",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOUFBWWDFheXB5VnpDUDA5NEJlWUpXbHhmVXI1NkxNMWM2WVF1TVFhaTFvVG9zRUpOWGgyUkkwMUNNRDIySjhrbGgzZXVud3JPdEVDcUNPaVpRam53Tk5lOUt4cF82aGRnTy04Uk9JX3hnU2JLTlE3LXlwbU51b3g5ZW9n?oc=5",
-   "d": "2026-11-21T23:41:00.000Z"
-  },
-  {
-   "t": "최태원 \"韓·日 기업·대학, 함께 AI 인재 육성하자\"",
+   "t": "외인매도에 5,000선도 깨진 코스피…호재에도 '받아줄 돈이 없다'",
    "src": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1rLW5QdjJGUGZRZTE0d252LWpoMlU5THNhblRwMk1kNGJFSXlwR0hLelFQRk5XemhlcGtlaUR6VWNMLW9PbzQ4MHJ5c1h4UWJzbFR2MjROM2s5RHpLQjhkUElmSWE4aXVyZjFSOWZGaWs?oc=5",
-   "d": "2026-11-22T00:19:34.000Z"
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE81ZDh0elpqUkM4eDZESjljQWZ4RnluVHVVY2xIN1pnVjhrOTh4YWctcndoNTBUSEppNy1UMFhwY3ZCNU5mTHNoa2VpeFNHRUlxZ1Y0T05zY2EyTVIzZjZFUWxiVmN0TUFVWFdoYnNMNVQ?oc=5",
+   "d": "2026-11-21T23:15:00.000Z"
   },
   {
-   "t": "대만, 잇단 급락장에 “직전 거래일 종가 미만 공매도 금지”",
+   "t": "서울 재건축 52곳 재초환 부담금…매매가 하락으로 이어질까?",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9jMnBOMHhxQTJjUVN0V0VsN1JZZDBoVXlXeHBNd2p4X3JIR0YwWWswTU9RNHZyMVZnYUlBX2tlZFVYS09Mb2RFWHRLN3FnZlNVWXNzRkM4QkpJTzFCMmVkSUJYcTZBVS0x?oc=5",
+   "d": "2026-11-22T08:15:00.000Z"
+  },
+  {
+   "t": "EU, 빅테크 디지털세 공식 제안…트럼프와 충돌 불가피",
+   "src": "한국무역협회-KITA.NET",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQb3dVYXo1d3A3VWhQaWl4Zk5vZDVFS3VTUW0xRjJMRHdFbFZlcjdySUJ0MkdhQjlKRmcwVTRhcUswNmdYc1ljR1dRY3N1TkNFODZiVXFJc0Z0TFI5OVE1RmF4SHQydUE4WWV0OUxVamQ3WThPM04yanhTSS1qTWZsX1F2MGFkNkNfSXZWNElHLTd4NGdPdFZEanJSaGM2b3N6RVlzWjdhMDdSellHLTkyUHFkemRRdm92TFphajY5N1g0bldpMU05Rmp0elZaZ3Z6dkc2NGpn?oc=5",
+   "d": "2026-11-22T06:02:34.000Z"
+  },
+  {
+   "t": "\"이사회의 젠슨 황 축출 이유는 외도보다 상습적 폭언·거짓말\"",
+   "src": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOOE40V1RLaUcxMkFiNGZrS1JLUWEzM2lrR3ZrMUc4aElxbDdiTVRydHVqcEFvQWNnejRFWUkxNDZBSktRckhseURPYmhMYnJ4TXVScnZWRmZLWTRrS19ZMy1oeDVwcG11TUp3MlktczJzUFRQTzF0Z3JLYW54NmVhbzVrTQ?oc=5",
+   "d": "2026-11-22T06:52:45.000Z"
+  },
+  {
+   "t": "WSJ “러트닉 미 상무, ‘엔비디아 사태 등 경질 위기’에도 건재”",
    "src": "KBS 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9aV2JJMUdHN29NcGRFWWFoUlVRYTl0bWh2Y0N5YU1iTXplcWU2dHdsOHp4YzEzYktRWXE1VDUwUXZrd25PUWRndDY3SVBEbmhwSEk1emVJeEJVWUE?oc=5",
-   "d": "2026-11-21T09:39:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9tbS1reml4eDl3eGlYbWdlaUdaZWRvOVEwUDNPRzNCWVZxRlgybS1jS2hJWV9WNG5JQkxZd1lkb0NjZ1hRakh3OEphQlZYdVlsNEI0UDA2Qk9BM1k?oc=5",
+   "d": "2026-11-22T02:16:00.000Z"
   }
  ],
  "news": [
   {
-   "t": "조희대 탄핵, 대통령이 반대해야…심판 기각 땐 거대한 역풍",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1LblhzTWV1dEhyWjVIakRXbzkyMi10eVhIMklvUW95dDU0Y21wYnhpYllCUHoxRkN6SUdwT0hCQlVsVnBoRzhyRTZ0elRGQmpka3BiSVhCWHItazAyMmVvNWtERDhZd2FRd19tc0dvVW5XMHlL?oc=5",
-   "d": "2026-11-22T01:02:00.000Z"
-  },
-  {
-   "t": "트럼프 \"이란 핵 보유 막을 수 있는 영구적인 합의 할 것\"",
-   "src": "MBC 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9UOHE1S1p1YnVKOVgwX2pPckRjelBieERGYnh0ODFGRnNHdTIybFBvam0yc3JJZjVvVU1kQVE2cjlQOG1JckxxQnlWWU1aNHdvbzR5eXB5akwtWDhpVUlqRTNyN1VnRzRUT2NKQm9HUmRJREdw0gF0QVVfeXFMUGpfUzF1UE9SX01wU3dkN3k2TlNzVWVhT3ZaSDVEbzItblpmYzJRVlV6ZW5HVzhJMzNtal9hc3p4Y2VtRG1DTDlhUDhBbkVrUW5PTkhQdkZmS3dzVVlhRm1OVDRkbkxCcVc0dnlBdm5QcXduQUo?oc=5",
-   "d": "2026-11-21T19:46:54.000Z"
-  },
-  {
-   "t": "2년 새 ‘4등급’서 ‘국영수 만점’ AI…‘전파 없는 커닝’ 위협 더 커진다",
+   "t": "[사설]‘수능 혼란 책임’ 교육부 장관 사퇴, 시험체계 전면 개편 서둘러야",
    "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE51OUtZc1I5OHgyRldLb2JKYkNFaXRlNmRTa196dW1rLWRyZElaNlhuVzhiMlRSaDlyVFFxdEZ3anI1VklCd0VyWXROeVF3Y0ZpdlFYUXpOQjA0UdIBX0FVX3lxTE9pbHNlV3NSLW0tT2dWTTd0TXEtcjA5QWVMZVJfUUFKc1puZzdPY20zbUZnQUZmdXRVb2sxeGR2aHFUNF9PUkdmZWVtQ1gtSHpWVk5od1VTUGlFR2pKekkw?oc=5",
-   "d": "2026-11-22T01:00:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBLLVFMbHVNT1NNUERhbF8zYm9TbUJFUkdWSlo4cmRkQzFZVTVJTU85Vlk4N3JuRG1Ha3pnSm5kMUxydF9oVWNuNERxZHJrSndZemNJRTlyM2pxd9IBX0FVX3lxTE1rYW11ekd6NTFWX240VW9GVjVwc21SN0wwSUhtRHpqVEFNQmtZREpHQWpFYU5HSzVsQk00N0JSb1FVZDlZTWg3dmgzWDVVTlZtWkN4YTVWdkk1SlBjQzBr?oc=5",
+   "d": "2026-11-22T09:10:00.000Z"
   },
   {
-   "t": "국힘 \"최교진, 수능 부정행위에 백기투항…자진 사퇴해야\"",
-   "src": "연합뉴스TV",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0xbDBFamdtbU56ZEtOcDdDMmlFY01iTnphSm8tTWxHSm9rdXB4UDRZUEtyNWFyTHpQbGJRWDV2RktpTkNfZ2tuVUxrSmtpY2RtY0pCMmliYWkzTHlhYzh2QkY1MHI1WVE?oc=5",
-   "d": "2026-11-22T01:16:00.000Z"
+   "t": "與 \"조희대 탄핵 사유, 한덕수 판결 아닌 절차상 문제\"",
+   "src": "한국경제",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBoeGZ4d0RlbDJUWjdZMTFDWGtHa1FFRGw3MFBlLVVFQ2N4SWNNdEZ1QzNHeXdMZVpKazNaLXk2THhiUmxIb1hmUnZidWNMZkotOG85VHlDMXBFdw?oc=5",
+   "d": "2026-11-22T08:30:02.000Z"
   },
   {
-   "t": "AI 커닝에 흔들린 국가자격시험…평가 방식도 바꿔야 하나",
-   "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9kN2QtSDFjSUhMZTEzWENoVVZqREhJTVUtOGM2RW92TUxtZ2I4YnFzTXlFRFJTUnNIZExLWDkwM0pHbl9PRG4tT1dqTUZleU5uYmxtZEVvVWJjWFHSAWBBVV95cUxPU2JHRUVTWFNUdUNidEh0dWRUYnFfUG5QMmVnd2ZaVnNWQ0llTVhOM3BmUnJua092eE8ySDhSRXZ3Um40OEpHMjhkbDZhQkMtb0RxbGd0VExVcUdZSktobm0?oc=5",
-   "d": "2026-11-21T21:03:01.000Z"
+   "t": "철도노조, ‘안전운행투쟁’ 26일로 연기…“사고 복구가 우선”",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1EMHBVdzM5S0VRYVpwdW1NQVdjQlVHWC1VSjZ6M2E1d2ljeWFKbU4zaC1XeVRBU3AyRHRDUGdYOHdIMTNKdWJ0TUV3U25YZDNQQVZGdWJSUTRoZ9IBX0FVX3lxTFAwbjAxOGdTUWJBOElnd295bUlrcTllU3o0cW5ib1JoM0NweXdXV0w4dnhUZmRiNzk2dUNVakl4eTdhSUQ1ZU1RemotUWxTZTZubUNwdFRFdFRYTVF2TFZV?oc=5",
+   "d": "2026-11-22T10:21:00.000Z"
   },
   {
-   "t": "눈 없이 맑은 ‘소설’…아침 최저 영하 10도, 낮 최고 12도",
+   "t": "“수중 52m에서 해광호 선체 발견”…실종자 수색 본격 추진",
    "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9sd2FPY01HYWJEZW9mRkRLWGpRY0pXbWZ5MGR5YTl4eFNPNDJZVU91Zk9rclhVaDF0bXpCMGVHWms0NWFONFg0Vy1BcWJuSDlwRHJmRjBLQ1pBXzJ0SUVkVGR4UFZTZnNiVUlDWQ?oc=5",
-   "d": "2026-11-21T23:09:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Lcjh3Nlp5MnV5QWtqSmhzR0RzUzR0UUU3ek5ZbVJERkNKTVBNU2tjVlhwREM5cWJrWlNYZzlydjdKUVI5MmlvLVlQXzZWYmJFLVhZNlBNYlR1RlB0REhRbkU2WTdPalhx?oc=5",
+   "d": "2026-11-22T07:45:00.000Z"
+  },
+  {
+   "t": "[기고] 취임 100일, 김민석 대표께 드리는 ‘충정’",
+   "src": "경기일보",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5CLVRRejhEX1lVLWJ2SkhGaVlQeGRWQ1VWR1FCMS1kY3BKcmI0ZTNWM0d0NDZ3c2ZWMWNvTnJzUTEwaFlHRzl6THJuZjFsNzB2QXNpVmlqRVQ0dWc?oc=5",
+   "d": "2026-11-22T05:55:09.000Z"
+  },
+  {
+   "t": "앞치마에 금속탐지기까지, AI 부정행위가 바꾼 대학 논술시험장…대학들, 대책 마련 총력",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9VSF84b0xPRVhmN0NZQ2cyOXYyQUNWdHEzbWVDTnBfamhlcDVMVzZ4Q25wU0dmbC00Wkd6ZWcwMHF3ZEFTTExjYlJ2dnlfY3gwb21sVjhwcHRZd9IBX0FVX3lxTE9JZ0FJZk1kcmpDZEN4SEY5bUJYWUgzWFdraDlDWHIwUVJ6ckRYZ1YzWjlKMm5Ncjd6Uy1VNGtlb1JQdWdyMlliZ3B6TjgzVnhtbkphaXFLUlR0dGh5R1dR?oc=5",
+   "d": "2026-11-22T08:23:00.000Z"
   }
  ],
  "week": [
