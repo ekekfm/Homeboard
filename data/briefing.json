@@ -1,7 +1,7 @@
 {
  "date": "2026-11-24",
- "slot": "morning",
- "updatedAt": "2026-11-23T21:12:37.949Z",
+ "slot": "afternoon",
+ "updatedAt": "2026-11-24T05:53:02.617Z",
  "slots": {
   "morning": {
    "at": "2026-11-23T21:12:37.949Z",
@@ -119,82 +119,199 @@
      "d": "2026-11-23T13:19:00.000Z"
     }
    ]
+  },
+  "afternoon": {
+   "at": "2026-11-24T05:53:02.617Z",
+   "economy": [
+    {
+     "t": "젠슨황 복귀시킨 트럼프, 엔비디아 급등에 최대 221억 원 수익",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14bVpDX2gtbDdLelFSUkhZbkdtX2ktRTVWVWNGUjhMdVdGa0I4bjZra3JBVV92el9KanFWLU5mV1pybEs0UWhwem50RTFPUEpLd2M4dzFGT3pLdThqUWlGajl1ci1ZWUVWTlF0MXBMeldLT24x0gF0QVVfeXFMUGNTZlNGeG5NbkUxTk4zNXJSYWxaZXBvWGhXRVYwVFNBZWVDNVNzZjdCeUtqMzlJQmNTRXdzVXFNdnVmRWszcGRsRXJ0eF9jX1VkM0FEVkwtSTdYMjl0OVF1V0hjakpnUXNDS1ktbVp4ajBiMTY?oc=5",
+     "d": "2026-11-24T02:46:59.000Z"
+    },
+    {
+     "t": "젠슨황 복귀에 '반도체주 강세' 아시아 증시 급등",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5fMVFVTTVfR3NUVVJrckQ4cjlnbzNDTW10d28wSTNWWjhWVldhd0lpN2FuSWtDMHQ0ajZReDJrNVNUNGJwXzNXc0c4WWpiZDZZc2VaWk5ILXpVcjjSAWBBVV95cUxPODVkY0Z2VkhyVWhEN21lYTVWSEpKVlVNMVp2eGg2bkpQNHV1NjluR1dIYXV3QnVlYVlSUHlCRFZKNlpoR3ktQjBrU2VuRTI1Zy1JTGVITzVpVFZZTklPQ0Q?oc=5",
+     "d": "2026-11-24T02:29:59.000Z"
+    },
+    {
+     "t": "기혼여성 10명 중 1명은 '무자녀'…15년 새 2.5배 급증",
+     "src": "뉴스1",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9ZcmlKZ1JkWDRSRGI5TVBPYVhCVEJOVWVpWU1VWnlWcTFVbno5Q1lUZ1ZWampFMDZHdVRUcllDU19DNDJUS05kNlJBOG90cnYwSmtEMg?oc=5",
+     "d": "2026-11-24T03:00:00.000Z"
+    },
+    {
+     "t": "현대차, 산림청과 전기차 ST1 기반 산불 대응 차량 실증사업",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5YYmN0bWZxcWFNUFJtMEdtaUFoVDl2STNaNUE1S2dCelUzNVNnRGNZSWxlWml2SmhpMXJmMWI5bW9ibnFIZkNRemtFTHlDMG1QeDJ1cWFOWG5tRFXSAWBBVV95cUxPT09qRUNHcVhnZFpGX21vT3Y5cnhHb21iel81WHNSMTVPZmlkX1NoZnZtWkJ3LU1vLWJCRWYwOG1pR3VfVWs2Q3dKTnIwYnM2R3JJM2tPS1YtZGRWYUJYekI?oc=5",
+     "d": "2026-11-24T00:02:21.000Z"
+    },
+    {
+     "t": "젠슨 황 복귀 몇시간 뒤…미 상무부, ‘불륜 상대’ 회사 제재",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWWRmLWR5V2lXaTFpYm1ISU5WaktIdE03VHZuWWI5dGJJZG5ENjFZa0t5UlZzeUVYdDBNbktJVmxFUW8zRmR3cF8wREhybDBIVlhMdG1pOXRlbXBrWW13MXlNd2lxd1FVQU5kYnpiNHRKU0Z5NWx2aU54Y2xtNDFWdmp3?oc=5",
+     "d": "2026-11-24T02:53:00.000Z"
+    },
+    {
+     "t": "'경제성장전략' 다시 '경제정책방향'으로 바뀐다…민생·양극화 대응 방점",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAyQ2FtVDRHOGZRMU1fR1ZQZnltU3dNNlBOYkJRUlpxNzhxQ0t1dFhqNzM0bjNlTVhkeDFRTFFYbE91WXZWVHctcTZuX292SC1yRF9Lc1JqRV9CeDhQcElMaHZrb2hnaUhNVG5EaG92c0I?oc=5",
+     "d": "2026-11-24T02:52:51.000Z"
+    }
+   ],
+   "stock": [
+    {
+     "t": "코스피 급등에 5천 선 회복...장 초반 매수 사이드카",
+     "src": "YTN",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Oc29PbE1SbGhiMU1SQXJMenZudURCdkRzSmdUYWdSY1pTS0FTNnRpc2Q5QnRoVzF2ZzRfeExHbmRVeEZjM3dqbWlZb2VZSkpvSEdLYzdQd3YwUFlNV3Rtem5MekRGV3JwbHp6Z2F1VQ?oc=5",
+     "d": "2026-11-24T02:31:00.000Z"
+    },
+    {
+     "t": "젠슨황 복귀에 코스피 5천선 안착…7%대 급등",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9TMl9ZVlVxYjh6YWdfYVJPUzByQzI1WUdsTU9OZ1A2T3dIR0s3V0paWTJJY0dnUjNIQVkyNmF4RWxqNXBfZFV4eUc3bnNCS25FMG9SUTVCN1I5WkMwcm9VaW44Mi1QbGxNM2g1ZnVlZHQ?oc=5",
+     "d": "2026-11-24T05:11:24.000Z"
+    },
+    {
+     "t": "젠슨황 복귀에 반도체주 급등…코스피·코스닥 매수 사이드카",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1KU2IxWmduRmFGM1pVcEc5aTFfcXFjUmMzVWswaWJmNWVlWlRiOVpfQlNyME54TW5wRzBBdmcwY2c5Njh3NFA1YVlGUjVSSDg1bjZSLUxsazBvazg?oc=5",
+     "d": "2026-11-24T03:07:00.000Z"
+    },
+    {
+     "t": "[오후시황] 코스피 5000선 안착 시도…외국인·기관 '사자'",
+     "src": "한국경제",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xQ3VoanZtYWVzWWV0eUNWakc1M0JaeHJyZnpXWG5USVJta1JQdFF1VzFBSGNINE9CZ1dPN0hLZExLTWNwcWtsSzZIWUprSmk5WlpWZEg1Ty1YQQ?oc=5",
+     "d": "2026-11-24T05:32:50.000Z"
+    },
+    {
+     "t": "나스닥·코스피 폭등…“시장이 젠슨 황 복귀에 이토록 의존, 충격적”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9raWUtSFdiaVdsS0ZDSTBCZnJROHNub0RRTWotYVpGTUlfRm40R0psYWhLSHlzME5IMThELThvdE9FX2RBU19xRnFOM0ZqWXhyZ0FOOTYybURoMmhPYmUwRGtQMldEY2M?oc=5",
+     "d": "2026-11-24T04:47:00.000Z"
+    },
+    {
+     "t": "정점식 \"지방선거용 증시 부양‥'이재명 버블 특검' 추진\"",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBhTXBfbGh0UTJleXVUVnpnRl9HcksxSVdxR2x4cFB1MWMzeFVSb0dfMnc2QU5jRXhkUG14QUk2dndEWG5hOUY0TkFlMUM1SjhwY3hIUmo2YmtWWXFSQ3htS2FGX3hacWpVckpMVU9CSGZJWU13Z094eNIBeEFVX3lxTE95R3A0cE10RmRXVjNmTnM1MTBZaUd0SDZtNVAzWXdmV0dURWRXZ0tsdWk3ZTB0Ullzek9vRTN3R0paZHA0T0tZbjRwOVFGTG5qekF1N3U3NS1ScE1UWURnMVliYTNLeEt4a1lWclZnQndYOC1FcXN2RQ?oc=5",
+     "d": "2026-11-24T01:34:57.000Z"
+    }
+   ],
+   "news": [
+    {
+     "t": "내신 시험도 ‘수능급’으로 감시···AI 부정행위 적발 시 모든 과목 0점·최대 퇴학",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Vc2Q3azZqdWJDN0NneDAxQTFjSkp6QUp4d1FKRE1HNHo4V1ZmbXJqLXZ1ZTRTMWNCcTlUX3hUVVZKeWo5VGJ2Q0hoTE84QXdYQldlOFFSZThaUdIBX0FVX3lxTE9LRXlBX1hnSURwZ3NrZm5tcTVrbmdPRkoxYkZfaEIxTmRKWjZ2aGJxUTdpUE9vTExGMGJIT2pnc2R0QXBxR2hfZk45MTdMYTAzbjBHMWYyNmszVHMyZ2tZ?oc=5",
+     "d": "2026-11-24T02:34:00.000Z"
+    },
+    {
+     "t": "[뉴스분석] 인용 가능성 낮은데···민주당 내부서도 ‘탄핵소추권, 정치 이벤트로 소비’ 우려",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBFaUJLZmlyNUxaZjJCOGduX2ZRZEV2R1c2MlJLN09sd0lKbkNiRnV2bF9wd2xLb1JsZmlmal9rNHRMU1RkN3lmVmNEdl81SHQxS2ZBdDZ6SVFwZ9IBX0FVX3lxTE9NN3M5TW9rY2VFZnBHZWFmb1hCMmdhVElsb1A4em0tOUhGU2NhYS1pYlNIa19ESkhhbDVadE9YV1ZlTHkyT0NfM3htZ1gySHliVEtPd2gtY0E4NGJ0QlZR?oc=5",
+     "d": "2026-11-23T21:00:00.000Z"
+    },
+    {
+     "t": "이용철, ‘배우자 주식 백지신탁 누락’ 지적에 “제 과실… 송구”",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOcXFlRUIzQ1NoM05XWEZYYzk2ckRwNG5mRlRidUtHRTRQblFHNWhSS3RMMmdPVy05VjJRVnZUUVhuSmJwNUh5X0VIN04yTTRlVGlDOGJfdndtcEpZQi1jNE5iVjExaHE5di02UGdxNGVLanNYODRlaVFMR2cxV3pDV0RHRTBlTVE?oc=5",
+     "d": "2026-11-24T04:29:00.000Z"
+    },
+    {
+     "t": "서울교통공사 노조 내일 파업 예고…서울시 비상수송대책 가동",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1VVzhMZEpKZUgxZ1RCR3hGdlNiaDhPRmZpQTdEUXFZYW1WbHFGWF9FTTYwVWJxUTVYWnpEektxOThFX29BRWZYM1ZrVVZEQk96UkhpRDlfcUVsZU0?oc=5",
+     "d": "2026-11-24T00:38:00.000Z"
+    },
+    {
+     "t": "이 대통령 “시험 부정, 주가 조작과 본질 같아…추적해 엄벌”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBBM1RWczdCYkY2Tk02Q1Z5VG83TWNSZnE0dWVHNkxya0duQzFTRlJlLUc3aUVaSFcyUUhPeXd3aEtUa0JyVUtZMnlFUnRuLTYtaUVrWjNqeFE3LTFFcHRNN3o0U1N1ZUJWSU9z?oc=5",
+     "d": "2026-11-24T02:51:00.000Z"
+    },
+    {
+     "t": "’조작 징계’ 추가 의혹 제기에…당 일각 “장동혁 사퇴·진상조사위“",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBSWDJlbzJHYmxmcDdHMGctVHVZTldJM1lNRWFPZzdLeEM0ZmktWVhsMVZybDlqUWptVlFSUUtfVG9lNzJZdDBtaThXRmlWeXc2X3E4OVg4bHhJU0taSmJvMlBRXzZNWDQ?oc=5",
+     "d": "2026-11-24T04:39:00.000Z"
+    }
+   ]
   }
  },
  "economy": [
   {
-   "t": "젠슨 황, 엔비디아 CEO로 전격 복귀...엔비디아 주가 33% 폭등",
-   "src": "YTN",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1GNHpzdmp1TVdHOXVnMVlSbTltN2hTN0VhcW11RU9jVkt2WExOYnVzX3VtZnd0UTYwOVZkeElOVlV3eGVfNnFXS3lWVWhZU1F1SzhaMmVvRy12ZFZQS3c?oc=5",
-   "d": "2026-11-23T15:51:00.000Z"
+   "t": "젠슨황 복귀시킨 트럼프, 엔비디아 급등에 최대 221억 원 수익",
+   "src": "MBC 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14bVpDX2gtbDdLelFSUkhZbkdtX2ktRTVWVWNGUjhMdVdGa0I4bjZra3JBVV92el9KanFWLU5mV1pybEs0UWhwem50RTFPUEpLd2M4dzFGT3pLdThqUWlGajl1ci1ZWUVWTlF0MXBMeldLT24x0gF0QVVfeXFMUGNTZlNGeG5NbkUxTk4zNXJSYWxaZXBvWGhXRVYwVFNBZWVDNVNzZjdCeUtqMzlJQmNTRXdzVXFNdnVmRWszcGRsRXJ0eF9jX1VkM0FEVkwtSTdYMjl0OVF1V0hjakpnUXNDS1ktbVp4ajBiMTY?oc=5",
+   "d": "2026-11-24T02:46:59.000Z"
   },
   {
-   "t": "코스피 5% 폭락에 매도 사이드카…장중 4500선까지",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE91Z1EyaE0xU2ttdmZsYW11ZkkzZU9IdmRVZWp1am0xbjY1Y0FJN2w0UE5nRmJrS2pYSV9EbkNvUFFpRkVKREF2NFNFTEJNcGU4bTlabnhHN0JCVmZ4Qk9BbS1OejZUcjA?oc=5",
-   "d": "2026-11-23T06:13:00.000Z"
-  },
-  {
-   "t": "[머니 컨설팅]흔들리는 증시 ‘두 번째 월급’ 준비하라",
-   "src": "동아일보",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE55aXlZSVV3aUJvaTZlMmotVFhIbHVyTUlpcnQtNlZubERLRlpIclJuVjVJVU1UVENCeHYyYUZicUVOUHdCSWduUmk5SHVGVW9oUk9obUdxNHNpcG1Fc2lNaVBXb0dZME0zSTlmaFdHVkNNeW9idGfSAWZBVV95cUxOTGFOVEVISWdiMloxQm04SlhLZkxIcjQ4Q2RITnlxR0ZzM0kxdm5XdWgxbjZGMGVTRHJyUk1XaHlpWVdmemtEY09HV1FqSkMyQVdHZWtDaFY4WEktUm9KZEtnUWdCWHc?oc=5",
-   "d": "2026-11-23T15:30:00.000Z"
-  },
-  {
-   "t": "이형일 \"전기차 생산세액공제 종합 판단…근로소득세 개편 신중\"",
+   "t": "젠슨황 복귀에 '반도체주 강세' 아시아 증시 급등",
    "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0N3I2X0JDTHc3R01tWG54a2J5SDZHNHFnbmctR0NyZzJwbkFKSmdrenhPclJuckRmb1dVSExzUE5JQkVmWHB5RmhWNU5WeHJ0dDcwMXZNNXlyLVnSAWBBVV95cUxPR2NndGQtREhfS0JFQUFsX1dPbko1VlhvUlJSNkhPdGZqVDdSa25aOW9WdGFrQ056NmVqOGR5SVNEeWhBd25RdS1zZlVzdTRUb2lnT3BoTG9ELUFyNmNmX2E?oc=5",
-   "d": "2026-11-23T02:40:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5fMVFVTTVfR3NUVVJrckQ4cjlnbzNDTW10d28wSTNWWjhWVldhd0lpN2FuSWtDMHQ0ajZReDJrNVNUNGJwXzNXc0c4WWpiZDZZc2VaWk5ILXpVcjjSAWBBVV95cUxPODVkY0Z2VkhyVWhEN21lYTVWSEpKVlVNMVp2eGg2bkpQNHV1NjluR1dIYXV3QnVlYVlSUHlCRFZKNlpoR3ktQjBrU2VuRTI1Zy1JTGVITzVpVFZZTklPQ0Q?oc=5",
+   "d": "2026-11-24T02:29:59.000Z"
   },
   {
-   "t": "\"앨리스 황, 1년 넘게 中 국가안전부와 접촉…젠슨 황 불륜 시기와 겹쳐\" - 머니투데이",
-   "src": "머니투데이",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBULWRLcTkwTy1qZnZpNEctd001WEtSSGI0NktuVkFpYVZBZVFLVnZYTnFad2ctaWRXUjVpVUp0WUFLNFRaanlBTHV5ZFdQMHU4VTUtUlBscUoxckF6M2JrN0JYelMyTjVI0gFuQVVfeXFMTV83REE0RFI2eU94RWZZMVNELVZkNFZ3WGVlaWl3YjdPenZxckNWWmtINmFnd2pUb2k3VG02TGIwMGpqZFIwWDNmdEJNSldQZ0FkVEpJV2JOdjMyVFRRWlBKLW5oQlIwQ2pyVEx1dWc?oc=5",
-   "d": "2026-11-23T11:19:21.000Z"
+   "t": "기혼여성 10명 중 1명은 '무자녀'…15년 새 2.5배 급증",
+   "src": "뉴스1",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9ZcmlKZ1JkWDRSRGI5TVBPYVhCVEJOVWVpWU1VWnlWcTFVbno5Q1lUZ1ZWampFMDZHdVRUcllDU19DNDJUS05kNlJBOG90cnYwSmtEMg?oc=5",
+   "d": "2026-11-24T03:00:00.000Z"
   },
   {
-   "t": "“9440억 모두 지급”…최태원, 9년 이혼 소송 끝내나",
-   "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9uY2hjeUllWlhCZEhVczJheXFBaHVUQ2hnZHF5Z3Y0SXpzRVp5b1BKTVZaYzVveWtOempibVJxMG16WmlDT2RQX1U4T2V6SFJOVGJwRkE4QXQ5d9IBX0FVX3lxTE1hZ0MtMktsSU03bWlVQzZoZVNNbUg2R3ZLZzBLdzJCdC02aGJEVUpZX2gzUzVjcFBXRnBJQ0p2WU1fZlhpbGU4TE5ISXo5V1FQRmF5NzZkX0FmTTdjWjQw?oc=5",
-   "d": "2026-11-23T11:44:00.000Z"
+   "t": "현대차, 산림청과 전기차 ST1 기반 산불 대응 차량 실증사업",
+   "src": "연합뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5YYmN0bWZxcWFNUFJtMEdtaUFoVDl2STNaNUE1S2dCelUzNVNnRGNZSWxlWml2SmhpMXJmMWI5bW9ibnFIZkNRemtFTHlDMG1QeDJ1cWFOWG5tRFXSAWBBVV95cUxPT09qRUNHcVhnZFpGX21vT3Y5cnhHb21iel81WHNSMTVPZmlkX1NoZnZtWkJ3LU1vLWJCRWYwOG1pR3VfVWs2Q3dKTnIwYnM2R3JJM2tPS1YtZGRWYUJYekI?oc=5",
+   "d": "2026-11-24T00:02:21.000Z"
+  },
+  {
+   "t": "젠슨 황 복귀 몇시간 뒤…미 상무부, ‘불륜 상대’ 회사 제재",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWWRmLWR5V2lXaTFpYm1ISU5WaktIdE03VHZuWWI5dGJJZG5ENjFZa0t5UlZzeUVYdDBNbktJVmxFUW8zRmR3cF8wREhybDBIVlhMdG1pOXRlbXBrWW13MXlNd2lxd1FVQU5kYnpiNHRKU0Z5NWx2aU54Y2xtNDFWdmp3?oc=5",
+   "d": "2026-11-24T02:53:00.000Z"
+  },
+  {
+   "t": "'경제성장전략' 다시 '경제정책방향'으로 바뀐다…민생·양극화 대응 방점",
+   "src": "연합인포맥스",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAyQ2FtVDRHOGZRMU1fR1ZQZnltU3dNNlBOYkJRUlpxNzhxQ0t1dFhqNzM0bjNlTVhkeDFRTFFYbE91WXZWVHctcTZuX292SC1yRF9Lc1JqRV9CeDhQcElMaHZrb2hnaUhNVG5EaG92c0I?oc=5",
+   "d": "2026-11-24T02:52:51.000Z"
   }
  ],
  "news": [
   {
-   "t": "동맹파 위성락만 남고 ‘외교안보라인 물갈이’…한미 갈등 돌파구 포석",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBEU20yUWliUi1XRFFVM2Z6c0h4UDdNd0kyVHQ5YUtrRmdoVVYyNUFIT2VnX3hPRS1sUm5LZUFzV3hjSjYyX0YtYjEtZkw0LUhYS191Ukcyam5tNkpKelZjeXBkZmVFRk5ldUFn?oc=5",
-   "d": "2026-11-23T13:27:00.000Z"
-  },
-  {
-   "t": "조희대 탄핵 추진에 “행동할 때” “성찰 먼저” 판사들 와글",
+   "t": "내신 시험도 ‘수능급’으로 감시···AI 부정행위 적발 시 모든 과목 0점·최대 퇴학",
    "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFByRkxoN2pjRWU5Y2xqSTBTTkxtaTZ0b3kxWFdYQWQzWnl3Rm9ZRVZ6cm9fcG42QjdRZGFlcDQ1TVZMNXhzMS1ISFJDTy1QMzNHVzR0Z3ktUE5hd9IBX0FVX3lxTE1FajI3TDFpMHo4cE5TMnc2ak9NVUxfczJDSDItVnowQXhFZlp0TV9GQWdIb0JuWGUwVllNUzMtRVMwNnV2R1otdlEtWVphWkQ5blRPclRLbjliRDE2eTVN?oc=5",
-   "d": "2026-11-23T12:23:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Vc2Q3azZqdWJDN0NneDAxQTFjSkp6QUp4d1FKRE1HNHo4V1ZmbXJqLXZ1ZTRTMWNCcTlUX3hUVVZKeWo5VGJ2Q0hoTE84QXdYQldlOFFSZThaUdIBX0FVX3lxTE9LRXlBX1hnSURwZ3NrZm5tcTVrbmdPRkoxYkZfaEIxTmRKWjZ2aGJxUTdpUE9vTExGMGJIT2pnc2R0QXBxR2hfZk45MTdMYTAzbjBHMWYyNmszVHMyZ2tZ?oc=5",
+   "d": "2026-11-24T02:34:00.000Z"
   },
   {
-   "t": "전국 아침 영하권…도로 살얼음 주의",
+   "t": "[뉴스분석] 인용 가능성 낮은데···민주당 내부서도 ‘탄핵소추권, 정치 이벤트로 소비’ 우려",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBFaUJLZmlyNUxaZjJCOGduX2ZRZEV2R1c2MlJLN09sd0lKbkNiRnV2bF9wd2xLb1JsZmlmal9rNHRMU1RkN3lmVmNEdl81SHQxS2ZBdDZ6SVFwZ9IBX0FVX3lxTE9NN3M5TW9rY2VFZnBHZWFmb1hCMmdhVElsb1A4em0tOUhGU2NhYS1pYlNIa19ESkhhbDVadE9YV1ZlTHkyT0NfM3htZ1gySHliVEtPd2gtY0E4NGJ0QlZR?oc=5",
+   "d": "2026-11-23T21:00:00.000Z"
+  },
+  {
+   "t": "이용철, ‘배우자 주식 백지신탁 누락’ 지적에 “제 과실… 송구”",
+   "src": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOcXFlRUIzQ1NoM05XWEZYYzk2ckRwNG5mRlRidUtHRTRQblFHNWhSS3RMMmdPVy05VjJRVnZUUVhuSmJwNUh5X0VIN04yTTRlVGlDOGJfdndtcEpZQi1jNE5iVjExaHE5di02UGdxNGVLanNYODRlaVFMR2cxV3pDV0RHRTBlTVE?oc=5",
+   "d": "2026-11-24T04:29:00.000Z"
+  },
+  {
+   "t": "서울교통공사 노조 내일 파업 예고…서울시 비상수송대책 가동",
    "src": "KBS 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5JS1FzQ1hpcHE2SW15Z0gzY2JhY0RnXzVueTNqd2VmU2IyS0JGdXF6a2pfUkdrZ1NLREZjLUdDMDlWdVlmVV9IajY0ak1tWnhOWWxJMzZSV1dwbzQ?oc=5",
-   "d": "2026-11-23T15:01:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1VVzhMZEpKZUgxZ1RCR3hGdlNiaDhPRmZpQTdEUXFZYW1WbHFGWF9FTTYwVWJxUTVYWnpEektxOThFX29BRWZYM1ZrVVZEQk96UkhpRDlfcUVsZU0?oc=5",
+   "d": "2026-11-24T00:38:00.000Z"
   },
   {
-   "t": "유엔 기후 정상회의, 합의 없이 종료",
-   "src": "VOA 한국어 홈페이지",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ySkZhVlEyZWxMWmZoOWlwOVl3WlQxTEhNNElLRHJMeUxwQjNsdFhxZ2tCX1J5bVYxOTRaSHc0Q1AwUnVjWWIySTgtV0VkQjZ2MGZHRVV6ODBQNk1PcmdQNzZSSTFhLWtzbFg1Q9IBb0FVX3lxTE95aHlRaFhnendyTEk4aE82LTV1empJdUd4LUFWWGFQakFtOTlPYVcwLTA2U2sxQS1FQzZwdUppTGxZQWc0X0pOelptSVZfME5feVVTYkd4ZWV1V2t2clE4MWlkQlBGeVluV05tSUlNRQ?oc=5",
-   "d": "2026-11-23T20:31:22.000Z"
-  },
-  {
-   "t": "국힘, ‘조작기소특검법’ 헌재 권한쟁의심판 청구",
-   "src": "동아일보",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBEaUFiVDJsYkd5OG1WbzVxeHlyM0twaF9TRGlCTF9iTVRVbFQ3MFUzcEx6VUFoNHdwSHFWMzR4VzRFb3F1bzhLYURISmtXbkVraGR3UE5SbFpYRk9sRnlfd1hCNDV5SjVvdnpBbWpqVmVVYkl0aUVJ0gFmQVVfeXFMTU9VbW5IaFlnU0tFczVOREwxRFFLNlg4RWhRd1JoeTZxelg3Qm9LN05IR1FORjdyYm9tcU4zVGpJbzdHeU1VZDZZM1pQUjROOE9HWmkzQUtKM3RwS1RMQXozUlJmV09n?oc=5",
-   "d": "2026-11-23T19:30:00.000Z"
-  },
-  {
-   "t": "“이진우 책 ‘브레인 악셀’ 100만원에 팝니다” 쏟아진 매물",
+   "t": "이 대통령 “시험 부정, 주가 조작과 본질 같아…추적해 엄벌”",
    "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1uOFgxaVd2NTV3dG0tcEFlcU1SM1RNZmladjBoRVZzU3ZoYXI3TVR4ZExZVW9RZFphQzUwRUNGT21kYk1DOElBTG01aFhfRURZeWM4SHdGTFhiaFBWOWxYT0l2cW1ubjdqX01yck9ob1dxZw?oc=5",
-   "d": "2026-11-23T13:19:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBBM1RWczdCYkY2Tk02Q1Z5VG83TWNSZnE0dWVHNkxya0duQzFTRlJlLUc3aUVaSFcyUUhPeXd3aEtUa0JyVUtZMnlFUnRuLTYtaUVrWjNqeFE3LTFFcHRNN3o0U1N1ZUJWSU9z?oc=5",
+   "d": "2026-11-24T02:51:00.000Z"
+  },
+  {
+   "t": "’조작 징계’ 추가 의혹 제기에…당 일각 “장동혁 사퇴·진상조사위“",
+   "src": "연합뉴스TV",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBSWDJlbzJHYmxmcDdHMGctVHVZTldJM1lNRWFPZzdLeEM0ZmktWVhsMVZybDlqUWptVlFSUUtfVG9lNzJZdDBtaThXRmlWeXc2X3E4OVg4bHhJU0taSmJvMlBRXzZNWDQ?oc=5",
+   "d": "2026-11-24T04:39:00.000Z"
   }
  ],
  "week": [
