@@ -1,7 +1,7 @@
 {
  "date": "2026-11-24",
- "slot": "afternoon",
- "updatedAt": "2026-11-24T05:53:02.617Z",
+ "slot": "night",
+ "updatedAt": "2026-11-24T07:04:23.731Z",
  "slots": {
   "morning": {
    "at": "2026-11-23T21:12:37.949Z",
@@ -236,82 +236,199 @@
      "d": "2026-11-24T04:39:00.000Z"
     }
    ]
+  },
+  "night": {
+   "at": "2026-11-24T07:04:23.731Z",
+   "economy": [
+    {
+     "t": "‘총지휘 트럼프’ 젠슨 황 구하기 전말…실리콘밸리 출신 밴스에 비밀 특명",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5sYmJ4djQ2MDFTTUo1QnIwNzBDRDFna19aU3RwQlNRMTcxLWk3bVJhUmVfYmphS0V1bjVBbTV3SnNPbWl1NFhDZzZVYTFlSjF1NENXN1M1aFkxcXlkQmQzSFBMNDZtQ2FGNHNua1BCOA?oc=5",
+     "d": "2026-11-24T05:35:00.000Z"
+    },
+    {
+     "t": "‘원화 스테이블코인’ 은행이 주도…가상자산 거래소 대주주 20% 제한",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8xZm9pLXNzcGtLeWJwcng4TFRMYWpPVU5kOGlQN1RFejVaNUxEQ1l3VXBVUlJtc25qbmhEdFYxOEZ0dDc0Nnh6OUFtNEZKR2o5bTN5ejdQWU5vUG8?oc=5",
+     "d": "2026-11-24T06:09:00.000Z"
+    },
+    {
+     "t": "최태원 \"9,440억 내겠다\"...'세기의 이혼' 마무리?",
+     "src": "YTN",
+     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE44R3NidmozOG03YkNoWE9NeXNjSk9mTXlWUWZnRERsRENfbkRUNUxhQ2RKaW5qRTRYb0thTUpjNlBkeGpCa0N1bzVkS2I4RWpQbjl6MXI4Z1pFd0YwTnc?oc=5",
+     "d": "2026-11-24T01:57:00.000Z"
+    },
+    {
+     "t": "집값 상승 기대 8개월 만에 최대 폭 하락…증시 조정에 경기 비관 확산",
+     "src": "JTBC",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBaSW1YeGdya2xNMGpCS2VQZTU4RHNvUDY5VDZIVjBRSWw2bkt3a2RWQ0xMNEQtZEljTHhmN25BcnBNbVdnemdYMXJXOGRLWjZVaDhFTw?oc=5",
+     "d": "2026-11-24T04:47:00.000Z"
+    },
+    {
+     "t": "이창용 \"금융 공공성만 강조하면 성장·혁신 제약\"",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5hT0dmZV9Oem0xQ3pidWtEOTNkZVpjb3JWa2gxbmJRMEpXcFRNQlZHX2p2OUZhajJKWDRmdGZuaTVsQXJPQlVUT2FpTFRRdXp5aDZWRHZtVm1UQmRuTzRvbV93OHJzN0ZnMHZEWVRvems?oc=5",
+     "d": "2026-11-24T06:00:20.000Z"
+    },
+    {
+     "t": "[속보]코스피, 매수 사이드카 발동…올해 100번째 사이드카 - 머니투데이",
+     "src": "머니투데이",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5UcmIyUE9RWEdXbWl4WmMtRV9UZE0tSThHTFAyOGoyd01iamU1WVdfbGpnX1ZHd05xWElGTWQ3djRyblRfdTM4NnQtQXk2SVZpUjlVUlRaMUZrckVjWDBLdlN1VmhxRjAt0gFuQVVfeXFMTS1ySU1RZm5zY2ZiXzJLQkk5bUIzd1dEZ2tPZHFxY09CRkdVbkN0ZUNrdTVEMUVzZWFpdEw0WjIzVlkyY092cHJTbF9lVldWUWJaTml0UWQzSk1NeS1QdUNUaVpNbzVaNFZqb1o2eWc?oc=5",
+     "d": "2026-11-24T00:06:24.000Z"
+    }
+   ],
+   "stock": [
+    {
+     "t": "코스피 '젠슨 황 복귀'에 급등...장중 5천 선 회복",
+     "src": "YTN",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1TRWF1OGNFQUFUVnJ1ZVVFQkhua05PWkJPbndZb1F1RmpRNEZKZ0pETkk1NGVGOGxBeE1BT3JZQ3hFdDJsNlVoaWF4TTBvaHRVOWlLT1B4anZ0bG1zMTE4cEFJY2ZrV0g5NGNwOFV5cw?oc=5",
+     "d": "2026-11-24T04:38:00.000Z"
+    },
+    {
+     "t": "[2027 투자전략] ③ AI 투자 불안에 흔들리는 한국 증시…대응 전략은",
+     "src": "뉴스핌",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA4OFRFMmxZSWVac0lsek1rWFljTmhZRV9QVGxLdWpsNER1aUVJeWJxQUJQODJzY3MyY2RRb2xHLUlac3I5VTZlWkttMVBXVlZuMDdQWERXb0RYVjB5?oc=5",
+     "d": "2026-11-24T06:39:00.000Z"
+    },
+    {
+     "t": "젠슨황 복귀에 6%대 급반등, '5천피' 회복…코스닥 4.8%↑",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE10NWtLcGtmcDRoTXlGeGF0dUdMaHM1ZHNoTm12Vkw1cXZBQWdyeU56U2l6eFlqYnZfOVpvT0k4aGVkZGowOFdoVHFSSnA4cGxsdVNxM2JyQmpUem_SAWBBVV95cUxPUFA0bVRQZDFhaE56VkZxZnFKQ0pSQWNXLS03TDdCQ296bVVEVy13TWJTem41bWx5V09jMkQ5NjY3UUF6WnAzQTktSVZuMldiV2w5NWx2WXdMclk0b29oRlk?oc=5",
+     "d": "2026-11-24T06:37:31.000Z"
+    },
+    {
+     "t": "‘롤러코스피’에 버팀목 될까…오늘부터 자사주 하루 주문 한도 완화",
+     "src": "매일경제 마켓",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9ReGVTQmhtZ1JIT01ndEFXTTRiMEQweW5WUzlHam1rTzhYQlA0di1aM2xMRndXZmNlUFQzZVgtbFhCcnZXbWVSTnFSNzloMkx4VkE?oc=5",
+     "d": "2026-11-24T05:49:10.000Z"
+    },
+    {
+     "t": "[속보] 젠슨 황 복귀에 코스피 6%대 급등…‘5천피’ 탈환",
+     "src": "중앙일보",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBDeHppOEZxSDZQWWRKTWx0WmJaM2thN3Q1NU9ILW11TGdPbTBKdVd5ek9IazNqWGw3b25udWdTTHdVOTIxa0h5R0RKV3E4YThOOEloY0NB?oc=5",
+     "d": "2026-11-24T06:35:06.000Z"
+    },
+    {
+     "t": "젠슨황 복귀에 코스피 6% 급등…5,000선 회복",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5zRnN6MDJEUlpLMWp1NzhuTkFOTjFlSjhfVkxyR09tUF9qcUExYXZGMTJrenVMcFRvN1pvUjJDTm5ZM3NhNXlOY0tGNzE4N1dLU2F4dXV3YmRRQ0QxVkJNbzczM1cyR2M?oc=5",
+     "d": "2026-11-24T02:45:00.000Z"
+    }
+   ],
+   "news": [
+    {
+     "t": "중·고교 내신 AI 커닝 하면 당일 ‘전 과목 0점’…퇴학까지 가능",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5IdXNjUEp4ODdEbHFzYThZcWctZmUxUTBaMTVyNTdpRlBYdFRaTV8zZXdCYmZ4ZTk3UlJ5R3NkZXFDdkI4OGxRSkE1YVVCVktFNml6a08wazhDWTI3RFE5Wnl4a3lfV0RTY2c?oc=5",
+     "d": "2026-11-24T04:48:00.000Z"
+    },
+    {
+     "t": "현직 부장판사, 조희대 탄핵 추진 비판…“계엄만큼 역사에 오점”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBPMEVFM2ZLQng3ZkpsYmc5QXlzMWNsaHFuV0ljd2p4WHk5OGkxMjVHd3JFNzB3QkpkdDZZZnRDb1RTMVQ3R1VyZjZhOHpWczczSWtOQmRhanBYRWFlR0ozZ2tiRGlTQTZXVzhOZkVsUVl4Zw?oc=5",
+     "d": "2026-11-24T04:04:00.000Z"
+    },
+    {
+     "t": "[속보]김병기 의원 ‘뇌물수수 등 혐의’ 불구속 송치…경찰 수사 1년2개월 만에 종료",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12SUwyekxIVG5ja2ZjOC1VU2lQcnZqbnZQWjFFWnZtSXFvSDR6S2R0b24xZVd6bVFJZkZqTEdhSG5ocnVJcjNWMlFScFBGWTNPUlgzdHowYU9aUdIBX0FVX3lxTFBtanN0d3dqT0pZU0VOcjFEMVlmTGc4a3BuRk9XZDJYRE9VdnJZV1RFNUtySGI0djBwU3Q2Z2I5R3dURG9JS3daSnExaUFxMDFITmZIMVRKWjVURV9oOVNj?oc=5",
+     "d": "2026-11-24T05:40:00.000Z"
+    },
+    {
+     "t": "한미 난기류 속 이종석-정동영 퇴장… 李, ‘동맹파’에 힘 실을듯",
+     "src": "동아일보",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5LMFl5TndsVDNsY1dPOWZJNE1CNUhyQUF1ejBUQzZaeGRTb2FmMUdjYmxCWmRjdmZfb25TSGJ0WVJRekNvZjVBSTZEX2JzVFZTRFpGRzVQb1IzT2p4WkZieGFmcW1nQ1RFX0hQYXE3OXo3SUNvUHg40gFmQVVfeXFMT3FCaDVVWTNLR0o5blFxV1Ezc3Rfb3NKdjdxUDRfdUJEQm1BZ3VGWWc0ODgxU0tna1MtMFlhSWNCX015eXA5SVJpLWZPeThMSDlXelZOczlkbHhEVWV1NkFIMEh3aTNR?oc=5",
+     "d": "2026-11-23T19:30:00.000Z"
+    },
+    {
+     "t": "李 \"시험 부정행위, 주가조작과 다르지 않아… 처벌 획기적으로 강화\"",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZzdtS1ZUbzUta2JyTkVQV0NMQWJCY3VMM2xLVEpxYzVuSks5VFFmSENjeHRNV3dDZ1ZTcmVmdHVZcnJzOW5KVDkzLWMwdXE1dkd1cmNDdTdQek13WE9sWTFSNHVFWUJndzdHZmY0SzFLckdTRlkzbm5BN3JpR2hvUkY3cm9iVzJ0UWhCVnhUaVA?oc=5",
+     "d": "2026-11-24T01:58:00.000Z"
+    },
+    {
+     "t": "‘조작징계 의혹’ 입 연 장동혁, 한동훈, 보수 궤멸 중심“",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9wcU01ZVRnSkNBd1BKcV9PeDI3UWxfRGxwZHpoQks4SlAxdEF6SjJXejB0XzBNNUVBcE5pMTg2aGRwaVBudkpjbmR0WGNwMXBBWVU0eDJpUFFLUjQ?oc=5",
+     "d": "2026-11-24T06:37:00.000Z"
+    }
+   ]
   }
  },
  "economy": [
   {
-   "t": "젠슨황 복귀시킨 트럼프, 엔비디아 급등에 최대 221억 원 수익",
-   "src": "MBC 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14bVpDX2gtbDdLelFSUkhZbkdtX2ktRTVWVWNGUjhMdVdGa0I4bjZra3JBVV92el9KanFWLU5mV1pybEs0UWhwem50RTFPUEpLd2M4dzFGT3pLdThqUWlGajl1ci1ZWUVWTlF0MXBMeldLT24x0gF0QVVfeXFMUGNTZlNGeG5NbkUxTk4zNXJSYWxaZXBvWGhXRVYwVFNBZWVDNVNzZjdCeUtqMzlJQmNTRXdzVXFNdnVmRWszcGRsRXJ0eF9jX1VkM0FEVkwtSTdYMjl0OVF1V0hjakpnUXNDS1ktbVp4ajBiMTY?oc=5",
-   "d": "2026-11-24T02:46:59.000Z"
-  },
-  {
-   "t": "젠슨황 복귀에 '반도체주 강세' 아시아 증시 급등",
-   "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5fMVFVTTVfR3NUVVJrckQ4cjlnbzNDTW10d28wSTNWWjhWVldhd0lpN2FuSWtDMHQ0ajZReDJrNVNUNGJwXzNXc0c4WWpiZDZZc2VaWk5ILXpVcjjSAWBBVV95cUxPODVkY0Z2VkhyVWhEN21lYTVWSEpKVlVNMVp2eGg2bkpQNHV1NjluR1dIYXV3QnVlYVlSUHlCRFZKNlpoR3ktQjBrU2VuRTI1Zy1JTGVITzVpVFZZTklPQ0Q?oc=5",
-   "d": "2026-11-24T02:29:59.000Z"
-  },
-  {
-   "t": "기혼여성 10명 중 1명은 '무자녀'…15년 새 2.5배 급증",
-   "src": "뉴스1",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9ZcmlKZ1JkWDRSRGI5TVBPYVhCVEJOVWVpWU1VWnlWcTFVbno5Q1lUZ1ZWampFMDZHdVRUcllDU19DNDJUS05kNlJBOG90cnYwSmtEMg?oc=5",
-   "d": "2026-11-24T03:00:00.000Z"
-  },
-  {
-   "t": "현대차, 산림청과 전기차 ST1 기반 산불 대응 차량 실증사업",
-   "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5YYmN0bWZxcWFNUFJtMEdtaUFoVDl2STNaNUE1S2dCelUzNVNnRGNZSWxlWml2SmhpMXJmMWI5bW9ibnFIZkNRemtFTHlDMG1QeDJ1cWFOWG5tRFXSAWBBVV95cUxPT09qRUNHcVhnZFpGX21vT3Y5cnhHb21iel81WHNSMTVPZmlkX1NoZnZtWkJ3LU1vLWJCRWYwOG1pR3VfVWs2Q3dKTnIwYnM2R3JJM2tPS1YtZGRWYUJYekI?oc=5",
-   "d": "2026-11-24T00:02:21.000Z"
-  },
-  {
-   "t": "젠슨 황 복귀 몇시간 뒤…미 상무부, ‘불륜 상대’ 회사 제재",
+   "t": "‘총지휘 트럼프’ 젠슨 황 구하기 전말…실리콘밸리 출신 밴스에 비밀 특명",
    "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWWRmLWR5V2lXaTFpYm1ISU5WaktIdE03VHZuWWI5dGJJZG5ENjFZa0t5UlZzeUVYdDBNbktJVmxFUW8zRmR3cF8wREhybDBIVlhMdG1pOXRlbXBrWW13MXlNd2lxd1FVQU5kYnpiNHRKU0Z5NWx2aU54Y2xtNDFWdmp3?oc=5",
-   "d": "2026-11-24T02:53:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5sYmJ4djQ2MDFTTUo1QnIwNzBDRDFna19aU3RwQlNRMTcxLWk3bVJhUmVfYmphS0V1bjVBbTV3SnNPbWl1NFhDZzZVYTFlSjF1NENXN1M1aFkxcXlkQmQzSFBMNDZtQ2FGNHNua1BCOA?oc=5",
+   "d": "2026-11-24T05:35:00.000Z"
   },
   {
-   "t": "'경제성장전략' 다시 '경제정책방향'으로 바뀐다…민생·양극화 대응 방점",
+   "t": "‘원화 스테이블코인’ 은행이 주도…가상자산 거래소 대주주 20% 제한",
+   "src": "KBS 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8xZm9pLXNzcGtLeWJwcng4TFRMYWpPVU5kOGlQN1RFejVaNUxEQ1l3VXBVUlJtc25qbmhEdFYxOEZ0dDc0Nnh6OUFtNEZKR2o5bTN5ejdQWU5vUG8?oc=5",
+   "d": "2026-11-24T06:09:00.000Z"
+  },
+  {
+   "t": "최태원 \"9,440억 내겠다\"...'세기의 이혼' 마무리?",
+   "src": "YTN",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE44R3NidmozOG03YkNoWE9NeXNjSk9mTXlWUWZnRERsRENfbkRUNUxhQ2RKaW5qRTRYb0thTUpjNlBkeGpCa0N1bzVkS2I4RWpQbjl6MXI4Z1pFd0YwTnc?oc=5",
+   "d": "2026-11-24T01:57:00.000Z"
+  },
+  {
+   "t": "집값 상승 기대 8개월 만에 최대 폭 하락…증시 조정에 경기 비관 확산",
+   "src": "JTBC",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBaSW1YeGdya2xNMGpCS2VQZTU4RHNvUDY5VDZIVjBRSWw2bkt3a2RWQ0xMNEQtZEljTHhmN25BcnBNbVdnemdYMXJXOGRLWjZVaDhFTw?oc=5",
+   "d": "2026-11-24T04:47:00.000Z"
+  },
+  {
+   "t": "이창용 \"금융 공공성만 강조하면 성장·혁신 제약\"",
    "src": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAyQ2FtVDRHOGZRMU1fR1ZQZnltU3dNNlBOYkJRUlpxNzhxQ0t1dFhqNzM0bjNlTVhkeDFRTFFYbE91WXZWVHctcTZuX292SC1yRF9Lc1JqRV9CeDhQcElMaHZrb2hnaUhNVG5EaG92c0I?oc=5",
-   "d": "2026-11-24T02:52:51.000Z"
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5hT0dmZV9Oem0xQ3pidWtEOTNkZVpjb3JWa2gxbmJRMEpXcFRNQlZHX2p2OUZhajJKWDRmdGZuaTVsQXJPQlVUT2FpTFRRdXp5aDZWRHZtVm1UQmRuTzRvbV93OHJzN0ZnMHZEWVRvems?oc=5",
+   "d": "2026-11-24T06:00:20.000Z"
+  },
+  {
+   "t": "[속보]코스피, 매수 사이드카 발동…올해 100번째 사이드카 - 머니투데이",
+   "src": "머니투데이",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5UcmIyUE9RWEdXbWl4WmMtRV9UZE0tSThHTFAyOGoyd01iamU1WVdfbGpnX1ZHd05xWElGTWQ3djRyblRfdTM4NnQtQXk2SVZpUjlVUlRaMUZrckVjWDBLdlN1VmhxRjAt0gFuQVVfeXFMTS1ySU1RZm5zY2ZiXzJLQkk5bUIzd1dEZ2tPZHFxY09CRkdVbkN0ZUNrdTVEMUVzZWFpdEw0WjIzVlkyY092cHJTbF9lVldWUWJaTml0UWQzSk1NeS1QdUNUaVpNbzVaNFZqb1o2eWc?oc=5",
+   "d": "2026-11-24T00:06:24.000Z"
   }
  ],
  "news": [
   {
-   "t": "내신 시험도 ‘수능급’으로 감시···AI 부정행위 적발 시 모든 과목 0점·최대 퇴학",
-   "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Vc2Q3azZqdWJDN0NneDAxQTFjSkp6QUp4d1FKRE1HNHo4V1ZmbXJqLXZ1ZTRTMWNCcTlUX3hUVVZKeWo5VGJ2Q0hoTE84QXdYQldlOFFSZThaUdIBX0FVX3lxTE9LRXlBX1hnSURwZ3NrZm5tcTVrbmdPRkoxYkZfaEIxTmRKWjZ2aGJxUTdpUE9vTExGMGJIT2pnc2R0QXBxR2hfZk45MTdMYTAzbjBHMWYyNmszVHMyZ2tZ?oc=5",
-   "d": "2026-11-24T02:34:00.000Z"
-  },
-  {
-   "t": "[뉴스분석] 인용 가능성 낮은데···민주당 내부서도 ‘탄핵소추권, 정치 이벤트로 소비’ 우려",
-   "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBFaUJLZmlyNUxaZjJCOGduX2ZRZEV2R1c2MlJLN09sd0lKbkNiRnV2bF9wd2xLb1JsZmlmal9rNHRMU1RkN3lmVmNEdl81SHQxS2ZBdDZ6SVFwZ9IBX0FVX3lxTE9NN3M5TW9rY2VFZnBHZWFmb1hCMmdhVElsb1A4em0tOUhGU2NhYS1pYlNIa19ESkhhbDVadE9YV1ZlTHkyT0NfM3htZ1gySHliVEtPd2gtY0E4NGJ0QlZR?oc=5",
-   "d": "2026-11-23T21:00:00.000Z"
-  },
-  {
-   "t": "이용철, ‘배우자 주식 백지신탁 누락’ 지적에 “제 과실… 송구”",
-   "src": "조선일보",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOcXFlRUIzQ1NoM05XWEZYYzk2ckRwNG5mRlRidUtHRTRQblFHNWhSS3RMMmdPVy05VjJRVnZUUVhuSmJwNUh5X0VIN04yTTRlVGlDOGJfdndtcEpZQi1jNE5iVjExaHE5di02UGdxNGVLanNYODRlaVFMR2cxV3pDV0RHRTBlTVE?oc=5",
-   "d": "2026-11-24T04:29:00.000Z"
-  },
-  {
-   "t": "서울교통공사 노조 내일 파업 예고…서울시 비상수송대책 가동",
-   "src": "KBS 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1VVzhMZEpKZUgxZ1RCR3hGdlNiaDhPRmZpQTdEUXFZYW1WbHFGWF9FTTYwVWJxUTVYWnpEektxOThFX29BRWZYM1ZrVVZEQk96UkhpRDlfcUVsZU0?oc=5",
-   "d": "2026-11-24T00:38:00.000Z"
-  },
-  {
-   "t": "이 대통령 “시험 부정, 주가 조작과 본질 같아…추적해 엄벌”",
+   "t": "중·고교 내신 AI 커닝 하면 당일 ‘전 과목 0점’…퇴학까지 가능",
    "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBBM1RWczdCYkY2Tk02Q1Z5VG83TWNSZnE0dWVHNkxya0duQzFTRlJlLUc3aUVaSFcyUUhPeXd3aEtUa0JyVUtZMnlFUnRuLTYtaUVrWjNqeFE3LTFFcHRNN3o0U1N1ZUJWSU9z?oc=5",
-   "d": "2026-11-24T02:51:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5IdXNjUEp4ODdEbHFzYThZcWctZmUxUTBaMTVyNTdpRlBYdFRaTV8zZXdCYmZ4ZTk3UlJ5R3NkZXFDdkI4OGxRSkE1YVVCVktFNml6a08wazhDWTI3RFE5Wnl4a3lfV0RTY2c?oc=5",
+   "d": "2026-11-24T04:48:00.000Z"
   },
   {
-   "t": "’조작 징계’ 추가 의혹 제기에…당 일각 “장동혁 사퇴·진상조사위“",
-   "src": "연합뉴스TV",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBSWDJlbzJHYmxmcDdHMGctVHVZTldJM1lNRWFPZzdLeEM0ZmktWVhsMVZybDlqUWptVlFSUUtfVG9lNzJZdDBtaThXRmlWeXc2X3E4OVg4bHhJU0taSmJvMlBRXzZNWDQ?oc=5",
-   "d": "2026-11-24T04:39:00.000Z"
+   "t": "현직 부장판사, 조희대 탄핵 추진 비판…“계엄만큼 역사에 오점”",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBPMEVFM2ZLQng3ZkpsYmc5QXlzMWNsaHFuV0ljd2p4WHk5OGkxMjVHd3JFNzB3QkpkdDZZZnRDb1RTMVQ3R1VyZjZhOHpWczczSWtOQmRhanBYRWFlR0ozZ2tiRGlTQTZXVzhOZkVsUVl4Zw?oc=5",
+   "d": "2026-11-24T04:04:00.000Z"
+  },
+  {
+   "t": "[속보]김병기 의원 ‘뇌물수수 등 혐의’ 불구속 송치…경찰 수사 1년2개월 만에 종료",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12SUwyekxIVG5ja2ZjOC1VU2lQcnZqbnZQWjFFWnZtSXFvSDR6S2R0b24xZVd6bVFJZkZqTEdhSG5ocnVJcjNWMlFScFBGWTNPUlgzdHowYU9aUdIBX0FVX3lxTFBtanN0d3dqT0pZU0VOcjFEMVlmTGc4a3BuRk9XZDJYRE9VdnJZV1RFNUtySGI0djBwU3Q2Z2I5R3dURG9JS3daSnExaUFxMDFITmZIMVRKWjVURV9oOVNj?oc=5",
+   "d": "2026-11-24T05:40:00.000Z"
+  },
+  {
+   "t": "한미 난기류 속 이종석-정동영 퇴장… 李, ‘동맹파’에 힘 실을듯",
+   "src": "동아일보",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5LMFl5TndsVDNsY1dPOWZJNE1CNUhyQUF1ejBUQzZaeGRTb2FmMUdjYmxCWmRjdmZfb25TSGJ0WVJRekNvZjVBSTZEX2JzVFZTRFpGRzVQb1IzT2p4WkZieGFmcW1nQ1RFX0hQYXE3OXo3SUNvUHg40gFmQVVfeXFMT3FCaDVVWTNLR0o5blFxV1Ezc3Rfb3NKdjdxUDRfdUJEQm1BZ3VGWWc0ODgxU0tna1MtMFlhSWNCX015eXA5SVJpLWZPeThMSDlXelZOczlkbHhEVWV1NkFIMEh3aTNR?oc=5",
+   "d": "2026-11-23T19:30:00.000Z"
+  },
+  {
+   "t": "李 \"시험 부정행위, 주가조작과 다르지 않아… 처벌 획기적으로 강화\"",
+   "src": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZzdtS1ZUbzUta2JyTkVQV0NMQWJCY3VMM2xLVEpxYzVuSks5VFFmSENjeHRNV3dDZ1ZTcmVmdHVZcnJzOW5KVDkzLWMwdXE1dkd1cmNDdTdQek13WE9sWTFSNHVFWUJndzdHZmY0SzFLckdTRlkzbm5BN3JpR2hvUkY3cm9iVzJ0UWhCVnhUaVA?oc=5",
+   "d": "2026-11-24T01:58:00.000Z"
+  },
+  {
+   "t": "‘조작징계 의혹’ 입 연 장동혁, 한동훈, 보수 궤멸 중심“",
+   "src": "KBS 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9wcU01ZVRnSkNBd1BKcV9PeDI3UWxfRGxwZHpoQks4SlAxdEF6SjJXejB0XzBNNUVBcE5pMTg2aGRwaVBudkpjbmR0WGNwMXBBWVU0eDJpUFFLUjQ?oc=5",
+   "d": "2026-11-24T06:37:00.000Z"
   }
  ],
  "week": [
