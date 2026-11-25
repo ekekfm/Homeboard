@@ -1,7 +1,7 @@
 {
  "date": "2026-11-25",
- "slot": "afternoon",
- "updatedAt": "2026-11-25T04:51:34.805Z",
+ "slot": "night",
+ "updatedAt": "2026-11-25T12:27:04.525Z",
  "slots": {
   "morning": {
    "at": "2026-11-24T20:05:49.795Z",
@@ -236,82 +236,199 @@
      "d": "2026-11-25T00:49:00.000Z"
     }
    ]
+  },
+  "night": {
+   "at": "2026-11-25T12:27:04.525Z",
+   "economy": [
+    {
+     "t": "코스피, 6%대 급락에 4700선 붕괴…삼성전자 시총 1000조 아래로",
+     "src": "JTBC",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5leEw0Z0tJNXJnQ2t0UE9vWFNCOGhBazhOUmlEbHY3ODVESGN3andzbTdkZjJBcEI4Sm5yWnFLZnZiVU9DZW9wbHAzcFI2TDQ2TWN5eQ?oc=5",
+     "d": "2026-11-25T06:35:00.000Z"
+    },
+    {
+     "t": "[마켓뷰] ‘젠슨 황’ 효과 하루 만에 반납…4600선에 주저앉은 코스피",
+     "src": "Chosunbiz",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWlZKLWU1WVR0eWpfTWU3SUVldmFHdm9MamlTYVljM19OSFpMY29WRVM0TnZtZThuLVF0MjBabVExX2swMnRQY3FrOWZHclQ4dVhkakFiTTEyMUNyTzE5MkRyeW13TklPSnpBdjRZS1hNTE9wTjlXOG9UMnlMMjFodGdZLWI4MVFQ0gGcAUFVX3lxTE5uX0FaMzhGT3RIaG9YdFVIWUw2RUZnTFl2U0lnTEdVSFN5SU5SWEJza3YxdVhqSGhSMGM1QWpQZVZsSUM5eTJtT2FkZGFHSFFnWnBXNS0wbmV2RndySS1CbjdXTWNoMWIwaXloRUp2cDZYNkJwU1ZVbVU1WS1YWVliM255NW1xUjJoSUM0UVdzc255c1VBTEZtWUlZcA?oc=5",
+     "d": "2026-11-25T10:05:00.000Z"
+    },
+    {
+     "t": "박현주 \"증안펀드 최소 100조는 돼야…주가 부양 아닌 시장 안정\"",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CdXNDbjdOTEpaQzJ1ZnRxQjJYRVJXaThTU01FODBSbk9NWmFVaG9KSHRiV3VhTzUzLUlEVGkwaGNhVGJ4aVJkdzNDdzBGMzYwM0xDZzRic2p6eUxOeEkwRG1keXVjc3VuaGJGVGpSZW0?oc=5",
+     "d": "2026-11-25T10:37:03.000Z"
+    },
+    {
+     "t": "배경훈 \"AI 부정행위 방지 대책 다각도로 검토 중\"",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5QT2Y2QjNFOFFZRkNiZm1zak5aUnJUWjVmVW9kM0RybURQLTI1eXdBNzR1aVc5eTdTdHdzQUJiQUppNEo1MEN3ZTNCNEJ1TzZJMEhvV181N0dEWTJtcmJYOGlibTJnemZ3Q2d6MDBDcnl6UklO0gF0QVVfeXFMTUFCZUpGcnpXQlNKNV92VkpCWWljQndJeGNTdkhDNmVydVFmQk0wSWxfX3VDWVNfVnZjUjR1NEV0SklGX0hhUENCcVRTMXNLUEZFZjVhak5KMzd6dlVhVXNUMng0ZlJPT2pabUJpYTlvaWxJZWQ?oc=5",
+     "d": "2026-11-25T06:32:28.000Z"
+    },
+    {
+     "t": "“젠슨 황 불륜 상대 앨리스 황, 오사카에도 법인 설립”",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA5VkJJd1haMGM5STRraWJaaTdueHNrUTJSbndVSkkyNnQzY2hsaUxZNkV4aDBscDNkVlJiTGNXOVRGZ3ZLLVo0SjNmWDNGdGFuTVkxNEFPNGVHWVE?oc=5",
+     "d": "2026-11-25T07:10:00.000Z"
+    },
+    {
+     "t": "[사설]가계대출 금리 5% 돌파, 취약층 안전판 마련 서둘러야",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE04Wmw1NzYyb2MxdkZSUWlTVlhBRGVwZ2tzcHFEN3pUd2VfY2hNMUhLQ0V4N1QtNklXRTMwQVo0QzBpMTZBTUNJLW94dVhDVUlwdDNOSUJtOEtyd9IBX0FVX3lxTE9zSzR2ZzFXOTJwVEpmMFNmOE51ekpSZDlYeFZLOGZFVmVaVm5fOURvNjNKSWZpaGkwRUJJUHpIYW4wTmhKaTM2Ym0tMHRRYjVFM2tkZzRJVnU0Tm9XUkdF?oc=5",
+     "d": "2026-11-25T09:36:00.000Z"
+    }
+   ],
+   "stock": [
+    {
+     "t": "증안펀드 규모 늘린다... 25개 금융사에 출자 여력 타진",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOdTI2bHZ6Nk5nUnJiYnl5eWl3NnRrMFZLMlEzeWNDT0hSc1BRU2V5Nzl5SWhfZk1kekxVZTZOeGIwc0hmVVZOcEtaQWlEMnhlRjl6Vm4tMFh0c1M2ZXJ4aW9lUU5UdWZHT1VDMFdZN29oYkkyc2M2NWc1VVhJUjczZ0VjRnVjQjh1b1lTcUdn?oc=5",
+     "d": "2026-11-25T09:10:03.000Z"
+    },
+    {
+     "t": "코스피, 6%대 급락 4,697‥전날 급등분 모두 반납",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9aelVlR3AtaWZaNE44NjhOOVdVY2FXelJoUnZsUVdzS0tQQzhwU0ItWlVTUHVuems5UHRMaFptMGNBUUROMl9CMUtoTl9lTVBrcEdXSC1mX3lSYVZiVW05WXJWd1VHT0tVbTNNOVRjMThHNWpS0gF0QVVfeXFMTThaZzBOV29BUGkyU25aRTdUNnpjWXR2bUhfVVJ3dmR2ZHFxTlpQOExQM2NDRm80STlXaTZKRlE4bmR6cFBMR2lnQVBqTXFIRTlBQTktZW41ZFBqUWhvd2hVeHVZcktQdnJ4cmZ1Mk9xMF9WU3Y?oc=5",
+     "d": "2026-11-25T06:35:15.000Z"
+    },
+    {
+     "t": "[e마켓클로징] 삼성전자 시총 1000兆 붕괴···코스피 4600선 후퇴",
+     "src": "시사저널e",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9mSVAyMm9WanFCYkNxUGp4MWhZV0UtOXl6UmlUdWF0TWFWdUg2ZGRkTTBSbmdPSXJrTVJ5T3YzZGY4S3UxSjJMSTFXMngxNzBabnhYYVlTOUJnekM3UUpab0FCV0k3Nm4teHNLbXMzeEt0UQ?oc=5",
+     "d": "2026-11-25T08:00:37.000Z"
+    },
+    {
+     "t": "코스피 4,700선도 깨졌다...삼전닉스 나란히 급락",
+     "src": "YTN",
+     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0xbEpyNHJZcE1BSkRoMVE3bWxDSVQxa1lHek5nRkdXSnd0Y2JYd2UzdjhWc29oSzV3Sjk3aE1HNXpEQ0pWYk43c1R4OGJZeW9GSjY1RUl6YWNqSkcwcmc?oc=5",
+     "d": "2026-11-25T10:50:00.000Z"
+    },
+    {
+     "t": "곤두박질 코스피에 “현실감 없어요” 막막…개미 자금 80조 ‘매물벽’ 갇혀",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5CRFFpM0tuTDFlZ2FaREJjeEdYQlRLbkgzSHlodjQ5VU9RaFN3dGF2SEpZUDdJWmVuaGY5TjFNY0RUZEV5ZW40TnhLNUtmVnhrRVRxVUNIczJ0SWJ4UWp5bkJYWnZ4azQ?oc=5",
+     "d": "2026-11-25T11:13:00.000Z"
+    },
+    {
+     "t": "또 사이드카…갈피 못 잡고 요동치는 2026 코스피",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE13TE5EMmVKOXpBczVZV0c4dDhrRXl4MzlTMWZJay1EaFZkdGtXdkVpR0hkVTVZeElBUHl3cDB1dkIySVY3Qm9qOU1ub29kdzJ3UGVjTlBQaDhTLWM?oc=5",
+     "d": "2026-11-25T12:03:00.000Z"
+    }
+   ],
+   "news": [
+    {
+     "t": "창원지법 \"법관 탄핵은 헌법 가치 훼손\"... 전국 첫 단체 입장문",
+     "src": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQaWN1ZmlQd3VLcmpQTW5VblJ2aEk1ZXZKdk9FLTFUTnJ4SWtxSTBvbFJYVU5oT01HTDFHaVA3TFBhZHJ6dDBOcDc2d0h1cE93MWlaV2VKbUhuVEdEbnYwWFYzYTBvdGF3QUxxT2FiQzJKUS02SV80WVk3eDdBdndHU3lrZGJvSjg?oc=5",
+     "d": "2026-11-25T08:27:52.000Z"
+    },
+    {
+     "t": "‘울릉도로 날아간’ 전략폭격기 ‘백조’…러시아의 일석삼조 셈법",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBkaGxlVXRsSVBaTkFBWG5SSy1FcDh2V0Y5dDFWX2dOQVZha3VLb0JDME93VTdObXFuTWkxa0pja1dXRS1HSVo4X01XWjVDUDQ0RG5nTFFEWmxLQzF1WVMtdFBWNS1TUWl2RTB3a0FwejhJbG5f?oc=5",
+     "d": "2026-11-25T09:11:00.000Z"
+    },
+    {
+     "t": "[속보]‘리트 만점자’ 생명과학 과외선생 “죽음이 범죄 도주처 되면 안돼···그래서 경찰 출석”",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1obmlSX1RpelZaQlZDcGExVUViQVpwREFEdS05ZjhycmQ0OEQyYUx3LVBwRXpRYVoxcXk4QlpXdW5WT1RSS0hRRFpPb1QwYnZDR09zaEwzN2xqd9IBX0FVX3lxTE95REJMbkE0ZFhjQlM1OFZ0VzVlMDIzdjNEdFZlbFFkMTVwWkFrQUMtUGdhWWxWdWdtS29PM2JOcVlXcWt4VFdtYmVlakd1Q29EUjhhME9aNDJ1R19aSTFZ?oc=5",
+     "d": "2026-11-25T05:15:00.000Z"
+    },
+    {
+     "t": "지하철 파업 또 넘겼지만…‘만성 적자·2212명 감축’ 불씨",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB4Q2ZPMzhRUVBzUjNCb1owUlJGbVpVdVpuSEtoUnpXWFpZUnhWU0kwYUlIZ1ZxaXZDenNZR2J2T0l0aFBEUjdVbFE4dHlZYjAtYWxHM3o5OURlUdIBX0FVX3lxTE5lNnd1emZfa0kxTzdkcU41V1BtRzN5N3BGeFBuREFnN3lkTDFfMjB4b1I5WXZzeUpMYnpNdE5PaUVjREVuTXRMSjV6YzVEOC1leDF6MmdRdmZNLWhHU3VV?oc=5",
+     "d": "2026-11-25T11:52:00.000Z"
+    },
+    {
+     "t": "노동계, 정년연장 \"연내 입법\" 최후통첩… 노사 간극 해소될까",
+     "src": "한국일보",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5RVlJiVERuSkZOYjgzQXQ2eEptMTgxTUlxdFJDUm1nR2hBSVNPSDJMSmM0NkhEb0lsNk9GWFZITkU5aXhTb3ZVTnNaUnlhLXA4RFVkbm1vbUhBdzg3REI5cUVpVjlJLWlpRnpkRkRR?oc=5",
+     "d": "2026-11-25T08:29:00.000Z"
+    },
+    {
+     "t": "[사설]‘공소취소 안한다’ 말 못하겠다는 법무장관 후보자",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FZlBSOXJzSWY2bFRSRnNscExBZDFoa3ZzcEkxZXEzOHhwYU5kdUVpLVhGTzZkWjl4UGMydHZtOERqU3dJVVl3UGVMaHdlOUg3NDRRY0lPakViQdIBX0FVX3lxTE1lT0Y0VmY4cHozdUdRTVBLa0FFcDNrU2dabE9JVnhNX3g4Nkk3bGF0NURfdE5ZU2pfVm8zdGdJeGNQNWJmSnBZcXFTaF9RZC1MOEc3cXdDdnA4NDRuTlFZ?oc=5",
+     "d": "2026-11-25T09:10:00.000Z"
+    }
+   ]
   }
  },
  "economy": [
   {
-   "t": "젠슨 황 복귀에 AI 신용시장 다시 '흔들'…코어위브 채권금리 17% 돌파",
-   "src": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5PNEUtRTdPN0ktUG5Gemdsa00ydWliWjFZYUgwd1cwaWN0TTUtWWllOEF3d3E2Q1B5SHlRem9XX2taWE1DYTRnZFB1OHRnUnBlZjFoSXVOYUptaTV4bUZVckR2ZUhDVkdJeXpUT0lQR2E?oc=5",
-   "d": "2026-11-25T01:00:00.000Z"
+   "t": "코스피, 6%대 급락에 4700선 붕괴…삼성전자 시총 1000조 아래로",
+   "src": "JTBC",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5leEw0Z0tJNXJnQ2t0UE9vWFNCOGhBazhOUmlEbHY3ODVESGN3andzbTdkZjJBcEI4Sm5yWnFLZnZiVU9DZW9wbHAzcFI2TDQ2TWN5eQ?oc=5",
+   "d": "2026-11-25T06:35:00.000Z"
   },
   {
-   "t": "하루천하 ‘젠슨 황 효과’…코스피 4% 급락하며 매도 사이드카",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9KcGFDUk5lM0VUOHVCZ2ZOVUZLcGlNX3poaTczTWdyeGxpWExqNnBxS1dDbjlqdG0weF9Wb2E0VnZZdTMzQzVkVnBORDJ3Y2h5LTRBTDZGOHp6LUxaNmszaG56aXVtVUE?oc=5",
-   "d": "2026-11-25T01:19:00.000Z"
-  },
-  {
-   "t": "하루 만에 끝난 '젠슨 황' 랠리…반도체지수 7.8%↓ [뉴욕증시 브리핑]",
-   "src": "한국경제",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5VMThzbllJaHdTS2V0ejQ3d05IZV9LN3JCSnZnRlpzMmJGb0dxc0xOMHc3azJ2aHN0NElWNHUycDlNaGE3UHZ1dHVKSGlJX05HbW55X3JSS25xQQ?oc=5",
-   "d": "2026-11-24T22:14:03.000Z"
-  },
-  {
-   "t": "[속보] 어제는 매수, 오늘은 매도…코스피, 매도 사이드카 발동",
+   "t": "[마켓뷰] ‘젠슨 황’ 효과 하루 만에 반납…4600선에 주저앉은 코스피",
    "src": "Chosunbiz",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTHBQeU0xYUN4T0Q5VEZVV2JDLUg3Y1NzazF5SzBDRnRDb0RXMXUtU3BRNHdwS3RhT2hlNDctbG5iVDE5RGtIQzdjNDhaSHFBRUg5dnNFVGc5SkFDUl9YeDlGbzBLb0U5TnlxVk1MTm1MdEhSdFE0UlBPbjNhVjI4UFFBcjEzMGM10gGcAUFVX3lxTE83cFZKbU8tMVlGemlYRWJqMTVEYmtwYkZyVW80ZGJvMy00RFBqRFZOVWlWaE1IZUk2THV1NTdZNG5wd2V2NjY3Zm5JMHIzTkF2TVpDWnBFNWNGc0JuanctTG1TRHgwTVA5Q2hkV3NHV1hfYmtnSGFBaUgyd1BPWHB5VVNpTjFPUENBV2NoSHV6RTlRMDhIaW5VRDJJWQ?oc=5",
-   "d": "2026-11-25T00:11:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWlZKLWU1WVR0eWpfTWU3SUVldmFHdm9MamlTYVljM19OSFpMY29WRVM0TnZtZThuLVF0MjBabVExX2swMnRQY3FrOWZHclQ4dVhkakFiTTEyMUNyTzE5MkRyeW13TklPSnpBdjRZS1hNTE9wTjlXOG9UMnlMMjFodGdZLWI4MVFQ0gGcAUFVX3lxTE5uX0FaMzhGT3RIaG9YdFVIWUw2RUZnTFl2U0lnTEdVSFN5SU5SWEJza3YxdVhqSGhSMGM1QWpQZVZsSUM5eTJtT2FkZGFHSFFnWnBXNS0wbmV2RndySS1CbjdXTWNoMWIwaXloRUp2cDZYNkJwU1ZVbVU1WS1YWVliM255NW1xUjJoSUM0UVdzc255c1VBTEZtWUlZcA?oc=5",
+   "d": "2026-11-25T10:05:00.000Z"
   },
   {
-   "t": "내일 금리인상 확신하는 단기금리…골드만삭스 등은 동결 전망",
+   "t": "박현주 \"증안펀드 최소 100조는 돼야…주가 부양 아닌 시장 안정\"",
    "src": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE83eFZTdWY0R3g5amQ3XzNBTDR6Y192X3JPaE9DOUpmM21zV1Q1Vm1UZFV0YkNiclQzaWxyTjQwNUtQLWFibTJSU1g5MWQtSWRwMWtrWWY2SWczdzRsWkZjN2xPWkxKSDFtMUJ3cTFha20?oc=5",
-   "d": "2026-11-25T02:02:05.000Z"
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CdXNDbjdOTEpaQzJ1ZnRxQjJYRVJXaThTU01FODBSbk9NWmFVaG9KSHRiV3VhTzUzLUlEVGkwaGNhVGJ4aVJkdzNDdzBGMzYwM0xDZzRic2p6eUxOeEkwRG1keXVjc3VuaGJGVGpSZW0?oc=5",
+   "d": "2026-11-25T10:37:03.000Z"
   },
   {
-   "t": "10월 주택담보대출 금리 6개월째 상승해 5% 육박",
-   "src": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA5NGhmcXhrOWctN2VHOFduWnYzVHJBRmdqSnFRMXNBYkJaQS0wMGwyY1liNkxtWGdtdTJGdHRzMXpTaldOQlNkOHhHRmxNaUxQSl9KNjM1ODM0Z3ZDb0szTW1ZWU0zMlV0NUhMZlVNQjM?oc=5",
-   "d": "2026-11-25T03:00:33.000Z"
+   "t": "배경훈 \"AI 부정행위 방지 대책 다각도로 검토 중\"",
+   "src": "MBC 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5QT2Y2QjNFOFFZRkNiZm1zak5aUnJUWjVmVW9kM0RybURQLTI1eXdBNzR1aVc5eTdTdHdzQUJiQUppNEo1MEN3ZTNCNEJ1TzZJMEhvV181N0dEWTJtcmJYOGlibTJnemZ3Q2d6MDBDcnl6UklO0gF0QVVfeXFMTUFCZUpGcnpXQlNKNV92VkpCWWljQndJeGNTdkhDNmVydVFmQk0wSWxfX3VDWVNfVnZjUjR1NEV0SklGX0hhUENCcVRTMXNLUEZFZjVhak5KMzd6dlVhVXNUMng0ZlJPT2pabUJpYTlvaWxJZWQ?oc=5",
+   "d": "2026-11-25T06:32:28.000Z"
+  },
+  {
+   "t": "“젠슨 황 불륜 상대 앨리스 황, 오사카에도 법인 설립”",
+   "src": "KBS 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA5VkJJd1haMGM5STRraWJaaTdueHNrUTJSbndVSkkyNnQzY2hsaUxZNkV4aDBscDNkVlJiTGNXOVRGZ3ZLLVo0SjNmWDNGdGFuTVkxNEFPNGVHWVE?oc=5",
+   "d": "2026-11-25T07:10:00.000Z"
+  },
+  {
+   "t": "[사설]가계대출 금리 5% 돌파, 취약층 안전판 마련 서둘러야",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE04Wmw1NzYyb2MxdkZSUWlTVlhBRGVwZ2tzcHFEN3pUd2VfY2hNMUhLQ0V4N1QtNklXRTMwQVo0QzBpMTZBTUNJLW94dVhDVUlwdDNOSUJtOEtyd9IBX0FVX3lxTE9zSzR2ZzFXOTJwVEpmMFNmOE51ekpSZDlYeFZLOGZFVmVaVm5fOURvNjNKSWZpaGkwRUJJUHpIYW4wTmhKaTM2Ym0tMHRRYjVFM2tkZzRJVnU0Tm9XUkdF?oc=5",
+   "d": "2026-11-25T09:36:00.000Z"
   }
  ],
  "news": [
   {
-   "t": "[속보] 노소영, 최태원 9천440억 원 지급 제안 거절‥\"즉시 상고취하하길\"",
-   "src": "MBC 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE16bFNrWDFEVlVkLVE0XzN6bmJPRVhvbG1qMk9BcC1Qa0g0SnJsYzRlQXcwVTlNeFcyMkt3ZXRTNTlhOVhWTzBNcmluOWVSZkk4V0FMLWlkcUNsa2dsQXBYV2JwSm5seGh2NXBuV242b1JIOXZ2Tms00gF3QVVfeXFMUFhYWEgzbHphT2hZMTgzQmRNYXUzbWk3Y0VGNDItU0c3TDM1amRRd1VfWXJURmN0Ry1VYTU5dEp3VEU0dEN6RUI1eTBGZ1l2Y3d0RHppWUJ5RFE3TXVVMWZUTWtsZFVncEhDQTRKSlNoalp6cmlOTTA?oc=5",
-   "d": "2026-11-25T02:36:37.000Z"
-  },
-  {
-   "t": "‘조희대 탄핵’ 두고 민주당 “사유 합치면 중대성 넘쳐” vs ‘무리수’",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5RZG11b2ZuTVZPMW1DQXhvNWVwcDU3TlF0azVJZU1GUUQ1OVNyRUtYMG9qNktXLXdROWpGTnZNbXBOb0Q3VVg4Z3JqNUNDMDd4UDFUYlVWVHhNMEstaW9SeTdETVhTSjZ1amhYV2NPeEw5MEZy?oc=5",
-   "d": "2026-11-25T02:52:00.000Z"
-  },
-  {
-   "t": "국힘 “이용철 법무장관 후보자는 부적격…청문보고서 거부 방침”",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5sQllycEx1bVBKY3JYRVo4WGUxUG1UZW5uS3htMVJlV2xlRmdqcHJBRHZhYVJpWkg2UkMzc2lsX1dpZFJ1Z0x0Y3hGYmhFa1ZyZkk0MzlIcG0wajk2RF9uWjhoaF9sZUItQWo1aGZBZEt3RWRF?oc=5",
-   "d": "2026-11-25T02:46:00.000Z"
-  },
-  {
-   "t": "미 당국자 “미북 정상회담 성사 노력 전혀 없었다…공은 북한에”",
-   "src": "VOA 한국어 홈페이지",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1KVzRBTjMxTC04anZqdEg4UmRkWTNRSFl6X05LTlFTVjNoM2ZjTmNjU3hTc1M5RW1fMnBCanAxQUQ3RXhvZmNSV1R4RElJOVp1Uk5iVnNjMTZIa0c2aFkxdXpFdW50Z3paMjFOcVVMdnM?oc=5",
-   "d": "2026-11-24T16:18:48.000Z"
-  },
-  {
-   "t": "\"강금실? 대통령 생각을 모르겠다\" 與서도 국정원장 후보 지명 우려",
+   "t": "창원지법 \"법관 탄핵은 헌법 가치 훼손\"... 전국 첫 단체 입장문",
    "src": "조선일보",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNLVBXOFpQTTB1M1BzQW1HOXdqUUJrMlB4S1oxUXNVaUt4aTRFemlueXZjTTZrYng1WmUydUtBNWM4THVkNmJ6VVFLTmRqUGZOLU5sZlNWbzJtV2RRWkc5aVRnVXIzenJnRHY0TVlDTXVuMTlMUU1uUTJDcnI1NnBRVFB1ZjJPQQ?oc=5",
-   "d": "2026-11-24T15:43:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQaWN1ZmlQd3VLcmpQTW5VblJ2aEk1ZXZKdk9FLTFUTnJ4SWtxSTBvbFJYVU5oT01HTDFHaVA3TFBhZHJ6dDBOcDc2d0h1cE93MWlaV2VKbUhuVEdEbnYwWFYzYTBvdGF3QUxxT2FiQzJKUS02SV80WVk3eDdBdndHU3lrZGJvSjg?oc=5",
+   "d": "2026-11-25T08:27:52.000Z"
   },
   {
-   "t": "음주운전 단속되자 편의점서 ’술타기’ 시도…50대 송치",
-   "src": "연합뉴스TV",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBISHI2czExd0pCaDZIelZJR1JzemtNWTFad1ZYZmpLR2hxSl94X3MzR21UZHJtQS1VNGlCLUp6Wi1xdTBYWnZGQVRWOVR1YXN0WDRaeEJVNWFRMmJRS0E5NGlPSnBaenc?oc=5",
-   "d": "2026-11-25T00:49:00.000Z"
+   "t": "‘울릉도로 날아간’ 전략폭격기 ‘백조’…러시아의 일석삼조 셈법",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBkaGxlVXRsSVBaTkFBWG5SSy1FcDh2V0Y5dDFWX2dOQVZha3VLb0JDME93VTdObXFuTWkxa0pja1dXRS1HSVo4X01XWjVDUDQ0RG5nTFFEWmxLQzF1WVMtdFBWNS1TUWl2RTB3a0FwejhJbG5f?oc=5",
+   "d": "2026-11-25T09:11:00.000Z"
+  },
+  {
+   "t": "[속보]‘리트 만점자’ 생명과학 과외선생 “죽음이 범죄 도주처 되면 안돼···그래서 경찰 출석”",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1obmlSX1RpelZaQlZDcGExVUViQVpwREFEdS05ZjhycmQ0OEQyYUx3LVBwRXpRYVoxcXk4QlpXdW5WT1RSS0hRRFpPb1QwYnZDR09zaEwzN2xqd9IBX0FVX3lxTE95REJMbkE0ZFhjQlM1OFZ0VzVlMDIzdjNEdFZlbFFkMTVwWkFrQUMtUGdhWWxWdWdtS29PM2JOcVlXcWt4VFdtYmVlakd1Q29EUjhhME9aNDJ1R19aSTFZ?oc=5",
+   "d": "2026-11-25T05:15:00.000Z"
+  },
+  {
+   "t": "지하철 파업 또 넘겼지만…‘만성 적자·2212명 감축’ 불씨",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB4Q2ZPMzhRUVBzUjNCb1owUlJGbVpVdVpuSEtoUnpXWFpZUnhWU0kwYUlIZ1ZxaXZDenNZR2J2T0l0aFBEUjdVbFE4dHlZYjAtYWxHM3o5OURlUdIBX0FVX3lxTE5lNnd1emZfa0kxTzdkcU41V1BtRzN5N3BGeFBuREFnN3lkTDFfMjB4b1I5WXZzeUpMYnpNdE5PaUVjREVuTXRMSjV6YzVEOC1leDF6MmdRdmZNLWhHU3VV?oc=5",
+   "d": "2026-11-25T11:52:00.000Z"
+  },
+  {
+   "t": "노동계, 정년연장 \"연내 입법\" 최후통첩… 노사 간극 해소될까",
+   "src": "한국일보",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5RVlJiVERuSkZOYjgzQXQ2eEptMTgxTUlxdFJDUm1nR2hBSVNPSDJMSmM0NkhEb0lsNk9GWFZITkU5aXhTb3ZVTnNaUnlhLXA4RFVkbm1vbUhBdzg3REI5cUVpVjlJLWlpRnpkRkRR?oc=5",
+   "d": "2026-11-25T08:29:00.000Z"
+  },
+  {
+   "t": "[사설]‘공소취소 안한다’ 말 못하겠다는 법무장관 후보자",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FZlBSOXJzSWY2bFRSRnNscExBZDFoa3ZzcEkxZXEzOHhwYU5kdUVpLVhGTzZkWjl4UGMydHZtOERqU3dJVVl3UGVMaHdlOUg3NDRRY0lPakViQdIBX0FVX3lxTE1lT0Y0VmY4cHozdUdRTVBLa0FFcDNrU2dabE9JVnhNX3g4Nkk3bGF0NURfdE5ZU2pfVm8zdGdJeGNQNWJmSnBZcXFTaF9RZC1MOEc3cXdDdnA4NDRuTlFZ?oc=5",
+   "d": "2026-11-25T09:10:00.000Z"
   }
  ],
  "week": [
