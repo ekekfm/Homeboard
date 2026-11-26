@@ -124,6 +124,41 @@
     box.appendChild(list);
   }
 
+  /* ---------- 메모 수정 ---------- */
+  var editId = "", draft = null;
+  function startEdit(n) {
+    editId = n.id; draft = { text: n.text || "", tags: (n.tags || []).join(", ") };
+    W.draw();
+    setTimeout(function () { var t = W.$("#notes .nedit textarea"); if (t) { t.focus(); t.setSelectionRange(t.value.length, t.value.length); grow(t); } }, 0);
+  }
+  function stopEdit() { editId = ""; draft = null; W.draw(); }
+  function saveEdit(n) {
+    var text = (draft.text || "").replace(/\s+$/, "");
+    if (!text.trim()) { W.toast("내용이 비어 있으면 저장할 수 없습니다. 지우려면 '지우기'를 누르세요"); return; }
+    var tg = tagList(draft.tags || "");
+    n.text = text; if (tg.length) n.tags = tg; else delete n.tags;
+    editId = ""; draft = null; W.save(); W.draw(); W.toast("메모를 수정했습니다");
+  }
+  function grow(t) { t.style.height = "auto"; t.style.height = Math.min(t.scrollHeight + 2, window.innerHeight * 0.6) + "px"; }
+  function editRow(n) {
+    var h = W.h;
+    var ta = h("textarea", { "aria-label": "메모 내용 수정" }); ta.value = draft.text;
+    ta.addEventListener("input", function () { draft.text = ta.value; grow(ta); });
+    var tg = h("input", { class: "field", placeholder: "태그 (쉼표로 구분)", autocomplete: "off", "aria-label": "태그 수정" }); tg.value = draft.tags;
+    tg.addEventListener("input", function () { draft.tags = tg.value; });
+    function keys(e) {
+      if (e.key === "Escape") { e.preventDefault(); stopEdit(); }
+      else if (e.key === "Enter" && (e.ctrlKey || e.metaKey) && !e.isComposing) { e.preventDefault(); saveEdit(n); }
+    }
+    ta.addEventListener("keydown", keys); tg.addEventListener("keydown", keys);
+    return h("li", { class: "nedit" + (n.pinned ? " pinned" : "") },
+      h("div", { class: "main" }, ta, tg,
+        h("div", { class: "nedit-acts" },
+          h("span", { class: "muted", text: "Ctrl+Enter 저장 · Esc 취소" }),
+          h("button", { class: "btn ghost sm", type: "button", onclick: stopEdit }, "취소"),
+          h("button", { class: "btn sm", type: "button", onclick: function () { saveEdit(n); } }, "저장"))));
+  }
+
   /* ---------- 오른쪽: 메모 ---------- */
   function main() {
     var h = W.h, $ = W.$, q = ($("#note-q").value || "").trim().toLowerCase(), all = live(), dead = (S().notes || []).filter(function (n) { return n.trashed; });
@@ -151,7 +186,10 @@
       if (tag && (n.tags || []).indexOf(tag) < 0) return false;
       return !q || ((n.text || "") + " " + (n.tags || []).join(" ") + " " + (wname[n.workId] || "") + " " + where(n)).toLowerCase().indexOf(q) >= 0;
     }).sort(function (a, c) { return (c.pinned ? 1 : 0) - (a.pinned ? 1 : 0) || (a.id < c.id ? 1 : -1); });
-    W.fill($("#notes"), shown.map(function (n) {
+    var ae = document.activeElement, typing = editId && ae && ae.closest && ae.closest("#notes .nedit");
+    if (editId && !all.some(function (n) { return n.id === editId; })) { editId = ""; draft = null; }
+    if (!typing) W.fill($("#notes"), shown.map(function (n) {
+      if (n.id === editId) return editRow(n);
       var cur = (n.nb && book(n.nb) ? n.nb : "") + (n.nb && book(n.nb) ? "|" + (n.sec || "") : "");
       return h("li", { class: n.pinned ? "pinned" : null },
         h("span", { class: "main" }, h("div", { style: "white-space:pre-wrap", text: n.text }),
@@ -163,6 +201,7 @@
           var v = e.target.value.split("|"); if (v[0]) { n.nb = v[0]; if (v[1]) n.sec = v[1]; else delete n.sec; } else { delete n.nb; delete n.sec; }
           redraw(); W.toast("'" + where(n) + "'(으)로 옮겼습니다"); } },
           moveOpts.map(function (o) { return h("option", { value: o[0], selected: o[0] === cur || (!cur && !o[0]) ? true : null }, o[1]); })),
+        h("button", { class: "btn ghost sm", type: "button", "aria-label": "메모 수정", onclick: function () { if (editId && editId !== n.id && draft && !confirm("수정 중인 다른 메모가 있습니다. 저장하지 않고 이 메모를 수정할까요?")) return; startEdit(n); } }, "수정"),
         h("button", { class: "btn ghost sm", type: "button", "aria-pressed": n.pinned ? "true" : "false", onclick: function () { W.upd("notes", n.id, { pinned: !n.pinned }); } }, n.pinned ? "고정됨" : "고정"),
         h("button", { class: "btn ghost sm danger", type: "button", onclick: function () { W.upd("notes", n.id, { trashed: new Date().toISOString(), pinned: false }); W.toast("휴지통으로 옮겼습니다"); } }, "지우기"));
     }), q ? "검색 결과가 없습니다." : tag ? "이 태그의 메모가 없습니다." : "이곳에 메모가 없습니다. 위에서 적어 보세요.");

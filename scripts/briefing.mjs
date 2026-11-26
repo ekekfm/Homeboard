@@ -40,11 +40,36 @@ function slotOf(now) {
   return { date: kst.toISOString().slice(0, 10), slot: hr < 11 ? "morning" : hr < 16 ? "afternoon" : "night" };
 }
 
+// GitHub 예약 실행은 몇 시간씩 늦게 시작될 때가 있다. 그래서 예약 실행이면 "실제로 시작한 시각"이 아니라
+// "어느 예약 시간(cron)으로 실행됐는지"로 시간대와 날짜를 정한다. (손으로 실행하면 지금 시각 기준)
+const CRON_SLOT = { "7 22 * * *": "morning", "37 23 * * *": "morning", "7 3 * * *": "afternoon", "7 4 * * *": "afternoon", "7 9 * * *": "night", "7 10 * * *": "night" };
+async function scheduledCron() {
+  if (process.env.BRIEFING_CRON) return process.env.BRIEFING_CRON;
+  if (process.env.GITHUB_EVENT_NAME !== "schedule" || !process.env.GITHUB_EVENT_PATH) return "";
+  try { return JSON.parse(await readFile(process.env.GITHUB_EVENT_PATH, "utf8")).schedule || ""; } catch { return ""; }
+}
+function slotOfCron(cron, now) {
+  const p = cron.trim().split(/\s+/), mm = +p[0], hh = +p[1];
+  if (!CRON_SLOT[cron.trim()] || isNaN(mm) || isNaN(hh)) return null;
+  // 지금보다 앞선 가장 가까운 예약 시각(UTC)을 찾고, 그 시각의 한국 날짜를 쓴다
+  let t = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), hh, mm);
+  if (t > now.getTime()) t -= 86400000;
+  return { date: new Date(t + 9 * 3600 * 1000).toISOString().slice(0, 10), slot: CRON_SLOT[cron.trim()], late: Math.round((now.getTime() - t) / 60000) };
+}
+
 const now = process.env.BRIEFING_NOW ? new Date(process.env.BRIEFING_NOW) : new Date();
-const { date, slot } = slotOf(now);
+const cron = await scheduledCron();
+const byCron = cron ? slotOfCron(cron, now) : null;
+const { date, slot } = byCron || slotOf(now);
+console.log(byCron ? `예약(${cron}) 실행 → ${date} ${slot} (예약보다 ${byCron.late}분 늦게 시작)` : `수동/시각 기준 실행 → ${date} ${slot}`);
 
 let prev = {};
 try { prev = JSON.parse(await readFile(FILE, "utf8")); } catch {}
+// 아주 늦게 도착한 예약 실행이 이미 넘어간 다음 날 파일을 덮어쓰지 않게 한다
+if (prev.date && date < prev.date) {
+  console.log(`${date} ${slot}: 이미 ${prev.date} 뉴스가 있어 늦게 도착한 이번 실행은 건너뜁니다.`);
+  process.exit(0);
+}
 const slots = prev.date === date && prev.slots ? { ...prev.slots } : {};
 
 // 예약 실행이 빠질 때를 대비해 시간대마다 예비 실행이 한 번 더 온다.
