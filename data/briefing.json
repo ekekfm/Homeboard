@@ -1,7 +1,7 @@
 {
  "date": "2026-11-27",
- "slot": "morning",
- "updatedAt": "2026-11-27T04:03:56.196Z",
+ "slot": "afternoon",
+ "updatedAt": "2026-11-27T11:56:55.337Z",
  "slots": {
   "morning": {
    "at": "2026-11-27T04:03:56.196Z",
@@ -119,82 +119,199 @@
      "d": "2026-11-26T23:01:34.000Z"
     }
    ]
+  },
+  "afternoon": {
+   "at": "2026-11-27T11:56:55.337Z",
+   "economy": [
+    {
+     "t": "코스피·코스닥 동반 급등…외국인 순매수",
+     "src": "KBS 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBUTjlTcFM1RXN2bUNIT1NoVHNpVTJzMzdtZDhGTzVIRm9oY29QYW1VQ3VlenhLMVVjM3AzSDViUUlWb0JYZTBYX3FSTzFXd21oQXJ3cW9tWGpXNURReU0tajRXeVlkUQ?oc=5",
+     "d": "2026-11-27T10:06:00.000Z"
+    },
+    {
+     "t": "[단독] 92억 집 팔려고 60억 빌려줬다…압구정 ‘집주인 대출가능’ 매물까지",
+     "src": "매일경제",
+     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE12WFNta1RrMk1aWXU5MGxaMDVlM1hMM1lMZXRlUUExcjY0OU0tWjVtWEZyQUlPZWxYN3RsZi00bG5veVk0LUxVb3F0V0wxTy1VV1VWWkdiU0U?oc=5",
+     "d": "2026-11-27T09:40:45.000Z"
+    },
+    {
+     "t": "美 과잉생산 관세 추가 부담 피했지만…자동차·철강 수출 희비",
+     "src": "한국무역협회-KITA.NET",
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNYXRiemN2NFRocmNfak9Ud2tlc2pXX0w1UkRFZVA2ZDBxaUg0Y3U0c201WWZsNlZiNTUyclVldzBnYi1yYkJyblZyOU5QRnh5Rl9neVJ4azc0eTVKQmpfaWctYXBQZDVHdXJxdXI0NnNPano0X1ZHYnRqNUJCdlYzaGdEZ0FCNGwyTXcwdHNRTW1TNUxJWk9XdG51QnRBTGVub3gxVndYYUJVOFBPM3k4WUNtLTN4OTJxT0c3R0tfV1d4aDNFQk84X3VINW5qOWhhd0pjREln?oc=5",
+     "d": "2026-11-27T05:41:40.000Z"
+    },
+    {
+     "t": "젠슨 황이 그릇 닦던 식당…‘엔비디아 발상지’ 명판 뗐다 다시 걸어",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBSUXNYLVZGcTBaM2RVbUhLaUpxTTIySElDenVIOUZza3hnOGZpUm1oNVc1LVlfek10WUFCN2ZmX2F3R09XUW5LT0laYkJTZHJ2NTl3dzhoVW9kTDRjNTFHZ3U4YmxnNHdYN1BfU2ZhVQ?oc=5",
+     "d": "2026-11-27T01:47:00.000Z"
+    },
+    {
+     "t": "[외환] 배당·네고 '밀당'에 보합권…1,340원 초반대 유지",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82bmJGekpfYWlULU9MRlNYZXlXXzNjV2VvTkRmcGRLdWltcUhnUF95bDFzazF6OEF2bEg4eWt6T2hfZkpmOFpWRGVwdEEtekdvd2lqbnBNUlJZOW1CdnhOUnhlVjUtTkVPQjBtd05hcnfSAXRBVV95cUxOdDhPRko5Yk1pUlREQXRsUWM2M05zT2p1Q1BzZ3FEcmJKNks1UzhqTWhLWjFfdXJleUR1Sks4UEpnbDdkSzF3bkNmTnROb1R2ZmtudFE2el90Z3VudUY4UkdkalJ4SEtHZGswMGw0Tnl2UmdkMA?oc=5",
+     "d": "2026-11-27T04:07:57.000Z"
+    },
+    {
+     "t": "씨티은행 측 \"증안펀드 최대 40조 원으로 커질 수도\" 전망",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9LdnNVdUhUcWZwbTc5bFQzTzlpQVY2SmtMWmxsZU15dzhuVGFlYjRWQzBKSURQcFl5V0VWOWE4ZmdjcGtvUk5RWUFWM2w0ckRRV2o4ai1XdjJESjIzdFduU085dVdVQTQyMi1HX2lRRXY5QV800gF0QVVfeXFMTi13NnZ3azY1ZTIzbExLN281QkwzemJYbVFyWE9LelpWNXpMYlpCbTlXbk1tcTdTMFM3cThycHVEVXpzc3FVTFhBQUF6RW9Oa2o0aFFCUGp1QTRoMEs0eGFnREJ3bVozZm1Bbm9FZ3hqZHlnRGI?oc=5",
+     "d": "2026-11-27T08:32:26.000Z"
+    }
+   ],
+   "stock": [
+    {
+     "t": "증안펀드 기대에 증시 급등…코스닥 ’사이드카’",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9qd1Q4aXRUSFM4dDRBMnV1dHU3Ry1uOUxSXzRxOS1TZldXbnV1TkNyQTlhbUVpUE5tN3dBTk5QSTFVdC15UnhuM3hHT1FWVzlFSXBjX1NNblFCZmhPYVZHNUxMSktWdTQ?oc=5",
+     "d": "2026-11-27T10:17:00.000Z"
+    },
+    {
+     "t": "배당금·증권시장안전펀드 투입 기대감에 불기둥 올린 증시",
+     "src": "YTN",
+     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4wUUl6TU5iQUZWMS1FT002cjFYM0NKbkxsdVZTbEwzNEkzNlNBcHVtdGwtN1UtLWxSRkxINDhYSDJES1ZkZFd0T2lERjNiRnZkUmliSTA0UVRYXzFwdXc?oc=5",
+     "d": "2026-11-27T09:11:00.000Z"
+    },
+    {
+     "t": "증시 호조+금통위 프라이싱에 약세 확대…국고 3년 7bp↑",
+     "src": "연합인포맥스",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE12MWRVdnI1S1dtTV9iUkkxaGpHdE12dDdfTmEtVnpRQ1RrYUNfaWQxdE40d25felZTZlExLVYxcWFlN0UtNGJmN0RnS0d1eWdnUjhDRi1aT2ZLbmYxWEt3bTIxZGxFblVidkg0UDNjUlg?oc=5",
+     "d": "2026-11-27T08:18:19.000Z"
+    },
+    {
+     "t": "18년 만에 ‘증안펀드’ 가동하나···4700선 갇힌 코스피에 고민 깊어진 정부",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5aYXFJWS1tTWhHc3dPWWFtX2RNMmJyUkNMS1JWaTJIbmJvS1dpTzlSbFF0cEtCMGNzMEh3ZWVBd1E1a0xSTUxNR0h5VV9SQWZfUTFyc2p0ckkwUdIBX0FVX3lxTFBvR29RQ1c2ZGhvdWxlSE9SRFVLcXY2R3dZYXhLdG1WTXI2YnpGcC1KaWl4ZHZhOW5KSzdESGFyb0VIRTU1bGZxb0hmZmU2eUVhZzZFMlF4LVlCUG9FZ1JB?oc=5",
+     "d": "2026-11-27T03:48:00.000Z"
+    },
+    {
+     "t": "엔비디아발 'AI 조정' 잦아드나…코스피·코스닥, 급등 마감(종합)",
+     "src": "연합뉴스",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9veUI5eUJaOWYzLTV3UlR6TkVxbXVTZzJuV2N3cXN4VXBjMkVsUTFJRmZZZnY0Q1BmdW5mWS1OY0kzd0IzRHAzeEhoREpzQ2o1SlZDNE9PdHhweFHSAWBBVV95cUxNcFlWOFJMSkpDWWJ5aTV1SFpHYVU4aDlUOTl1VGZFR0VscHdBZVhSb1V3X2hTVjBGLTlFc1RWUmJ2V25Jc0VabWplT3hHNHlKMTJvckVTbGxMZDE4RVlnQWg?oc=5",
+     "d": "2026-11-27T07:35:56.000Z"
+    },
+    {
+     "t": "기준금리 3.25% 인상·출렁이는 코스피! 다이소·롯데리아·더벤티 혜택까지 챙기는 '고향사랑기부제 위기브' 확정 세테크",
+     "src": "고향사랑기부제 위기브",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0yMTIwazNvbG1OYjNQQi02Z2JFVmFreURiUGJvSGFmYjB4bzYyNGtWdFI4Y2x6eldTWjVnUnlNY0p1MGRUSzd6dlM4V3NlLTV6TzRtOEVR?oc=5",
+     "d": "2026-11-27T11:52:55.000Z"
+    }
+   ],
+   "news": [
+    {
+     "t": "최민희 ‘당원 자격정지 2년’ 확정 땐 28년 총선 출마 불가능···계파갈등 전면전 치닫나",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1qTzZxNm1jYlUwa19GXzhKN25UVkVmbkF2a0s0LWQtTWw1SGdQZENRNGFWcG5XUFhzSUpSUjExVlBqdFdUNVVQXzh1RDh6WEo5ZzVBQUZkNHRMZ9IBX0FVX3lxTE93WVBCTThYNV9QSm9kWHFkRlFDbEtKV0dFOW9CLVlVbk51N1AtVWJxQ0RnYlNxbUFIU091OHo2SUhxVGFTRmlqVlZ1OVI2T3VMWEZ5VGtVMG9La19SdGJv?oc=5",
+     "d": "2026-11-27T11:05:00.000Z"
+    },
+    {
+     "t": "헛도는 ‘정년 연장’ 논의…노동계 “65살 연장” 재계 “60살 퇴직 뒤 재고용”",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5TQ1RBVGg3UFIyZmZhQzFEVG1nd2gyM3dlV1BEVDUwOUFLZi1aOWE2dE1mT2tCZnNjcjhMY2ZRVzhKMnI1blpDWWJxRXFJb2lxNUljbUlHYzlNbTdNOC1aV2NDTXo?oc=5",
+     "d": "2026-11-27T11:14:00.000Z"
+    },
+    {
+     "t": "가방엔 술·과자뿐…최전방 철책 200m 앞에서 붙잡힌 30대 여성",
+     "src": "한겨레",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE45YnJZUGFaNEZIeGZNSDFxUURJWEZ5NDhJRDI1S1FldFZuOFFLM3IxZEg4RzZ4SGlDVmVYbkNOZWprcWptTG9OLXllSkxPV2VESzI5aTdSM1ZVdllyRjVaTE5LWk9NbXpoQ0RQa2NGVl9Nbm5K?oc=5",
+     "d": "2026-11-27T10:03:00.000Z"
+    },
+    {
+     "t": "서영교·박홍근 뜻밖의 충돌‥\"답변 태도에 문제\" \"여기가 상원인가\"",
+     "src": "MBC 뉴스",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9WMDJEUjU5cjdlTWNJN2JVOW1ONWJZaFNvY1BpeFhoUnNJenFGc0V1NFBaVm1aYUpJYUh2Sk1Zdk5McWk3Y1Z1R2RDYVpfbnpHVFRpazhWSVFNc045eWlNeXplRkZPMGkwVnUzWHlxLXUwR1ZOYWl5ctIBeEFVX3lxTE45YWpKdGtXNHVlbFFVQ1R3T1hXMDN1aWs1TGpGY0lmVDdoalUxcFhrai1TelpSeUlXdnJkdlN0UGxwbEZDSUN1cGVaTm1kRjcwT055aVNUZjdZYmM1eVdxSGE1UFQxUjVSYzBNenlmTmtJSUoxTFh4RA?oc=5",
+     "d": "2026-11-27T06:41:28.000Z"
+    },
+    {
+     "t": "李 대통령 사회대개혁위 1주년 간담회…\"사회 전반 구조적 변화 필요\"",
+     "src": "연합뉴스TV",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE04VXVlNU02SVh5bEpTbkZ5U0J0TURsek9pWXZycjdrb0tQRFpUOG1OV0ZBVk5XdWJPY1V1M0lzelZJSFZ0dXZkb1g5dGNlWmUtS0NCazd3ekxENjk2YW1pZ1BUXzAxLUk?oc=5",
+     "d": "2026-11-27T11:32:00.000Z"
+    },
+    {
+     "t": "주말 다시 추워진다…전국 곳곳 ‘비·눈’ 일요일 아침 영하 6도까지 떨어져",
+     "src": "경향신문",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBxUlZ3RXN4eEE3aEpRXy1jV1FfRXpXSExzeGVGaHkxS2NwU0ZCSFpKal8xcU9waHFqZjRmMEZydG40SnA0Wmd5bS1YREdsaW1sY3JqSzZvY3cxQdIBX0FVX3lxTE5WU3JJa1VMVlhSNFBuaFUwa2FGZi01Vm5jYzZNZDEwbWZwM1dUZnhBeDlPa3JSQk5ZX0V6aHdwRUgyMnozWnZZNzZjeURlVmV4ZlNZbjZPLWpRcy1ndTgw?oc=5",
+     "d": "2026-11-27T10:58:00.000Z"
+    }
+   ]
   }
  },
  "economy": [
   {
-   "t": "성장률 전망치 올랐지만…가계 실질소득은 뒷걸음",
-   "src": "JTBC",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5BSW16X3FNTmlGTjhjQzYtcl91VFE4Uk8wRWVNU190M3cxVTNZaVd3a3BnakRNc0dHTnpIU1l6QU01LUNqU1dkU3Z4QnVtTjBLZ1d2OQ?oc=5",
-   "d": "2026-11-26T22:44:00.000Z"
+   "t": "코스피·코스닥 동반 급등…외국인 순매수",
+   "src": "KBS 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBUTjlTcFM1RXN2bUNIT1NoVHNpVTJzMzdtZDhGTzVIRm9oY29QYW1VQ3VlenhLMVVjM3AzSDViUUlWb0JYZTBYX3FSTzFXd21oQXJ3cW9tWGpXNURReU0tajRXeVlkUQ?oc=5",
+   "d": "2026-11-27T10:06:00.000Z"
   },
   {
-   "t": "코스닥 급등 ‘매수 사이드카’…반도체 ‘주춤’, 로봇·바이오 ‘껑충’",
+   "t": "[단독] 92억 집 팔려고 60억 빌려줬다…압구정 ‘집주인 대출가능’ 매물까지",
+   "src": "매일경제",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE12WFNta1RrMk1aWXU5MGxaMDVlM1hMM1lMZXRlUUExcjY0OU0tWjVtWEZyQUlPZWxYN3RsZi00bG5veVk0LUxVb3F0V0wxTy1VV1VWWkdiU0U?oc=5",
+   "d": "2026-11-27T09:40:45.000Z"
+  },
+  {
+   "t": "美 과잉생산 관세 추가 부담 피했지만…자동차·철강 수출 희비",
+   "src": "한국무역협회-KITA.NET",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNYXRiemN2NFRocmNfak9Ud2tlc2pXX0w1UkRFZVA2ZDBxaUg0Y3U0c201WWZsNlZiNTUyclVldzBnYi1yYkJyblZyOU5QRnh5Rl9neVJ4azc0eTVKQmpfaWctYXBQZDVHdXJxdXI0NnNPano0X1ZHYnRqNUJCdlYzaGdEZ0FCNGwyTXcwdHNRTW1TNUxJWk9XdG51QnRBTGVub3gxVndYYUJVOFBPM3k4WUNtLTN4OTJxT0c3R0tfV1d4aDNFQk84X3VINW5qOWhhd0pjREln?oc=5",
+   "d": "2026-11-27T05:41:40.000Z"
+  },
+  {
+   "t": "젠슨 황이 그릇 닦던 식당…‘엔비디아 발상지’ 명판 뗐다 다시 걸어",
    "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE41QWI5R29NM0FVZmJDOElsWXdZVUIyd1k5bU40cXRnQlNLSmVtMHB3Ti1LYXRxZTVFUkFZSnBpaXlHYnNuNlJFLWJDemRabUQxMXVsX18yNDRiUy1MWTdweWNjZjh2dzQ?oc=5",
-   "d": "2026-11-27T02:08:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBSUXNYLVZGcTBaM2RVbUhLaUpxTTIySElDenVIOUZza3hnOGZpUm1oNVc1LVlfek10WUFCN2ZmX2F3R09XUW5LT0laYkJTZHJ2NTl3dzhoVW9kTDRjNTFHZ3U4YmxnNHdYN1BfU2ZhVQ?oc=5",
+   "d": "2026-11-27T01:47:00.000Z"
   },
   {
-   "t": "엔비디아칩 대량구매 실리콘밸리 업체 2곳…알고 보니 中 소유",
-   "src": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE52VjQwMjl1Uk02cHBFczItU0hpWXhMdFM0dXZ2cVo1NDUwUmNUZnh2dVNIcllXb25sZzBJOFg2bkozLW5qdzZYRHZEQ1dTOUpOR2RGVXlhZkRkaEHSAWBBVV95cUxPVW94N1RQbUJCQ0o0QkRDNWdVazhIUkRlWUhvZlR2bVdqblI5Q0l2Z09yRGppOU84dVUxR1loR1QxR05saktDSVptWEFUbXV4MVRnR0ZmbVJpcDNEMy14c0o?oc=5",
-   "d": "2026-11-26T21:23:33.000Z"
-  },
-  {
-   "t": "[단독] 홈플러스 \"매각주관사 통해 인수의향서 접수\"...부동산 개발업체인 듯",
-   "src": "YTN",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1JeEhPU1d6N0s5WDliODZLc0lwb3VCOU10Wi1hOVgtX0ZoMHp4YkR3eXZIM0dTcTV2Q0ZOa2ZEblBIcUhuVjk3VnpQZWtJM01nelNPeGlUUDB3cFpEVWpJRlQxUGtGVmpsVXlxaGt1QQ?oc=5",
-   "d": "2026-11-26T04:26:00.000Z"
-  },
-  {
-   "t": "대출 확대·금리 상승에 올해 3분기까지 은행 이자이익 48조 원 넘어",
-   "src": "MBC 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE15Q3FNQktiS3BRZHJRVjhNbWZMbENZYmFKTERQUVhBdVVDVWUwRzNRYlpFRWMxYWo1T29VM1I1MERoT0NtdVRmYlVyS3phc0Z3SDlTSGgzSGN3dGpzZGdneHlaTl9sM3NzaGtPSGtQOGxFSDE20gF0QVVfeXFMT0syd3JabWJlbVNNcWtzWXJhMl83dlplc3ZCeG5PdmljazNwZFVJalMtc1lXQ1VCODRzc2lDTkxXSV95WXlYNlBWQ1FibnBZQTBzRXk0WDIwTGhkUGh6U3ZFODUyMDIzVXZ5QlU1N1VIMll2VFE?oc=5",
-   "d": "2026-11-27T00:46:37.000Z"
-  },
-  {
-   "t": "트럼프, 3분기 GDP 대폭 상향에 \"기록적 오류…즉각 조사해야\"",
+   "t": "[외환] 배당·네고 '밀당'에 보합권…1,340원 초반대 유지",
    "src": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBTZzJXajlFUll4QTNDZjVTellFNUhEc2gwUE95WmhrbE5TeF8wUlRQdXpvaXhsbDEtMUxSeGlQa1l5LV9lZGlWczZvRk80dWliWVRGQ3BoTkg5MDNJZ1dXYllqMWU1cU0zTUgxNWltUnfSAXRBVV95cUxOWUJpYzVjZEtWcGpkM0RER20xMWd4MHdOQkhtSTV6WHFaalljRnNPWmRTU2U4UFN6R0FMbV85VThBQVg2UTBUSmVndFo4SldrbmxIQUF6dnNBelRNYzZOM2JacnJBZy03THBvcC1oRG16U1Vrag?oc=5",
-   "d": "2026-11-27T00:42:06.000Z"
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82bmJGekpfYWlULU9MRlNYZXlXXzNjV2VvTkRmcGRLdWltcUhnUF95bDFzazF6OEF2bEg4eWt6T2hfZkpmOFpWRGVwdEEtekdvd2lqbnBNUlJZOW1CdnhOUnhlVjUtTkVPQjBtd05hcnfSAXRBVV95cUxOdDhPRko5Yk1pUlREQXRsUWM2M05zT2p1Q1BzZ3FEcmJKNks1UzhqTWhLWjFfdXJleUR1Sks4UEpnbDdkSzF3bkNmTnROb1R2ZmtudFE2el90Z3VudUY4UkdkalJ4SEtHZGswMGw0Tnl2UmdkMA?oc=5",
+   "d": "2026-11-27T04:07:57.000Z"
+  },
+  {
+   "t": "씨티은행 측 \"증안펀드 최대 40조 원으로 커질 수도\" 전망",
+   "src": "MBC 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9LdnNVdUhUcWZwbTc5bFQzTzlpQVY2SmtMWmxsZU15dzhuVGFlYjRWQzBKSURQcFl5V0VWOWE4ZmdjcGtvUk5RWUFWM2w0ckRRV2o4ai1XdjJESjIzdFduU085dVdVQTQyMi1HX2lRRXY5QV800gF0QVVfeXFMTi13NnZ3azY1ZTIzbExLN281QkwzemJYbVFyWE9LelpWNXpMYlpCbTlXbk1tcTdTMFM3cThycHVEVXpzc3FVTFhBQUF6RW9Oa2o0aFFCUGp1QTRoMEs0eGFnREJ3bVozZm1Bbm9FZ3hqZHlnRGI?oc=5",
+   "d": "2026-11-27T08:32:26.000Z"
   }
  ],
  "news": [
   {
-   "t": "경찰, ‘한동훈 자료 유출 의혹’ 법무부·공소청 등 압수수색",
-   "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5kVTFoaGlkOFIwRlg5MjhuR2FoREhfU2x1M1EzbU9Ec2xwYmV0R0ZHQU5JRzlDYkphUVJZU1BnaUpqZkc3d05YZ2l1anMyaGpuZXNQNmh1LWtqRUExTElPOFhERVF1VE43Y001VlhMSFU3QQ?oc=5",
-   "d": "2026-11-27T02:24:00.000Z"
-  },
-  {
-   "t": "최민희, 징계심의 전 김민석 조준 \"마타도어 방지책 마련해야\"",
-   "src": "MBC 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5yaVFabms2bGcwX3RVZ2kyMktocUIwVlUyLU15cnhKOWJYMUw4czJEa3REMlhObmNPTWxUUXJrRzAyOUdvNG5WUER0by1XOVRDbmxmMUpzcGlJTXNkSXdiT3A4TWJHS2RzdV9UQ0Rzbnd3R2pHeDczYdIBeEFVX3lxTE5XNGJ2U2JtNEFRZU5DVmhnd1dVNkt1UU82aWx5ZzEyTjN4cWhabFlLWG9qZmwybGNZQjY2RHJURktlX2dySGMxSTI0aHdndXk3VFNYNXFGR0NMR1ViZ2pITEx5RTJoLWI4TzBZUlluWGM1TXFzRHlPZw?oc=5",
-   "d": "2026-11-27T02:29:23.000Z"
-  },
-  {
-   "t": "국민의힘 김용태 “12월3일 무거운 마음 가져야...국민 원하실 때까지 사과해야”",
+   "t": "최민희 ‘당원 자격정지 2년’ 확정 땐 28년 총선 출마 불가능···계파갈등 전면전 치닫나",
    "src": "경향신문",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80V1M0N1BORE5VS1plTTlSTDdkZExOem8tTnpYQ2VOSjAwdkhRNUhtQ20xNFczckxnTVBNcXlWZEdwUllWY1dhRWgxcVFfcWlsSS1uNzJTbEREd9IBX0FVX3lxTFBqMVVFRGpaWUxFRlFOM3N3eTl5NDFYS2RZVm9FZFBrc0hic3ZYRFpBZVliekdTTUMzQjZTU18xV0Yzczh2Rjlyc2RpbU56Zjdoei1pTDZVYmJxYkdhTVNr?oc=5",
-   "d": "2026-11-26T23:30:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1qTzZxNm1jYlUwa19GXzhKN25UVkVmbkF2a0s0LWQtTWw1SGdQZENRNGFWcG5XUFhzSUpSUjExVlBqdFdUNVVQXzh1RDh6WEo5ZzVBQUZkNHRMZ9IBX0FVX3lxTE93WVBCTThYNV9QSm9kWHFkRlFDbEtKV0dFOW9CLVlVbk51N1AtVWJxQ0RnYlNxbUFIU091OHo2SUhxVGFTRmlqVlZ1OVI2T3VMWEZ5VGtVMG9La19SdGJv?oc=5",
+   "d": "2026-11-27T11:05:00.000Z"
   },
   {
-   "t": "’마약 전과’ 전직 정치인 아들, 전 연인 스토킹·폭행 혐의 체포",
-   "src": "연합뉴스TV",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5Za05uRnA1SXd5bUpNTXhjazF2Nkw4dThtazhxeXV5NHBNN1JfUHdyX3QxZDA1Ul8xSmdkSjd0NUFXSmVzb2xEcUhYSExFeGlNeUd1YzVOVVlBTDI0N253WHp1WjlSMGM?oc=5",
-   "d": "2026-11-27T01:55:00.000Z"
-  },
-  {
-   "t": "치매 주사 한 대에 140만원…‘망각의 시계’ 그는 늦출 수 없었다",
+   "t": "헛도는 ‘정년 연장’ 논의…노동계 “65살 연장” 재계 “60살 퇴직 뒤 재고용”",
    "src": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1vQnl5MkVXTGlPcHpFcUxPcXhSYzdkV2Q5LUdiSjAxNUhjd3pmV0J3VWl4UUptaWtSSjZPNzJaa0EtcFVjMmJ3U2tzOWVUMWp5M2ZGOUhwdUhoWnltdEY0NTZ2cTY5UQ?oc=5",
-   "d": "2026-11-27T01:30:00.000Z"
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5TQ1RBVGg3UFIyZmZhQzFEVG1nd2gyM3dlV1BEVDUwOUFLZi1aOWE2dE1mT2tCZnNjcjhMY2ZRVzhKMnI1blpDWWJxRXFJb2lxNUljbUlHYzlNbTdNOC1aV2NDTXo?oc=5",
+   "d": "2026-11-27T11:14:00.000Z"
   },
   {
-   "t": "\"수능 이력만으론 출판 한계\"…'리트 만점자'의 진짜 목적",
-   "src": "한국경제",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1oUnZWNnoxYVJZcnFWckg2QzNaOTdYSDdOYW5heHhPaDd6TnVhU3dqWU1fenZRZE5jTnBhT2t2cDIwWVd2YXJHTjZTRC0zZm0wQWFMRmN2NkpjUQ?oc=5",
-   "d": "2026-11-26T23:01:34.000Z"
+   "t": "가방엔 술·과자뿐…최전방 철책 200m 앞에서 붙잡힌 30대 여성",
+   "src": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE45YnJZUGFaNEZIeGZNSDFxUURJWEZ5NDhJRDI1S1FldFZuOFFLM3IxZEg4RzZ4SGlDVmVYbkNOZWprcWptTG9OLXllSkxPV2VESzI5aTdSM1ZVdllyRjVaTE5LWk9NbXpoQ0RQa2NGVl9Nbm5K?oc=5",
+   "d": "2026-11-27T10:03:00.000Z"
+  },
+  {
+   "t": "서영교·박홍근 뜻밖의 충돌‥\"답변 태도에 문제\" \"여기가 상원인가\"",
+   "src": "MBC 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9WMDJEUjU5cjdlTWNJN2JVOW1ONWJZaFNvY1BpeFhoUnNJenFGc0V1NFBaVm1aYUpJYUh2Sk1Zdk5McWk3Y1Z1R2RDYVpfbnpHVFRpazhWSVFNc045eWlNeXplRkZPMGkwVnUzWHlxLXUwR1ZOYWl5ctIBeEFVX3lxTE45YWpKdGtXNHVlbFFVQ1R3T1hXMDN1aWs1TGpGY0lmVDdoalUxcFhrai1TelpSeUlXdnJkdlN0UGxwbEZDSUN1cGVaTm1kRjcwT055aVNUZjdZYmM1eVdxSGE1UFQxUjVSYzBNenlmTmtJSUoxTFh4RA?oc=5",
+   "d": "2026-11-27T06:41:28.000Z"
+  },
+  {
+   "t": "李 대통령 사회대개혁위 1주년 간담회…\"사회 전반 구조적 변화 필요\"",
+   "src": "연합뉴스TV",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE04VXVlNU02SVh5bEpTbkZ5U0J0TURsek9pWXZycjdrb0tQRFpUOG1OV0ZBVk5XdWJPY1V1M0lzelZJSFZ0dXZkb1g5dGNlWmUtS0NCazd3ekxENjk2YW1pZ1BUXzAxLUk?oc=5",
+   "d": "2026-11-27T11:32:00.000Z"
+  },
+  {
+   "t": "주말 다시 추워진다…전국 곳곳 ‘비·눈’ 일요일 아침 영하 6도까지 떨어져",
+   "src": "경향신문",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBxUlZ3RXN4eEE3aEpRXy1jV1FfRXpXSExzeGVGaHkxS2NwU0ZCSFpKal8xcU9waHFqZjRmMEZydG40SnA0Wmd5bS1YREdsaW1sY3JqSzZvY3cxQdIBX0FVX3lxTE5WU3JJa1VMVlhSNFBuaFUwa2FGZi01Vm5jYzZNZDEwbWZwM1dUZnhBeDlPa3JSQk5ZX0V6aHdwRUgyMnozWnZZNzZjeURlVmV4ZlNZbjZPLWpRcy1ndTgw?oc=5",
+   "d": "2026-11-27T10:58:00.000Z"
   }
  ],
  "week": [
